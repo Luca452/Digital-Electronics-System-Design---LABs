@@ -11,7 +11,7 @@ library IEEE;
 
 entity PWM_module is
     generic(
-        TAIL_LENGTH	    :  	INTEGER	RANGE	1 TO 16	:= 16-- Tail length
+        TAIL_LENGTH	    :  	INTEGER	RANGE	1 TO 16	:=4-- Tail length
     );
     port(
         -------Reset/Clock----------
