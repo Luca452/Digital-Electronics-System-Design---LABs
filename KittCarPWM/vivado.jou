@@ -12,3 +12,106 @@
 start_gui
 open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.xpr}
 update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCar/KittCar.srcs/sim_1/new/tb_KittCar.vhd}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_KittCar [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+refresh_design
+refresh_design
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+refresh_design
+refresh_design
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+set_property -name {xsim.simulate.runtime} -value {0.3s} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 88
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 89
+remove_bps -file {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} -line 89
+remove_bps -file {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} -line 88
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 88
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 89
+remove_bps -file {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} -line 89
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 89
+remove_bps -file {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} -line 89
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 89
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 91
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 92
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 93
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 94
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 95
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 85
+add_bp {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd} 87
+close_sim
+launch_simulation
+refresh_design
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_simulation
+close_design
+open_run synth_1 -name synth_1
+close_design
+open_run impl_1
+launch_simulation
+launch_simulation
+launch_simulation

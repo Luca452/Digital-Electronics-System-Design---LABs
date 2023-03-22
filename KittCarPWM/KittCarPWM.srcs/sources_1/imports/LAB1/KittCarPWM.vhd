@@ -13,7 +13,7 @@ entity KittCarPWM is
 		NUM_OF_SWS				:	INTEGER	RANGE	1 TO 16 := 16;	-- Number of input switches
 		NUM_OF_LEDS				:	INTEGER	RANGE	1 TO 16 := 16;	-- Number of output LEDs
 
-		TAIL_LENGTH				:	INTEGER	RANGE	1 TO 16	:= 16	-- Tail length
+		TAIL_LENGTH				:	INTEGER	RANGE	1 TO 16	:= 4	-- Tail length
 	);
 	Port (
 
@@ -35,7 +35,7 @@ architecture Behavioral of KittCarPWM is
 	--------------------------------COMPONENTs INSTANTIATION---------------------
 	component PWM_module
         generic(
-            TAIL_LENGTH	    :  	INTEGER	RANGE	1 TO 16	:= 16	-- Tail length
+            TAIL_LENGTH	    :  	INTEGER	RANGE	1 TO 16	:= 4	-- Tail length
         );
         port(
             -------Reset/Clock----------
@@ -52,7 +52,8 @@ architecture Behavioral of KittCarPWM is
 	---------------------------------SIGNALS------------------------------------
 	signal tail : std_logic_vector(TAIL_LENGTH-1 downto 0);
 
-	signal circular_reg : std_logic_vector(TAIL_LENGTH*2-2 downto 0);
+	signal circular_reg : std_logic_vector(leds'range) := (others => '0');
+	signal position : natural range 0 to circular_reg'length-1 := 0;
 
 	-- constant that stores the number of clock cycles needed for MIN_KITT_CAR_STEP_MS time to pass
     constant delay_step : positive := (1_000_000 / CLK_PERIOD_NS * MIN_KITT_CAR_STEP_MS); 
@@ -82,7 +83,7 @@ begin
 	process (clk, reset)
 	begin
 		if rising_edge(clk) then
-
+			
 			sw_reg <= sw;
 
             -----------------RESET & INIT LOGIC------------------
@@ -101,7 +102,7 @@ begin
             end if;
             -----------------------------------------------------
 
-			-----------------COUNT LOGIC-------------------------
+			--------------------COUNT LOGIC----------------------
 			if counter_clk < delay_step then
 				counter_clk <= counter_clk + 1;
 			else
@@ -111,7 +112,7 @@ begin
 				else   
 					counter_ms <= (others => '0');
 					--------------------------CIRCULAR----------------------------------
-					
+				
 					--------------------------------------------------------------------
 				end if;
 			end if;

@@ -27,7 +27,7 @@ end PWM_module;
 architecture Behavioral of PWM_module is
 
     ---------------------------CONSTANT-------------------------------
-    constant delay_pwm : positive := 100_000; -- 4ms period PWM, 250Hz
+    constant delay_pwm : positive := 10_000; --*10*10-9 gives the period PWM / 4 in seconds
     ------------------------------------------------------------------
 
     ---------------------------SIGNALS-------------------------------

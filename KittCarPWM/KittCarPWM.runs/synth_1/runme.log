@@ -16,38 +16,38 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12784
+INFO: [Synth 8-7075] Helper process launched with PID 45416
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
 	Parameter CLK_PERIOD_NS bound to: 10 - type: integer 
 	Parameter MIN_KITT_CAR_STEP_MS bound to: 1 - type: integer 
 	Parameter NUM_OF_SWS bound to: 16 - type: integer 
 	Parameter NUM_OF_LEDS bound to: 16 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:12' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:27]
+INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:12' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:27]
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -80,20 +80,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -111,37 +111,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -171,23 +171,23 @@ Report Instance Areas:
 |1     |top      |       |    22|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1006.727 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1006.727 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1002.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1006.727 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 1002.312 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/KittCarPWM.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1006.727 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.runs/synth_1/KittCarPWM.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file KittCarPWM_utilization_synth.rpt -pb KittCarPWM_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 20 23:54:21 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 22 14:47:13 2023...

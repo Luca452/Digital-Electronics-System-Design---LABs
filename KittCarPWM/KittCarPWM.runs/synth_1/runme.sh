@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1'
+HD_PWD='C:/Users/daido/Desktop/Polimi/Anno 4/DESD/KittCarPWM/KittCarPWM/KittCarPWM.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
