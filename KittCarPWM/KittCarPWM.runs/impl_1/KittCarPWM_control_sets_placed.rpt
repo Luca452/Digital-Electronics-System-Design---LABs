@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Mar 23 16:03:29 2023
+| Date         : Fri Mar 24 00:24:56 2023
 | Host         : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file KittCarPWM_control_sets_placed.rpt
 | Design       : KittCarPWM
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     6 |
-|    Minimum number of control sets                        |     6 |
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    13 |
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     6 |
+| Total control sets |     7 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     2 |
-| >= 16              |     3 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,27 +58,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              56 |           27 |
+| No           | No                    | No                     |              39 |           17 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              32 |            9 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |              48 |           18 |
+| Yes          | No                    | No                     |               4 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              35 |            9 |
+| Yes          | Yes                   | No                     |              32 |            7 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-----------------------+---------------------------+------------------+----------------+--------------+
-|  Clock Signal  |     Enable Signal     |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+-----------------------+---------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | pwm_map[0]            | pwm_map[0][4]_i_1_n_0     |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG |                       | inst1/clear               |                4 |             14 |         3.50 |
-|  clk_IBUF_BUFG | pwm_map[0]            | pwm_map[1][4]_i_1_n_0     |                3 |             15 |         5.00 |
-|  clk_IBUF_BUFG | counter_ms[0]_i_2_n_0 | counter_ms[0]_i_1_n_0     |                4 |             16 |         4.00 |
-|  clk_IBUF_BUFG |                       | counter_clk[0]_i_1__0_n_0 |                5 |             18 |         3.60 |
-|  clk_IBUF_BUFG |                       |                           |               27 |             56 |         2.07 |
-+----------------+-----------------------+---------------------------+------------------+----------------+--------------+
++----------------+------------------------+-------------------------+------------------+----------------+--------------+
+|  Clock Signal  |      Enable Signal     |     Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+------------------------+-------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | pwm_map[3]             |                         |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG |                        | inst1/clear             |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG |                        | leds_reg[15]_i_1_n_0    |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG | counter_ms[15]_i_2_n_0 | counter_ms              |                3 |             16 |         5.33 |
+|  clk_IBUF_BUFG | pwm_map[3]             | pwm_map[0][0]_i_1_n_0   |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG |                        | counter_clk[17]_i_1_n_0 |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG |                        |                         |               17 |             39 |         2.29 |
++----------------+------------------------+-------------------------+------------------+----------------+--------------+
 
 

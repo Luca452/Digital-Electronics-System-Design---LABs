@@ -1,4 +1,4 @@
----------- DEFAULT LIBRARY ---------
+--------DEFAULT LIBRARIES-----------
 library IEEE;
 	use IEEE.STD_LOGIC_1164.all;
 	use IEEE.NUMERIC_STD.ALL;
@@ -32,7 +32,7 @@ end KittCarPWM;
 
 architecture Behavioral of KittCarPWM is
 
-	--------------------------------COMPONENTs INSTANTIATION---------------------
+	--------------------------COMPONENTs INSTANTIATION--------------------------
 	component PWM_module
         generic(
             TAIL_LENGTH	    :  	INTEGER	RANGE	1 TO 16	-- Tail length
@@ -54,7 +54,7 @@ architecture Behavioral of KittCarPWM is
 	type pwm_array_map is array (TAIL_LENGTH-1 downto 0) of my_natural;
 	signal pwm_map : pwm_array_map;
 
-	signal dir : std_logic := '0';
+	signal dir : std_logic;
 
 	signal pwm_out : std_logic_vector(0 TO TAIL_LENGTH-1);
 
@@ -85,44 +85,45 @@ begin
 	----------------------------------------------------------------------------
 	process (clk, reset)
 	begin
-		
+
 		if rising_edge(clk) then
 
 			sw_reg <= sw;
 			leds <= leds_reg;
 
+            ---------SYNC SWITCHES DELAY TIME CHANGE-------------
+            if sw /= sw_reg then
+                counter_ms <= (others => '0');
+                counter_clk <= 0; 
+            end if;
+            -----------------------------------------------------
+
 			-----------------RESET & INIT LOGIC------------------
 			if (unsigned(leds_reg) = 0 or reset = '1') then
+
+				dir <= '0';
+				for I in TAIL_LENGTH-1 downto 0 loop
+					pwm_map(I) <= 0;
+				end loop;
+
 				leds_reg <= (others => '1');
 				leds <= leds_reg;
 				counter_clk <= 0;
 				counter_ms <= unsigned(sw_reg);
 
-				pwm_map(0) <= 1;
-				for I in 1 to TAIL_LENGTH-1 loop
-					pwm_map(I) <= 0;
-				end loop;
-			end if;
-			-----------------------------------------------------
-			
-            ---------SYNC SWITCHES DELAY TIME CHANGE-------------
-            if  sw /= sw_reg then
-                counter_ms <= (others => '0');
-                counter_clk <= 0; 
-            end if;
-            -----------------------------------------------------
-			
-			leds_reg <= (others => '0');
-			-----------------PWM ASSIGNMENT----------------------
-			for I in TAIL_LENGTH-1 downto 0 loop
-				leds_reg(pwm_map(I)) <= pwm_out(I) ;
-			end loop;  			
-			-----------------------------------------------------
+			else 
+				-----------------PWM ASSIGNMENT----------------------
+				leds_reg <= (others => '0');
+				
+				for I in TAIL_LENGTH-1 downto 0 loop
+					leds_reg(pwm_map(I)) <= pwm_out(I);
+				end loop; 
+				-----------------------------------------------------
+			end if; 
+			-----------------------------------------------------			
 
 			-----------------COUNT LOGIC-------------------------
-			if counter_clk < delay_step then
-				counter_clk <= counter_clk + 1;
-			else
+			if counter_clk = delay_step then
 				counter_clk <= 0;
 				if counter_ms < unsigned(sw_reg) then
 					counter_ms <= counter_ms + 1;
@@ -146,6 +147,8 @@ begin
  					end loop; 				
 					--------------------------------------------------------------------
 				end if;
+			else
+				counter_clk <= counter_clk + 1;
 			end if;
 			---------------------------------------------------
 

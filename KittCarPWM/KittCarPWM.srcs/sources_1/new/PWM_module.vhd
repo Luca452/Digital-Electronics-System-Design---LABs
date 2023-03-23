@@ -4,14 +4,16 @@ library IEEE;
 	use IEEE.NUMERIC_STD.ALL;
 ------------------------------------
 
+-----------------------------------------------------------CODE EXPLANATION--------------------------------------------------------------------------------
 -- This modules produces a number of output equal to TAIL_LENGTH, each output is a PWM signal, the duty cycle is different for each output.
--- The idea is that a single register is initialized to '1'. After a certain delay, the last element is set to '0'. The same delay time is 
+-- The idea is that a register as long as TAIL_LENGTH is initialized to '1'. After a certain delay, the last element is set to '0'. The same delay time is 
 -- waited again and this time also the second-last element is set to 0. And so on until the first element is reached. In this way each element
--- of the register will be a pwm output with different duty cycle (lowest one the first element which is set to '0').
+-- of the register will be a pwm output with duty cycle different from the others.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 entity PWM_module is
     generic(
-        TAIL_LENGTH	    :  	INTEGER	RANGE	1 TO 16	:= 4-- Tail length
+        TAIL_LENGTH	    :  	INTEGER	RANGE	1 TO 16	:= 4 -- Tail length
     );
     port(
         -------Reset/Clock----------
@@ -27,7 +29,7 @@ end PWM_module;
 architecture Behavioral of PWM_module is
 
     ---------------------------CONSTANT-------------------------------
-    constant delay_pwm : positive := 10000; -- 4*10*10-9 is the period PWM in seconds
+    constant delay_pwm : positive := 10000; -- 4*10*10-9 is the PWM's period in seconds
     ------------------------------------------------------------------
 
     ---------------------------SIGNALS-------------------------------
@@ -46,14 +48,13 @@ begin
 
         if rising_edge(clk) then
 
-            --pwm_reg(TAIL_LENGTH-1) <= '1';
-
             ----------------RESET LOGIC-----------------
             if reset = '1' then
                 pwm_reg <= (others => '1');
                 position <= 0;  
             end if;
             --------------------------------------------
+
             --------------------COUNTER & DUTY CYCLE LOGIC------------------------------
             if counter_clk < delay_pwm then
                 counter_clk <= counter_clk + 1;

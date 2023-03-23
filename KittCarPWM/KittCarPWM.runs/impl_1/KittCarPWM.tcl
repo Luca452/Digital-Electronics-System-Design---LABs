@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -126,7 +125,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/daido/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20440-DESKTOP-JKUPK39/incrSyn
+  set_param xicom.use_bs_reader 1
   reset_param project.defaultXPMLibraries 
   open_checkpoint {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.dcp}
   set_property webtalk.parent_dir {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.cache/wt} [current_project]
