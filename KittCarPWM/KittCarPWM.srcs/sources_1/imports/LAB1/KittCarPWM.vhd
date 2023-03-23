@@ -85,34 +85,35 @@ begin
 	----------------------------------------------------------------------------
 	process (clk, reset)
 	begin
-		-----------------RESET & INIT LOGIC------------------
-		if (unsigned(leds_reg) = 0 or reset = '1') then
-			leds_reg <= (others => '1');
-			leds <= leds_reg;
-			counter_clk <= 0;
-			counter_ms <= unsigned(sw_reg);
-
-			pwm_map(0) <= 1;
-			for I in 1 to TAIL_LENGTH-1 loop
-				pwm_map(I) <= 0;
-			end loop;
-		end if;
-		-----------------------------------------------------
+		
 		if rising_edge(clk) then
 
 			sw_reg <= sw;
 			leds <= leds_reg;
 
+			-----------------RESET & INIT LOGIC------------------
+			if (unsigned(leds_reg) = 0 or reset = '1') then
+				leds_reg <= (others => '1');
+				leds <= leds_reg;
+				counter_clk <= 0;
+				counter_ms <= unsigned(sw_reg);
+
+				pwm_map(0) <= 1;
+				for I in 1 to TAIL_LENGTH-1 loop
+					pwm_map(I) <= 0;
+				end loop;
+			end if;
+			-----------------------------------------------------
+			
             ---------SYNC SWITCHES DELAY TIME CHANGE-------------
             if  sw /= sw_reg then
                 counter_ms <= (others => '0');
                 counter_clk <= 0; 
             end if;
             -----------------------------------------------------
-
-			-----------------PWM ASSIGNMENT----------------------
+			
 			leds_reg <= (others => '0');
-
+			-----------------PWM ASSIGNMENT----------------------
 			for I in TAIL_LENGTH-1 downto 0 loop
 				leds_reg(pwm_map(I)) <= pwm_out(I) ;
 			end loop;  			
