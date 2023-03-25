@@ -119,6 +119,12 @@ begin
         wait for RESET_WND;
 
         reset <= '0';
+        wait for 4000000*CLK_PERIOD;
+
+        reset <= '1';
+        wait for 2000000*CLK_PERIOD;
+
+        reset <= '0';
         wait;
 
     end process;
@@ -133,17 +139,12 @@ begin
         wait for RESET_WND;
 
         -- Start
-        dut2_sw <= (Others => '0');
+        dut2_sw <= ("0000000000000010");
         wait for 4000000*CLK_PERIOD;
 
-        dut2_sw <= ("0000000000001000");
-        wait for 8000000*CLK_PERIOD;
-
-        dut2_sw <= ("0000000000000010");
-        wait for 8000000*CLK_PERIOD;
-
-        dut2_sw <= ("0000000000000100");
-        wait for 8000000*CLK_PERIOD;
+        dut2_sw <= (Others => '0');
+        wait for RESET_WND;
+    
 
     wait;
     end process;

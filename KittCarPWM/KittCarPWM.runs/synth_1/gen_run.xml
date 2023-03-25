@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1679613811">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1679703190">
   <File Type="PA-TCL" Name="KittCarPWM.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="KittCarPWM_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="KittCarPWM_reports.tcl"/>
@@ -52,7 +52,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
