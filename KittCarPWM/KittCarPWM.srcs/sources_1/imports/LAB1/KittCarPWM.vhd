@@ -5,8 +5,8 @@ library IEEE;
 ------------------------------------
 
 -----------------------------------------------------------CODE EXPLANATION--------------------------------------------------------------------------------------------------
--- This module generates the kittcar effect with a dimmed tail. The tail movement and bounce is managed through an array, whose length is equal to the number of 
--- elements of the tail. Each element of this array (called pwm_map below) is an integer and contains the index (between 0 and NUM_OF_LEDS-1) of the leds array at which the
+-- This module generates the kittcar effect with a dimmed tail. The tail movement and bounce is managed through an array of integer, whose length is equal to the number of 
+-- elements of the tail. Each element of this array (called pwm_map below) represent an element of the tail and is an integer corresponding to the index (between 0 and NUM_OF_LEDS-1) of the leds array at which the
 -- corresponding element of the tail should be.
 
 -- e.g. with a tail of length 4, at a certain time the pwm_map = [3,2,1,0] meaning that the head of the tail, whose position is encoded as the integer in position 0 of this array,
@@ -152,20 +152,18 @@ begin
 				else   
 					counter_ms <= (others => '0');
 					--------------------------PWM SHIFT LOGIC---------------------------
-					-- change direction if the extremes of the leds strip are reached
-					-- then the shift and add/subtract logic dedscribed above is implemented
 					case dir is
 						when '0' => pwm_map(0) <= pwm_map(0) + 1;
 						when '1' => pwm_map(0) <= pwm_map(0) - 1;
 						when others => pwm_map(0) <= pwm_map(0); 
 					end case;
-				
+					-- change direction if the extremes of the leds strip are reached
 					if pwm_map(0) = NUM_OF_LEDS-2 then
 						dir <= '1';
 					elsif  pwm_map(0) = 1 then
 						dir <= '0';
 					end if;
-							
+					-- shift logic dedscribed above is implemented
 					for I in 0 to TAIL_LENGTH-2 loop
 						pwm_map(I+1) <= pwm_map(I);
  					end loop; 				
