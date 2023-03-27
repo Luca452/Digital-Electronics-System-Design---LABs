@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1679703249">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1679955974">
   <File Type="OPT-HWDEF" Name="KittCarPWM.hwdef"/>
   <File Type="ROUTE-BUS-SKEW" Name="KittCarPWM_bus_skew_routed.rpt"/>
   <File Type="PA-DCP" Name="KittCarPWM.dcp"/>
@@ -119,9 +119,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

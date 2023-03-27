@@ -2,10 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Mar 24 15:26:38 2023
-# Process ID: 5932
+# Start of session at: Mon Mar 27 19:56:20 2023
+# Process ID: 37508
 # Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7912 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\LAB1\KittCarPWM\KittCarPWM.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36988 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\LAB1\KittCarPWM\KittCarPWM.xpr
 # Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/vivado.log
 # Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM\vivado.jou
 #-----------------------------------------------------------
@@ -17,7 +17,6 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1005.762 ; gain = 0.000
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
@@ -31,9 +30,10 @@ INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desk
 "xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'KittCarPWM'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PWM_module'
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:69]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
 "xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
@@ -65,7 +65,7 @@ invalid command name "%"
     while executing
 "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
     (file "C:/Users/daido/Desktop/Polimi/Anno" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Fri Mar 24 16:15:38 2023...
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar 27 21:30:49 2023...
 INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
@@ -85,294 +85,11 @@ source tb_KittCar.tcl
 #   }
 # }
 # run 0.1s
-run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1005.762 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1005.762 ; gain = 0.000
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1192.211 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1192.211 ; gain = 0.000
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1005.762 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
-Built simulation snapshot tb_KittCar_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_KittCar.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 0.1s
-run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1005.762 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1005.762 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1005.762 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
-Built simulation snapshot tb_KittCar_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_KittCar.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 0.1s
-run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1005.762 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1005.762 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1005.762 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_KittCar.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 0.1s
-run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1005.762 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1005.762 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1005.762 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
-Built simulation snapshot tb_KittCar_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_KittCar.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 0.1s
-run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1005.762 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1005.762 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1005.762 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
-Built simulation snapshot tb_KittCar_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_KittCar.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 0.1s
-run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1005.762 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1005.762 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1005.762 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1192.211 ; gain = 0.000
 synth_design -rtl -rtl_skip_mlo -name rtl_1
 Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
 Starting synth_design
@@ -380,34 +97,34 @@ Using part: xc7a35tcpg236-1
 Top: KittCarPWM
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1297.355 ; gain = 250.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1271.863 ; gain = 79.652
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:47]
 	Parameter CLK_PERIOD_NS bound to: 10 - type: integer 
 	Parameter MIN_KITT_CAR_STEP_MS bound to: 2 - type: integer 
 	Parameter NUM_OF_SWS bound to: 16 - type: integer 
 	Parameter NUM_OF_LEDS bound to: 16 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:14' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:76]
-INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:29]
+INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:15' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:29]
-INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:133]
-INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
+INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:47]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1349.465 ; gain = 302.617
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1323.723 ; gain = 131.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1349.465 ; gain = 302.617
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1323.723 ; gain = 131.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1349.465 ; gain = 302.617
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1323.723 ; gain = 131.512
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1349.465 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1323.723 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -416,26 +133,26 @@ Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/Kitt
 Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1454.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1425.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1577.309 ; gain = 530.461
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1552.543 ; gain = 360.332
 9 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1577.309 ; gain = 571.547
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1552.543 ; gain = 360.332
 reset_run synth_1
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
 
 launch_runs synth_1 -jobs 6
-[Fri Mar 24 16:25:47 2023] Launched synth_1...
+[Mon Mar 27 21:31:55 2023] Launched synth_1...
 Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
 close_design
 open_run synth_1 -name synth_1
 Design is defaulting to impl run constrset: constrs_1
 Design is defaulting to synth run part: xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1613.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1558.168 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
@@ -443,7 +160,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
 Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1613.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1558.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -453,54 +170,20 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2000.055 ; gain = 0.000
-[Fri Mar 24 16:27:17 2023] Launched impl_1...
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1558.168 ; gain = 0.000
+[Mon Mar 27 21:32:46 2023] Launched impl_1...
 Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2020.2
-  **** Build date : Nov 18 2020 at 10:01:48
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-Warning: Cannot create '3000:arm' GDB server: Tentativo di accesso al socket con modalità non consentite dalle rispettive autorizzazioni di accesso
-
 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2020.2
-  ****** Build date   : Nov 03 2020-22:02:56
-    **** Build number : 2020.2.1604437376
-      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 2032.266 ; gain = 4.820
+INFO: [Labtools 27-3414] Connected to existing cs_server.
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4CF5A
-open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3581.758 ; gain = 1549.492
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3503.652 ; gain = 1553.211
 set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -521,7 +204,14 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
 "xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'KittCarPWM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PWM_module'
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:70]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
 "xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
@@ -531,8 +221,18 @@ Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -551,11 +251,129 @@ source tb_KittCar.tcl
 #   }
 # }
 # run 0.1s
-run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 3624.594 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3624.594 ; gain = 10.797
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3541.691 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3541.691 ; gain = 1.770
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 3624.594 ; gain = 10.797
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 3541.691 ; gain = 1.770
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 3565.855 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 3565.855 ; gain = 21.395
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 3565.855 ; gain = 21.395
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3616.301 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 3616.301 ; gain = 1.691
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 3616.301 ; gain = 1.691
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
@@ -610,194 +428,526 @@ source tb_KittCar.tcl
 #   }
 # }
 # run 0.1s
-run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3854.824 ; gain = 0.000
-xsim: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3854.824 ; gain = 33.570
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3618.680 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3618.680 ; gain = 0.000
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 0.1s
-launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 3854.824 ; gain = 33.570
-set_property mark_debug true [get_nets [list {mux1_out[0]} {mux1_out[5]} {mux1_out[8]} {mux1_out[1]} {mux1_out[4]} {mux1_out[6]} {mux1_out[11]} {mux1_out[15]} {mux1_out[2]} {mux1_out[9]} {mux1_out[12]} {mux1_out[3]} {mux1_out[7]} {mux1_out[10]} {mux1_out[13]} {mux1_out[14]}]]
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[0]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[1]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[2]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[3]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[4]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[5]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[6]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[7]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[8]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[9]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[10]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[11]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[12]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[13]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[14]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[15]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[0]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[1]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[2]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[3]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[4]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[5]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[6]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[7]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[8]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[9]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[10]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[11]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[12]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[13]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[14]'; it is not accessible from the fabric routing.
-CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'leds[15]'; it is not accessible from the fabric routing.
-create_debug_core u_ila_0 ila
-set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
-set_property port_width 16 [get_debug_ports u_ila_0/probe0]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {mux1_out[0]} {mux1_out[1]} {mux1_out[2]} {mux1_out[3]} {mux1_out[4]} {mux1_out[5]} {mux1_out[6]} {mux1_out[7]} {mux1_out[8]} {mux1_out[9]} {mux1_out[10]} {mux1_out[11]} {mux1_out[12]} {mux1_out[13]} {mux1_out[14]} {mux1_out[15]} ]]
-save_constraints
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
-
-launch_runs synth_1 -jobs 6
-[Fri Mar 24 16:58:32 2023] Launched synth_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
-close_design
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3862.539 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3862.539 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 3866.422 ; gain = 0.000
-[Fri Mar 24 16:59:50 2023] Launched impl_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
-set_property PROBES.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.ltx} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.ltx} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2023-Mar-24 17:04:39
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
-INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2023-Mar-24 17:04:39
-INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2023-Mar-24 17:04:54
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
-INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2023-Mar-24 17:04:54
-INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
-save_wave_config {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
-set_property mark_debug false [get_nets [list {mux1_out[4]} {mux1_out[11]} {mux1_out[12]} {mux1_out[13]} {mux1_out[14]} {mux1_out[15]} {mux1_out[3]} {mux1_out[7]} {mux1_out[8]} {mux1_out[0]} {mux1_out[2]} {mux1_out[5]} {mux1_out[6]} {mux1_out[10]} {mux1_out[1]} {mux1_out[9]}]]
-delete_debug_core [get_debug_cores {u_ila_0 }]
-save_constraints
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
-
-launch_runs synth_1 -jobs 6
-[Fri Mar 24 17:13:41 2023] Launched synth_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
-close_design
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3877.602 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3877.602 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.076 . Memory (MB): peak = 3877.602 ; gain = 0.000
-[Fri Mar 24 17:15:54 2023] Launched impl_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 3618.680 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3618.789 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3618.789 ; gain = 0.109
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 3618.789 ; gain = 0.109
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3738.055 ; gain = 0.074
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 3738.055 ; gain = 0.781
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 3738.055 ; gain = 0.781
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PWM_module'
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:70]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 4399.773 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'KittCarPWM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 4399.773 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 4399.773 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 4399.773 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:32 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:36 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:39 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 4399.773 ; gain = 0.000
 synth_design -rtl -rtl_skip_mlo -name rtl_1
 Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
 Starting synth_design
 Using part: xc7a35tcpg236-1
 Top: KittCarPWM
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3908.516 ; gain = 30.914
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
 	Parameter CLK_PERIOD_NS bound to: 10 - type: integer 
 	Parameter MIN_KITT_CAR_STEP_MS bound to: 2 - type: integer 
 	Parameter NUM_OF_SWS bound to: 16 - type: integer 
 	Parameter NUM_OF_LEDS bound to: 16 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:14' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:76]
-INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:29]
+INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:15' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:29]
-INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:133]
-INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
+INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:169]
+INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3945.398 ; gain = 67.797
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3967.293 ; gain = 89.691
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3967.293 ; gain = 89.691
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3967.293 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 4399.773 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -806,107 +956,27 @@ Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/Kitt
 Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4077.289 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4399.773 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 4086.766 ; gain = 209.164
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 4399.773 ; gain = 0.000
 8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 4086.766 ; gain = 209.164
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 4399.773 ; gain = 0.000
 reset_run synth_1
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
 
 launch_runs synth_1 -jobs 6
-[Fri Mar 24 17:23:14 2023] Launched synth_1...
+[Mon Mar 27 23:53:13 2023] Launched synth_1...
 Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
 current_design synth_1
 close_design
-close_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4104.832 ; gain = 18.066
 open_run synth_1 -name synth_1
 Design is defaulting to impl run constrset: constrs_1
 Design is defaulting to synth run part: xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 4104.832 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4104.832 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 4104.832 ; gain = 0.000
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 4104.832 ; gain = 0.000
-[Fri Mar 24 17:26:41 2023] Launched impl_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
-set_property IOSTANDARD LVCMOS18 [get_ports [list {leds[15]} {leds[14]} {leds[13]} {leds[12]} {leds[11]} {leds[10]} {leds[9]} {leds[8]} {leds[7]} {leds[6]} {leds[5]} {leds[4]} {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list {sw[15]} {sw[14]} {sw[13]} {sw[12]} {sw[11]} {sw[10]} {sw[9]} {sw[8]} {sw[7]} {sw[6]} {sw[5]} {sw[4]} {sw[3]} {sw[2]} {sw[1]} {sw[0]}]]
-save_constraints
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
-
-launch_runs synth_1 -jobs 6
-[Fri Mar 24 17:36:14 2023] Launched synth_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
-close_design
-close_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 4121.973 ; gain = 17.141
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4121.973 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4121.973 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 4122.992 ; gain = 1.020
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-INFO: [Timing 38-480] Writing timing data to binary archive.
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.120 . Memory (MB): peak = 4122.992 ; gain = 0.000
-[Fri Mar 24 17:40:15 2023] Launched impl_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
-
-launch_runs synth_1 -jobs 6
-[Fri Mar 24 17:52:49 2023] Launched synth_1...
-Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
-close_design
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 4124.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 4399.773 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
@@ -914,30 +984,22 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
 Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4124.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4399.773 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 4124.824 ; gain = 0.000
 launch_runs impl_1 -to_step write_bitstream -jobs 6
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.147 . Memory (MB): peak = 4124.824 ; gain = 0.000
-[Fri Mar 24 17:55:58 2023] Launched impl_1...
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 4399.773 ; gain = 0.000
+[Mon Mar 27 23:55:25 2023] Launched impl_1...
 Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
@@ -953,38 +1015,272 @@ close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 Command: launch_simulation 
-boost::filesystem::remove: Impossibile accedere al file. Il file è utilizzato da un altro processo: "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim/simulate.log"
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'KittCarPWM'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 4399.773 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'KittCarPWM'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 4399.773 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'KittCarPWM'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_KittCar' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_KittCar_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sim_1/imports/new/tb_KittCar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_KittCar'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+"xelab -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6d90d0af26684910b4e3ef2c3dc03f99 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_KittCar_behav xil_defaultlib.tb_KittCar -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.KittCarPWM [kittcarpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_kittcar
+Built simulation snapshot tb_KittCar_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_KittCar_behav -key {Behavioral:sim_1:Functional:tb_KittCar} -tclbatch {tb_KittCar.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_KittCar.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0.1s
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 4399.773 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_KittCar_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0.1s
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 4399.773 ; gain = 0.000
 current_design rtl_1
 refresh_design
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 4174.906 ; gain = 48.426
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
 	Parameter CLK_PERIOD_NS bound to: 10 - type: integer 
 	Parameter MIN_KITT_CAR_STEP_MS bound to: 2 - type: integer 
 	Parameter NUM_OF_SWS bound to: 16 - type: integer 
 	Parameter NUM_OF_LEDS bound to: 16 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:15' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:80]
+INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:15' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:100]
 INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
 	Parameter TAIL_LENGTH bound to: 4 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
-INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:137]
-INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:37]
+INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 4207.793 ; gain = 81.312
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 4225.723 ; gain = 99.242
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 4225.723 ; gain = 99.242
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 4243.109 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 4399.773 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -993,9 +1289,208 @@ Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/Kitt
 Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
 Completed Processing XDC Constraints
 
-refresh_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 4243.109 ; gain = 116.629
-launch_simulation
-Command: launch_simulation 
-boost::filesystem::remove: Impossibile accedere al file. Il file è utilizzato da un altro processo: "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim/simulate.log"
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 4399.773 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Tue Mar 28 00:11:19 2023] Launched synth_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 4399.773 ; gain = 0.000
+[Tue Mar 28 00:14:51 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+current_design rtl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
+	Parameter CLK_PERIOD_NS bound to: 10 - type: integer 
+	Parameter MIN_KITT_CAR_STEP_MS bound to: 2 - type: integer 
+	Parameter NUM_OF_SWS bound to: 16 - type: integer 
+	Parameter NUM_OF_LEDS bound to: 16 - type: integer 
+	Parameter TAIL_LENGTH bound to: 16 - type: integer 
+	Parameter TAIL_LENGTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:15' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
+	Parameter TAIL_LENGTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
+INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 4399.773 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Tue Mar 28 00:17:53 2023] Launched synth_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 4399.773 ; gain = 0.000
+[Tue Mar 28 00:20:28 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+current_design rtl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'KittCarPWM' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
+	Parameter CLK_PERIOD_NS bound to: 10 - type: integer 
+	Parameter MIN_KITT_CAR_STEP_MS bound to: 2 - type: integer 
+	Parameter NUM_OF_SWS bound to: 16 - type: integer 
+	Parameter NUM_OF_LEDS bound to: 16 - type: integer 
+	Parameter TAIL_LENGTH bound to: 4 - type: integer 
+	Parameter TAIL_LENGTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'PWM_module' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:15' bound to instance 'inst1' of component 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'PWM_module' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
+	Parameter TAIL_LENGTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PWM_module' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/new/PWM_module.vhd:30]
+INFO: [Synth 8-226] default block is never used [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'KittCarPWM' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/sources_1/imports/LAB1/KittCarPWM.vhd:48]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4399.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 4399.773 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Tue Mar 28 00:25:18 2023] Launched synth_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/synth_1/runme.log
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+Finished Parsing XDC File [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.srcs/constrs_1/imports/.Xil/KittCar_propImpl.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4399.773 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 4399.773 ; gain = 0.000
+[Tue Mar 28 00:26:14 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 24 18:13:14 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 28 00:27:53 2023...

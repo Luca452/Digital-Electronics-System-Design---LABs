@@ -1,26 +1,22 @@
+---------- DEFAULT LIBRARY ---------
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+	use IEEE.STD_LOGIC_1164.all;
+	use IEEE.NUMERIC_STD.ALL;
+------------------------------------
 
 entity tb_KittCar is
 end tb_KittCar;
 
 architecture Behavioral of tb_KittCar is
 
-    ------------------------ Constant Declaration -------------------------
 
+    ------------------------ Constant Declaration -------------------------
     -- Constant For Test Bench (TB) --
     constant    RESET_ON    :   STD_LOGIC := '1';
 
     constant    CLK_PERIOD 	: time := 10 ns;
-    constant    RESET_WND 	: time := 100000 ns;
+    constant    RESET_WND 	: time := 2 ms;
     ----------------------------------
-
     ------ Constant For DUT v2 ------
     constant    DUT2_NUM_OF_SWS  :   NATURAL    := 16;
     constant    DUT2_NUM_OF_LEDS   :   POSITIVE   := 16;
@@ -28,7 +24,6 @@ architecture Behavioral of tb_KittCar is
     constant    DUT2_MIN_KITT_CAR_STEP_MS    :   POSITIVE    := 2;
     constant    DUT2_TAIL_LENGTH    :   INTEGER := 4;
     ----------------------------------
-
     ----------------------------------------------------------------------
 
 
@@ -46,7 +41,6 @@ architecture Behavioral of tb_KittCar is
             TAIL_LENGTH		:	INTEGER	:= 4	-- Tail length
         );
         Port (
-
            ------- Reset/Clock --------
 		    reset	:	IN	STD_LOGIC;
 		    clk		:	IN	STD_LOGIC;
@@ -56,23 +50,21 @@ architecture Behavioral of tb_KittCar is
 		    sw		:	IN	STD_LOGIC_VECTOR(NUM_OF_SWS-1 downto 0);	-- Switches avaiable on Basys3
 		    leds	:	OUT	STD_LOGIC_VECTOR(NUM_OF_LEDS-1 downto 0)	-- LEDs avaiable on Basys3
 		    ----------------------------
-
         );
     END COMPONENT;
-    ----------------------------------
+    ----------------------------------------------------------------------
 
     ------------------------- Signal Declaration -------------------------
-
     ---------- Reset/Clock ----------
     signal  reset   :   STD_LOGIC := RESET_ON;
     signal  clk     :   STD_LOGIC := '1';
     ---------------------------------
 
-
     -------- KittCar ----------------
     signal  dut2_sw   :   STD_LOGIC_VECTOR(DUT2_NUM_OF_SWS-1 downto 0) := (Others => '0');
     signal  dut2_leds  :   STD_LOGIC_VECTOR(DUT2_NUM_OF_LEDS-1 downto 0);
     ---------------------------------
+    ----------------------------------------------------------------------
 
 begin
 
@@ -89,25 +81,20 @@ begin
             TAIL_LENGTH => DUT2_TAIL_LENGTH
         )
         Port Map(
-
             ---------- Reset/Clock ----------
             reset  => reset,
             clk    => clk,
             ---------------------------------
-
             ------------- Data --------------
             sw => dut2_sw,
 		    leds => dut2_leds
             ---------------------------------
-
         );
-    ----------------------------------
+    -----------------------------------------------------------------------
 
     -------------------------- Signals Generation -------------------------
 
-
     ------ TB Clk Generation -------
-
     clk	<= not clk after CLK_PERIOD/2;
     ---------------------------------
 
@@ -115,16 +102,10 @@ begin
     reset_wave : process
     begin
 
-        reset <= '1';
+        reset <= RESET_ON;
         wait for RESET_WND;
 
-        reset <= '0';
-        wait for 4000000*CLK_PERIOD;
-
-        reset <= '1';
-        wait for 2000000*CLK_PERIOD;
-
-        reset <= '0';
+        reset <= not RESET_ON;
         wait;
 
     end process;
@@ -133,21 +114,11 @@ begin
     -- TB din pattern Generation ---
     dut2_din_pattern : process
     begin
-
-        -- wait the reset window
+        --not needed to wait for reset window since sw remain always at 0
         dut2_sw <= (Others => '0');
-        wait for RESET_WND;
+        wait;
 
-        -- Start
-        dut2_sw <= ("0000000000000010");
-        wait for 4000000*CLK_PERIOD;
-
-        dut2_sw <= (Others => '0');
-        wait for RESET_WND;
-    
-
-    wait;
     end process;
     ---------------------------------
-
+    -----------------------------------------------------------------------
 end Behavioral;

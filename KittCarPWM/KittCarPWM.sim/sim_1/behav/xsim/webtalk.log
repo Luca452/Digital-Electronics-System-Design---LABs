@@ -2,8 +2,8 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Mar 24 21:24:28 2023
-# Process ID: 13764
+# Start of session at: Mon Mar 27 23:15:29 2023
+# Process ID: 32744
 # Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim/xsim.dir/tb_KittCar_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.sim/sim_1/behav/xsim/webtalk.log
@@ -14,4 +14,4 @@ invalid command name "%"
     while executing
 "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
     (file "C:/Users/daido/Desktop/Polimi/Anno" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Fri Mar 24 21:24:28 2023...
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar 27 23:15:29 2023...

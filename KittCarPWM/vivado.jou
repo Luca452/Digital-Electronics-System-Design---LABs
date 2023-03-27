@@ -2,31 +2,16 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Mar 24 15:26:38 2023
-# Process ID: 5932
+# Start of session at: Mon Mar 27 19:56:20 2023
+# Process ID: 37508
 # Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7912 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\LAB1\KittCarPWM\KittCarPWM.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36988 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\LAB1\KittCarPWM\KittCarPWM.xpr
 # Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/vivado.log
 # Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.xpr}
 update_compile_order -fileset sources_1
-launch_simulation
-source tb_KittCar.tcl
-close_sim
-launch_simulation
-source tb_KittCar.tcl
-close_sim
-launch_simulation
-source tb_KittCar.tcl
-close_sim
-launch_simulation
-source tb_KittCar.tcl
-close_sim
-launch_simulation
-source tb_KittCar.tcl
-close_sim
 launch_simulation
 source tb_KittCar.tcl
 synth_design -rtl -rtl_skip_mlo -name rtl_1
@@ -48,77 +33,42 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 close_sim
 launch_simulation
 source tb_KittCar.tcl
 close_sim
 launch_simulation
 source tb_KittCar.tcl
-set_property mark_debug true [get_nets [list {mux1_out[0]} {mux1_out[5]} {mux1_out[8]} {mux1_out[1]} {mux1_out[4]} {mux1_out[6]} {mux1_out[11]} {mux1_out[15]} {mux1_out[2]} {mux1_out[9]} {mux1_out[12]} {mux1_out[3]} {mux1_out[7]} {mux1_out[10]} {mux1_out[13]} {mux1_out[14]}]]
-create_debug_core u_ila_0 ila
-set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
-set_property port_width 16 [get_debug_ports u_ila_0/probe0]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {mux1_out[0]} {mux1_out[1]} {mux1_out[2]} {mux1_out[3]} {mux1_out[4]} {mux1_out[5]} {mux1_out[6]} {mux1_out[7]} {mux1_out[8]} {mux1_out[9]} {mux1_out[10]} {mux1_out[11]} {mux1_out[12]} {mux1_out[13]} {mux1_out[14]} {mux1_out[15]} ]]
-save_constraints
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-set_property PROBES.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.ltx} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.ltx} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
-save_wave_config {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
-set_property mark_debug false [get_nets [list {mux1_out[4]} {mux1_out[11]} {mux1_out[12]} {mux1_out[13]} {mux1_out[14]} {mux1_out[15]} {mux1_out[3]} {mux1_out[7]} {mux1_out[8]} {mux1_out[0]} {mux1_out[2]} {mux1_out[5]} {mux1_out[6]} {mux1_out[10]} {mux1_out[1]} {mux1_out[9]}]]
-delete_debug_core [get_debug_cores {u_ila_0 }]
-save_constraints
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
 synth_design -rtl -rtl_skip_mlo -name rtl_1
 reset_run synth_1
 launch_runs synth_1 -jobs 6
@@ -128,36 +78,9 @@ close_design
 open_run synth_1 -name synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 6
 wait_on_run impl_1
-set_property IOSTANDARD LVCMOS18 [get_ports [list {leds[15]} {leds[14]} {leds[13]} {leds[12]} {leds[11]} {leds[10]} {leds[9]} {leds[8]} {leds[7]} {leds[6]} {leds[5]} {leds[4]} {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list {sw[15]} {sw[14]} {sw[13]} {sw[12]} {sw[11]} {sw[10]} {sw[9]} {sw[8]} {sw[7]} {sw[6]} {sw[5]} {sw[4]} {sw[3]} {sw[2]} {sw[1]} {sw[0]}]]
-save_constraints
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-reset_run synth_1
-launch_runs synth_1 -jobs 6
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/daido/Desktop/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -167,6 +90,59 @@ program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 close_sim
 launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
+close_sim
+launch_simulation
+source tb_KittCar.tcl
 current_design rtl_1
 refresh_design
-launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+current_design rtl_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+current_design rtl_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB1/KittCarPWM/KittCarPWM.runs/impl_1/KittCarPWM.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim

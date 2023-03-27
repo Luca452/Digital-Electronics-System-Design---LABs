@@ -31,8 +31,8 @@ architecture Behavioral of PWM_module is
 
     ---------------------------CONSTANT-------------------------------
     -- PWM period in seconds = delay_pwm*TAIL_LENGTH*10*10-9
-    -- with tail=16 and delay_pwm=10000 the f=625Hz, with tail=1 the f=10kHz so the range is ok
-    constant delay_pwm : positive := 10000; 
+    -- with tail=16 and delay_pwm=1000 the f=6,25kHz, with tail=1 the f=100kHz so the range is ok
+    constant delay_pwm : positive := 1000; 
     ------------------------------------------------------------------
 
     ---------------------------SIGNALS-------------------------------
@@ -57,6 +57,7 @@ begin
             if reset = '1' then
                 pwm_reg <= (others => '1');
                 position <= 0;  
+                counter_clk <= 0;
             end if;
             --------------------------------------------
 
