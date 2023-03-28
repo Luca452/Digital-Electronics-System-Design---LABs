@@ -28,7 +28,7 @@ architecture Behavioral of C2G is
     signal state : state_type := IDLE;
 
     signal counter : unsigned(1 downto 0):= (others => '0') ;
-	signal result : unsigned(TDATA_WIDTH-1 downto 0);
+	signal result : natural range 0 to 381;
 
 begin
     with state select m_axis_tvalid <= 
@@ -55,12 +55,12 @@ begin
     
                     when RECEIVE =>
                         if s_axis_tvalid = '1' then
-                            if to_integer(counter) = 3 then 
+                            if to_integer(counter) = 2 then 
                                 counter <= (others =>'0');
-                                m_axis_tdata <= std_logic_vector(result);
+                                m_axis_tdata <= std_logic_vector(to_unsigned(result,TDATA_WIDTH'range));
                                 state	<= TRANSMIT;
                             else 
-                                result <= result + unsigned(s_axis_tdata);
+                                result <= result + to_integer(s_axis_tdata);
                                 counter <= counter + 1;
                                 state <= RECEIVE;
                             end if; 

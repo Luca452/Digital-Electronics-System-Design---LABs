@@ -1,81 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1679938670">
-  <File Type="OPT-HWDEF" Name="Color2Grey_wrapper.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Color2Grey_wrapper_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="Color2Grey_wrapper.dcp"/>
-  <File Type="BITSTR-BMM" Name="Color2Grey_wrapper_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Color2Grey_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="Color2Grey_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="Color2Grey_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Color2Grey_wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="Color2Grey_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="Color2Grey_wrapper_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="Color2Grey_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Color2Grey_wrapper_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="Color2Grey_wrapper.msk"/>
+  <File Type="ROUTE-CLK" Name="Color2Grey_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="Color2Grey_wrapper.vdi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Color2Grey_wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="Color2Grey_wrapper.dcp"/>
+  <File Type="BG-BIT" Name="Color2Grey_wrapper.bit"/>
+  <File Type="BG-DRC" Name="Color2Grey_wrapper.drc"/>
+  <File Type="BG-BGN" Name="Color2Grey_wrapper.bgn"/>
+  <File Type="BG-BIN" Name="Color2Grey_wrapper.bin"/>
+  <File Type="BITSTR-RBT" Name="Color2Grey_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="Color2Grey_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="Color2Grey_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Color2Grey_wrapper.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="Color2Grey_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Color2Grey_wrapper.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="Color2Grey_wrapper_drc_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="Color2Grey_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="Color2Grey_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="Color2Grey_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="Color2Grey_wrapper_placed.dcp"/>
+  <File Type="OPT-HWDEF" Name="Color2Grey_wrapper.hwdef"/>
   <File Type="PLACE-IO" Name="Color2Grey_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="Color2Grey_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Color2Grey_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="Color2Grey_wrapper_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="Color2Grey_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="Color2Grey_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Color2Grey_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="Color2Grey_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Color2Grey_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="Color2Grey_wrapper.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="Color2Grey_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="Color2Grey_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="Color2Grey_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="Color2Grey_wrapper.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="Color2Grey_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Color2Grey_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="Color2Grey_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Color2Grey_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Color2Grey_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Color2Grey_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="Color2Grey_wrapper_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="Color2Grey_wrapper.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Color2Grey_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Color2Grey_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Color2Grey_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="Color2Grey_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="Color2Grey_wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="Color2Grey_wrapper_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="Color2Grey_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Color2Grey_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Color2Grey_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="Color2Grey_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Color2Grey_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Color2Grey_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="Color2Grey_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="Color2Grey_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Color2Grey_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Color2Grey_wrapper_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="Color2Grey_wrapper_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="Color2Grey_wrapper_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="Color2Grey_wrapper_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Color2Grey_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="Color2Grey_wrapper_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Color2Grey_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Color2Grey_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Color2Grey_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Color2Grey_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Color2Grey_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Color2Grey_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Color2Grey_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="Color2Grey_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Color2Grey_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="Color2Grey_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="Color2Grey_wrapper.nky"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Color2Grey_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Color2Grey_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Color2Grey_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Color2Grey_wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="Color2Grey_wrapper.pdi"/>
   <File Type="RCFI_FILE" Name="Color2Grey_wrapper.rcfi"/>
   <File Type="CFI_FILE" Name="Color2Grey_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="Color2Grey_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="Color2Grey_wrapper.npi"/>
   <File Type="RBD_FILE" Name="Color2Grey_wrapper.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Color2Grey_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="Color2Grey_wrapper.sysdef"/>
-  <File Type="BG-BGN" Name="Color2Grey_wrapper.bgn"/>
-  <File Type="BG-DRC" Name="Color2Grey_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="Color2Grey_wrapper.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/C2G.vhd">
@@ -123,9 +105,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -135,9 +115,10 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Color2Grey_AXI4Stream_UART_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Color2Grey_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Color2Grey_AXI4Stream_UART_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Color2Grey_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Color2Grey_C2G_0_0"/>
 </GenRun>

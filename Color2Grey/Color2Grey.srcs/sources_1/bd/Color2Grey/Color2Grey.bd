@@ -276,6 +276,12 @@
       }
     },
     "interface_nets": {
+      "AXI4Stream_UART_0_M00_AXIS_RX": {
+        "interface_ports": [
+          "AXI4Stream_UART_0/M00_AXIS_RX",
+          "C2G_0/s_axis"
+        ]
+      },
       "C2G_0_m_axis": {
         "interface_ports": [
           "AXI4Stream_UART_0/S00_AXIS_TX",
@@ -286,12 +292,6 @@
         "interface_ports": [
           "usb_uart",
           "AXI4Stream_UART_0/UART"
-        ]
-      },
-      "AXI4Stream_UART_0_M00_AXIS_RX": {
-        "interface_ports": [
-          "AXI4Stream_UART_0/M00_AXIS_RX",
-          "C2G_0/s_axis"
         ]
       }
     },

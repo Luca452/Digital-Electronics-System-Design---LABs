@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1679938541">
   <File Type="PA-TCL" Name="Color2Grey_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Color2Grey_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Color2Grey_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="Color2Grey_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="Color2Grey_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Color2Grey_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Color2Grey_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Color2Grey_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Color2Grey_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/C2G.vhd">
@@ -56,13 +53,11 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Color2Grey_AXI4Stream_UART_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Color2Grey_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Color2Grey_AXI4Stream_UART_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Color2Grey_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Color2Grey_C2G_0_0"/>
 </GenRun>
