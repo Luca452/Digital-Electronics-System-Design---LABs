@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar 28 15:55:25 2023
+# Process ID: 30272
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15868 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\Color2Grey\Color2Grey.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey/Color2Grey.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Color2Grey' since last save.
+INFO: [filemgmt 56-1] IP Repository Path: Directory not found as 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/IP'; using path 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP' instead.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1002.164 ; gain = 0.000
+update_compile_order -fileset sources_1

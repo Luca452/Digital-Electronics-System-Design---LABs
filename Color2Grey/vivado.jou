@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar 28 15:55:25 2023
+# Process ID: 30272
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15868 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\Color2Grey\Color2Grey.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey/Color2Grey.xpr}
+update_compile_order -fileset sources_1
