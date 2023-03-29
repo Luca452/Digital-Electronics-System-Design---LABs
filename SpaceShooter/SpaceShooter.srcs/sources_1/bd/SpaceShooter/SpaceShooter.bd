@@ -7,8 +7,7 @@
       "name": "SpaceShooter",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
       "proc_sys_reset_0": "",
@@ -22,6 +21,10 @@
       "usb_uart": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+      },
+      "SPI_M_0": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:spi_rtl:1.0"
       }
     },
     "ports": {
@@ -29,20 +32,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "SpaceShooter_sys_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           },
           "PHASE": {
             "value": "0.000"
@@ -53,10 +44,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -105,7 +92,12 @@
         "vlnv": "DigiLAB:ip:axi4stream_spi_master:1.0",
         "xci_name": "SpaceShooter_axi4stream_spi_master_0_0",
         "xci_path": "ip/SpaceShooter_axi4stream_spi_master_0_0/SpaceShooter_axi4stream_spi_master_0_0.xci",
-        "inst_hier_path": "axi4stream_spi_master_0"
+        "inst_hier_path": "axi4stream_spi_master_0",
+        "parameters": {
+          "c_sclkfreq": {
+            "value": "5000"
+          }
+        }
       },
       "digilent_jstk2_0": {
         "vlnv": "xilinx.com:module_ref:digilent_jstk2:1.0",
@@ -561,6 +553,12 @@
         "interface_ports": [
           "usb_uart",
           "AXI4Stream_UART_0/UART"
+        ]
+      },
+      "axi4stream_spi_master_0_SPI_M": {
+        "interface_ports": [
+          "SPI_M_0",
+          "axi4stream_spi_master_0/SPI_M"
         ]
       }
     },

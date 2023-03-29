@@ -1,11 +1,12 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.776195",
-   "Default View_TopLeft":"22,-651",
+   "Default View_TopLeft":"37,-651",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port usb_uart -pg 1 -lvl 4 -x 990 -y -300 -defaultsOSRD
+preplace port SPI_M_0 -pg 1 -lvl 4 -x 990 -y -70 -defaultsOSRD
 preplace port sys_clock -pg 1 -lvl 0 -x -320 -y -40 -defaultsOSRD
 preplace port reset -pg 1 -lvl 0 -x -320 -y -120 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 380 -y -80 -defaultsOSRD
@@ -32,6 +33,7 @@ preplace netloc AXI4Stream_UART_0_M00_AXIS_RX 1 1 3 -10 -440 NJ -440 970
 preplace netloc jstk_uart_bridge_0_m_axis 1 2 1 650 -590n
 preplace netloc digilent_jstk2_0_m_axis 1 2 1 620 -330n
 preplace netloc axi4stream_spi_master_0_M_AXIS 1 1 3 30 -180 NJ -180 970
+preplace netloc axi4stream_spi_master_0_SPI_M 1 3 1 N -70
 levelinfo -pg 1 -320 -140 380 810 990
 pagesize -pg 1 -db -bbox -sgen -440 -670 1100 180
 "
