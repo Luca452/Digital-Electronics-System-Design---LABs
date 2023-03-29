@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="Color2Grey_C2G_0_0_synth_1" LaunchDir="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Color2Grey/Color2Grey.runs/Color2Grey_C2G_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Parameters>
-		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
-		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
-	</Parameters>
-</Runs>
-
