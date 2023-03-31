@@ -54,13 +54,13 @@
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "SpaceShooter_proc_sys_reset_0_0",
-        "xci_path": "ip/SpaceShooter_proc_sys_reset_0_0/SpaceShooter_proc_sys_reset_0_0.xci",
+        "xci_path": "ip\\SpaceShooter_proc_sys_reset_0_0\\SpaceShooter_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0"
       },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "SpaceShooter_clk_wiz_0_0",
-        "xci_path": "ip/SpaceShooter_clk_wiz_0_0/SpaceShooter_clk_wiz_0_0.xci",
+        "xci_path": "ip\\SpaceShooter_clk_wiz_0_0\\SpaceShooter_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLK_IN1_BOARD_INTERFACE": {
@@ -77,7 +77,7 @@
       "AXI4Stream_UART_0": {
         "vlnv": "DigiLAB:ip:AXI4Stream_UART:1.1",
         "xci_name": "SpaceShooter_AXI4Stream_UART_0_0",
-        "xci_path": "ip/SpaceShooter_AXI4Stream_UART_0_0/SpaceShooter_AXI4Stream_UART_0_0.xci",
+        "xci_path": "ip\\SpaceShooter_AXI4Stream_UART_0_0\\SpaceShooter_AXI4Stream_UART_0_0.xci",
         "inst_hier_path": "AXI4Stream_UART_0",
         "parameters": {
           "UART_BOARD_INTERFACE": {
@@ -91,7 +91,7 @@
       "axi4stream_spi_master_0": {
         "vlnv": "DigiLAB:ip:axi4stream_spi_master:1.0",
         "xci_name": "SpaceShooter_axi4stream_spi_master_0_0",
-        "xci_path": "ip/SpaceShooter_axi4stream_spi_master_0_0/SpaceShooter_axi4stream_spi_master_0_0.xci",
+        "xci_path": "ip\\SpaceShooter_axi4stream_spi_master_0_0\\SpaceShooter_axi4stream_spi_master_0_0.xci",
         "inst_hier_path": "axi4stream_spi_master_0",
         "parameters": {
           "c_sclkfreq": {
@@ -102,7 +102,7 @@
       "digilent_jstk2_0": {
         "vlnv": "xilinx.com:module_ref:digilent_jstk2:1.0",
         "xci_name": "SpaceShooter_digilent_jstk2_0_0",
-        "xci_path": "ip/SpaceShooter_digilent_jstk2_0_0/SpaceShooter_digilent_jstk2_0_0.xci",
+        "xci_path": "ip\\SpaceShooter_digilent_jstk2_0_0\\SpaceShooter_digilent_jstk2_0_0.xci",
         "inst_hier_path": "digilent_jstk2_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -145,18 +145,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -211,18 +199,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -251,18 +227,6 @@
               "ASSOCIATED_RESET": {
                 "value": "aresetn",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             }
           },
@@ -312,7 +276,7 @@
       "jstk_uart_bridge_0": {
         "vlnv": "xilinx.com:module_ref:jstk_uart_bridge:1.0",
         "xci_name": "SpaceShooter_jstk_uart_bridge_0_0",
-        "xci_path": "ip/SpaceShooter_jstk_uart_bridge_0_0/SpaceShooter_jstk_uart_bridge_0_0.xci",
+        "xci_path": "ip\\SpaceShooter_jstk_uart_bridge_0_0\\SpaceShooter_jstk_uart_bridge_0_0.xci",
         "inst_hier_path": "jstk_uart_bridge_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -355,18 +319,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -421,18 +373,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -465,18 +405,6 @@
               "ASSOCIATED_RESET": {
                 "value": "aresetn",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             }
           },
@@ -531,12 +459,6 @@
           "digilent_jstk2_0/s_axis"
         ]
       },
-      "digilent_jstk2_0_m_axis": {
-        "interface_ports": [
-          "digilent_jstk2_0/m_axis",
-          "axi4stream_spi_master_0/S_AXIS"
-        ]
-      },
       "jstk_uart_bridge_0_m_axis": {
         "interface_ports": [
           "jstk_uart_bridge_0/m_axis",
@@ -547,6 +469,12 @@
         "interface_ports": [
           "AXI4Stream_UART_0/M00_AXIS_RX",
           "jstk_uart_bridge_0/s_axis"
+        ]
+      },
+      "digilent_jstk2_0_m_axis": {
+        "interface_ports": [
+          "digilent_jstk2_0/m_axis",
+          "axi4stream_spi_master_0/S_AXIS"
         ]
       },
       "AXI4Stream_UART_0_UART": {
@@ -573,12 +501,12 @@
         "ports": [
           "clk_wiz_0/clk_out1",
           "proc_sys_reset_0/slowest_sync_clk",
-          "jstk_uart_bridge_0/aclk",
-          "digilent_jstk2_0/aclk",
           "AXI4Stream_UART_0/clk_uart",
           "axi4stream_spi_master_0/aclk",
           "AXI4Stream_UART_0/m00_axis_rx_aclk",
-          "AXI4Stream_UART_0/s00_axis_tx_aclk"
+          "AXI4Stream_UART_0/s00_axis_tx_aclk",
+          "digilent_jstk2_0/aclk",
+          "jstk_uart_bridge_0/aclk"
         ]
       },
       "reset_1": {
@@ -648,8 +576,8 @@
           "axi4stream_spi_master_0/aresetn",
           "AXI4Stream_UART_0/m00_axis_rx_aresetn",
           "AXI4Stream_UART_0/s00_axis_tx_aresetn",
-          "jstk_uart_bridge_0/aresetn",
-          "digilent_jstk2_0/aresetn"
+          "digilent_jstk2_0/aresetn",
+          "jstk_uart_bridge_0/aresetn"
         ]
       }
     }

@@ -1,0 +1,29 @@
+{
+	"version": "1.0",
+	"modules": {
+		"test_UART_packet": {
+			"proto_instances": {
+				"/AXI4Stream_UART_0/S00_AXIS_TX": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s00_axis_tx_aclk"},
+						"ARESETN": { "actual": "s00_axis_tx_aresetn"},
+						"TDATA": { "actual": "s00_axis_tx_tdata"},
+						"TREADY": { "actual": "s00_axis_tx_tready"},
+						"TVALID": { "actual": "s00_axis_tx_tvalid"}
+					}
+				},
+				"/jstk_uart_bridge_0_0/m_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TREADY": { "actual": "m_axis_tready"},
+						"TVALID": { "actual": "m_axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}

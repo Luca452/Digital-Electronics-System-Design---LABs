@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Mar 30 21:53:38 2023
+# Process ID: 20312
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/SpaceShooter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27696 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\SpaceShooter\SpaceShooter.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/SpaceShooter/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/SpaceShooter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/SpaceShooter/SpaceShooter.xpr}
+update_compile_order -fileset sources_1
+update_module_reference SpaceShooter_digilent_jstk2_0_0
+update_module_reference SpaceShooter_jstk_uart_bridge_0_0
+regenerate_bd_layout
+regenerate_bd_layout
+undo
+undo
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
