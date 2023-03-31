@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Fri Mar 31 16:13:08 2023
+--Date        : Fri Mar 31 17:36:55 2023
 --Host        : unbound-phoenix running 64-bit unknown
 --Command     : generate_target joysticktester.bd
 --Design      : joysticktester
@@ -35,24 +35,6 @@ entity joysticktester is
 end joysticktester;
 
 architecture STRUCTURE of joysticktester is
-  component joysticktester_digilent_jstk2_0_0 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tready : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    jstk_x : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    jstk_y : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    btn_jstk : out STD_LOGIC;
-    btn_trigger : out STD_LOGIC;
-    led_r : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    led_g : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    led_b : in STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component joysticktester_digilent_jstk2_0_0;
   component joysticktester_axi4stream_spi_master_0_0 is
   port (
     aclk : in STD_LOGIC;
@@ -98,6 +80,21 @@ architecture STRUCTURE of joysticktester is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component joysticktester_proc_sys_reset_0_0;
+  component joysticktester_digilent_jstk2_0_2 is
+  port (
+    aclk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tready : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC;
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    jstk_x : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    jstk_y : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    btn_jstk : out STD_LOGIC;
+    btn_trigger : out STD_LOGIC
+  );
+  end component joysticktester_digilent_jstk2_0_2;
   signal axi4stream_spi_master_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi4stream_spi_master_0_M_AXIS_TVALID : STD_LOGIC;
   signal axi4stream_spi_master_0_SPI_M_IO0_I : STD_LOGIC;
@@ -190,7 +187,7 @@ clk_wiz_0: component joysticktester_clk_wiz_0_0
       locked => clk_wiz_0_locked,
       reset => reset_1
     );
-digilent_jstk2_0: component joysticktester_digilent_jstk2_0_0
+digilent_jstk2_0: component joysticktester_digilent_jstk2_0_2
      port map (
       aclk => clk_wiz_0_clk_out1,
       aresetn => proc_sys_reset_0_peripheral_aresetn(0),
@@ -198,9 +195,6 @@ digilent_jstk2_0: component joysticktester_digilent_jstk2_0_0
       btn_trigger => NLW_digilent_jstk2_0_btn_trigger_UNCONNECTED,
       jstk_x(9 downto 0) => NLW_digilent_jstk2_0_jstk_x_UNCONNECTED(9 downto 0),
       jstk_y(9 downto 0) => NLW_digilent_jstk2_0_jstk_y_UNCONNECTED(9 downto 0),
-      led_b(7 downto 0) => B"00000000",
-      led_g(7 downto 0) => B"00000000",
-      led_r(7 downto 0) => B"00000000",
       m_axis_tdata(7 downto 0) => digilent_jstk2_0_m_axis_TDATA(7 downto 0),
       m_axis_tready => digilent_jstk2_0_m_axis_TREADY,
       m_axis_tvalid => digilent_jstk2_0_m_axis_TVALID,

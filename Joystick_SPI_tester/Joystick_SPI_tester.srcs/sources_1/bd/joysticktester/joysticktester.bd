@@ -7,13 +7,14 @@
       "name": "joysticktester",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2"
+      "tool_version": "2020.2",
+      "validated": "true"
     },
     "design_tree": {
-      "digilent_jstk2_0": "",
       "axi4stream_spi_master_0": "",
       "clk_wiz_0": "",
-      "proc_sys_reset_0": ""
+      "proc_sys_reset_0": "",
+      "digilent_jstk2_0": ""
     },
     "interface_ports": {
       "SPI_M_0": {
@@ -26,8 +27,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "joysticktester_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.000"
@@ -38,6 +51,10 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -45,10 +62,44 @@
       }
     },
     "components": {
+      "axi4stream_spi_master_0": {
+        "vlnv": "DigiLAB:ip:axi4stream_spi_master:1.0",
+        "xci_name": "joysticktester_axi4stream_spi_master_0_0",
+        "xci_path": "ip/joysticktester_axi4stream_spi_master_0_0/joysticktester_axi4stream_spi_master_0_0.xci",
+        "inst_hier_path": "axi4stream_spi_master_0",
+        "parameters": {
+          "c_sclkfreq": {
+            "value": "5000"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "joysticktester_clk_wiz_0_0",
+        "xci_path": "ip/joysticktester_clk_wiz_0_0/joysticktester_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "joysticktester_proc_sys_reset_0_0",
+        "xci_path": "ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
+      },
       "digilent_jstk2_0": {
         "vlnv": "xilinx.com:module_ref:digilent_jstk2:1.0",
-        "xci_name": "joysticktester_digilent_jstk2_0_0",
-        "xci_path": "ip/joysticktester_digilent_jstk2_0_0/joysticktester_digilent_jstk2_0_0.xci",
+        "xci_name": "joysticktester_digilent_jstk2_0_2",
+        "xci_path": "ip/joysticktester_digilent_jstk2_0_2/joysticktester_digilent_jstk2_0_2.xci",
         "inst_hier_path": "digilent_jstk2_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -237,76 +288,27 @@
           },
           "btn_trigger": {
             "direction": "O"
-          },
-          "led_r": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "led_g": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "led_b": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
           }
         }
-      },
-      "axi4stream_spi_master_0": {
-        "vlnv": "DigiLAB:ip:axi4stream_spi_master:1.0",
-        "xci_name": "joysticktester_axi4stream_spi_master_0_0",
-        "xci_path": "ip/joysticktester_axi4stream_spi_master_0_0/joysticktester_axi4stream_spi_master_0_0.xci",
-        "inst_hier_path": "axi4stream_spi_master_0",
-        "parameters": {
-          "c_sclkfreq": {
-            "value": "5000"
-          }
-        }
-      },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "joysticktester_clk_wiz_0_0",
-        "xci_path": "ip/joysticktester_clk_wiz_0_0/joysticktester_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLK_IN1_BOARD_INTERFACE": {
-            "value": "sys_clock"
-          },
-          "RESET_BOARD_INTERFACE": {
-            "value": "reset"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
-          }
-        }
-      },
-      "proc_sys_reset_0": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "joysticktester_proc_sys_reset_0_0",
-        "xci_path": "ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xci",
-        "inst_hier_path": "proc_sys_reset_0"
       }
     },
     "interface_nets": {
-      "axi4stream_spi_master_0_M_AXIS": {
-        "interface_ports": [
-          "axi4stream_spi_master_0/M_AXIS",
-          "digilent_jstk2_0/s_axis"
-        ]
-      },
-      "digilent_jstk2_0_m_axis": {
-        "interface_ports": [
-          "axi4stream_spi_master_0/S_AXIS",
-          "digilent_jstk2_0/m_axis"
-        ]
-      },
       "axi4stream_spi_master_0_SPI_M": {
         "interface_ports": [
           "SPI_M_0",
           "axi4stream_spi_master_0/SPI_M"
+        ]
+      },
+      "axi4stream_spi_master_0_M_AXIS": {
+        "interface_ports": [
+          "digilent_jstk2_0/s_axis",
+          "axi4stream_spi_master_0/M_AXIS"
+        ]
+      },
+      "digilent_jstk2_0_m_axis": {
+        "interface_ports": [
+          "digilent_jstk2_0/m_axis",
+          "axi4stream_spi_master_0/S_AXIS"
         ]
       }
     },

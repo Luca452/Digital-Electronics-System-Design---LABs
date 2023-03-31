@@ -25,16 +25,20 @@ entity digilent_jstk2 is
 		jstk_x			: out std_logic_vector(9 downto 0);
 		jstk_y			: out std_logic_vector(9 downto 0);
 		btn_jstk		: out std_logic;
-		btn_trigger		: out std_logic;
+		btn_trigger		: out std_logic
 
 		-- LED color to send to the module
-		led_r			: in std_logic_vector(7 downto 0);
-		led_g			: in std_logic_vector(7 downto 0);
-		led_b			: in std_logic_vector(7 downto 0)
+		--led_r			: in std_logic_vector(7 downto 0);
+		--led_g			: in std_logic_vector(7 downto 0);
+		--led_b			: in std_logic_vector(7 downto 0)
 	);
 end digilent_jstk2;
 
 architecture Behavioral of digilent_jstk2 is
+    signal led_r : std_logic_vector(7 downto 0) := x"00";
+    signal led_g : std_logic_vector(7 downto 0) := x"84";
+    signal led_b : std_logic_vector(7 downto 0) := x"84";
+
 
 	-- Code for the SetLEDRGB command, see the JSTK2 datasheet.
 	constant CMDSETLEDRGB		: std_logic_vector(7 downto 0) := x"84";
