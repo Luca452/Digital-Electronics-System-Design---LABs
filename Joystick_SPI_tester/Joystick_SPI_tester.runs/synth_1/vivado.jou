@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar 31 18:43:21 2023
+# Process ID: 384
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.runs/synth_1
+# Command line: vivado.exe -log joysticktester_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source joysticktester_wrapper.tcl
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.runs/synth_1/joysticktester_wrapper.vds
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source joysticktester_wrapper.tcl -notrace

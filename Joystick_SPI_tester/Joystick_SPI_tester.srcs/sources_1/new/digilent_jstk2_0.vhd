@@ -19,22 +19,26 @@ entity digilent_jstk2 is
 		-- Data coming FROM the SPI IP-Core (and so, from the JSTK2 module)
 		-- There is no tready signal, so you must be always ready to accept and use the incoming data, or it will be lost!
 		s_axis_tvalid	: in STD_LOGIC;
-		s_axis_tdata	: in STD_LOGIC_VECTOR(7 downto 0);
+		s_axis_tdata	: in STD_LOGIC_VECTOR(7 downto 0)
 
 		-- Joystick and button values read from the module
-		jstk_x			: out std_logic_vector(9 downto 0);
-		jstk_y			: out std_logic_vector(9 downto 0);
-		btn_jstk		: out std_logic;
-		btn_trigger		: out std_logic;
+		--jstk_x			: out std_logic_vector(9 downto 0);
+		--jstk_y			: out std_logic_vector(9 downto 0);
+		--btn_jstk		: out std_logic;
+		--btn_trigger		: out std_logic
 
 		-- LED color to send to the module
-		led_r			: in std_logic_vector(7 downto 0);
-		led_g			: in std_logic_vector(7 downto 0);
-		led_b			: in std_logic_vector(7 downto 0)
+		--led_r			: in std_logic_vector(7 downto 0);
+		--led_g			: in std_logic_vector(7 downto 0);
+		--led_b			: in std_logic_vector(7 downto 0)
 	);
 end digilent_jstk2;
 
 architecture Behavioral of digilent_jstk2 is
+
+    signal led_r : std_logic_vector(7 downto 0) := x"FF";
+    signal led_g : std_logic_vector(7 downto 0) := x"FF";
+    signal led_b : std_logic_vector(7 downto 0) := x"FF";
 
 	-- Code for the SetLEDRGB command, see the JSTK2 datasheet.
 	constant CMDSETLEDRGB		: std_logic_vector(7 downto 0) := x"84";
@@ -58,7 +62,8 @@ architecture Behavioral of digilent_jstk2 is
 
 
 begin
-    
+
+
     -- change level of m_axis_tvalid based on the tx-state we are in
     with state_cmd select m_axis_tvalid <=
         '0' when WAIT_DELAY,
@@ -81,11 +86,9 @@ begin
                 -- increment a counter every clock front until the wait time has elapsed. 
                 -- Then change state to sending the command
                 when WAIT_DELAY =>
-                    if (tx_delay_counter = DELAY_CYCLES) then
-
+                    if tx_delay_counter = DELAY_CYCLES then
                         tx_delay_counter <= 0;
                         state_cmd <= SEND_CMD;
-
                     else
                         tx_delay_counter <= tx_delay_counter + 1;
                     end if;
@@ -95,49 +98,52 @@ begin
                 -- if the AXI-Slave has received the data (m_axis_tready = '1') the state is changed to the following one
                 when SEND_CMD =>
                     --if m_axis_tvalid = '1' then
-                        m_axis_tdata <= CMDSETLEDRGB; 
                     --end if;
-
                     if m_axis_tready = '1' then
+                        m_axis_tdata <= CMDSETLEDRGB;
                         state_cmd <= SEND_RED;
                     end if;
 
 
                 when SEND_RED =>
                     --if m_axis_tvalid = '1' then
-                        m_axis_tdata <= led_r; 
+                         
                     --end if;
 
                     if m_axis_tready = '1' then
+                        m_axis_tdata <= led_r;
                         state_cmd <= SEND_GREEN;
                     end if;
 
                 when SEND_GREEN =>
                     --if m_axis_tvalid = '1' then
-                        m_axis_tdata <= led_r; 
+                         
                     --end if;
 
                     if m_axis_tready = '1' then
+                        m_axis_tdata <= led_g;
                         state_cmd <= SEND_BLUE;
                     end if;
 
 
                 when SEND_BLUE =>
                     --if m_axis_tvalid = '1' then
-                        m_axis_tdata <= led_b; 
+                         
                     --end if;
 
                     if m_axis_tready = '1' then
+                        m_axis_tdata <= led_b;
                         state_cmd <= SEND_DUMMY;
                     end if;
 
 
                 when SEND_DUMMY =>
                     --if m_axis_tvalid = '1' then
-                        m_axis_tdata <= (Others => '0'); 
+                         
                     --end if;
 
                     if m_axis_tready = '1' then
+                        m_axis_tdata <= (Others => '0');
                         state_cmd <= WAIT_DELAY;
                     end if;
 
