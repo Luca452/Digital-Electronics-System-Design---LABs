@@ -1,5 +1,6 @@
 #-----------------------------------------------------------
 # Vivado v2020.2 (64-bit)
+<<<<<<< HEAD
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
 # Start of session at: Fri Mar 31 17:24:06 2023
@@ -16,11 +17,27 @@ If this directory should no longer be in your list of user repositories, go to t
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.cache/ip 
+=======
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar 31 17:46:50 2023
+# Process ID: 6217
+# Current directory: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/joysticktester_clk_wiz_0_0_synth_1
+# Command line: vivado -log joysticktester_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source joysticktester_clk_wiz_0_0.tcl
+# Log file: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/joysticktester_clk_wiz_0_0_synth_1/joysticktester_clk_wiz_0_0.vds
+# Journal file: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/joysticktester_clk_wiz_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source joysticktester_clk_wiz_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/code/ipCoreVivado'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 Command: synth_design -top joysticktester_clk_wiz_0_0 -part xc7a35tcpg236-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+<<<<<<< HEAD
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 INFO: [Synth 8-7075] Helper process launched with PID 9780
@@ -281,3 +298,8 @@ INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP joysticktester_
 INFO: [Common 17-1381] The checkpoint 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.runs/joysticktester_clk_wiz_0_0_synth_1/joysticktester_clk_wiz_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file joysticktester_clk_wiz_0_0_utilization_synth.rpt -pb joysticktester_clk_wiz_0_0_utilization_synth.pb
 INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 17:24:37 2023...
+=======
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6373
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f

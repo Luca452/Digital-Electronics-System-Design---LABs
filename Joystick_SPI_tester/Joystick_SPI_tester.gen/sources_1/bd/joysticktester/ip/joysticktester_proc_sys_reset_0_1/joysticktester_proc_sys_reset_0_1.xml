@@ -394,11 +394,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
             <spirit:value>Fri Mar 31 15:26:20 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:15d3e25c</spirit:value>
+=======
+            <spirit:value>Fri Mar 31 15:08:47 UTC 2023</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6324e32d</spirit:value>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -412,11 +420,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
             <spirit:value>Fri Mar 31 15:26:20 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:15d3e25c</spirit:value>
+=======
+            <spirit:value>Fri Mar 31 15:08:47 UTC 2023</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6324e32d</spirit:value>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -425,18 +441,30 @@
         <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:modelName>joysticktester_proc_sys_reset_0_1</spirit:modelName>
+=======
+        <spirit:modelName>joysticktester_proc_sys_reset_0_0</spirit:modelName>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
             <spirit:value>Fri Mar 31 15:26:20 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:15d3e25c</spirit:value>
+=======
+            <spirit:value>Fri Mar 31 15:08:47 UTC 2023</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6324e32d</spirit:value>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -455,11 +483,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
             <spirit:value>Fri Mar 31 15:26:20 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:f6280db8</spirit:value>
+=======
+            <spirit:value>Fri Mar 31 15:08:47 UTC 2023</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:cb4b75fd</spirit:value>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -468,18 +504,30 @@
         <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:modelName>joysticktester_proc_sys_reset_0_1</spirit:modelName>
+=======
+        <spirit:modelName>joysticktester_proc_sys_reset_0_0</spirit:modelName>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
             <spirit:value>Fri Mar 31 15:26:20 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:f6280db8</spirit:value>
+=======
+            <spirit:value>Fri Mar 31 15:08:47 UTC 2023</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:cb4b75fd</spirit:value>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -493,11 +541,19 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
             <spirit:value>Fri Mar 31 15:26:20 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:15d3e25c</spirit:value>
+=======
+            <spirit:value>Fri Mar 31 15:08:47 UTC 2023</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6324e32d</spirit:value>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -510,12 +566,17 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
             <spirit:name>GENtimestamp</spirit:name>
             <spirit:value>Fri Mar 31 15:27:01 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:15d3e25c</spirit:value>
+=======
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6324e32d</spirit:value>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -770,14 +831,22 @@
         <spirit:logicalName>proc_sys_reset_v5_0_13</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1.xdc</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0.xdc</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:userFileType>xdc</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_synthesisconstraints_view_fileset</spirit:name>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1_ooc.xdc</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0_ooc.xdc</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
@@ -787,7 +856,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>synth/joysticktester_proc_sys_reset_0_1.vhd</spirit:name>
+=======
+        <spirit:name>synth/joysticktester_proc_sys_reset_0_0.vhd</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
@@ -820,7 +893,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>sim/joysticktester_proc_sys_reset_0_1.vhd</spirit:name>
+=======
+        <spirit:name>sim/joysticktester_proc_sys_reset_0_0.vhd</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
@@ -828,7 +905,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_implementation_view_fileset</spirit:name>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1_board.xdc</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0_board.xdc</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_board</spirit:userFileType>
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
@@ -838,33 +919,53 @@
     <spirit:fileSet>
       <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1.dcp</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0.dcp</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:userFileType>dcp</spirit:userFileType>
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1_stub.v</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0_stub.v</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1_stub.vhdl</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0_stub.vhdl</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1_sim_netlist.v</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0_sim_netlist.v</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+<<<<<<< HEAD:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xml
         <spirit:name>joysticktester_proc_sys_reset_0_1_sim_netlist.vhdl</spirit:name>
+=======
+        <spirit:name>joysticktester_proc_sys_reset_0_0_sim_netlist.vhdl</spirit:name>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f:Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xml
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>

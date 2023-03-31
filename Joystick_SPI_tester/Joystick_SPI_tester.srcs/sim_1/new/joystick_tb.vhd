@@ -7,21 +7,17 @@ end joystick_tb;
 
 architecture Behavioral of joystick_tb is
 
-begin
-
     ------------------------ Constant Declaration -------------------------
     -- Constant For Test Bench (TB) --
-    constant    RESET_ON    :   STD_LOGIC := '0';
+    constant    RESET_ON    : STD_LOGIC := '0';
 
     constant    CLK_PERIOD 	: time := 10 ns;
     constant    RESET_WND 	: time := 2 ms;
     ----------------------------------
     ------ Constant For DUT v2 ------
-    constant    DUT2_NUM_OF_SWS  :   NATURAL    := 16;
-    constant    DUT2_NUM_OF_LEDS   :   POSITIVE   := 16;
-    constant    DUT2_CLK_PERIOD_NS	   :   POSITIVE   := 10;
-    constant    DUT2_MIN_KITT_CAR_STEP_MS    :   POSITIVE    := 2;
-    constant    DUT2_TAIL_LENGTH    :   INTEGER := 4;
+    constant    DUT2_DELAY_US		: integer := 25;    -- Delay (in us) between two packets
+    constant    DUT2_CLKFREQ	    : integer := 100_000_000;  -- Frequency of the aclk signal (in Hz)
+    constant    DUT2_SPI_SCLKFREQ 	: integer := 66_666; -- Frequency of the SPI SCLK clock signal (in Hz)
     ----------------------------------
     ----------------------------------------------------------------------
 
@@ -70,8 +66,8 @@ begin
     ---------------------------------
 
     -------- KittCar ----------------
-    signal  dut2_sw   :   STD_LOGIC_VECTOR(DUT2_NUM_OF_SWS-1 downto 0) := (Others => '0');
-    signal  dut2_leds  :   STD_LOGIC_VECTOR(DUT2_NUM_OF_LEDS-1 downto 0);
+    --signal  dut2_sw   :   STD_LOGIC_VECTOR(DUT2_NUM_OF_SWS-1 downto 0) := (Others => '0');
+    --signal  dut2_leds  :   STD_LOGIC_VECTOR(DUT2_NUM_OF_LEDS-1 downto 0);
     ---------------------------------
     ----------------------------------------------------------------------
 
@@ -80,23 +76,21 @@ begin
     ------------------- Device Under Test (DUT) Wrapper ------------------
 
     ------------ DUT v2 --------------
-    dut2_KittCarPWM   :   KittCarPWM
+    dut2_joystick  :    digilent_jstk2_0
 
         Generic Map(
-            CLK_PERIOD_NS => DUT2_CLK_PERIOD_NS,		
-		    MIN_KITT_CAR_STEP_MS =>	DUT2_MIN_KITT_CAR_STEP_MS,	
-		    NUM_OF_SWS =>   DUT2_NUM_OF_SWS,
-		    NUM_OF_LEDS =>	DUT2_NUM_OF_LEDS,
-            TAIL_LENGTH => DUT2_TAIL_LENGTH
+            DELAY_US => DUT2_DELAY_US,		
+		    CLKFREQ =>	DUT2_CLKFREQ,	
+		    SPI_SCLKFREQ =>   DUT2_SPI_SCLKFREQ
         )
         Port Map(
             ---------- Reset/Clock ----------
-            reset  => reset,
-            clk    => clk,
+            aresetn  => reset,
+            aclk    => clk
             ---------------------------------
             ------------- Data --------------
-            sw => dut2_sw,
-		    leds => dut2_leds
+            --sw => dut2_sw,
+		    --leds => dut2_leds
             ---------------------------------
         );
     -----------------------------------------------------------------------
@@ -124,7 +118,7 @@ begin
     dut2_din_pattern : process
     begin
         --not needed to wait for reset window since sw remain always at 0
-        dut2_sw <= (Others => '0');
+        --dut2_sw <= (Others => '0');
         wait;
 
     end process;

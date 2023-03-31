@@ -35,6 +35,10 @@ entity digilent_jstk2 is
 end digilent_jstk2;
 
 architecture Behavioral of digilent_jstk2 is
+    signal led_r : std_logic_vector(7 downto 0) := x"00";
+    signal led_g : std_logic_vector(7 downto 0) := x"84";
+    signal led_b : std_logic_vector(7 downto 0) := x"84";
+
 
     signal led_r : std_logic_vector(7 downto 0) := x"FF";
     signal led_g : std_logic_vector(7 downto 0) := x"FF";

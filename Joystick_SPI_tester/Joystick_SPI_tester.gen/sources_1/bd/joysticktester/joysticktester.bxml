@@ -2,10 +2,17 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="joysticktester" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
+<<<<<<< HEAD
     <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1680280946"/>
     <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1680280946"/>
     <Generation Name="SIMULATION" State="GENERATED" Timestamp="1680280946"/>
     <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1680280946"/>
+=======
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1680277602"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1680277602"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1680277602"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1680277602"/>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\joysticktester.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -24,7 +31,11 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="OUT_OF_CONTEXT"/>
       </File>
+<<<<<<< HEAD
       <File Name="hw_handoff\joysticktester.hwh" Type="HwHandoff">
+=======
+      <File Name="hw_handoff/joysticktester.hwh" Type="HwHandoff">
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -34,17 +45,29 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
+<<<<<<< HEAD
       <File Name="hw_handoff\joysticktester_bd.tcl">
+=======
+      <File Name="hw_handoff/joysticktester_bd.tcl">
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
+<<<<<<< HEAD
       <File Name="synth\joysticktester.hwdef">
+=======
+      <File Name="synth/joysticktester.hwdef">
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
+<<<<<<< HEAD
       <File Name="sim\joysticktester.protoinst">
+=======
+      <File Name="sim/joysticktester.protoinst">
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

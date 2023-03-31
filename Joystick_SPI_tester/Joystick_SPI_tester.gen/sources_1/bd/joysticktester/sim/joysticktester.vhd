@@ -1,8 +1,14 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
+<<<<<<< HEAD
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 --Date        : Fri Mar 31 18:42:25 2023
 --Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
+=======
+--Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+--Date        : Fri Mar 31 17:46:42 2023
+--Host        : unbound-phoenix running 64-bit unknown
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 --Command     : generate_target joysticktester.bd
 --Design      : joysticktester
 --Purpose     : IP block netlist
@@ -35,6 +41,7 @@ entity joysticktester is
 end joysticktester;
 
 architecture STRUCTURE of joysticktester is
+<<<<<<< HEAD
   component joysticktester_clk_wiz_0_0 is
   port (
     reset : in STD_LOGIC;
@@ -58,6 +65,9 @@ architecture STRUCTURE of joysticktester is
   );
   end component joysticktester_proc_sys_reset_0_1;
   component joysticktester_axi4stream_spi_master_0_1 is
+=======
+  component joysticktester_axi4stream_spi_master_0_0 is
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -90,7 +100,36 @@ architecture STRUCTURE of joysticktester is
     s_axis_tvalid : in STD_LOGIC;
     s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+<<<<<<< HEAD
   end component joysticktester_digilent_jstk2_0_1;
+=======
+  end component joysticktester_clk_wiz_0_0;
+  component joysticktester_proc_sys_reset_0_0 is
+  port (
+    slowest_sync_clk : in STD_LOGIC;
+    ext_reset_in : in STD_LOGIC;
+    aux_reset_in : in STD_LOGIC;
+    mb_debug_sys_rst : in STD_LOGIC;
+    dcm_locked : in STD_LOGIC;
+    mb_reset : out STD_LOGIC;
+    bus_struct_reset : out STD_LOGIC_VECTOR ( 0 to 0 );
+    peripheral_reset : out STD_LOGIC_VECTOR ( 0 to 0 );
+    interconnect_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 );
+    peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component joysticktester_proc_sys_reset_0_0;
+  component joysticktester_digilent_jstk2_0_2 is
+  port (
+    aclk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tready : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC;
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component joysticktester_digilent_jstk2_0_2;
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
   signal axi4stream_spi_master_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi4stream_spi_master_0_M_AXIS_TVALID : STD_LOGIC;
   signal axi4stream_spi_master_0_SPI_M_IO0_I : STD_LOGIC;
@@ -179,7 +218,11 @@ clk_wiz_0: component joysticktester_clk_wiz_0_0
       locked => clk_wiz_0_locked,
       reset => reset_1
     );
+<<<<<<< HEAD
 digilent_jstk2_0: component joysticktester_digilent_jstk2_0_1
+=======
+digilent_jstk2_0: component joysticktester_digilent_jstk2_0_2
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
      port map (
       aclk => clk_wiz_0_clk_out1,
       aresetn => proc_sys_reset_0_peripheral_aresetn(0),

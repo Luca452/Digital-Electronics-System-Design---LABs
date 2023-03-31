@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1680280998">
   <File Type="PA-TCL" Name="joysticktester_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="joysticktester_wrapper_drc_synth.rpt"/>
@@ -9,6 +10,18 @@
   <File Type="RDS-DCP" Name="joysticktester_wrapper.dcp"/>
   <File Type="VDS-TIMINGSUMMARY" Name="joysticktester_wrapper_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="joysticktester_wrapper_timing_summary_synth.pb"/>
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1680277607">
+  <File Type="VDS-TIMING-PB" Name="joysticktester_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="joysticktester_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="joysticktester_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="joysticktester_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="joysticktester_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="joysticktester_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="joysticktester_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="joysticktester_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="joysticktester_wrapper.tcl"/>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/digilent_jstk2_0.vhd">
@@ -38,6 +51,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+<<<<<<< HEAD
     <File Path="$PSRCDIR/constrs_1/new/Pinout_SPI.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -46,6 +60,9 @@
     </File>
     <Config>
       <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Pinout_SPI.xdc"/>
+=======
+    <Config>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -56,6 +73,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
+<<<<<<< HEAD
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
       <Desc>Vivado Synthesis Defaults</Desc>
     </StratHandle>
@@ -65,4 +83,13 @@
   <BlockFileSet Type="BlockSrcs" Name="joysticktester_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="joysticktester_proc_sys_reset_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="joysticktester_digilent_jstk2_0_1"/>
+=======
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="joysticktester_digilent_jstk2_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="joysticktester_axi4stream_spi_master_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="joysticktester_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="joysticktester_clk_wiz_0_0"/>
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 </GenRun>

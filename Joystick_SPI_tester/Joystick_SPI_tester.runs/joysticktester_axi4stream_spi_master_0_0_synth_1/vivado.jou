@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Mar 31 17:46:50 2023
+# Process ID: 6218
+# Current directory: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/joysticktester_axi4stream_spi_master_0_0_synth_1
+# Command line: vivado -log joysticktester_axi4stream_spi_master_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source joysticktester_axi4stream_spi_master_0_0.tcl
+# Log file: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/joysticktester_axi4stream_spi_master_0_0_synth_1/joysticktester_axi4stream_spi_master_0_0.vds
+# Journal file: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/joysticktester_axi4stream_spi_master_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source joysticktester_axi4stream_spi_master_0_0.tcl -notrace

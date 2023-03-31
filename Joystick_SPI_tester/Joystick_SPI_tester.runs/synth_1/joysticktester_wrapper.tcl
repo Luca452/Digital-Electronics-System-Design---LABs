@@ -4,7 +4,11 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
+<<<<<<< HEAD
   variable script "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.runs/synth_1/joysticktester_wrapper.tcl"
+=======
+  variable script "/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/synth_1/joysticktester_wrapper.tcl"
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
   variable category "vivado_synth"
 }
 
@@ -70,11 +74,14 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+<<<<<<< HEAD
 set_param chipscope.maxJobs 3
 set_param synth.incrementalSynthesisCache {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/.Xil/Vivado-28548-DESKTOP-JKUPK39/incrSyn}
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
+=======
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -82,6 +89,7 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
+<<<<<<< HEAD
 set_property webtalk.parent_dir {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.cache/wt} [current_project]
 set_property parent.project_path {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
@@ -103,6 +111,30 @@ set_property used_in_implementation false [get_files -all {{c:/Users/daido/Deskt
 set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_1/joysticktester_proc_sys_reset_0_1_ooc.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/joysticktester_ooc.xdc}}]
+=======
+set_property webtalk.parent_dir /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.cache/wt [current_project]
+set_property parent.project_path /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.xpr [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property default_lib xil_defaultlib [current_project]
+set_property target_language VHDL [current_project]
+set_property board_part_repo_paths {/home/stexo/.Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+set_property ip_repo_paths /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/code/ipCoreVivado [current_project]
+update_ip_catalog
+set_property ip_output_repo /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.cache/ip [current_project]
+set_property ip_cache_permissions {read write} [current_project]
+OPTRACE "Creating in-memory project" END { }
+OPTRACE "Adding files" START { }
+read_vhdl -library xil_defaultlib /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/hdl/joysticktester_wrapper.vhd
+add_files /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.srcs/sources_1/bd/joysticktester/joysticktester.bd
+set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_clk_wiz_0_0/joysticktester_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_clk_wiz_0_0/joysticktester_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_clk_wiz_0_0/joysticktester_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/ip/joysticktester_proc_sys_reset_0_0/joysticktester_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.gen/sources_1/bd/joysticktester/joysticktester_ooc.xdc]
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -113,9 +145,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+<<<<<<< HEAD
 read_xdc {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.srcs/constrs_1/new/Pinout_SPI.xdc}}
 set_property used_in_implementation false [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.srcs/constrs_1/new/Pinout_SPI.xdc}}]
 
+=======
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

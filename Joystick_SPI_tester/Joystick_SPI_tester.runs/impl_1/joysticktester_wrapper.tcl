@@ -17,7 +17,11 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
+<<<<<<< HEAD
   variable script "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Joystick_SPI_tester/Joystick_SPI_tester.runs/impl_1/joysticktester_wrapper.tcl"
+=======
+  variable script "/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/impl_1/joysticktester_wrapper.tcl"
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
   variable category "vivado_impl"
 }
 
@@ -115,8 +119,11 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+<<<<<<< HEAD
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
+=======
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -124,6 +131,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+<<<<<<< HEAD
   set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
   reset_param project.defaultXPMLibraries 
@@ -138,6 +146,45 @@ set rc [catch {
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }
+=======
+  set_param chipscope.maxJobs 2
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property board_part_repo_paths {/home/stexo/.Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
+  set_property webtalk.parent_dir /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.cache/wt [current_project]
+  set_property parent.project_path /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.xpr [current_project]
+  set_property ip_repo_paths /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/code/ipCoreVivado [current_project]
+  update_ip_catalog
+  set_property ip_output_repo /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.runs/synth_1/joysticktester_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Joystick_SPI_tester/Joystick_SPI_tester.srcs/sources_1/bd/joysticktester/joysticktester.bd
+  set_param project.isImplRun false
+OPTRACE "read constraints: implementation" START { }
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  set_param project.isImplRun true
+  link_design -top joysticktester_wrapper -part xc7a35tcpg236-1
+OPTRACE "link_design" END { }
+  set_param project.isImplRun false
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
+OPTRACE "init_design_reports" START { REPORT }
+OPTRACE "init_design_reports" END { }
+OPTRACE "init_design_write_hwdef" START { }
+  write_hwdef -force -file joysticktester_wrapper.hwdef
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
 OPTRACE "init_design_write_hwdef" END { }
   close_msg_db -file init_design.pb
 } RESULT]

@@ -250,11 +250,19 @@ function ISEOpenFile( ISEFilename ) {
       } else {
         WScript.StdErr.WriteLine("ERROR: Exception caught trying to open file " + ISEFullPath);
         var exceptionFilePath = ISERunDir + "/exception.log";
+<<<<<<< HEAD
         if (!ISEFileSys.FileExists(exceptionFilePath)) {
           WScript.StdErr.WriteLine("See file " + exceptionFilePath + " for details.");
           var exceptionFile = ISEFileSys.OpenTextFile(exceptionFilePath, 8, true);
           exceptionFile.WriteLine("ERROR: Exception caught trying to open file " + ISEFullPath);
           exceptionFile.WriteLine("\tException name: " + exception.name);
+=======
+        if (!ISEFileSys.FileExists(exceptionFilePath)) {
+          WScript.StdErr.WriteLine("See file " + exceptionFilePath + " for details.");
+          var exceptionFile = ISEFileSys.OpenTextFile(exceptionFilePath, 8, true);
+          exceptionFile.WriteLine("ERROR: Exception caught trying to open file " + ISEFullPath);
+          exceptionFile.WriteLine("\tException name: " + exception.name);
+>>>>>>> 52af1fa826306e8084a8722fa077dc0e9adaf89f
           exceptionFile.WriteLine("\tException error code: " + error_code);
           exceptionFile.WriteLine("\tException message: " + exception.message);
           exceptionFile.Close();
