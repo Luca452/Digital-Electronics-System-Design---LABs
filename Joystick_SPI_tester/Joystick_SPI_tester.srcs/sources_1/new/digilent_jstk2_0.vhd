@@ -19,13 +19,13 @@ entity digilent_jstk2 is
 		-- Data coming FROM the SPI IP-Core (and so, from the JSTK2 module)
 		-- There is no tready signal, so you must be always ready to accept and use the incoming data, or it will be lost!
 		s_axis_tvalid	: in STD_LOGIC;
-		s_axis_tdata	: in STD_LOGIC_VECTOR(7 downto 0);
+		s_axis_tdata	: in STD_LOGIC_VECTOR(7 downto 0)
 
 		-- Joystick and button values read from the module
-		jstk_x			: out std_logic_vector(9 downto 0);
-		jstk_y			: out std_logic_vector(9 downto 0);
-		btn_jstk		: out std_logic;
-		btn_trigger		: out std_logic
+		--jstk_x			: out std_logic_vector(9 downto 0);
+		--jstk_y			: out std_logic_vector(9 downto 0);
+		--btn_jstk		: out std_logic;
+		--btn_trigger		: out std_logic
 
 		-- LED color to send to the module
 		--led_r			: in std_logic_vector(7 downto 0);
