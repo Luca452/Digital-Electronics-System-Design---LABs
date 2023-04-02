@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# jstk_uart_bridge_0
+# digilent_jstk2, jstk_uart_bridge_0
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -163,6 +163,8 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set SPI_M_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:spi_rtl:1.0 SPI_M_0 ]
+
   set usb_uart [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart ]
 
 
@@ -183,14 +185,35 @@ proc create_root_design { parentCell } {
    CONFIG.USE_BOARD_FLOW {true} \
  ] $AXI4Stream_UART_0
 
+  # Create instance: axi4stream_spi_master_0, and set properties
+  set axi4stream_spi_master_0 [ create_bd_cell -type ip -vlnv DigiLAB:ip:axi4stream_spi_master:1.0 axi4stream_spi_master_0 ]
+  set_property -dict [ list \
+   CONFIG.c_clkfreq {100000000} \
+   CONFIG.c_sclkfreq {5000} \
+ ] $axi4stream_spi_master_0
+
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
+   CONFIG.CLKOUT1_JITTER {130.958} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100.000} \
    CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} \
    CONFIG.RESET_BOARD_INTERFACE {reset} \
    CONFIG.USE_BOARD_FLOW {true} \
  ] $clk_wiz_0
 
+  # Create instance: digilent_jstk2_0, and set properties
+  set block_name digilent_jstk2
+  set block_cell_name digilent_jstk2_0
+  if { [catch {set digilent_jstk2_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $digilent_jstk2_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: jstk_uart_bridge_0_0, and set properties
   set block_name jstk_uart_bridge_0
   set block_cell_name jstk_uart_bridge_0_0
@@ -206,13 +229,24 @@ proc create_root_design { parentCell } {
   set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
 
   # Create interface connections
+  connect_bd_intf_net -intf_net AXI4Stream_UART_0_M00_AXIS_RX [get_bd_intf_pins AXI4Stream_UART_0/M00_AXIS_RX] [get_bd_intf_pins jstk_uart_bridge_0_0/s_axis]
   connect_bd_intf_net -intf_net AXI4Stream_UART_0_UART [get_bd_intf_ports usb_uart] [get_bd_intf_pins AXI4Stream_UART_0/UART]
+  connect_bd_intf_net -intf_net axi4stream_spi_master_0_M_AXIS [get_bd_intf_pins axi4stream_spi_master_0/M_AXIS] [get_bd_intf_pins digilent_jstk2_0/s_axis]
+  connect_bd_intf_net -intf_net axi4stream_spi_master_0_SPI_M [get_bd_intf_ports SPI_M_0] [get_bd_intf_pins axi4stream_spi_master_0/SPI_M]
+  connect_bd_intf_net -intf_net digilent_jstk2_0_m_axis [get_bd_intf_pins axi4stream_spi_master_0/S_AXIS] [get_bd_intf_pins digilent_jstk2_0/m_axis]
   connect_bd_intf_net -intf_net jstk_uart_bridge_0_0_m_axis [get_bd_intf_pins AXI4Stream_UART_0/S00_AXIS_TX] [get_bd_intf_pins jstk_uart_bridge_0_0/m_axis]
 
   # Create port connections
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins AXI4Stream_UART_0/clk_uart] [get_bd_pins AXI4Stream_UART_0/m00_axis_rx_aclk] [get_bd_pins AXI4Stream_UART_0/s00_axis_tx_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins jstk_uart_bridge_0_0/aclk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins AXI4Stream_UART_0/clk_uart] [get_bd_pins AXI4Stream_UART_0/m00_axis_rx_aclk] [get_bd_pins AXI4Stream_UART_0/s00_axis_tx_aclk] [get_bd_pins axi4stream_spi_master_0/aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins digilent_jstk2_0/aclk] [get_bd_pins jstk_uart_bridge_0_0/aclk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins AXI4Stream_UART_0/m00_axis_rx_aresetn] [get_bd_pins AXI4Stream_UART_0/s00_axis_tx_aresetn] [get_bd_pins jstk_uart_bridge_0_0/aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net digilent_jstk2_0_btn_jstk [get_bd_pins digilent_jstk2_0/btn_jstk] [get_bd_pins jstk_uart_bridge_0_0/btn_jstk]
+  connect_bd_net -net digilent_jstk2_0_btn_trigger [get_bd_pins digilent_jstk2_0/btn_trigger] [get_bd_pins jstk_uart_bridge_0_0/btn_trigger]
+  connect_bd_net -net digilent_jstk2_0_jstk_x [get_bd_pins digilent_jstk2_0/jstk_x] [get_bd_pins jstk_uart_bridge_0_0/jstk_x]
+  connect_bd_net -net digilent_jstk2_0_jstk_y [get_bd_pins digilent_jstk2_0/jstk_y] [get_bd_pins jstk_uart_bridge_0_0/jstk_y]
+  connect_bd_net -net jstk_uart_bridge_0_0_led_b [get_bd_pins digilent_jstk2_0/led_b] [get_bd_pins jstk_uart_bridge_0_0/led_b]
+  connect_bd_net -net jstk_uart_bridge_0_0_led_g [get_bd_pins digilent_jstk2_0/led_g] [get_bd_pins jstk_uart_bridge_0_0/led_g]
+  connect_bd_net -net jstk_uart_bridge_0_0_led_r [get_bd_pins digilent_jstk2_0/led_r] [get_bd_pins jstk_uart_bridge_0_0/led_r]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins AXI4Stream_UART_0/m00_axis_rx_aresetn] [get_bd_pins AXI4Stream_UART_0/s00_axis_tx_aresetn] [get_bd_pins axi4stream_spi_master_0/aresetn] [get_bd_pins digilent_jstk2_0/aresetn] [get_bd_pins jstk_uart_bridge_0_0/aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net proc_sys_reset_0_peripheral_reset [get_bd_pins AXI4Stream_UART_0/rst] [get_bd_pins proc_sys_reset_0/peripheral_reset]
   connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/reset] [get_bd_pins proc_sys_reset_0/ext_reset_in]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]

@@ -1,0 +1,480 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr  1 10:29:54 2023
+# Process ID: 11156
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17252 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\LAB2\Test_UART_packet\Test_UART_packet.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+launch_runs test_UART_packet_digilent_jstk2_0_1_synth_1
+wait_on_run test_UART_packet_digilent_jstk2_0_1_synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+startgroup
+set_property -dict [list CONFIG.c_sclkfreq {66666}] [get_bd_cells axi4stream_spi_master_0]
+endgroup
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run test_UART_packet_axi4stream_spi_master_0_1_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+startgroup
+set_property package_pin "" [get_ports [list  SPI_M_0_io1_io]]
+place_ports SPI_M_0_io0_io J2
+endgroup
+place_ports SPI_M_0_io1_io L2
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+startgroup
+set_property package_pin "" [get_ports [list  SPI_M_0_io1_io]]
+place_ports SPI_M_0_io0_io L2
+endgroup
+place_ports SPI_M_0_io1_io J2
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+startgroup
+set_property -dict [list CONFIG.c_sclkfreq {5000}] [get_bd_cells axi4stream_spi_master_0]
+endgroup
+startgroup
+endgroup
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+startgroup
+endgroup
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run test_UART_packet_axi4stream_spi_master_0_1_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+connect_bd_net [get_bd_pins jstk_uart_bridge_0_0/led_r] [get_bd_pins digilent_jstk2_0/led_r]
+connect_bd_net [get_bd_pins jstk_uart_bridge_0_0/led_g] [get_bd_pins digilent_jstk2_0/led_g]
+connect_bd_net [get_bd_pins jstk_uart_bridge_0_0/led_b] [get_bd_pins digilent_jstk2_0/led_b]
+regenerate_bd_layout
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+launch_runs test_UART_packet_jstk_uart_bridge_0_0_1_synth_1
+wait_on_run test_UART_packet_jstk_uart_bridge_0_0_1_synth_1
+launch_runs test_UART_packet_digilent_jstk2_0_1_synth_1
+wait_on_run test_UART_packet_digilent_jstk2_0_1_synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+connect_bd_intf_net [get_bd_intf_pins jstk_uart_bridge_0_0/s_axis] [get_bd_intf_pins AXI4Stream_UART_0/M00_AXIS_RX]
+reset_run test_UART_packet_digilent_jstk2_0_1_synth_1
+launch_runs test_UART_packet_digilent_jstk2_0_1_synth_1
+wait_on_run test_UART_packet_digilent_jstk2_0_1_synth_1
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+launch_runs test_UART_packet_digilent_jstk2_0_1_synth_1
+wait_on_run test_UART_packet_digilent_jstk2_0_1_synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+launch_runs test_UART_packet_digilent_jstk2_0_1_synth_1
+wait_on_run test_UART_packet_digilent_jstk2_0_1_synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+regenerate_bd_layout
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+current_design rtl_1
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}]
+launch_runs test_UART_packet_jstk_uart_bridge_0_0_1_synth_1
+wait_on_run test_UART_packet_jstk_uart_bridge_0_0_1_synth_1
+launch_runs test_UART_packet_digilent_jstk2_0_1_synth_1
+wait_on_run test_UART_packet_digilent_jstk2_0_1_synth_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+startgroup
+set_property -dict [list CONFIG.c_sclkfreq {66666}] [get_bd_cells axi4stream_spi_master_0]
+endgroup
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+startgroup
+set_property -dict [list CONFIG.c_sclkfreq {5000}] [get_bd_cells axi4stream_spi_master_0]
+endgroup
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_jstk_uart_bridge_0_0_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+update_module_reference test_UART_packet_digilent_jstk2_0_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/impl_1/test_UART_packet_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

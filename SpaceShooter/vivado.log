@@ -75,3 +75,5 @@ INFO: [Common 17-17] undo 'regenerate_bd_layout'
 regenerate_bd_layout
 regenerate_bd_layout
 regenerate_bd_layout
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 18:56:23 2023...
