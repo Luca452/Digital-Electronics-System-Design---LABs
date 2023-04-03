@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Sun Apr  2 16:51:47 2023
+// Date        : Tue Apr  4 00:18:28 2023
 // Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {c:/Users/daido/Desktop/Polimi/Anno
 //               4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_digilent_jstk2_0_1/test_UART_packet_digilent_jstk2_0_1_stub.v}

@@ -70,7 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "test_UART_packet_digilent_jstk2_0_1_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 3
+set_param synth.incrementalSynthesisCache {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/.Xil/Vivado-348-DESKTOP-JKUPK39/incrSyn}
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000

@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity axis_lw_spi_master is
 	generic (
 		c_clkfreq 		: integer := 100_000_000;
-		c_sclkfreq 		: integer := 1_000_000;
+		c_sclkfreq 		: integer := 5_000;
 		c_cpol			: std_logic := '0';
 		c_cpha			: std_logic := '0'
 	);
@@ -30,8 +30,8 @@ architecture Behavioral of axis_lw_spi_master is
 
 	component lw_spi_master is
 		generic (
-			c_clkfreq 		: integer := 50_000_000;
-			c_sclkfreq 		: integer := 5_000_000;
+			c_clkfreq 		: integer := 100_000_000;
+			c_sclkfreq 		: integer := 5_000;
 			c_cpol			: std_logic := '0';
 			c_cpha			: std_logic := '0'
 		);

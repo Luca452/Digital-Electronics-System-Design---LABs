@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Sun Apr  2 16:19:13 2023
+// Date        : Mon Apr  3 23:51:06 2023
 // Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ test_UART_packet_jstk_uart_bridge_0_0_1_sim_netlist.v
@@ -23,11 +23,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     s_axis_tvalid,
     jstk_y,
     jstk_x,
-    m_axis_tready,
     aclk,
     s_axis_tdata,
     btn_jstk,
-    btn_trigger);
+    btn_trigger,
+    m_axis_tready);
   output [7:0]led_r;
   output [7:0]led_g;
   output [7:0]led_b;
@@ -38,27 +38,25 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
   input s_axis_tvalid;
   input [7:0]jstk_y;
   input [7:0]jstk_x;
-  input m_axis_tready;
   input aclk;
   input [7:0]s_axis_tdata;
   input btn_jstk;
   input btn_trigger;
+  input m_axis_tready;
 
   wire \FSM_sequential_rx_state[0]_i_1_n_0 ;
   wire \FSM_sequential_rx_state[1]_i_1_n_0 ;
-  wire \FSM_sequential_rx_state[1]_i_2_n_0 ;
-  wire \FSM_sequential_rx_state[1]_i_3_n_0 ;
   wire \FSM_sequential_rx_state[2]_i_1_n_0 ;
-  wire \FSM_sequential_tx_state[0]_i_1_n_0 ;
+  wire \FSM_sequential_rx_state[2]_i_2_n_0 ;
+  wire \FSM_sequential_rx_state[2]_i_3_n_0 ;
   wire \FSM_sequential_tx_state[0]_i_2_n_0 ;
   wire \FSM_sequential_tx_state[0]_i_3_n_0 ;
   wire \FSM_sequential_tx_state[0]_i_4_n_0 ;
   wire \FSM_sequential_tx_state[0]_i_5_n_0 ;
   wire \FSM_sequential_tx_state[0]_i_6_n_0 ;
   wire \FSM_sequential_tx_state[0]_i_7_n_0 ;
-  wire \FSM_sequential_tx_state[1]_i_1_n_0 ;
   wire \FSM_sequential_tx_state[2]_i_1_n_0 ;
-  wire \FSM_sequential_tx_state[2]_i_2_n_0 ;
+  wire \FSM_sequential_tx_state[2]_i_3_n_0 ;
   wire aclk;
   wire aresetn;
   wire btn_jstk;
@@ -105,8 +103,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
   wire \counter_delay_reg_n_0_[8] ;
   wire \counter_delay_reg_n_0_[9] ;
   wire [19:1]data0;
-  wire data_ready0;
-  wire data_ready_reg_n_0;
+  wire data_ready_rx0;
+  wire data_ready_rx_reg_n_0;
   wire [7:0]jstk_x;
   wire [7:0]jstk_y;
   wire [7:0]led_b;
@@ -151,90 +149,93 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
   wire \m_axis_tdata[7]_i_2_n_0 ;
   wire m_axis_tready;
   wire m_axis_tvalid;
-  wire [2:0]rx_state;
+  wire [2:0]rx_state__0;
   wire [7:0]s_axis_tdata;
   wire s_axis_tready;
   wire s_axis_tvalid;
   wire [2:0]tx_state;
+  wire [2:0]tx_state__0;
   wire [3:2]NLW_counter_delay0_carry__3_CO_UNCONNECTED;
   wire [3:3]NLW_counter_delay0_carry__3_O_UNCONNECTED;
 
   LUT6 #(
-    .INIT(64'hDFDDDFDF22222222)) 
+    .INIT(64'hFFF70008FFF70808)) 
     \FSM_sequential_rx_state[0]_i_1 
        (.I0(s_axis_tvalid),
-        .I1(rx_state[2]),
-        .I2(rx_state[1]),
-        .I3(\FSM_sequential_rx_state[1]_i_2_n_0 ),
-        .I4(\FSM_sequential_rx_state[1]_i_3_n_0 ),
-        .I5(rx_state[0]),
+        .I1(aresetn),
+        .I2(rx_state__0[2]),
+        .I3(\FSM_sequential_rx_state[2]_i_2_n_0 ),
+        .I4(rx_state__0[0]),
+        .I5(rx_state__0[1]),
         .O(\FSM_sequential_rx_state[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hD0D2D0D0F0F0F0F0)) 
+    .INIT(64'hFFF7FFFF00080000)) 
     \FSM_sequential_rx_state[1]_i_1 
        (.I0(s_axis_tvalid),
-        .I1(rx_state[2]),
-        .I2(rx_state[1]),
-        .I3(\FSM_sequential_rx_state[1]_i_2_n_0 ),
-        .I4(\FSM_sequential_rx_state[1]_i_3_n_0 ),
-        .I5(rx_state[0]),
+        .I1(aresetn),
+        .I2(rx_state__0[2]),
+        .I3(\FSM_sequential_rx_state[2]_i_2_n_0 ),
+        .I4(rx_state__0[0]),
+        .I5(rx_state__0[1]),
         .O(\FSM_sequential_rx_state[1]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    \FSM_sequential_rx_state[1]_i_2 
-       (.I0(s_axis_tdata[6]),
-        .I1(s_axis_tdata[3]),
-        .I2(s_axis_tdata[0]),
-        .I3(s_axis_tdata[4]),
-        .O(\FSM_sequential_rx_state[1]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h0010)) 
-    \FSM_sequential_rx_state[1]_i_3 
-       (.I0(s_axis_tdata[1]),
-        .I1(s_axis_tdata[5]),
-        .I2(s_axis_tdata[7]),
-        .I3(s_axis_tdata[2]),
-        .O(\FSM_sequential_rx_state[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'hECC4)) 
+  LUT6 #(
+    .INIT(64'hF0F8F0F0F0F07070)) 
     \FSM_sequential_rx_state[2]_i_1 
        (.I0(s_axis_tvalid),
-        .I1(rx_state[2]),
-        .I2(rx_state[1]),
-        .I3(rx_state[0]),
+        .I1(aresetn),
+        .I2(rx_state__0[2]),
+        .I3(\FSM_sequential_rx_state[2]_i_2_n_0 ),
+        .I4(rx_state__0[0]),
+        .I5(rx_state__0[1]),
         .O(\FSM_sequential_rx_state[2]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000FFFFFFF7)) 
+    \FSM_sequential_rx_state[2]_i_2 
+       (.I0(\FSM_sequential_rx_state[2]_i_3_n_0 ),
+        .I1(s_axis_tdata[7]),
+        .I2(s_axis_tdata[2]),
+        .I3(s_axis_tdata[1]),
+        .I4(s_axis_tdata[5]),
+        .I5(rx_state__0[1]),
+        .O(\FSM_sequential_rx_state[2]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h0010)) 
+    \FSM_sequential_rx_state[2]_i_3 
+       (.I0(s_axis_tdata[0]),
+        .I1(s_axis_tdata[4]),
+        .I2(s_axis_tdata[6]),
+        .I3(s_axis_tdata[3]),
+        .O(\FSM_sequential_rx_state[2]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "idle:000,get_header:001,get_led_r:010,get_led_g:011,get_led_b:100," *) 
-  FDCE \FSM_sequential_rx_state_reg[0] 
+  FDRE \FSM_sequential_rx_state_reg[0] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_tx_state[2]_i_2_n_0 ),
         .D(\FSM_sequential_rx_state[0]_i_1_n_0 ),
-        .Q(rx_state[0]));
+        .Q(rx_state__0[0]),
+        .R(1'b0));
   (* FSM_ENCODED_STATES = "idle:000,get_header:001,get_led_r:010,get_led_g:011,get_led_b:100," *) 
-  FDCE \FSM_sequential_rx_state_reg[1] 
+  FDRE \FSM_sequential_rx_state_reg[1] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_tx_state[2]_i_2_n_0 ),
         .D(\FSM_sequential_rx_state[1]_i_1_n_0 ),
-        .Q(rx_state[1]));
+        .Q(rx_state__0[1]),
+        .R(1'b0));
   (* FSM_ENCODED_STATES = "idle:000,get_header:001,get_led_r:010,get_led_g:011,get_led_b:100," *) 
-  FDCE \FSM_sequential_rx_state_reg[2] 
+  FDRE \FSM_sequential_rx_state_reg[2] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\FSM_sequential_tx_state[2]_i_2_n_0 ),
         .D(\FSM_sequential_rx_state[2]_i_1_n_0 ),
-        .Q(rx_state[2]));
+        .Q(rx_state__0[2]),
+        .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'hFF0033CA)) 
+  LUT4 #(
+    .INIT(16'h000E)) 
     \FSM_sequential_tx_state[0]_i_1 
        (.I0(\FSM_sequential_tx_state[0]_i_2_n_0 ),
-        .I1(m_axis_tready),
-        .I2(tx_state[1]),
+        .I1(tx_state[1]),
+        .I2(tx_state[2]),
         .I3(tx_state[0]),
-        .I4(tx_state[2]),
-        .O(\FSM_sequential_tx_state[0]_i_1_n_0 ));
+        .O(tx_state__0[0]));
   LUT5 #(
     .INIT(32'h00000004)) 
     \FSM_sequential_tx_state[0]_i_2 
@@ -268,7 +269,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .I2(\counter_delay_reg_n_0_[5] ),
         .I3(\counter_delay_reg_n_0_[1] ),
         .O(\FSM_sequential_tx_state[0]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'hFFDF)) 
     \FSM_sequential_tx_state[0]_i_6 
@@ -285,54 +286,60 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .I2(\counter_delay_reg_n_0_[16] ),
         .I3(\counter_delay_reg_n_0_[13] ),
         .O(\FSM_sequential_tx_state[0]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'hCC6C)) 
+  LUT3 #(
+    .INIT(8'h06)) 
     \FSM_sequential_tx_state[1]_i_1 
-       (.I0(m_axis_tready),
-        .I1(tx_state[1]),
-        .I2(tx_state[0]),
-        .I3(tx_state[2]),
-        .O(\FSM_sequential_tx_state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+       (.I0(tx_state[1]),
+        .I1(tx_state[0]),
+        .I2(tx_state[2]),
+        .O(tx_state__0[1]));
   LUT4 #(
-    .INIT(16'hFD80)) 
+    .INIT(16'h02AB)) 
     \FSM_sequential_tx_state[2]_i_1 
        (.I0(m_axis_tready),
         .I1(tx_state[1]),
         .I2(tx_state[0]),
         .I3(tx_state[2]),
         .O(\FSM_sequential_tx_state[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \FSM_sequential_tx_state[2]_i_2 
+       (.I0(tx_state[0]),
+        .I1(tx_state[1]),
+        .I2(tx_state[2]),
+        .O(tx_state__0[2]));
   LUT1 #(
     .INIT(2'h1)) 
-    \FSM_sequential_tx_state[2]_i_2 
+    \FSM_sequential_tx_state[2]_i_3 
        (.I0(aresetn),
-        .O(\FSM_sequential_tx_state[2]_i_2_n_0 ));
+        .O(\FSM_sequential_tx_state[2]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "send_jstk_x:010,send_jstk_y:011,send_buttons:100,delay:000,send_header:001" *) 
   FDCE #(
     .INIT(1'b0)) 
     \FSM_sequential_tx_state_reg[0] 
        (.C(aclk),
-        .CE(1'b1),
-        .CLR(\FSM_sequential_tx_state[2]_i_2_n_0 ),
-        .D(\FSM_sequential_tx_state[0]_i_1_n_0 ),
+        .CE(\FSM_sequential_tx_state[2]_i_1_n_0 ),
+        .CLR(\FSM_sequential_tx_state[2]_i_3_n_0 ),
+        .D(tx_state__0[0]),
         .Q(tx_state[0]));
   (* FSM_ENCODED_STATES = "send_jstk_x:010,send_jstk_y:011,send_buttons:100,delay:000,send_header:001" *) 
   FDCE #(
     .INIT(1'b0)) 
     \FSM_sequential_tx_state_reg[1] 
        (.C(aclk),
-        .CE(1'b1),
-        .CLR(\FSM_sequential_tx_state[2]_i_2_n_0 ),
-        .D(\FSM_sequential_tx_state[1]_i_1_n_0 ),
+        .CE(\FSM_sequential_tx_state[2]_i_1_n_0 ),
+        .CLR(\FSM_sequential_tx_state[2]_i_3_n_0 ),
+        .D(tx_state__0[1]),
         .Q(tx_state[1]));
   (* FSM_ENCODED_STATES = "send_jstk_x:010,send_jstk_y:011,send_buttons:100,delay:000,send_header:001" *) 
   FDCE #(
     .INIT(1'b0)) 
     \FSM_sequential_tx_state_reg[2] 
        (.C(aclk),
-        .CE(1'b1),
-        .CLR(\FSM_sequential_tx_state[2]_i_2_n_0 ),
-        .D(\FSM_sequential_tx_state[2]_i_1_n_0 ),
+        .CE(\FSM_sequential_tx_state[2]_i_1_n_0 ),
+        .CLR(\FSM_sequential_tx_state[2]_i_3_n_0 ),
+        .D(tx_state__0[2]),
         .Q(tx_state[2]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 counter_delay0_carry
@@ -374,7 +381,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({NLW_counter_delay0_carry__3_O_UNCONNECTED[3],data0[19:17]}),
         .S({1'b0,\counter_delay_reg_n_0_[19] ,\counter_delay_reg_n_0_[18] ,\counter_delay_reg_n_0_[17] }));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \counter_delay[0]_i_1 
@@ -519,19 +526,19 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .R(\counter_delay[19]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
-    data_ready_reg
+    data_ready_rx_reg
        (.C(aclk),
-        .CE(data_ready0),
-        .CLR(data_ready_reg_n_0),
+        .CE(data_ready_rx0),
+        .CLR(data_ready_rx_reg_n_0),
         .D(s_axis_tvalid),
-        .Q(data_ready_reg_n_0));
+        .Q(data_ready_rx_reg_n_0));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \led_b_reg[0] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[0] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[0]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -540,7 +547,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_b_reg[1] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[1] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[1]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -549,7 +556,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_b_reg[2] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[2] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[2]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -558,7 +565,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_b_reg[3] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[3] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[3]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -567,7 +574,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_b_reg[4] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[4] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[4]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -576,7 +583,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_b_reg[5] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[5] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[5]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -585,7 +592,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_b_reg[6] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[6] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[6]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -594,63 +601,63 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_b_reg[7] 
        (.CLR(1'b0),
         .D(\led_b_reg_reg_n_0_[7] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_b[7]));
   LUT5 #(
     .INIT(32'h00000080)) 
     \led_b_reg[7]_i_1 
-       (.I0(rx_state[2]),
-        .I1(aresetn),
-        .I2(s_axis_tvalid),
-        .I3(rx_state[1]),
-        .I4(rx_state[0]),
-        .O(data_ready0));
+       (.I0(aresetn),
+        .I1(s_axis_tvalid),
+        .I2(rx_state__0[2]),
+        .I3(rx_state__0[1]),
+        .I4(rx_state__0[0]),
+        .O(data_ready_rx0));
   FDRE \led_b_reg_reg[0] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[0]),
         .Q(\led_b_reg_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \led_b_reg_reg[1] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[1]),
         .Q(\led_b_reg_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \led_b_reg_reg[2] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[2]),
         .Q(\led_b_reg_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \led_b_reg_reg[3] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[3]),
         .Q(\led_b_reg_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \led_b_reg_reg[4] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[4]),
         .Q(\led_b_reg_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \led_b_reg_reg[5] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[5]),
         .Q(\led_b_reg_reg_n_0_[5] ),
         .R(1'b0));
   FDRE \led_b_reg_reg[6] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[6]),
         .Q(\led_b_reg_reg_n_0_[6] ),
         .R(1'b0));
   FDRE \led_b_reg_reg[7] 
        (.C(aclk),
-        .CE(data_ready0),
+        .CE(data_ready_rx0),
         .D(s_axis_tdata[7]),
         .Q(\led_b_reg_reg_n_0_[7] ),
         .R(1'b0));
@@ -660,7 +667,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[0] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[0] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[0]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -669,7 +676,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[1] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[1] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[1]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -678,7 +685,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[2] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[2] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[2]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -687,7 +694,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[3] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[3] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[3]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -696,7 +703,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[4] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[4] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[4]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -705,7 +712,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[5] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[5] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[5]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -714,7 +721,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[6] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[6] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[6]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -723,7 +730,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[7] 
        (.CLR(1'b0),
         .D(\led_g_reg_reg_n_0_[7] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_g[7]));
   LUT5 #(
@@ -731,9 +738,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_g_reg[7]_i_1 
        (.I0(s_axis_tvalid),
         .I1(aresetn),
-        .I2(rx_state[0]),
-        .I3(rx_state[1]),
-        .I4(rx_state[2]),
+        .I2(rx_state__0[0]),
+        .I3(rx_state__0[1]),
+        .I4(rx_state__0[2]),
         .O(led_g_reg0));
   FDRE \led_g_reg_reg[0] 
        (.C(aclk),
@@ -789,7 +796,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[0] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[0] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[0]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -798,7 +805,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[1] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[1] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[1]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -807,7 +814,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[2] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[2] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[2]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -816,7 +823,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[3] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[3] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[3]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -825,7 +832,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[4] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[4] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[4]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -834,7 +841,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[5] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[5] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[5]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -843,7 +850,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[6] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[6] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[6]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -852,17 +859,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
     \led_r_reg[7] 
        (.CLR(1'b0),
         .D(\led_r_reg_reg_n_0_[7] ),
-        .G(data_ready_reg_n_0),
+        .G(data_ready_rx_reg_n_0),
         .GE(1'b1),
         .Q(led_r[7]));
   LUT5 #(
     .INIT(32'h10000000)) 
     \led_r_reg[7]_i_1 
-       (.I0(rx_state[2]),
-        .I1(rx_state[0]),
+       (.I0(rx_state__0[2]),
+        .I1(rx_state__0[0]),
         .I2(aresetn),
         .I3(s_axis_tvalid),
-        .I4(rx_state[1]),
+        .I4(rx_state__0[1]),
         .O(\led_r_reg[7]_i_1_n_0 ));
   FDRE \led_r_reg_reg[0] 
        (.C(aclk),
@@ -932,7 +939,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .I4(btn_trigger),
         .I5(tx_state[1]),
         .O(\m_axis_tdata[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[2]_i_1 
@@ -940,7 +947,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .I1(tx_state[0]),
         .I2(jstk_x[2]),
         .O(\m_axis_tdata[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[3]_i_1 
@@ -948,7 +955,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .I1(tx_state[0]),
         .I2(jstk_x[3]),
         .O(\m_axis_tdata[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[4]_i_1 
@@ -964,7 +971,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .I2(tx_state[1]),
         .I3(aresetn),
         .O(\m_axis_tdata[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[5]_i_2 
@@ -1055,13 +1062,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jstk_uart_bridge_0
         .I1(tx_state[2]),
         .I2(tx_state[0]),
         .O(m_axis_tvalid));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     s_axis_tready_INST_0
-       (.I0(rx_state[2]),
-        .I1(rx_state[1]),
-        .I2(rx_state[0]),
+       (.I0(rx_state__0[1]),
+        .I1(rx_state__0[2]),
+        .I2(rx_state__0[0]),
         .O(s_axis_tready));
 endmodule
 
@@ -1121,8 +1127,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .aresetn(aresetn),
         .btn_jstk(btn_jstk),
         .btn_trigger(btn_trigger),
-        .jstk_x(jstk_x[9:2]),
-        .jstk_y(jstk_y[9:2]),
+        .jstk_x(jstk_x[8:1]),
+        .jstk_y(jstk_y[8:1]),
         .led_b(led_b),
         .led_g(led_g),
         .led_r(led_r),

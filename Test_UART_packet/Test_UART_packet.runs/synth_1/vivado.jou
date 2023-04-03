@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Apr  2 17:40:47 2023
-# Process ID: 26108
+# Start of session at: Tue Apr  4 00:18:31 2023
+# Process ID: 30868
 # Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/synth_1
 # Command line: vivado.exe -log test_UART_packet_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_UART_packet_wrapper.tcl
 # Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/synth_1/test_UART_packet_wrapper.vds

@@ -5,7 +5,7 @@ entity digilent_jstk2 is
 	generic (
 		DELAY_US		: integer := 25;    -- Delay (in us) between two packets
 		CLKFREQ		 	: integer := 100_000_000;  -- Frequency of the aclk signal (in Hz)
-		SPI_SCLKFREQ 	: integer := 5000 -- Frequency of the SPI SCLK clock signal (in Hz)
+		SPI_SCLKFREQ 	: integer := 5_000 -- Frequency of the SPI SCLK clock signal (in Hz)
 	);
 	Port (
 		aclk 			: in  STD_LOGIC;
@@ -80,9 +80,9 @@ begin
     begin
         if aresetn = '0' then
 
-            state_cmd <= WAIT_DELAY;
-            next_state_cmd <= SEND_CMD;
-            tx_delay_counter <= 0;
+            --state_cmd <= WAIT_DELAY;
+            --next_state_cmd <= SEND_CMD;
+            --tx_delay_counter <= 0;
 
         elsif rising_edge(aclk) then
 
@@ -98,6 +98,7 @@ begin
                         state_cmd <= DELAY_BYTE;
                         next_state_cmd <= SEND_CMD; 
                     else
+                        m_axis_tdata <= CMDSETLEDRGB;
                         tx_delay_counter <= tx_delay_counter + 1;
                         state_cmd <= WAIT_DELAY;
                     end if;
@@ -120,16 +121,15 @@ begin
                         state_cmd <= DELAY_BYTE;
                     end if;
 
-
                 when SEND_RED =>
-                    m_axis_tdata <= x"FF";
+                    m_axis_tdata <= led_r;
                     if m_axis_tready = '1' then
                         next_state_cmd <= SEND_GREEN;
                         state_cmd <= DELAY_BYTE;
                     end if;
 
                 when SEND_GREEN =>
-                    m_axis_tdata <= x"FF";
+                    m_axis_tdata <= led_g;
                     if m_axis_tready = '1' then
                         next_state_cmd <= SEND_BLUE;
                         state_cmd <= DELAY_BYTE;
@@ -137,7 +137,7 @@ begin
 
 
                 when SEND_BLUE =>
-                    m_axis_tdata <= x"FF";
+                    m_axis_tdata <= led_b;
                     if m_axis_tready = '1' then
                         next_state_cmd <= SEND_DUMMY;
                         state_cmd <= DELAY_BYTE;
@@ -146,8 +146,8 @@ begin
                 when SEND_DUMMY =>
                     m_axis_tdata <= x"00";
                     if m_axis_tready = '1' then
-                        state_cmd <= DELAY_BYTE;
                         next_state_cmd <= WAIT_DELAY;
+                        state_cmd <= DELAY_BYTE;
                     end if;
             end case;
         end if;
@@ -159,7 +159,7 @@ begin
     begin
         if (aresetn = '0') then
 
-            state_sts <= GET_X_LSB;
+            --state_sts <= GET_X_LSB;
 
         elsif rising_edge(aclk) then
 

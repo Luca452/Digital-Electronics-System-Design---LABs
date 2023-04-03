@@ -4,8 +4,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity lw_spi_master is
 generic (
-	c_clkfreq 			: integer := 50_000_000;
-	c_sclkfreq 			: integer := 5_000_000;
+	c_clkfreq 			: integer := 100_000_000;
+	c_sclkfreq 			: integer := 5_000;
 	c_cpol				: std_logic := '0';
 	c_cpha				: std_logic := '0'
 );
