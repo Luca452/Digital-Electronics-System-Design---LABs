@@ -3,9 +3,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity jstk_uart_bridge_0 is
 	generic (
-		HEADER_CODE		: std_logic_vector(7 downto 0) := x"c0"; -- Header of the packet
-		TX_DELAY		: positive := 1_000_000    -- Pause (in clock cycles) between two packets
-		--JSTK_BITS		: integer range 1 to 7 := 7    -- Number of bits of the joystick axis to transfer to the PC 
+		HEADER_CODE		: std_logic_vector(7 downto 0) := x"c0";     -- Header of the packet
+		TX_DELAY		: positive := 1_000_000;                     -- Pause (in clock cycles) between two packets
+		-- TODO number of bits variable
+		JSTK_BITS		: integer range 1 to 7 := 7                  -- Number of bits of the joystick axis to transfer to the PC 
 	);
 	Port ( 
 		aclk 			: in  STD_LOGIC;
@@ -36,6 +37,7 @@ architecture Behavioral of jstk_uart_bridge_0 is
 
     signal counter_delay : natural range 0 to TX_DELAY;
     signal data_ready_rx : std_logic := '0';
+    
     signal led_r_reg : std_logic_vector(7 downto 0);
     signal led_g_reg : std_logic_vector(7 downto 0);
     signal led_b_reg : std_logic_vector(7 downto 0);
@@ -51,11 +53,12 @@ architecture Behavioral of jstk_uart_bridge_0 is
     --------------------------------------------
 	
 begin
-
+    -- set the tvalid on the axis stream to 0 during the wait period, to 1 otherwise
     with tx_state select m_axis_tvalid <= 
             '0' when DELAY,
             '1' when others; 
 
+    -- handle the TX part over UART towards the PC, by sending the data on the axi-stream to the UART IP
     FSM_TX : process(aclk ,aresetn)
     begin
 
@@ -63,9 +66,13 @@ begin
 
 
         elsif rising_edge(aclk) then
+            
+            -- states that define what data is put onto the axi-stream
 
             case tx_state is
 
+                -- in this state we count the clock cycles until we reach the value set by the generic
+                -- at this point we put the Header Code on the data line and change state
                 when DELAY => 
                     if counter_delay = TX_DELAY then
                         counter_delay <= 0;
@@ -75,14 +82,17 @@ begin
                         counter_delay <= counter_delay + 1;
                         tx_state <= DELAY;
                     end if;
-                -- we are not waiting for the tready to send data!!!! the data is already on the tdata line, when tready = 1 we prepare the data for the next tready!!
+                    
+                -- we are not waiting for the tready to send data!!!!
+                -- the data is already on the tdata line, when tready = 1 we prepare the data for the next tready!!
+                -- and change to the following state
                 when SEND_HEADER =>
                     if m_axis_tready = '1' then 
                         tx_state <= SEND_JSTK_X;
                         m_axis_tdata(6 downto 0) <= jstk_x(9 downto 3);
                         m_axis_tdata(7) <= '0';
                     end if;
-                        
+                    
                 when SEND_JSTK_X =>
                     if m_axis_tready = '1' then 
                         tx_state <= SEND_JSTK_Y;
@@ -93,7 +103,7 @@ begin
                 when SEND_JSTK_Y =>
                     if m_axis_tready = '1' then 
                         tx_state <= SEND_BUTTONS;
-                        m_axis_tdata<= (0 => btn_jstk, 1 => btn_trigger, others => '0'); 
+                        m_axis_tdata <= (0 => btn_jstk, 1 => btn_trigger, others => '0'); 
                     end if;
 
                 when SEND_BUTTONS =>
@@ -108,15 +118,20 @@ begin
     end process;
 
 
+    -- change tready based on the state it is in
+    -- pull it low if idling, high elseways
     with rx_state select s_axis_tready <= 
         '0' when IDLE,
         '1' when others; 
 
+    -- process handling the different rx states on clock edge
     FSM_RX : process(aclk, aresetn)
     begin
         if aresetn = '0' then
 
         elsif rising_edge(aclk) then
+        
+            -- change to the next state if the data on the axi-stream is valid 
             case rx_state is
 
                 when IDLE =>
@@ -125,10 +140,13 @@ begin
                     end if;
 
                 when GET_HEADER =>
-                    if s_axis_tvalid = '1' and s_axis_tdata = x"c0" then
+                    -- only change to the next state if the data is equal to the Header code
+                    if s_axis_tvalid = '1' and s_axis_tdata = HEADER_CODE then
                         rx_state <= GET_LED_R;
                     end if;
                     
+                -- save the received data for the led color in the apropriate register
+                -- when the last byte is received set the data_ready_rx to 1, to trigger the update of the led color
                 when GET_LED_R =>
                     if s_axis_tvalid = '1' then
                         led_r_reg <= s_axis_tdata;
@@ -151,6 +169,8 @@ begin
             end case;     
         end if;
 
+
+        -- when all three color bytes have been received, asign the right color to the led output
         if data_ready_rx = '1' then
             data_ready_rx <= '0';
             led_r <= led_r_reg;
