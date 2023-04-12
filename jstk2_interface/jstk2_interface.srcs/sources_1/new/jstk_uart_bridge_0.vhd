@@ -4,8 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity jstk_uart_bridge_0 is
 	generic (
 		HEADER_CODE		: std_logic_vector(7 downto 0) := x"c0";     -- Header of the packet
-		TX_DELAY		: positive := 1_000_000;                     -- Pause (in clock cycles) between two packets
-		-- TODO number of bits variable
+		TX_DELAY		: positive := 1_000_000;                     -- Pause (in clock cycles) between two packets	
 		JSTK_BITS		: integer range 1 to 7 := 7                  -- Number of bits of the joystick axis to transfer to the PC 
 	);
 	Port ( 
@@ -89,15 +88,15 @@ begin
                 when SEND_HEADER =>
                     if m_axis_tready = '1' then 
                         tx_state <= SEND_JSTK_X;
-                        m_axis_tdata(6 downto 0) <= jstk_x(9 downto 3);
-                        m_axis_tdata(7) <= '0';
+                        m_axis_tdata((JSTK_BITS-1) downto 0) <= jstk_x(9 downto (10-JSTK_BITS));
+                        m_axis_tdata(JSTK_BITS) <= '0';
                     end if;
                     
                 when SEND_JSTK_X =>
                     if m_axis_tready = '1' then 
                         tx_state <= SEND_JSTK_Y;
-                        m_axis_tdata(6 downto 0) <= jstk_y(9 downto 3);
-                        m_axis_tdata(7) <= '0';
+                        m_axis_tdata((JSTK_BITS-1) downto 0) <= jstk_y(9 downto (10-JSTK_BITS));
+                        m_axis_tdata(JSTK_BITS) <= '0';
                     end if;
 
                 when SEND_JSTK_Y =>
