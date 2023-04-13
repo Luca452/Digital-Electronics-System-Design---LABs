@@ -89,14 +89,14 @@ begin
                     if m_axis_tready = '1' then 
                         tx_state <= SEND_JSTK_X;
                         m_axis_tdata((JSTK_BITS-1) downto 0) <= jstk_x(9 downto (10-JSTK_BITS));
-                        m_axis_tdata(JSTK_BITS) <= '0';
+                        m_axis_tdata(m_axis_tdata'HIGH downto JSTK_BITS) <= (Others => '0');
                     end if;
                     
                 when SEND_JSTK_X =>
                     if m_axis_tready = '1' then 
                         tx_state <= SEND_JSTK_Y;
                         m_axis_tdata((JSTK_BITS-1) downto 0) <= jstk_y(9 downto (10-JSTK_BITS));
-                        m_axis_tdata(JSTK_BITS) <= '0';
+                        m_axis_tdata(m_axis_tdata'HIGH downto JSTK_BITS) <= (Others => '0');
                     end if;
 
                 when SEND_JSTK_Y =>

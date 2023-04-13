@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity digilent_jstk2 is
 	generic (
-		DELAY_US		: integer := 25;    -- Delay (in us) between two packets
-		CLKFREQ		 	: integer := 100_000_000;  -- Frequency of the aclk signal (in Hz)
-		SPI_SCLKFREQ 	: integer := 5_000 -- Frequency of the SPI SCLK clock signal (in Hz)
+		DELAY_US		: integer := 25;            -- Delay (in us) between two packets
+		CLKFREQ		 	: integer := 100_000_000;   -- Frequency of the aclk signal (in Hz)
+		SPI_SCLKFREQ 	: integer := 5_000          -- Frequency of the SPI SCLK clock signal (in Hz)
 	);
 	Port (
 		aclk 			: in  STD_LOGIC;
@@ -51,13 +51,17 @@ architecture Behavioral of digilent_jstk2 is
 	-- Inter-packet delay plus the time needed to transfer 1 byte (for the CS de-assertion)
 	constant DELAY_CYCLES		: integer := DELAY_US * (CLKFREQ / 1_000_000) + CLKFREQ / SPI_SCLKFREQ;
 
-    -- Interbyte delay set to 25us as suggested on the datasheet
-    constant DELAY_INTERBYTE    : integer := 2500;
+    -- DELAY_US is the Interbyte delay in us
+    -- The datasheet suggests at minimum 10us for interbyte and 25us after Chip-Select
+    -- since we change the tvalid, the SPI-Core will change the CS, so we have to take that into consideration
+    constant DELAY_INTERBYTE    : integer := DELAY_US * (CLKFREQ / 1_000_000);
 
     -- counter that counts the clock cycles befor passing on from the wait state in the TX process 
     signal tx_delay_counter     : natural range 0 to DELAY_CYCLES; 
 
     -- state signal for the outgoing data to the joystick
+    -- state_cmd state we are in 
+    -- next_state_cmd next state we want to enter, even if there is delay in between
 	------------------------------------------------------------
 	type state_cmd_type is (WAIT_DELAY, DELAY_BYTE, SEND_CMD, SEND_RED, SEND_GREEN, SEND_BLUE, SEND_DUMMY);
 	signal state_cmd			: state_cmd_type := WAIT_DELAY;
@@ -88,9 +92,11 @@ begin
             -- act depending on the state we are in
             case state_cmd is
 
-                -- if we are in the wait phase between two packets, 
+                -- if we are in a wait phase, 
                 -- increment a counter every clock front until the wait time has elapsed. 
                 -- Then change state to sending the command
+
+                -- wait phase between two packets
                 when WAIT_DELAY =>
                     if tx_delay_counter = DELAY_CYCLES then
                         tx_delay_counter <= 0;
@@ -101,6 +107,7 @@ begin
                         state_cmd <= WAIT_DELAY;
                     end if;
 
+                -- wait phase between two bytes
                 when DELAY_BYTE => 
                     if tx_delay_counter = DELAY_INTERBYTE then
                         tx_delay_counter <= 0;
