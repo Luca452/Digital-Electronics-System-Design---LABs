@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Apr  5 22:00:16 2023
+| Date             : Thu Apr 13 23:41:06 2023
 | Host             : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 | Command          : report_power -file test_UART_packet_wrapper_power_routed.rpt -pb test_UART_packet_wrapper_power_summary_routed.pb -rpx test_UART_packet_wrapper_power_routed.rpx
 | Design           : test_UART_packet_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.190        |
+| Total On-Chip Power (W)  | 0.189        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.118        |
+| Dynamic (W)              | 0.117        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.005 |        5 |       --- |             --- |
-| Slice Logic             |     0.002 |     1220 |       --- |             --- |
-|   LUT as Logic          |     0.002 |      336 |     20800 |            1.62 |
+| Slice Logic             |     0.002 |     1208 |       --- |             --- |
+|   LUT as Logic          |     0.002 |      326 |     20800 |            1.57 |
 |   Register              |    <0.001 |      662 |     41600 |            1.59 |
 |   CARRY4                |    <0.001 |       55 |      8150 |            0.67 |
 |   Others                |     0.000 |       81 |       --- |             --- |
 |   LUT as Shift Register |     0.000 |        1 |      9600 |            0.01 |
-| Signals                 |     0.002 |      856 |       --- |             --- |
+| Signals                 |     0.002 |      848 |       --- |             --- |
 | Block RAM               |     0.001 |        1 |        50 |            2.00 |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
-| I/O                     |     0.002 |        8 |       106 |            7.55 |
+| I/O                     |     0.001 |        8 |       106 |            7.55 |
 | Static Power            |     0.072 |          |           |                 |
-| Total                   |     0.190 |          |           |                 |
+| Total                   |     0.189 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.020 |       0.010 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,8 +145,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| test_UART_packet_wrapper |     0.118 |
-|   SPI_M_0_io0_iobuf      |     0.002 |
+| test_UART_packet_wrapper |     0.117 |
 |   test_UART_packet_i     |     0.116 |
 |     AXI4Stream_UART_0    |     0.007 |
 |       U0                 |     0.007 |

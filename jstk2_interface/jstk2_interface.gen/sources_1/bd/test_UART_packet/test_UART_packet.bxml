@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="test_UART_packet" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1680724415"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1680724415"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1680724415"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1680724415"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1681421799"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1681421799"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1681421799"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1681421799"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\test_UART_packet.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr  5 21:58:35 2023
-# Process ID: 26028
-# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/synth_1
+# Start of session at: Thu Apr 13 23:37:23 2023
+# Process ID: 34532
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/synth_1
 # Command line: vivado.exe -log test_UART_packet_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_UART_packet_wrapper.tcl
-# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/synth_1/test_UART_packet_wrapper.vds
-# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/synth_1\vivado.jou
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/synth_1/test_UART_packet_wrapper.vds
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source test_UART_packet_wrapper.tcl -notrace

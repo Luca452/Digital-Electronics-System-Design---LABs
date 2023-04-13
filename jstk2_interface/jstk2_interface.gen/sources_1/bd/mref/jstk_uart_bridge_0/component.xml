@@ -129,7 +129,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f113aa74</spirit:value>
+            <spirit:value>fe257d61</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -142,7 +142,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f113aa74</spirit:value>
+            <spirit:value>fe257d61</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -397,6 +397,11 @@
         <spirit:displayName>Tx Delay</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TX_DELAY" spirit:minimum="0">1000000</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>JSTK_BITS</spirit:name>
+        <spirit:displayName>Jstk Bits</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.JSTK_BITS" spirit:minimum="1" spirit:maximum="7" spirit:rangeType="long">7</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
@@ -412,7 +417,7 @@
       <spirit:file>
         <spirit:name>xgui/jstk_uart_bridge_0_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1760ce08</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_471f8f57</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -428,6 +433,11 @@
       <spirit:name>TX_DELAY</spirit:name>
       <spirit:displayName>Tx Delay</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TX_DELAY" spirit:minimum="0" spirit:rangeType="long">1000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>JSTK_BITS</spirit:name>
+      <spirit:displayName>Jstk Bits</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.JSTK_BITS" spirit:minimum="1" spirit:maximum="7" spirit:rangeType="long">7</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -449,7 +459,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-04-05T20:12:12Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2023-04-13T21:16:47Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Wed Apr  5 21:53:35 2023
+--Date        : Thu Apr 13 23:36:39 2023
 --Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 --Command     : generate_target test_UART_packet.bd
 --Design      : test_UART_packet

@@ -79,7 +79,8 @@ ARCHITECTURE test_UART_packet_jstk_uart_bridge_0_0_1_arch OF test_UART_packet_js
   COMPONENT jstk_uart_bridge_0 IS
     GENERIC (
       HEADER_CODE : STD_LOGIC_VECTOR(7 DOWNTO 0);
-      TX_DELAY : INTEGER
+      TX_DELAY : INTEGER;
+      JSTK_BITS : INTEGER
     );
     PORT (
       aclk : IN STD_LOGIC;
@@ -104,7 +105,7 @@ ARCHITECTURE test_UART_packet_jstk_uart_bridge_0_0_1_arch OF test_UART_packet_js
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF test_UART_packet_jstk_uart_bridge_0_0_1_arch : ARCHITECTURE IS "test_UART_packet_jstk_uart_bridge_0_0_1,jstk_uart_bridge_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF test_UART_packet_jstk_uart_bridge_0_0_1_arch: ARCHITECTURE IS "test_UART_packet_jstk_uart_bridge_0_0_1,jstk_uart_bridge_0,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=jstk_uart_bridge_0,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,HEADER_CODE=11000000,TX_DELAY=1000000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF test_UART_packet_jstk_uart_bridge_0_0_1_arch: ARCHITECTURE IS "test_UART_packet_jstk_uart_bridge_0_0_1,jstk_uart_bridge_0,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=jstk_uart_bridge_0,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,HEADER_CODE=11000000,TX_DELAY=1000000,JSTK_BITS=7}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF test_UART_packet_jstk_uart_bridge_0_0_1_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -125,7 +126,8 @@ BEGIN
   U0 : jstk_uart_bridge_0
     GENERIC MAP (
       HEADER_CODE => B"11000000",
-      TX_DELAY => 1000000
+      TX_DELAY => 1000000,
+      JSTK_BITS => 7
     )
     PORT MAP (
       aclk => aclk,

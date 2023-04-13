@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Wed Apr  5 21:47:03 2023
+// Date        : Thu Apr 13 23:18:50 2023
 // Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {c:/Users/daido/Desktop/Polimi/Anno
-//               4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_jstk_uart_bridge_0_0_1/test_UART_packet_jstk_uart_bridge_0_0_1_sim_netlist.v}
+//               4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_jstk_uart_bridge_0_0_1/test_UART_packet_jstk_uart_bridge_0_0_1_sim_netlist.v}
 // Design      : test_UART_packet_jstk_uart_bridge_0_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

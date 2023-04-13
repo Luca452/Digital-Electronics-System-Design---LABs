@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr  5 21:53:35 2023" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 13 23:36:39 2023" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="test_UART_packet" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -1148,6 +1148,7 @@
       <PARAMETERS>
         <PARAMETER NAME="HEADER_CODE" VALUE="&quot;11000000&quot;"/>
         <PARAMETER NAME="TX_DELAY" VALUE="1000000"/>
+        <PARAMETER NAME="JSTK_BITS" VALUE="7"/>
         <PARAMETER NAME="Component_Name" VALUE="test_UART_packet_jstk_uart_bridge_0_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

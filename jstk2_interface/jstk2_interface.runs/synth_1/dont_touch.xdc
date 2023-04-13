@@ -24,4 +24,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_UART_p
 # IP: bd/test_UART_packet/ip/test_UART_packet_digilent_jstk2_0_1/test_UART_packet_digilent_jstk2_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_UART_packet_digilent_jstk2_0_1 || ORIG_REF_NAME==test_UART_packet_digilent_jstk2_0_1} -quiet] -quiet
 
-# XDC: c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/test_UART_packet_ooc.xdc
+# XDC: c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/test_UART_packet_ooc.xdc

@@ -79,7 +79,8 @@ ARCHITECTURE test_UART_packet_jstk_uart_bridge_0_0_1_arch OF test_UART_packet_js
   COMPONENT jstk_uart_bridge_0 IS
     GENERIC (
       HEADER_CODE : STD_LOGIC_VECTOR(7 DOWNTO 0);
-      TX_DELAY : INTEGER
+      TX_DELAY : INTEGER;
+      JSTK_BITS : INTEGER
     );
     PORT (
       aclk : IN STD_LOGIC;
@@ -119,7 +120,8 @@ BEGIN
   U0 : jstk_uart_bridge_0
     GENERIC MAP (
       HEADER_CODE => B"11000000",
-      TX_DELAY => 1000000
+      TX_DELAY => 1000000,
+      JSTK_BITS => 7
     )
     PORT MAP (
       aclk => aclk,

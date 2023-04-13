@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/jstk2_interface/jstk2_interface.xpr">
+<Project Version="7" Minor="54" Path="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c08e9cdc45c34a66918f7fc4bf276d5e"/>
@@ -36,7 +36,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../IP/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../IP/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -100,11 +100,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="test_UART_packet.bd" FileRelPathName="ip/test_UART_packet_jstk_uart_bridge_0_0_1/test_UART_packet_jstk_uart_bridge_0_0_1.xci">
-          <Proxy FileSetName="test_UART_packet_jstk_uart_bridge_0_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_UART_packet.bd" FileRelPathName="ip/test_UART_packet_digilent_jstk2_0_1/test_UART_packet_digilent_jstk2_0_1.xci">
           <Proxy FileSetName="test_UART_packet_digilent_jstk2_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="test_UART_packet.bd" FileRelPathName="ip/test_UART_packet_jstk_uart_bridge_0_0_1/test_UART_packet_jstk_uart_bridge_0_0_1.xci">
+          <Proxy FileSetName="test_UART_packet_jstk_uart_bridge_0_0_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/test_UART_packet_wrapper.vhd">
@@ -191,7 +191,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../Git/KittCarPWM/Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -201,7 +201,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="test_UART_packet_jstk_uart_bridge_0_0_1_synth_1" Type="Ft3:Synth" SrcSet="test_UART_packet_jstk_uart_bridge_0_0_1" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_jstk_uart_bridge_0_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/test_UART_packet_jstk_uart_bridge_0_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/test_UART_packet_jstk_uart_bridge_0_0_1_synth_1">
+    <Run Id="test_UART_packet_jstk_uart_bridge_0_0_1_synth_1" Type="Ft3:Synth" SrcSet="test_UART_packet_jstk_uart_bridge_0_0_1" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_jstk_uart_bridge_0_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/test_UART_packet_jstk_uart_bridge_0_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/test_UART_packet_jstk_uart_bridge_0_0_1_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -213,7 +213,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="test_UART_packet_digilent_jstk2_0_1_synth_1" Type="Ft3:Synth" SrcSet="test_UART_packet_digilent_jstk2_0_1" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_digilent_jstk2_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/test_UART_packet_digilent_jstk2_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/test_UART_packet_digilent_jstk2_0_1_synth_1">
+    <Run Id="test_UART_packet_digilent_jstk2_0_1_synth_1" Type="Ft3:Synth" SrcSet="test_UART_packet_digilent_jstk2_0_1" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_digilent_jstk2_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/test_UART_packet_digilent_jstk2_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/test_UART_packet_digilent_jstk2_0_1_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -225,7 +225,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../Git/KittCarPWM/Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -243,7 +243,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="test_UART_packet_jstk_uart_bridge_0_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_jstk_uart_bridge_0_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="test_UART_packet_jstk_uart_bridge_0_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/test_UART_packet_jstk_uart_bridge_0_0_1_impl_1">
+    <Run Id="test_UART_packet_jstk_uart_bridge_0_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_jstk_uart_bridge_0_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="test_UART_packet_jstk_uart_bridge_0_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/test_UART_packet_jstk_uart_bridge_0_0_1_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>
@@ -262,7 +262,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="test_UART_packet_digilent_jstk2_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_digilent_jstk2_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="test_UART_packet_digilent_jstk2_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../Test_UART_packet/Test_UART_packet.srcs/utils_1/imports/test_UART_packet_digilent_jstk2_0_1_impl_1">
+    <Run Id="test_UART_packet_digilent_jstk2_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="test_UART_packet_digilent_jstk2_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="test_UART_packet_digilent_jstk2_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/test_UART_packet_digilent_jstk2_0_1_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>

@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr  5 21:53:41 2023
-# Process ID: 4292
-# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/test_UART_packet_digilent_jstk2_0_1_synth_1
+# Start of session at: Thu Apr 13 23:36:46 2023
+# Process ID: 32264
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/test_UART_packet_digilent_jstk2_0_1_synth_1
 # Command line: vivado.exe -log test_UART_packet_digilent_jstk2_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_UART_packet_digilent_jstk2_0_1.tcl
-# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/test_UART_packet_digilent_jstk2_0_1_synth_1/test_UART_packet_digilent_jstk2_0_1.vds
-# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/test_UART_packet_digilent_jstk2_0_1_synth_1\vivado.jou
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/test_UART_packet_digilent_jstk2_0_1_synth_1/test_UART_packet_digilent_jstk2_0_1.vds
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/test_UART_packet_digilent_jstk2_0_1_synth_1\vivado.jou
 #-----------------------------------------------------------
 source test_UART_packet_digilent_jstk2_0_1.tcl -notrace

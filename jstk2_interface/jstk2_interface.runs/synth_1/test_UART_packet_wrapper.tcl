@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/synth_1/test_UART_packet_wrapper.tcl"
+  variable script "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/synth_1/test_UART_packet_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -79,28 +79,28 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.xpr} [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_repo_paths {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP/ip_repo}} [current_project]
 update_ip_catalog
-set_property ip_output_repo {c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/hdl/test_UART_packet_wrapper.vhd}}
-add_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_proc_sys_reset_0_1/test_UART_packet_proc_sys_reset_0_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_proc_sys_reset_0_1/test_UART_packet_proc_sys_reset_0_1.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_proc_sys_reset_0_1/test_UART_packet_proc_sys_reset_0_1_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_AXI4Stream_UART_0_1/test_UART_packet_AXI4Stream_UART_0_1_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_clk_wiz_0_2/test_UART_packet_clk_wiz_0_2_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_clk_wiz_0_2/test_UART_packet_clk_wiz_0_2.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_clk_wiz_0_2/test_UART_packet_clk_wiz_0_2_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.gen/sources_1/bd/test_UART_packet/test_UART_packet_ooc.xdc}}]
+read_vhdl -library xil_defaultlib {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.srcs/sources_1/imports/test_UART_packet_wrapper.vhd}}
+add_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.srcs/sources_1/bd/test_UART_packet/test_UART_packet.bd}}
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_proc_sys_reset_0_1/test_UART_packet_proc_sys_reset_0_1_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_proc_sys_reset_0_1/test_UART_packet_proc_sys_reset_0_1.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_proc_sys_reset_0_1/test_UART_packet_proc_sys_reset_0_1_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_AXI4Stream_UART_0_1/test_UART_packet_AXI4Stream_UART_0_1_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_clk_wiz_0_2/test_UART_packet_clk_wiz_0_2_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_clk_wiz_0_2/test_UART_packet_clk_wiz_0_2.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/ip/test_UART_packet_clk_wiz_0_2/test_UART_packet_clk_wiz_0_2_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.gen/sources_1/bd/test_UART_packet/test_UART_packet_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -111,8 +111,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/constrs_1/new/PINS.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/constrs_1/new/PINS.xdc}}]
+read_xdc {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.srcs/constrs_1/new/PINS.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.srcs/constrs_1/new/PINS.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.srcs/constrs_1/new/PINS.xdc} rfile:../../../Test_UART_packet.srcs/constrs_1/new/PINS.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.srcs/constrs_1/new/PINS.xdc} rfile:../../../jstk2_interface.srcs/constrs_1/new/PINS.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L2 [get_ports SPI_M_0_io0_io]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

@@ -51,21 +51,17 @@ architecture Behavioral of digilent_jstk2 is
 	-- Inter-packet delay plus the time needed to transfer 1 byte (for the CS de-assertion)
 	constant DELAY_CYCLES		: integer := DELAY_US * (CLKFREQ / 1_000_000) + CLKFREQ / SPI_SCLKFREQ;
 
-    -- DELAY_US is the Interbyte delay in us
     -- The datasheet suggests at minimum 10us for interbyte and 25us after Chip-Select
     -- since we change the tvalid, the SPI-Core will change the CS, so we have to take that into consideration
-    constant DELAY_INTERBYTE    : integer := DELAY_US * (CLKFREQ / 1_000_000);
 
     -- counter that counts the clock cycles befor passing on from the wait state in the TX process 
     signal tx_delay_counter     : natural range 0 to DELAY_CYCLES; 
 
     -- state signal for the outgoing data to the joystick
     -- state_cmd state we are in 
-    -- next_state_cmd next state we want to enter, even if there is delay in between
 	------------------------------------------------------------
-	type state_cmd_type is (WAIT_DELAY, DELAY_BYTE, SEND_CMD, SEND_RED, SEND_GREEN, SEND_BLUE, SEND_DUMMY);
+	type state_cmd_type is (WAIT_DELAY, SEND_CMD, SEND_RED, SEND_GREEN, SEND_BLUE, SEND_DUMMY);
 	signal state_cmd			: state_cmd_type := WAIT_DELAY;
-    signal next_state_cmd       : state_cmd_type := SEND_CMD;
 	------------------------------------------------------------
 
     -- state signal for the incoming data from the joystick
@@ -106,43 +102,29 @@ begin
                         tx_delay_counter <= tx_delay_counter + 1;
                         state_cmd <= WAIT_DELAY;
                     end if;
-
-                -- wait phase between two bytes
-                when DELAY_BYTE => 
-                    if tx_delay_counter = DELAY_INTERBYTE then
-                        tx_delay_counter <= 0;
-                        state_cmd <= next_state_cmd;
-                    else
-                        tx_delay_counter <= tx_delay_counter + 1;
-                        state_cmd <= DELAY_BYTE;
-                    end if;
                     
                 -- in the following states the command for sending the LED Color is send onto the AXI-Stream and then the RGB Values
                 when SEND_CMD =>
                     if m_axis_tready = '1' then
-                        next_state_cmd <= SEND_RED;
-                        state_cmd <= DELAY_BYTE;
+                        state_cmd <= SEND_RED;
                         m_axis_tdata <= led_r;
                     end if;
 
                 when SEND_RED =>
                     if m_axis_tready = '1' then
-                        next_state_cmd <= SEND_GREEN;
-                        state_cmd <= DELAY_BYTE;
+                        state_cmd <= SEND_GREEN;
                         m_axis_tdata <= led_g;
                     end if;
 
                 when SEND_GREEN =>
                     if m_axis_tready = '1' then
-                        next_state_cmd <= SEND_BLUE;
-                        state_cmd <= DELAY_BYTE;
+                        state_cmd <= SEND_BLUE;
                         m_axis_tdata <= led_b;
                     end if;
 
                 when SEND_BLUE =>
                     if m_axis_tready = '1' then
-                        next_state_cmd <= SEND_DUMMY;
-                        state_cmd <= DELAY_BYTE;
+                        state_cmd <= SEND_DUMMY;
                         m_axis_tdata <= x"00";
                     end if;
 

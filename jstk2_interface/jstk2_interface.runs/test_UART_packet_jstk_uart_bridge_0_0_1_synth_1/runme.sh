@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB2/Test_UART_packet/Test_UART_packet.runs/test_UART_packet_jstk_uart_bridge_0_0_1_synth_1'
+HD_PWD='C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/jstk2_interface/jstk2_interface.runs/test_UART_packet_jstk_uart_bridge_0_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

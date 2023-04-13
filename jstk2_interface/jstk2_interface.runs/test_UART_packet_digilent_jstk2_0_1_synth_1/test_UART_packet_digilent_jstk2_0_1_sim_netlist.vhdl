@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Apr  5 21:54:13 2023
+-- Date        : Thu Apr 13 23:37:20 2023
 -- Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ test_UART_packet_digilent_jstk2_0_1_sim_netlist.vhdl
@@ -22,18 +22,26 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_digilent_jstk2 is
     btn_jstk : out STD_LOGIC;
     btn_trigger : out STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
-    aresetn : in STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
     aclk : in STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
     s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tready : in STD_LOGIC;
+    led_b : in STD_LOGIC_VECTOR ( 7 downto 0 );
     led_r : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    led_g : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    led_b : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    led_g : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_digilent_jstk2;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_digilent_jstk2 is
+  signal \FSM_onehot_state_cmd[0]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state_cmd[0]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state_cmd[1]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state_cmd_reg_n_0_[1]\ : STD_LOGIC;
+  signal \FSM_onehot_state_cmd_reg_n_0_[2]\ : STD_LOGIC;
+  signal \FSM_onehot_state_cmd_reg_n_0_[3]\ : STD_LOGIC;
+  signal \FSM_onehot_state_cmd_reg_n_0_[4]\ : STD_LOGIC;
+  signal \FSM_onehot_state_cmd_reg_n_0_[5]\ : STD_LOGIC;
   signal \FSM_sequential_state_sts[0]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_sts[1]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_sts[2]_i_1_n_0\ : STD_LOGIC;
@@ -76,6 +84,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_digilent_jst
   signal \m_axis_tdata[0]_i_1_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[1]_i_1_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[2]_i_1_n_0\ : STD_LOGIC;
+  signal \m_axis_tdata[2]_i_2_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[3]_i_1_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[4]_i_1_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[5]_i_1_n_0\ : STD_LOGIC;
@@ -85,70 +94,183 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_digilent_jst
   signal \m_axis_tdata[7]_i_4_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[7]_i_5_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[7]_i_6_n_0\ : STD_LOGIC;
-  signal \next_state_cmd[0]_i_1_n_0\ : STD_LOGIC;
-  signal \next_state_cmd[1]_i_1_n_0\ : STD_LOGIC;
-  signal \next_state_cmd[2]_i_1_n_0\ : STD_LOGIC;
-  signal \next_state_cmd_reg_n_0_[0]\ : STD_LOGIC;
-  signal \next_state_cmd_reg_n_0_[1]\ : STD_LOGIC;
-  signal \next_state_cmd_reg_n_0_[2]\ : STD_LOGIC;
-  signal sel0 : STD_LOGIC_VECTOR ( 14 downto 0 );
+  signal \m_axis_tdata[7]_i_7_n_0\ : STD_LOGIC;
   signal state_cmd0 : STD_LOGIC;
-  signal \state_cmd[0]_i_1_n_0\ : STD_LOGIC;
-  signal \state_cmd[1]_i_1_n_0\ : STD_LOGIC;
-  signal \state_cmd[1]_i_2_n_0\ : STD_LOGIC;
-  signal \state_cmd[1]_i_3_n_0\ : STD_LOGIC;
-  signal \state_cmd[1]_i_4_n_0\ : STD_LOGIC;
-  signal \state_cmd[1]_i_5_n_0\ : STD_LOGIC;
-  signal \state_cmd[2]_i_1_n_0\ : STD_LOGIC;
-  signal \state_cmd[2]_i_2_n_0\ : STD_LOGIC;
-  signal \state_cmd[2]_i_4_n_0\ : STD_LOGIC;
-  signal \state_cmd_reg_n_0_[0]\ : STD_LOGIC;
-  signal \state_cmd_reg_n_0_[1]\ : STD_LOGIC;
-  signal \state_cmd_reg_n_0_[2]\ : STD_LOGIC;
   signal state_sts : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal state_sts0 : STD_LOGIC;
+  signal tx_delay_counter : STD_LOGIC;
   signal tx_delay_counter0 : STD_LOGIC;
+  signal \tx_delay_counter0_carry__0_n_0\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__0_n_1\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__0_n_2\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__0_n_3\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__1_n_0\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__1_n_1\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__1_n_2\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__1_n_3\ : STD_LOGIC;
+  signal \tx_delay_counter0_carry__2_n_3\ : STD_LOGIC;
+  signal tx_delay_counter0_carry_n_0 : STD_LOGIC;
+  signal tx_delay_counter0_carry_n_1 : STD_LOGIC;
+  signal tx_delay_counter0_carry_n_2 : STD_LOGIC;
+  signal tx_delay_counter0_carry_n_3 : STD_LOGIC;
   signal \tx_delay_counter[0]_i_1_n_0\ : STD_LOGIC;
-  signal \tx_delay_counter[0]_i_2_n_0\ : STD_LOGIC;
   signal \tx_delay_counter[14]_i_1_n_0\ : STD_LOGIC;
-  signal \tx_delay_counter[14]_i_4_n_0\ : STD_LOGIC;
-  signal \tx_delay_counter[14]_i_5_n_0\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[12]_i_1_n_0\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[12]_i_1_n_1\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[12]_i_1_n_2\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[12]_i_1_n_3\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[14]_i_3_n_3\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[4]_i_1_n_0\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[4]_i_1_n_1\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[4]_i_1_n_2\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[4]_i_1_n_3\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[8]_i_1_n_0\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[8]_i_1_n_1\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[8]_i_1_n_2\ : STD_LOGIC;
-  signal \tx_delay_counter_reg[8]_i_1_n_3\ : STD_LOGIC;
-  signal \NLW_tx_delay_counter_reg[14]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_tx_delay_counter_reg[14]_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \tx_delay_counter_reg_n_0_[0]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[10]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[11]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[12]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[13]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[14]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[1]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[2]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[3]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[4]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[5]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[6]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[7]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[8]\ : STD_LOGIC;
+  signal \tx_delay_counter_reg_n_0_[9]\ : STD_LOGIC;
+  signal \NLW_tx_delay_counter0_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_tx_delay_counter0_carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_state_sts[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \FSM_onehot_state_cmd[0]_i_2\ : label is "soft_lutpair2";
+  attribute FSM_ENCODED_STATES : string;
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_cmd_reg[0]\ : label is "send_red:000100,send_green:001000,send_blue:010000,send_dummy:100000,wait_delay:000001,send_cmd:000010";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_cmd_reg[1]\ : label is "send_red:000100,send_green:001000,send_blue:010000,send_dummy:100000,wait_delay:000001,send_cmd:000010";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_cmd_reg[2]\ : label is "send_red:000100,send_green:001000,send_blue:010000,send_dummy:100000,wait_delay:000001,send_cmd:000010";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_cmd_reg[3]\ : label is "send_red:000100,send_green:001000,send_blue:010000,send_dummy:100000,wait_delay:000001,send_cmd:000010";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_cmd_reg[4]\ : label is "send_red:000100,send_green:001000,send_blue:010000,send_dummy:100000,wait_delay:000001,send_cmd:000010";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_cmd_reg[5]\ : label is "send_red:000100,send_green:001000,send_blue:010000,send_dummy:100000,wait_delay:000001,send_cmd:000010";
+  attribute SOFT_HLUTNM of \FSM_sequential_state_sts[0]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \FSM_sequential_state_sts[1]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \FSM_sequential_state_sts[2]_i_1\ : label is "soft_lutpair0";
-  attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_sts_reg[0]\ : label is "get_x_lsb:000,get_x_msb:001,get_y_lsb:010,get_y_msb:011,get_buttons:100,";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_sts_reg[1]\ : label is "get_x_lsb:000,get_x_msb:001,get_y_lsb:010,get_y_msb:011,get_buttons:100,";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_sts_reg[2]\ : label is "get_x_lsb:000,get_x_msb:001,get_y_lsb:010,get_y_msb:011,get_buttons:100,";
-  attribute SOFT_HLUTNM of btn_jstk_reg_i_2 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \m_axis_tdata[7]_i_3\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of m_axis_tvalid_INST_0 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \state_cmd[1]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \state_cmd[1]_i_4\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \state_cmd[2]_i_4\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \tx_delay_counter[0]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \jstk_x_reg[9]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_axis_tdata[7]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of m_axis_tvalid_INST_0 : label is "soft_lutpair3";
   attribute ADDER_THRESHOLD : integer;
-  attribute ADDER_THRESHOLD of \tx_delay_counter_reg[12]_i_1\ : label is 35;
-  attribute ADDER_THRESHOLD of \tx_delay_counter_reg[14]_i_3\ : label is 35;
-  attribute ADDER_THRESHOLD of \tx_delay_counter_reg[4]_i_1\ : label is 35;
-  attribute ADDER_THRESHOLD of \tx_delay_counter_reg[8]_i_1\ : label is 35;
+  attribute ADDER_THRESHOLD of tx_delay_counter0_carry : label is 35;
+  attribute ADDER_THRESHOLD of \tx_delay_counter0_carry__0\ : label is 35;
+  attribute ADDER_THRESHOLD of \tx_delay_counter0_carry__1\ : label is 35;
+  attribute ADDER_THRESHOLD of \tx_delay_counter0_carry__2\ : label is 35;
+  attribute SOFT_HLUTNM of \tx_delay_counter[0]_i_1\ : label is "soft_lutpair2";
 begin
+\FSM_onehot_state_cmd[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFEFAAAAAAAA"
+    )
+        port map (
+      I0 => \FSM_onehot_state_cmd_reg_n_0_[5]\,
+      I1 => \m_axis_tdata[7]_i_3_n_0\,
+      I2 => \m_axis_tdata[7]_i_4_n_0\,
+      I3 => \FSM_onehot_state_cmd[0]_i_2_n_0\,
+      I4 => \tx_delay_counter_reg_n_0_[13]\,
+      I5 => tx_delay_counter,
+      O => \FSM_onehot_state_cmd[0]_i_1_n_0\
+    );
+\FSM_onehot_state_cmd[0]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFEF"
+    )
+        port map (
+      I0 => \tx_delay_counter_reg_n_0_[11]\,
+      I1 => \tx_delay_counter_reg_n_0_[1]\,
+      I2 => \tx_delay_counter_reg_n_0_[5]\,
+      I3 => \tx_delay_counter_reg_n_0_[0]\,
+      O => \FSM_onehot_state_cmd[0]_i_2_n_0\
+    );
+\FSM_onehot_state_cmd[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000040000000"
+    )
+        port map (
+      I0 => \m_axis_tdata[7]_i_3_n_0\,
+      I1 => \tx_delay_counter_reg_n_0_[14]\,
+      I2 => \tx_delay_counter_reg_n_0_[12]\,
+      I3 => \tx_delay_counter_reg_n_0_[9]\,
+      I4 => \tx_delay_counter_reg_n_0_[7]\,
+      I5 => \m_axis_tdata[7]_i_5_n_0\,
+      O => \FSM_onehot_state_cmd[1]_i_1_n_0\
+    );
+\FSM_onehot_state_cmd[5]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"A888AAAA"
+    )
+        port map (
+      I0 => aresetn,
+      I1 => tx_delay_counter,
+      I2 => m_axis_tready,
+      I3 => \FSM_onehot_state_cmd_reg_n_0_[5]\,
+      I4 => \m_axis_tdata[7]_i_6_n_0\,
+      O => state_cmd0
+    );
+\FSM_onehot_state_cmd_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => aclk,
+      CE => state_cmd0,
+      D => \FSM_onehot_state_cmd[0]_i_1_n_0\,
+      Q => tx_delay_counter,
+      R => '0'
+    );
+\FSM_onehot_state_cmd_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => state_cmd0,
+      D => \FSM_onehot_state_cmd[1]_i_1_n_0\,
+      Q => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      R => '0'
+    );
+\FSM_onehot_state_cmd_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => state_cmd0,
+      D => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      Q => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      R => '0'
+    );
+\FSM_onehot_state_cmd_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => state_cmd0,
+      D => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      Q => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      R => '0'
+    );
+\FSM_onehot_state_cmd_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => state_cmd0,
+      D => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      Q => \FSM_onehot_state_cmd_reg_n_0_[4]\,
+      R => '0'
+    );
+\FSM_onehot_state_cmd_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => aclk,
+      CE => state_cmd0,
+      D => \FSM_onehot_state_cmd_reg_n_0_[4]\,
+      Q => \FSM_onehot_state_cmd_reg_n_0_[5]\,
+      R => '0'
+    );
 \FSM_sequential_state_sts[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"3F40"
@@ -177,8 +299,8 @@ begin
       INIT => X"0FFF8000"
     )
         port map (
-      I0 => state_sts(0),
-      I1 => state_sts(1),
+      I0 => state_sts(1),
+      I1 => state_sts(0),
       I2 => s_axis_tvalid,
       I3 => aresetn,
       I4 => state_sts(2),
@@ -227,25 +349,16 @@ btn_jstk_reg: unisim.vcomponents.FDRE
     );
 btn_jstk_reg_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEFFFFF00200000"
+      INIT => X"FFFEFFFF00020000"
     )
         port map (
       I0 => s_axis_tdata(0),
-      I1 => state_sts(0),
-      I2 => state_sts(2),
+      I1 => \jstk_x_reg[9]_i_2_n_0\,
+      I2 => state_sts(0),
       I3 => state_sts(1),
-      I4 => state_sts0,
+      I4 => state_sts(2),
       I5 => \btn_jstk_reg__0\,
       O => btn_jstk_reg_i_1_n_0
-    );
-btn_jstk_reg_i_2: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => s_axis_tvalid,
-      I1 => aresetn,
-      O => state_sts0
     );
 btn_jstk_reg_reg: unisim.vcomponents.FDRE
      port map (
@@ -265,14 +378,14 @@ btn_trigger_reg: unisim.vcomponents.FDRE
     );
 btn_trigger_reg_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEFFFFF00200000"
+      INIT => X"FFFEFFFF00020000"
     )
         port map (
       I0 => s_axis_tdata(1),
-      I1 => state_sts(0),
-      I2 => state_sts(2),
+      I1 => \jstk_x_reg[9]_i_2_n_0\,
+      I2 => state_sts(0),
       I3 => state_sts(1),
-      I4 => state_sts0,
+      I4 => state_sts(2),
       I5 => \btn_trigger_reg__0\,
       O => btn_trigger_reg_i_1_n_0
     );
@@ -286,15 +399,15 @@ btn_trigger_reg_reg: unisim.vcomponents.FDRE
     );
 data_ready_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2222222222622222"
+      INIT => X"0004AAAA0000AAAA"
     )
         port map (
       I0 => data_ready,
-      I1 => aresetn,
-      I2 => s_axis_tvalid,
-      I3 => state_sts(1),
-      I4 => state_sts(2),
-      I5 => state_sts(0),
+      I1 => state_sts(2),
+      I2 => state_sts(1),
+      I3 => state_sts(0),
+      I4 => aresetn,
+      I5 => s_axis_tvalid,
       O => data_ready_i_1_n_0
     );
 data_ready_reg: unisim.vcomponents.FDRE
@@ -313,8 +426,8 @@ data_ready_reg: unisim.vcomponents.FDRE
       INIT => X"8"
     )
         port map (
-      I0 => data_ready,
-      I1 => aresetn,
+      I0 => aresetn,
+      I1 => data_ready,
       O => jstk_x0
     );
 \jstk_x_reg[0]\: unisim.vcomponents.FDRE
@@ -383,14 +496,14 @@ data_ready_reg: unisim.vcomponents.FDRE
     );
 \jstk_x_reg[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000040"
+      INIT => X"00001000"
     )
         port map (
-      I0 => state_sts(1),
-      I1 => s_axis_tvalid,
+      I0 => state_sts(2),
+      I1 => state_sts(0),
       I2 => aresetn,
-      I3 => state_sts(2),
-      I4 => state_sts(0),
+      I3 => s_axis_tvalid,
+      I4 => state_sts(1),
       O => \jstk_x_reg[7]_i_1_n_0\
     );
 \jstk_x_reg[8]\: unisim.vcomponents.FDRE
@@ -403,14 +516,14 @@ data_ready_reg: unisim.vcomponents.FDRE
     );
 \jstk_x_reg[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFFFFFFF20000000"
+      INIT => X"FFFFFFFB00000008"
     )
         port map (
       I0 => s_axis_tdata(0),
-      I1 => state_sts(1),
-      I2 => s_axis_tvalid,
-      I3 => aresetn,
-      I4 => \jstk_x_reg[9]_i_2_n_0\,
+      I1 => state_sts(0),
+      I2 => state_sts(2),
+      I3 => \jstk_x_reg[9]_i_2_n_0\,
+      I4 => state_sts(1),
       I5 => \jstk_x_reg_reg_n_0_[8]\,
       O => \jstk_x_reg[8]_i_1_n_0\
     );
@@ -424,24 +537,24 @@ data_ready_reg: unisim.vcomponents.FDRE
     );
 \jstk_x_reg[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFFFFFFF20000000"
+      INIT => X"FFFFFFFB00000008"
     )
         port map (
       I0 => s_axis_tdata(1),
-      I1 => state_sts(1),
-      I2 => s_axis_tvalid,
-      I3 => aresetn,
-      I4 => \jstk_x_reg[9]_i_2_n_0\,
+      I1 => state_sts(0),
+      I2 => state_sts(2),
+      I3 => \jstk_x_reg[9]_i_2_n_0\,
+      I4 => state_sts(1),
       I5 => \jstk_x_reg_reg_n_0_[9]\,
       O => \jstk_x_reg[9]_i_1_n_0\
     );
 \jstk_x_reg[9]_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"7"
     )
         port map (
-      I0 => state_sts(0),
-      I1 => state_sts(2),
+      I0 => aresetn,
+      I1 => s_axis_tvalid,
       O => \jstk_x_reg[9]_i_2_n_0\
     );
 \jstk_x_reg_reg[0]\: unisim.vcomponents.FDRE
@@ -593,11 +706,11 @@ data_ready_reg: unisim.vcomponents.FDRE
       INIT => X"00000080"
     )
         port map (
-      I0 => state_sts(1),
-      I1 => s_axis_tvalid,
-      I2 => aresetn,
-      I3 => state_sts(2),
-      I4 => state_sts(0),
+      I0 => s_axis_tvalid,
+      I1 => aresetn,
+      I2 => state_sts(1),
+      I3 => state_sts(0),
+      I4 => state_sts(2),
       O => \jstk_y_reg[7]_i_1_n_0\
     );
 \jstk_y_reg[8]\: unisim.vcomponents.FDRE
@@ -610,14 +723,14 @@ data_ready_reg: unisim.vcomponents.FDRE
     );
 \jstk_y_reg[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BFFFFFFF80000000"
+      INIT => X"FFEFFFFF00200000"
     )
         port map (
       I0 => s_axis_tdata(0),
-      I1 => state_sts(1),
-      I2 => s_axis_tvalid,
-      I3 => aresetn,
-      I4 => \jstk_x_reg[9]_i_2_n_0\,
+      I1 => \jstk_x_reg[9]_i_2_n_0\,
+      I2 => state_sts(1),
+      I3 => state_sts(2),
+      I4 => state_sts(0),
       I5 => \jstk_y_reg_reg_n_0_[8]\,
       O => \jstk_y_reg[8]_i_1_n_0\
     );
@@ -631,14 +744,14 @@ data_ready_reg: unisim.vcomponents.FDRE
     );
 \jstk_y_reg[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BFFFFFFF80000000"
+      INIT => X"FFEFFFFF00200000"
     )
         port map (
       I0 => s_axis_tdata(1),
-      I1 => state_sts(1),
-      I2 => s_axis_tvalid,
-      I3 => aresetn,
-      I4 => \jstk_x_reg[9]_i_2_n_0\,
+      I1 => \jstk_x_reg[9]_i_2_n_0\,
+      I2 => state_sts(1),
+      I3 => state_sts(2),
+      I4 => state_sts(0),
       I5 => \jstk_y_reg_reg_n_0_[9]\,
       O => \jstk_y_reg[9]_i_1_n_0\
     );
@@ -724,169 +837,186 @@ data_ready_reg: unisim.vcomponents.FDRE
     );
 \m_axis_tdata[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44FF44A044A044A0"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => led_g(0),
-      I2 => led_b(0),
-      I3 => \state_cmd_reg_n_0_[0]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => led_r(0),
+      I0 => led_r(0),
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      I3 => led_g(0),
+      I4 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I5 => led_b(0),
       O => \m_axis_tdata[0]_i_1_n_0\
     );
 \m_axis_tdata[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44FF44A044A044A0"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => led_g(1),
-      I2 => led_b(1),
-      I3 => \state_cmd_reg_n_0_[0]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => led_r(1),
+      I0 => led_r(1),
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      I3 => led_g(1),
+      I4 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I5 => led_b(1),
       O => \m_axis_tdata[1]_i_1_n_0\
     );
-\m_axis_tdata[2]_i_1\: unisim.vcomponents.LUT6
+\m_axis_tdata[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"E2E2E2E23300FFFF"
+      INIT => X"FFF8"
+    )
+        port map (
+      I0 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I1 => led_b(2),
+      I2 => tx_delay_counter,
+      I3 => \m_axis_tdata[2]_i_2_n_0\,
+      O => \m_axis_tdata[2]_i_1_n_0\
+    );
+\m_axis_tdata[2]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F888"
     )
         port map (
       I0 => led_r(2),
-      I1 => \state_cmd_reg_n_0_[0]\,
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
       I2 => led_g(2),
-      I3 => led_b(2),
-      I4 => \state_cmd_reg_n_0_[2]\,
-      I5 => \state_cmd_reg_n_0_[1]\,
-      O => \m_axis_tdata[2]_i_1_n_0\
+      I3 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      O => \m_axis_tdata[2]_i_2_n_0\
     );
 \m_axis_tdata[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44FF44A044A044A0"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => led_g(3),
-      I2 => led_b(3),
-      I3 => \state_cmd_reg_n_0_[0]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => led_r(3),
+      I0 => led_r(3),
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      I3 => led_g(3),
+      I4 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I5 => led_b(3),
       O => \m_axis_tdata[3]_i_1_n_0\
     );
 \m_axis_tdata[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44FF44A044A044A0"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => led_g(4),
-      I2 => led_b(4),
-      I3 => \state_cmd_reg_n_0_[0]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => led_r(4),
+      I0 => led_r(4),
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      I3 => led_g(4),
+      I4 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I5 => led_b(4),
       O => \m_axis_tdata[4]_i_1_n_0\
     );
 \m_axis_tdata[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44FF44A044A044A0"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => led_g(5),
-      I2 => led_b(5),
-      I3 => \state_cmd_reg_n_0_[0]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => led_r(5),
+      I0 => led_r(5),
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      I3 => led_g(5),
+      I4 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I5 => led_b(5),
       O => \m_axis_tdata[5]_i_1_n_0\
     );
 \m_axis_tdata[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44FF44A044A044A0"
+      INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => led_g(6),
-      I2 => led_b(6),
-      I3 => \state_cmd_reg_n_0_[0]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => led_r(6),
+      I0 => led_r(6),
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      I3 => led_g(6),
+      I4 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I5 => led_b(6),
       O => \m_axis_tdata[6]_i_1_n_0\
     );
-\m_axis_tdata[7]_i_1\: unisim.vcomponents.LUT6
+\m_axis_tdata[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2222F222F2222222"
+      INIT => X"0020AAAA"
     )
         port map (
-      I0 => \m_axis_tdata[7]_i_3_n_0\,
-      I1 => \m_axis_tdata[7]_i_4_n_0\,
-      I2 => m_axis_tready,
-      I3 => aresetn,
-      I4 => \state_cmd_reg_n_0_[2]\,
-      I5 => \state_cmd_reg_n_0_[1]\,
+      I0 => aresetn,
+      I1 => \m_axis_tdata[7]_i_3_n_0\,
+      I2 => \m_axis_tdata[7]_i_4_n_0\,
+      I3 => \m_axis_tdata[7]_i_5_n_0\,
+      I4 => \m_axis_tdata[7]_i_6_n_0\,
       O => m_axis_tdata0
     );
-\m_axis_tdata[7]_i_2\: unisim.vcomponents.LUT6
+\m_axis_tdata[7]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"E2E2E2E23300FFFF"
+      INIT => X"FFF8"
     )
         port map (
-      I0 => led_r(7),
-      I1 => \state_cmd_reg_n_0_[0]\,
-      I2 => led_g(7),
-      I3 => led_b(7),
-      I4 => \state_cmd_reg_n_0_[2]\,
-      I5 => \state_cmd_reg_n_0_[1]\,
+      I0 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I1 => led_b(7),
+      I2 => tx_delay_counter,
+      I3 => \m_axis_tdata[7]_i_7_n_0\,
       O => \m_axis_tdata[7]_i_2_n_0\
     );
-\m_axis_tdata[7]_i_3\: unisim.vcomponents.LUT5
+\m_axis_tdata[7]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"01000000"
+      INIT => X"FFFFFFFFFFFF7FFF"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => \state_cmd_reg_n_0_[1]\,
-      I2 => \state_cmd_reg_n_0_[0]\,
-      I3 => sel0(5),
-      I4 => \m_axis_tdata[7]_i_5_n_0\,
+      I0 => \tx_delay_counter_reg_n_0_[2]\,
+      I1 => \tx_delay_counter_reg_n_0_[8]\,
+      I2 => \tx_delay_counter_reg_n_0_[10]\,
+      I3 => \tx_delay_counter_reg_n_0_[6]\,
+      I4 => \tx_delay_counter_reg_n_0_[4]\,
+      I5 => \tx_delay_counter_reg_n_0_[3]\,
       O => \m_axis_tdata[7]_i_3_n_0\
     );
-\m_axis_tdata[7]_i_4\: unisim.vcomponents.LUT6
+\m_axis_tdata[7]_i_4\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFFFFFFFFB"
+      INIT => X"8000"
     )
         port map (
-      I0 => \m_axis_tdata[7]_i_6_n_0\,
-      I1 => sel0(2),
-      I2 => sel0(1),
-      I3 => sel0(4),
-      I4 => sel0(3),
-      I5 => sel0(0),
+      I0 => \tx_delay_counter_reg_n_0_[14]\,
+      I1 => \tx_delay_counter_reg_n_0_[12]\,
+      I2 => \tx_delay_counter_reg_n_0_[9]\,
+      I3 => \tx_delay_counter_reg_n_0_[7]\,
       O => \m_axis_tdata[7]_i_4_n_0\
     );
 \m_axis_tdata[7]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2000000000000000"
+      INIT => X"FFFFFFFFFFFBFFFF"
     )
         port map (
-      I0 => sel0(12),
-      I1 => sel0(11),
-      I2 => sel0(9),
-      I3 => sel0(10),
-      I4 => aresetn,
-      I5 => sel0(14),
+      I0 => \tx_delay_counter_reg_n_0_[0]\,
+      I1 => \tx_delay_counter_reg_n_0_[5]\,
+      I2 => \tx_delay_counter_reg_n_0_[1]\,
+      I3 => \tx_delay_counter_reg_n_0_[11]\,
+      I4 => tx_delay_counter,
+      I5 => \tx_delay_counter_reg_n_0_[13]\,
       O => \m_axis_tdata[7]_i_5_n_0\
     );
-\m_axis_tdata[7]_i_6\: unisim.vcomponents.LUT4
+\m_axis_tdata[7]_i_6\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF7F"
+      INIT => X"55555557"
     )
         port map (
-      I0 => sel0(7),
-      I1 => sel0(6),
-      I2 => sel0(8),
-      I3 => sel0(13),
+      I0 => m_axis_tready,
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      I3 => \FSM_onehot_state_cmd_reg_n_0_[3]\,
+      I4 => \FSM_onehot_state_cmd_reg_n_0_[4]\,
       O => \m_axis_tdata[7]_i_6_n_0\
+    );
+\m_axis_tdata[7]_i_7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F888"
+    )
+        port map (
+      I0 => led_r(7),
+      I1 => \FSM_onehot_state_cmd_reg_n_0_[1]\,
+      I2 => led_g(7),
+      I3 => \FSM_onehot_state_cmd_reg_n_0_[2]\,
+      O => \m_axis_tdata[7]_i_7_n_0\
     );
 \m_axis_tdata_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -952,325 +1082,116 @@ data_ready_reg: unisim.vcomponents.FDRE
       Q => m_axis_tdata(7),
       R => '0'
     );
-m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
+m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"FE"
+      INIT => X"1"
     )
         port map (
-      I0 => \state_cmd_reg_n_0_[2]\,
-      I1 => \state_cmd_reg_n_0_[1]\,
-      I2 => \state_cmd_reg_n_0_[0]\,
+      I0 => tx_delay_counter,
       O => m_axis_tvalid
     );
-\next_state_cmd[0]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FF7F7FFF00404000"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[0]\,
-      I1 => aresetn,
-      I2 => m_axis_tready,
-      I3 => \state_cmd_reg_n_0_[2]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => \next_state_cmd_reg_n_0_[0]\,
-      O => \next_state_cmd[0]_i_1_n_0\
+tx_delay_counter0_carry: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => tx_delay_counter0_carry_n_0,
+      CO(2) => tx_delay_counter0_carry_n_1,
+      CO(1) => tx_delay_counter0_carry_n_2,
+      CO(0) => tx_delay_counter0_carry_n_3,
+      CYINIT => \tx_delay_counter_reg_n_0_[0]\,
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => data0(4 downto 1),
+      S(3) => \tx_delay_counter_reg_n_0_[4]\,
+      S(2) => \tx_delay_counter_reg_n_0_[3]\,
+      S(1) => \tx_delay_counter_reg_n_0_[2]\,
+      S(0) => \tx_delay_counter_reg_n_0_[1]\
     );
-\next_state_cmd[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FF7FBFFF00408000"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[0]\,
-      I1 => aresetn,
-      I2 => m_axis_tready,
-      I3 => \state_cmd_reg_n_0_[2]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => \next_state_cmd_reg_n_0_[1]\,
-      O => \next_state_cmd[1]_i_1_n_0\
+\tx_delay_counter0_carry__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => tx_delay_counter0_carry_n_0,
+      CO(3) => \tx_delay_counter0_carry__0_n_0\,
+      CO(2) => \tx_delay_counter0_carry__0_n_1\,
+      CO(1) => \tx_delay_counter0_carry__0_n_2\,
+      CO(0) => \tx_delay_counter0_carry__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => data0(8 downto 5),
+      S(3) => \tx_delay_counter_reg_n_0_[8]\,
+      S(2) => \tx_delay_counter_reg_n_0_[7]\,
+      S(1) => \tx_delay_counter_reg_n_0_[6]\,
+      S(0) => \tx_delay_counter_reg_n_0_[5]\
     );
-\next_state_cmd[2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFBFFFFF0080C000"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[0]\,
-      I1 => aresetn,
-      I2 => m_axis_tready,
-      I3 => \state_cmd_reg_n_0_[2]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => \next_state_cmd_reg_n_0_[2]\,
-      O => \next_state_cmd[2]_i_1_n_0\
+\tx_delay_counter0_carry__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \tx_delay_counter0_carry__0_n_0\,
+      CO(3) => \tx_delay_counter0_carry__1_n_0\,
+      CO(2) => \tx_delay_counter0_carry__1_n_1\,
+      CO(1) => \tx_delay_counter0_carry__1_n_2\,
+      CO(0) => \tx_delay_counter0_carry__1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => data0(12 downto 9),
+      S(3) => \tx_delay_counter_reg_n_0_[12]\,
+      S(2) => \tx_delay_counter_reg_n_0_[11]\,
+      S(1) => \tx_delay_counter_reg_n_0_[10]\,
+      S(0) => \tx_delay_counter_reg_n_0_[9]\
     );
-\next_state_cmd_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => '1',
-      D => \next_state_cmd[0]_i_1_n_0\,
-      Q => \next_state_cmd_reg_n_0_[0]\,
-      R => '0'
+\tx_delay_counter0_carry__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \tx_delay_counter0_carry__1_n_0\,
+      CO(3 downto 1) => \NLW_tx_delay_counter0_carry__2_CO_UNCONNECTED\(3 downto 1),
+      CO(0) => \tx_delay_counter0_carry__2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 2) => \NLW_tx_delay_counter0_carry__2_O_UNCONNECTED\(3 downto 2),
+      O(1 downto 0) => data0(14 downto 13),
+      S(3 downto 2) => B"00",
+      S(1) => \tx_delay_counter_reg_n_0_[14]\,
+      S(0) => \tx_delay_counter_reg_n_0_[13]\
     );
-\next_state_cmd_reg[1]\: unisim.vcomponents.FDRE
+\tx_delay_counter[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
-      INIT => '1'
+      INIT => X"1"
     )
         port map (
-      C => aclk,
-      CE => '1',
-      D => \next_state_cmd[1]_i_1_n_0\,
-      Q => \next_state_cmd_reg_n_0_[1]\,
-      R => '0'
-    );
-\next_state_cmd_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => '1',
-      D => \next_state_cmd[2]_i_1_n_0\,
-      Q => \next_state_cmd_reg_n_0_[2]\,
-      R => '0'
-    );
-\state_cmd[0]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFF6FFFF66660000"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[1]\,
-      I1 => \state_cmd_reg_n_0_[2]\,
-      I2 => \next_state_cmd_reg_n_0_[0]\,
-      I3 => \state_cmd[2]_i_2_n_0\,
-      I4 => state_cmd0,
-      I5 => \state_cmd_reg_n_0_[0]\,
-      O => \state_cmd[0]_i_1_n_0\
-    );
-\state_cmd[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0B0AFFFF0B0A0000"
-    )
-        port map (
-      I0 => \state_cmd[1]_i_2_n_0\,
-      I1 => \state_cmd[1]_i_3_n_0\,
-      I2 => \m_axis_tdata[7]_i_4_n_0\,
-      I3 => \state_cmd[1]_i_4_n_0\,
-      I4 => state_cmd0,
-      I5 => \state_cmd_reg_n_0_[1]\,
-      O => \state_cmd[1]_i_1_n_0\
-    );
-\state_cmd[1]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0002"
-    )
-        port map (
-      I0 => \state_cmd[1]_i_5_n_0\,
-      I1 => \state_cmd_reg_n_0_[0]\,
-      I2 => \state_cmd_reg_n_0_[1]\,
-      I3 => \state_cmd_reg_n_0_[2]\,
-      O => \state_cmd[1]_i_2_n_0\
-    );
-\state_cmd[1]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFEFF"
-    )
-        port map (
-      I0 => sel0(12),
-      I1 => sel0(14),
-      I2 => sel0(10),
-      I3 => sel0(11),
-      I4 => sel0(9),
-      I5 => sel0(5),
-      O => \state_cmd[1]_i_3_n_0\
-    );
-\state_cmd[1]_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0008"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[0]\,
-      I1 => \next_state_cmd_reg_n_0_[1]\,
-      I2 => \state_cmd_reg_n_0_[2]\,
-      I3 => \state_cmd_reg_n_0_[1]\,
-      O => \state_cmd[1]_i_4_n_0\
-    );
-\state_cmd[1]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2000000000000000"
-    )
-        port map (
-      I0 => sel0(10),
-      I1 => sel0(11),
-      I2 => sel0(5),
-      I3 => sel0(9),
-      I4 => sel0(14),
-      I5 => sel0(12),
-      O => \state_cmd[1]_i_5_n_0\
-    );
-\state_cmd[2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000FFFF00400000"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[1]\,
-      I1 => \next_state_cmd_reg_n_0_[2]\,
-      I2 => \state_cmd_reg_n_0_[0]\,
-      I3 => \state_cmd[2]_i_2_n_0\,
-      I4 => state_cmd0,
-      I5 => \state_cmd_reg_n_0_[2]\,
-      O => \state_cmd[2]_i_1_n_0\
-    );
-\state_cmd[2]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \state_cmd[1]_i_3_n_0\,
-      I1 => sel0(0),
-      I2 => \state_cmd[2]_i_4_n_0\,
-      I3 => \m_axis_tdata[7]_i_6_n_0\,
-      O => \state_cmd[2]_i_2_n_0\
-    );
-\state_cmd[2]_i_3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"F010"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[1]\,
-      I1 => \state_cmd_reg_n_0_[2]\,
-      I2 => aresetn,
-      I3 => m_axis_tready,
-      O => state_cmd0
-    );
-\state_cmd[2]_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFD"
-    )
-        port map (
-      I0 => sel0(2),
-      I1 => sel0(1),
-      I2 => sel0(4),
-      I3 => sel0(3),
-      O => \state_cmd[2]_i_4_n_0\
-    );
-\state_cmd_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => '1',
-      D => \state_cmd[0]_i_1_n_0\,
-      Q => \state_cmd_reg_n_0_[0]\,
-      R => '0'
-    );
-\state_cmd_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => '1',
-      D => \state_cmd[1]_i_1_n_0\,
-      Q => \state_cmd_reg_n_0_[1]\,
-      R => '0'
-    );
-\state_cmd_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => aclk,
-      CE => '1',
-      D => \state_cmd[2]_i_1_n_0\,
-      Q => \state_cmd_reg_n_0_[2]\,
-      R => '0'
-    );
-\tx_delay_counter[0]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFF0F000000E0"
-    )
-        port map (
-      I0 => \tx_delay_counter[14]_i_4_n_0\,
-      I1 => \tx_delay_counter[0]_i_2_n_0\,
-      I2 => aresetn,
-      I3 => \state_cmd_reg_n_0_[2]\,
-      I4 => \state_cmd_reg_n_0_[1]\,
-      I5 => sel0(0),
+      I0 => \tx_delay_counter_reg_n_0_[0]\,
       O => \tx_delay_counter[0]_i_1_n_0\
     );
-\tx_delay_counter[0]_i_2\: unisim.vcomponents.LUT5
+\tx_delay_counter[14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFEFF"
+      INIT => X"0010000000000000"
     )
         port map (
-      I0 => sel0(3),
-      I1 => sel0(4),
-      I2 => sel0(1),
-      I3 => sel0(2),
-      I4 => \m_axis_tdata[7]_i_6_n_0\,
-      O => \tx_delay_counter[0]_i_2_n_0\
-    );
-\tx_delay_counter[14]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000010"
-    )
-        port map (
-      I0 => \state_cmd_reg_n_0_[1]\,
-      I1 => \state_cmd_reg_n_0_[2]\,
-      I2 => aresetn,
-      I3 => \m_axis_tdata[7]_i_4_n_0\,
-      I4 => \tx_delay_counter[14]_i_4_n_0\,
+      I0 => \tx_delay_counter_reg_n_0_[13]\,
+      I1 => \FSM_onehot_state_cmd[0]_i_2_n_0\,
+      I2 => \m_axis_tdata[7]_i_4_n_0\,
+      I3 => \m_axis_tdata[7]_i_3_n_0\,
+      I4 => aresetn,
+      I5 => tx_delay_counter,
       O => \tx_delay_counter[14]_i_1_n_0\
     );
-\tx_delay_counter[14]_i_2\: unisim.vcomponents.LUT3
+\tx_delay_counter[14]_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"02"
+      INIT => X"8"
     )
         port map (
-      I0 => aresetn,
-      I1 => \state_cmd_reg_n_0_[2]\,
-      I2 => \state_cmd_reg_n_0_[1]\,
+      I0 => tx_delay_counter,
+      I1 => aresetn,
       O => tx_delay_counter0
-    );
-\tx_delay_counter[14]_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"BFFE"
-    )
-        port map (
-      I0 => \tx_delay_counter[14]_i_5_n_0\,
-      I1 => sel0(5),
-      I2 => sel0(10),
-      I3 => sel0(9),
-      O => \tx_delay_counter[14]_i_4_n_0\
-    );
-\tx_delay_counter[14]_i_5\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFDFFBFF"
-    )
-        port map (
-      I0 => sel0(12),
-      I1 => sel0(11),
-      I2 => sel0(5),
-      I3 => \state_cmd_reg_n_0_[0]\,
-      I4 => sel0(14),
-      O => \tx_delay_counter[14]_i_5_n_0\
     );
 \tx_delay_counter_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => '1',
+      CE => tx_delay_counter0,
       D => \tx_delay_counter[0]_i_1_n_0\,
-      Q => sel0(0),
-      R => '0'
+      Q => \tx_delay_counter_reg_n_0_[0]\,
+      R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(10),
-      Q => sel0(10),
+      Q => \tx_delay_counter_reg_n_0_[10]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[11]\: unisim.vcomponents.FDRE
@@ -1278,7 +1199,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(11),
-      Q => sel0(11),
+      Q => \tx_delay_counter_reg_n_0_[11]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[12]\: unisim.vcomponents.FDRE
@@ -1286,27 +1207,15 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(12),
-      Q => sel0(12),
+      Q => \tx_delay_counter_reg_n_0_[12]\,
       R => \tx_delay_counter[14]_i_1_n_0\
-    );
-\tx_delay_counter_reg[12]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \tx_delay_counter_reg[8]_i_1_n_0\,
-      CO(3) => \tx_delay_counter_reg[12]_i_1_n_0\,
-      CO(2) => \tx_delay_counter_reg[12]_i_1_n_1\,
-      CO(1) => \tx_delay_counter_reg[12]_i_1_n_2\,
-      CO(0) => \tx_delay_counter_reg[12]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(12 downto 9),
-      S(3 downto 0) => sel0(12 downto 9)
     );
 \tx_delay_counter_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(13),
-      Q => sel0(13),
+      Q => \tx_delay_counter_reg_n_0_[13]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[14]\: unisim.vcomponents.FDRE
@@ -1314,27 +1223,15 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(14),
-      Q => sel0(14),
+      Q => \tx_delay_counter_reg_n_0_[14]\,
       R => \tx_delay_counter[14]_i_1_n_0\
-    );
-\tx_delay_counter_reg[14]_i_3\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \tx_delay_counter_reg[12]_i_1_n_0\,
-      CO(3 downto 1) => \NLW_tx_delay_counter_reg[14]_i_3_CO_UNCONNECTED\(3 downto 1),
-      CO(0) => \tx_delay_counter_reg[14]_i_3_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 2) => \NLW_tx_delay_counter_reg[14]_i_3_O_UNCONNECTED\(3 downto 2),
-      O(1 downto 0) => data0(14 downto 13),
-      S(3 downto 2) => B"00",
-      S(1 downto 0) => sel0(14 downto 13)
     );
 \tx_delay_counter_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(1),
-      Q => sel0(1),
+      Q => \tx_delay_counter_reg_n_0_[1]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[2]\: unisim.vcomponents.FDRE
@@ -1342,7 +1239,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(2),
-      Q => sel0(2),
+      Q => \tx_delay_counter_reg_n_0_[2]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[3]\: unisim.vcomponents.FDRE
@@ -1350,7 +1247,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(3),
-      Q => sel0(3),
+      Q => \tx_delay_counter_reg_n_0_[3]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[4]\: unisim.vcomponents.FDRE
@@ -1358,27 +1255,15 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(4),
-      Q => sel0(4),
+      Q => \tx_delay_counter_reg_n_0_[4]\,
       R => \tx_delay_counter[14]_i_1_n_0\
-    );
-\tx_delay_counter_reg[4]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \tx_delay_counter_reg[4]_i_1_n_0\,
-      CO(2) => \tx_delay_counter_reg[4]_i_1_n_1\,
-      CO(1) => \tx_delay_counter_reg[4]_i_1_n_2\,
-      CO(0) => \tx_delay_counter_reg[4]_i_1_n_3\,
-      CYINIT => sel0(0),
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(4 downto 1),
-      S(3 downto 0) => sel0(4 downto 1)
     );
 \tx_delay_counter_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(5),
-      Q => sel0(5),
+      Q => \tx_delay_counter_reg_n_0_[5]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[6]\: unisim.vcomponents.FDRE
@@ -1386,7 +1271,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(6),
-      Q => sel0(6),
+      Q => \tx_delay_counter_reg_n_0_[6]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[7]\: unisim.vcomponents.FDRE
@@ -1394,7 +1279,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(7),
-      Q => sel0(7),
+      Q => \tx_delay_counter_reg_n_0_[7]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 \tx_delay_counter_reg[8]\: unisim.vcomponents.FDRE
@@ -1402,27 +1287,15 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT3
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(8),
-      Q => sel0(8),
+      Q => \tx_delay_counter_reg_n_0_[8]\,
       R => \tx_delay_counter[14]_i_1_n_0\
-    );
-\tx_delay_counter_reg[8]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \tx_delay_counter_reg[4]_i_1_n_0\,
-      CO(3) => \tx_delay_counter_reg[8]_i_1_n_0\,
-      CO(2) => \tx_delay_counter_reg[8]_i_1_n_1\,
-      CO(1) => \tx_delay_counter_reg[8]_i_1_n_2\,
-      CO(0) => \tx_delay_counter_reg[8]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(8 downto 5),
-      S(3 downto 0) => sel0(8 downto 5)
     );
 \tx_delay_counter_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
       CE => tx_delay_counter0,
       D => data0(9),
-      Q => sel0(9),
+      Q => \tx_delay_counter_reg_n_0_[9]\,
       R => \tx_delay_counter[14]_i_1_n_0\
     );
 end STRUCTURE;
