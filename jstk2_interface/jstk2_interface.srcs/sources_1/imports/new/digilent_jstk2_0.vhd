@@ -36,12 +36,12 @@ end digilent_jstk2;
 
 architecture Behavioral of digilent_jstk2 is
 
-
-    signal jstk_x_reg : std_logic_vector(9 downto 0);
-    signal jstk_y_reg : std_logic_vector(9 downto 0);
-    signal btn_jstk_reg : std_logic;
-    signal btn_trigger_reg : std_logic;
-    signal data_ready : std_logic := '0';
+    -- internal signals to save the incoming data, before putting it on the out lines when the hole data is ready
+    signal jstk_x_reg       : std_logic_vector(9 downto 0);
+    signal jstk_y_reg       : std_logic_vector(9 downto 0);
+    signal btn_jstk_reg     : std_logic;
+    signal btn_trigger_reg  : std_logic;
+    signal data_ready       : std_logic := '0';
 
 
 	-- Code for the SetLEDRGB command, see the JSTK2 datasheet.
@@ -52,16 +52,19 @@ architecture Behavioral of digilent_jstk2 is
 	constant DELAY_CYCLES		: integer := DELAY_US * (CLKFREQ / 1_000_000) + CLKFREQ / SPI_SCLKFREQ;
 
     -- Interbyte delay set to 25us as suggested on the datasheet
-    constant DELAY_INTERBYTE         : integer := 2500;
+    constant DELAY_INTERBYTE    : integer := 2500;
 
+    -- counter that counts the clock cycles befor passing on from the wait state in the TX process 
     signal tx_delay_counter     : natural range 0 to DELAY_CYCLES; 
 
+    -- state signal for the outgoing data to the joystick
 	------------------------------------------------------------
 	type state_cmd_type is (WAIT_DELAY, DELAY_BYTE, SEND_CMD, SEND_RED, SEND_GREEN, SEND_BLUE, SEND_DUMMY);
 	signal state_cmd			: state_cmd_type := WAIT_DELAY;
     signal next_state_cmd       : state_cmd_type := SEND_CMD;
 	------------------------------------------------------------
 
+    -- state signal for the incoming data from the joystick
     ------------------------------------------------------------
 	type state_sts_type is (GET_X_LSB, GET_X_MSB, GET_Y_LSB, GET_Y_MSB, GET_BUTTONS);
 	signal state_sts			: state_sts_type := GET_X_LSB;
@@ -146,6 +149,7 @@ begin
 
 
     
+    -- process for handling the incoming AXI-Stream data coming from the SPI-Core. (The joystick data)
     RX_FSM : process(aclk, aresetn)
     begin
         if (aresetn = '0') then
@@ -154,30 +158,37 @@ begin
 
             case state_sts is
 
+                -- the AXI-Stream bus is 8 bit wide, the incoming joystick data 10 bit. 
+                -- So first we get the 8 Least significant bits, then in the next state the 2 most significant ones.
+                -- after we've got all data (x,y and btn) the data_ready signal is set high and the data saved in the internal registers maped to the outputs of the entity
                 when GET_X_LSB =>
                     if s_axis_tvalid = '1' then
                         jstk_x_reg(7 downto 0) <= s_axis_tdata;
                         state_sts <= GET_X_MSB;
                     end if;
                 
+                -- get X most significant bits
                 when GET_X_MSB =>
                     if s_axis_tvalid = '1' then
                         jstk_x_reg(9 downto 8) <= s_axis_tdata(1 downto 0);
                         state_sts <= GET_Y_LSB;
                     end if;
 
+                -- get Y least significant bits
                 when GET_Y_LSB =>
                     if s_axis_tvalid = '1' then
                         jstk_y_reg(7 downto 0) <= s_axis_tdata;
                         state_sts <= GET_Y_MSB;
                     end if;
 
+                -- get Y most significant bits
                 when GET_Y_MSB =>
                     if s_axis_tvalid = '1' then
                         jstk_y_reg(9 downto 8) <= s_axis_tdata(1 downto 0);
                         state_sts <= GET_BUTTONS;
                     end if;
 
+                -- get button states and set ready for copying the data 
                 when GET_BUTTONS =>
                     if s_axis_tvalid = '1' then
                         btn_jstk_reg <= s_axis_tdata(0);
@@ -188,6 +199,7 @@ begin
 
             end case;
 
+            -- if all data is arrived, so data_ready is high, copy the data to the external registers
             if data_ready = '1' then
                 data_ready <= '0';
                 jstk_x <= jstk_x_reg;
