@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 19 01:51:25 2023
+# Process ID: 69199
+# Current directory: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.runs/synth_1
+# Command line: vivado -log interface_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source interface_bd_wrapper.tcl
+# Log file: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.runs/synth_1/interface_bd_wrapper.vds
+# Journal file: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source interface_bd_wrapper.tcl -notrace
