@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="SpaceShooter_clk_wiz_0_0_synth_1" LaunchDir="/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/SpaceShooter/SpaceShooter.runs/SpaceShooter_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="SpaceShooter_AXI4Stream_UART_0_0_synth_1" LaunchDir="/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/SpaceShooter/SpaceShooter.runs/SpaceShooter_AXI4Stream_UART_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="SpaceShooter_axi4stream_spi_master_0_0_synth_1" LaunchDir="/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/SpaceShooter/SpaceShooter.runs/SpaceShooter_axi4stream_spi_master_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="SpaceShooter_proc_sys_reset_0_0_synth_1" LaunchDir="/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/SpaceShooter/SpaceShooter.runs/SpaceShooter_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="SpaceShooter_jstk_uart_bridge_0_0_synth_1" LaunchDir="/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/SpaceShooter/SpaceShooter.runs/SpaceShooter_jstk_uart_bridge_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="SpaceShooter_digilent_jstk2_0_0_synth_1" LaunchDir="/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/SpaceShooter/SpaceShooter.runs/SpaceShooter_digilent_jstk2_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/SpaceShooter/SpaceShooter.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="SpaceShooter_clk_wiz_0_0_synth_1"/>
+		<Parent Id="SpaceShooter_AXI4Stream_UART_0_0_synth_1"/>
+		<Parent Id="SpaceShooter_axi4stream_spi_master_0_0_synth_1"/>
+		<Parent Id="SpaceShooter_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="SpaceShooter_jstk_uart_bridge_0_0_synth_1"/>
+		<Parent Id="SpaceShooter_digilent_jstk2_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

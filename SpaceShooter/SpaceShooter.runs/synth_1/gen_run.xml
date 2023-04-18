@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1681316570">
+  <File Type="REPORTS-TCL" Name="SpaceShooter_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="SpaceShooter_wrapper.tcl"/>
+  <File Type="RDS-DCP" Name="SpaceShooter_wrapper.dcp"/>
+  <File Type="RDS-RDS" Name="SpaceShooter_wrapper.vds"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/digilent_jstk2_0.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/jstk_uart_bridge_0.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/SpaceShooter/SpaceShooter.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/SpaceShooter/hdl/SpaceShooter_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="SpaceShooter_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="SpaceShooter_AXI4Stream_UART_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SpaceShooter_jstk_uart_bridge_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SpaceShooter_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SpaceShooter_axi4stream_spi_master_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SpaceShooter_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SpaceShooter_digilent_jstk2_0_0"/>
+</GenRun>
