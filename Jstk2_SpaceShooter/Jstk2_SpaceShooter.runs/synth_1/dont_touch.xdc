@@ -23,5 +23,3 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==interface_b
 
 # IP: bd/interface_bd/ip/interface_bd_jstk_uart_bridge_0_0/interface_bd_jstk_uart_bridge_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==interface_bd_jstk_uart_bridge_0_0 || ORIG_REF_NAME==interface_bd_jstk_uart_bridge_0_0} -quiet] -quiet
-
-# XDC: /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/interface_bd_ooc.xdc

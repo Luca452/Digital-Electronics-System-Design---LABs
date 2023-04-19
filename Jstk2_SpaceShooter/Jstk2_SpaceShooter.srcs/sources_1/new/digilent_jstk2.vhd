@@ -1,5 +1,7 @@
+--------DEFAULT LIBRARIES-----------
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+	use IEEE.STD_LOGIC_1164.all;
+------------------------------------
 
 entity digilent_jstk2 is
 	generic (
@@ -7,7 +9,7 @@ entity digilent_jstk2 is
 		CLKFREQ		 	: integer                       := 100_000_000;   -- Frequency of the aclk signal (in Hz)
 		SPI_SCLKFREQ 	: integer range 1_000 to 40_000 := 5_000          -- Frequency of the SPI SCLK clock signal (in Hz) 
 		-- the SPI_SCLKFREQ range gets limited to respect the interbyte delay asked by the jstk 
-		-- 40k is used as the upper limit, to stay on the save side and respect the 25us timing requirements, even if we could push it a bit further
+		-- 40k is used as the upper limit, to stay on the safe side and respect the 25us timing requirements, even if we could push it a bit further
 	);
 	Port (
 		aclk 			: in  STD_LOGIC;
@@ -38,13 +40,13 @@ end digilent_jstk2;
 
 architecture Behavioral of digilent_jstk2 is
 
-    -- internal signals to save the incoming data, before putting it on the out lines when the hole data is ready
+    -------------------------------------------------SIGNALS & CONSTANTS------------------------------------------------
+    -- internal signals to save the incoming data, before putting it on the out lines when the whole data is ready
     signal jstk_x_reg       : std_logic_vector(9 downto 0);
     signal jstk_y_reg       : std_logic_vector(9 downto 0);
     signal btn_jstk_reg     : std_logic;
     signal btn_trigger_reg  : std_logic;
     signal data_ready       : std_logic := '0';
-
 
 	-- Code for the SetLEDRGB command, see the JSTK2 datasheet.
 	constant CMDSETLEDRGB		: std_logic_vector(7 downto 0) := x"84";
@@ -59,22 +61,18 @@ architecture Behavioral of digilent_jstk2 is
     -- counter that counts the clock cycles befor passing on from the wait state in the TX process 
     signal tx_delay_counter     : natural range 0 to DELAY_CYCLES; 
 
-    -- state signal for the outgoing data to the joystick
     -- state_cmd state we are in 
-	------------------------------------------------------------
 	type state_cmd_type is (WAIT_DELAY, SEND_CMD, SEND_RED, SEND_GREEN, SEND_BLUE, SEND_DUMMY);
 	signal state_cmd			: state_cmd_type := WAIT_DELAY;
-	------------------------------------------------------------
 
     -- state signal for the incoming data from the joystick
-    ------------------------------------------------------------
 	type state_sts_type is (GET_X_LSB, GET_X_MSB, GET_Y_LSB, GET_Y_MSB, GET_BUTTONS);
 	signal state_sts			: state_sts_type := GET_X_LSB;
-    ------------------------------------------------------------
+    ------------------------------------------------------------------------------------------------------------------
 
 begin
 
-
+    -------------------------------------------------TX STATE MACHINE----------------------------------------------------
     -- change level of m_axis_tvalid based on the tx-state we are in
     with state_cmd select m_axis_tvalid <=
         '0' when WAIT_DELAY,
@@ -84,7 +82,7 @@ begin
     TX_FSM : process(aclk, aresetn)
     begin
         if aresetn = '0' then
-
+        -- reset is not handled. No state initialization in order to not stop the communication with/to the PC
         elsif rising_edge(aclk) then
 
             -- act depending on the state we are in
@@ -92,7 +90,7 @@ begin
 
                 -- if we are in a wait phase, 
                 -- increment a counter every clock front until the wait time has elapsed. 
-                -- Then change state to sending the command
+                -- Then change state to send the command 
 
                 -- wait phase between two packets
                 when WAIT_DELAY =>
@@ -104,47 +102,55 @@ begin
                         tx_delay_counter <= tx_delay_counter + 1;
                         state_cmd <= WAIT_DELAY;
                     end if;
-                    
-                -- in the following states the command for sending the LED Color is send onto the AXI-Stream and then the RGB Values
+
+                -- we are not waiting for the tready to send data!!!
+                -- the data is already on the tdata line, when tready = 1 we prepare the data for the next tready!
+                -- and change to the following state
+                -- in the following states the command for sending the LED Color and then the RGB values are sent onto the AXI-Stream 
                 when SEND_CMD =>
                     if m_axis_tready = '1' then
                         state_cmd <= SEND_RED;
                         m_axis_tdata <= led_r;
                     end if;
 
+                -- send red byte
                 when SEND_RED =>
                     if m_axis_tready = '1' then
                         state_cmd <= SEND_GREEN;
                         m_axis_tdata <= led_g;
                     end if;
 
+                -- send green byte
                 when SEND_GREEN =>
                     if m_axis_tready = '1' then
                         state_cmd <= SEND_BLUE;
                         m_axis_tdata <= led_b;
                     end if;
-
+                
+                -- send blue byte
                 when SEND_BLUE =>
                     if m_axis_tready = '1' then
                         state_cmd <= SEND_DUMMY;
                         m_axis_tdata <= x"00";
                     end if;
 
+                -- send dummy byte
                 when SEND_DUMMY =>
                     if m_axis_tready = '1' then
                         state_cmd <= WAIT_DELAY;
                     end if;
+
             end case;
         end if;
     end process;
+    ---------------------------------------------------------------------------------------------------------------------
 
-
-    
+    -------------------------------------------------RX STATE MACHINE----------------------------------------------------
     -- process for handling the incoming AXI-Stream data coming from the SPI-Core. (The joystick data)
     RX_FSM : process(aclk, aresetn)
     begin
         if (aresetn = '0') then
-
+        -- reset is not handled. No state initialization in order to not stop the communication with/to the PC
         elsif rising_edge(aclk) then
 
             case state_sts is
@@ -201,4 +207,6 @@ begin
         
         end if;
     end process;
+    ---------------------------------------------------------------------------------------------------------------------
+    
 end architecture;

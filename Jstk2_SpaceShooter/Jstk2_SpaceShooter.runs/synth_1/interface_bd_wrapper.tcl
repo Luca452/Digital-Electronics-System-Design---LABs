@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.runs/synth_1/interface_bd_wrapper.tcl"
+  variable script "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.runs/synth_1/interface_bd_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,8 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/.Xil/Vivado-28064-DESKTOP-JKUPK39/incrSyn}
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -79,29 +80,27 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.cache/wt [current_project]
-set_property parent.project_path /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.xpr} [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {/home/stexo/.Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_repo_paths /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/code/ipCoreVivado [current_project]
+set_property ip_repo_paths {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado}} [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/hdl/interface_bd_wrapper.vhd
-add_files /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.srcs/sources_1/bd/interface_bd/interface_bd.bd
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_clk_wiz_0_0/interface_bd_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_clk_wiz_0_0/interface_bd_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_clk_wiz_0_0/interface_bd_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_proc_sys_reset_0_0/interface_bd_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_proc_sys_reset_0_0/interface_bd_proc_sys_reset_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_proc_sys_reset_0_0/interface_bd_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_AXI4Stream_UART_0_0/interface_bd_AXI4Stream_UART_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/interface_bd_ooc.xdc]
+read_vhdl -library xil_defaultlib {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/hdl/interface_bd_wrapper.vhd}}
+add_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.srcs/sources_1/bd/interface_bd/interface_bd.bd}}
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_clk_wiz_0_0/interface_bd_clk_wiz_0_0_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_clk_wiz_0_0/interface_bd_clk_wiz_0_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_clk_wiz_0_0/interface_bd_clk_wiz_0_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_proc_sys_reset_0_0/interface_bd_proc_sys_reset_0_0_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_proc_sys_reset_0_0/interface_bd_proc_sys_reset_0_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_proc_sys_reset_0_0/interface_bd_proc_sys_reset_0_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_AXI4Stream_UART_0_0/interface_bd_AXI4Stream_UART_0_0_board.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -112,8 +111,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.srcs/constrs_1/new/PINS.xdc
-set_property used_in_implementation false [get_files /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.srcs/constrs_1/new/PINS.xdc]
+read_xdc {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.srcs/constrs_1/new/PINS.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.srcs/constrs_1/new/PINS.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
