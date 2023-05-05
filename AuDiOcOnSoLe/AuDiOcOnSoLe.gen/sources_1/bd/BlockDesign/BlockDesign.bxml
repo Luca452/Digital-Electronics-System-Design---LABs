@@ -7,12 +7,12 @@
     <Generation Name="SIMULATION" State="STALE" Timestamp="1683294229"/>
     <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1683294209"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth/BlockDesign.vhd" Type="VHDL">
+      <File Name="synth\BlockDesign.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
       </File>
-      <File Name="sim/BlockDesign.vhd" Type="VHDL">
+      <File Name="sim\BlockDesign.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

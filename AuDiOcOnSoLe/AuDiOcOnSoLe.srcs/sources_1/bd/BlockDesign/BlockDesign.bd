@@ -50,11 +50,26 @@
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "BlockDesign_clk_wiz_0_0",
-        "xci_path": "ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xci",
+        "xci_path": "ip\\BlockDesign_clk_wiz_0_0\\BlockDesign_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
+          "CLKOUT2_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
           "CLK_IN1_BOARD_INTERFACE": {
             "value": "sys_clock"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "10"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
           },
           "RESET_BOARD_INTERFACE": {
             "value": "reset"
@@ -67,19 +82,19 @@
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "BlockDesign_proc_sys_reset_0_0",
-        "xci_path": "ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xci",
+        "xci_path": "ip\\BlockDesign_proc_sys_reset_0_0\\BlockDesign_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0"
       },
       "proc_sys_reset_1": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "BlockDesign_proc_sys_reset_1_0",
-        "xci_path": "ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xci",
+        "xci_path": "ip\\BlockDesign_proc_sys_reset_1_0\\BlockDesign_proc_sys_reset_1_0.xci",
         "inst_hier_path": "proc_sys_reset_1"
       },
       "digilent_jstk2_0": {
         "vlnv": "xilinx.com:module_ref:digilent_jstk2:1.0",
         "xci_name": "BlockDesign_digilent_jstk2_0_0",
-        "xci_path": "ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0.xci",
+        "xci_path": "ip\\BlockDesign_digilent_jstk2_0_0\\BlockDesign_digilent_jstk2_0_0.xci",
         "inst_hier_path": "digilent_jstk2_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -253,13 +268,13 @@
       "axi4stream_spi_master_0": {
         "vlnv": "DigiLAB:ip:axi4stream_spi_master:1.0",
         "xci_name": "BlockDesign_axi4stream_spi_master_0_0",
-        "xci_path": "ip/BlockDesign_axi4stream_spi_master_0_0/BlockDesign_axi4stream_spi_master_0_0.xci",
+        "xci_path": "ip\\BlockDesign_axi4stream_spi_master_0_0\\BlockDesign_axi4stream_spi_master_0_0.xci",
         "inst_hier_path": "axi4stream_spi_master_0"
       },
       "axis_dual_i2s_0": {
         "vlnv": "DigiLAB:ip:axis_dual_i2s:1.0",
         "xci_name": "BlockDesign_axis_dual_i2s_0_0",
-        "xci_path": "ip/BlockDesign_axis_dual_i2s_0_0/BlockDesign_axis_dual_i2s_0_0.xci",
+        "xci_path": "ip\\BlockDesign_axis_dual_i2s_0_0\\BlockDesign_axis_dual_i2s_0_0.xci",
         "inst_hier_path": "axis_dual_i2s_0"
       }
     },
@@ -281,7 +296,28 @@
       "reset_1": {
         "ports": [
           "reset",
-          "clk_wiz_0/reset"
+          "clk_wiz_0/reset",
+          "proc_sys_reset_0/ext_reset_in",
+          "proc_sys_reset_1/ext_reset_in"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "proc_sys_reset_1/slowest_sync_clk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "proc_sys_reset_0/dcm_locked",
+          "proc_sys_reset_1/dcm_locked"
+        ]
+      },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       }
     }
