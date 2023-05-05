@@ -15,7 +15,9 @@
       "proc_sys_reset_1": "",
       "digilent_jstk2_0": "",
       "axi4stream_spi_master_0": "",
-      "axis_dual_i2s_0": ""
+      "axis_dual_i2s_0": "",
+      "Debouncer_0": "",
+      "Debouncer_1": ""
     },
     "interface_ports": {
       "SPI_M_0": {
@@ -276,6 +278,72 @@
         "xci_name": "BlockDesign_axis_dual_i2s_0_0",
         "xci_path": "ip\\BlockDesign_axis_dual_i2s_0_0\\BlockDesign_axis_dual_i2s_0_0.xci",
         "inst_hier_path": "axis_dual_i2s_0"
+      },
+      "Debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "BlockDesign_Debouncer_0_0",
+        "xci_path": "ip\\BlockDesign_Debouncer_0_0\\BlockDesign_Debouncer_0_0.xci",
+        "inst_hier_path": "Debouncer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "input_signal": {
+            "direction": "I"
+          },
+          "debounced": {
+            "direction": "O"
+          }
+        }
+      },
+      "Debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:Debouncer:1.0",
+        "xci_name": "BlockDesign_Debouncer_1_0",
+        "xci_path": "ip\\BlockDesign_Debouncer_1_0\\BlockDesign_Debouncer_1_0.xci",
+        "inst_hier_path": "Debouncer_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "input_signal": {
+            "direction": "I"
+          },
+          "debounced": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
