@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Tue Apr 18 13:17:37 2023
--- Host        : unbound-phoenix running 64-bit unknown
--- Command     : write_vhdl -force -mode synth_stub
---               /home/stexo/Nextcloud/uni/Polimi/8_Semester/DESD/labs/DESD_LABS/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_jstk_uart_bridge_0_0/interface_bd_jstk_uart_bridge_0_0_stub.vhdl
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Wed Apr 19 16:56:46 2023
+-- Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub {c:/Users/daido/Desktop/Polimi/Anno
+--               4/DESD/Git/KittCarPWM/Jstk2_SpaceShooter/Jstk2_SpaceShooter.gen/sources_1/bd/interface_bd/ip/interface_bd_jstk_uart_bridge_0_0/interface_bd_jstk_uart_bridge_0_0_stub.vhdl}
 -- Design      : interface_bd_jstk_uart_bridge_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
