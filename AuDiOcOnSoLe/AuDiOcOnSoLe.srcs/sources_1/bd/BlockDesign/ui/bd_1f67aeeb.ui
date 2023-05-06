@@ -1,29 +1,31 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.411601",
-   "Default View_TopLeft":"-447,-1050",
+   "Default View_ScaleFactor":"0.423123",
+   "Default View_TopLeft":"-447,-1082",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port SPI_M_0 -pg 1 -lvl 6 -x 1970 -y -390 -defaultsOSRD
-preplace port sys_clock -pg 1 -lvl 0 -x -340 -y -30 -defaultsOSRD
-preplace port reset -pg 1 -lvl 0 -x -340 -y -60 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 210 -y -40 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 550 -y -40 -defaultsOSRD
-preplace inst proc_sys_reset_1 -pg 1 -lvl 2 -x 550 -y -220 -defaultsOSRD
-preplace inst digilent_jstk2_0 -pg 1 -lvl 3 -x 1090 -y -370 -defaultsOSRD
-preplace inst axi4stream_spi_master_0 -pg 1 -lvl 4 -x 1580 -y -380 -defaultsOSRD
-preplace inst axis_dual_i2s_0 -pg 1 -lvl 5 -x 1830 -y 60 -defaultsOSRD -resize 188 430
-preplace inst Debouncer_0 -pg 1 -lvl 2 -x 550 -y -480 -defaultsOSRD
-preplace inst Debouncer_1 -pg 1 -lvl 2 -x 550 -y -620 -defaultsOSRD
-preplace netloc sys_clock_1 1 0 1 N -30
-preplace netloc reset_1 1 0 2 -320 -120 310
-preplace netloc clk_wiz_0_clk_out1 1 1 1 300 -260n
-preplace netloc clk_wiz_0_locked 1 1 1 320 -180n
-preplace netloc clk_wiz_0_clk_out2 1 1 1 330 -80n
-preplace netloc axi4stream_spi_master_0_SPI_M 1 4 2 NJ -390 N
-levelinfo -pg 1 -340 210 550 1090 1580 1830 1970
-pagesize -pg 1 -db -bbox -sgen -450 -700 2080 440
+preplace port SPI_M_0 -pg 1 -lvl 8 -x 1970 -y -390 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x -340 -y -40 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -340 -y -70 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 160 -y -40 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 450 -y -40 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 2 -x 450 -y -220 -defaultsOSRD
+preplace inst digilent_jstk2_0 -pg 1 -lvl 5 -x 1360 -y -700 -defaultsOSRD
+preplace inst axi4stream_spi_master_0 -pg 1 -lvl 6 -x 1590 -y -380 -defaultsOSRD
+preplace inst axis_dual_i2s_0 -pg 1 -lvl 7 -x 1830 -y 60 -defaultsOSRD -resize 188 430
+preplace inst Debouncer_0 -pg 1 -lvl 3 -x 760 -y -560 -defaultsOSRD
+preplace inst Debouncer_1 -pg 1 -lvl 3 -x 760 -y -400 -defaultsOSRD
+preplace inst EdgeDetector_0 -pg 1 -lvl 4 -x 1090 -y -560 -defaultsOSRD
+preplace inst EdgeDetector_1 -pg 1 -lvl 4 -x 1090 -y -400 -defaultsOSRD
+preplace netloc sys_clock_1 1 0 1 -320 -40n
+preplace netloc reset_1 1 0 2 -320 -120 260
+preplace netloc clk_wiz_0_clk_out1 1 1 1 250 -260n
+preplace netloc clk_wiz_0_locked 1 1 1 270 -180n
+preplace netloc clk_wiz_0_clk_out2 1 1 1 280 -80n
+preplace netloc axi4stream_spi_master_0_SPI_M 1 6 2 NJ -390 N
+levelinfo -pg 1 -340 160 450 760 1090 1360 1590 1830 1970
+pagesize -pg 1 -db -bbox -sgen -450 -890 2080 440
 "
 }
 0

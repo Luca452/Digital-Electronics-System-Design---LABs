@@ -1,43 +1,41 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 05.05.2023 15:11:10
--- Design Name: 
--- Module Name: EdgeDetector - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity EdgeDetector is
---  Port ( );
+    Generic(
+        trigger_rising : boolean := true
+    );
+    Port (
+        clk : IN std_logic;
+        rst : IN std_logic;
+
+        input_signal : IN   std_logic;
+        output_signal : OUT std_logic
+     );
 end EdgeDetector;
 
 architecture Behavioral of EdgeDetector is
 
-begin
+    signal input_signal_prec : std_logic;
 
+begin
+    process(clk, rst) 
+    begin
+        if(rst = '1') then  
+
+            input_signal_prec <= '0';
+            output_signal <= '0';
+
+        elsif rising_edge(clk) then
+
+            input_signal_prec <= input_signal;
+            output_signal <= '0';
+
+            if( trigger_rising and input_signal_prec = '0' and input_signal = '1' ) or ( not trigger_rising and input_signal_prec = '1' and input_signal = '0' ) then
+                output_signal <= '1';
+            end if;
+
+        end if;
+    end process;
 
 end Behavioral;
