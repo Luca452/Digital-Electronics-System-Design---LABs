@@ -40,36 +40,37 @@ entity MovingAverageFilter is
      );
 end MovingAverageFilter;
 
+architecture Behavioral of MovingAverageFilter is
+
     ---------------------------------------COMPONENTs DECLARATIONS------------------------------------
 	-- FIFO modules declaration
 	component FIFO
-        generic (
-		    FIFO_WIDTH : natural;
-		    FIFO_DEPTH : integer
-	    );
-	    port (
+    generic (
+        FIFO_WIDTH : natural;
+        FIFO_DEPTH : integer
+    );
+    port (
 
-		    -------- Reset/Clock -------
-		    aresetn	: in std_logic;
-		    clk		: in std_logic;
-		    ----------------------------
+        -------- Reset/Clock -------
+        aresetn	: in std_logic;
+        clk		: in std_logic;
+        ----------------------------
 
-		    --- FIFO Write Interface ---
-		    wr_en	: in	std_logic;
-		    din		: in	std_logic_vector(FIFO_WIDTH-1 downto 0);
-		    full	: out	std_logic;
-		    ----------------------------
+        --- FIFO Write Interface ---
+        wr_en	: in	std_logic;
+        din		: in	std_logic_vector(FIFO_WIDTH-1 downto 0);
+        full	: out	std_logic;
+        ----------------------------
 
-		    ---- FIFO Read Interface ---
-		    rd_en	: in	std_logic;
-		    dout	: out std_logic_vector(FIFO_WIDTH-1 downto 0);
-		    empty	: out std_logic
-		    ----------------------------
-	    );
+        ---- FIFO Read Interface ---
+        rd_en	: in	std_logic;
+        dout	: out std_logic_vector(FIFO_WIDTH-1 downto 0);
+        empty	: out std_logic
+        ----------------------------
+    );
     end component;
     -------------------------------------------------------------------------------------------------
 
-architecture Behavioral of MovingAverageFilter is
 
 begin
     --------------------------------------FIFO MODULES INSTATIATION---------------------------------
@@ -82,7 +83,7 @@ begin
     )
     port map (
         aresetn  => aresetn,
-        clk    => clk,
+        clk    => clk
     );
 
     ----Right Channel----
@@ -93,7 +94,7 @@ begin
     )
     port map (
         aresetn  => aresetn,
-        clk    => clk,
+        clk    => clk
     );
 
     ------------------------------------------------------------------------------------------------
