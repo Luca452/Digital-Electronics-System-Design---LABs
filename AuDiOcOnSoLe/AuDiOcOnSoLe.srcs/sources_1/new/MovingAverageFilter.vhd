@@ -8,7 +8,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MovingAverageFilter is
     Generic(
-        AXIS_TDATA_WIDTH	: integer	:= 24
+        AXIS_TDATA_WIDTH	: integer	:= 24;
+        AVERAGE_BUFF_SIZE   : integer   := 32
     );
     Port (
         aclk             :   in   STD_LOGIC;   
@@ -39,9 +40,62 @@ entity MovingAverageFilter is
      );
 end MovingAverageFilter;
 
+    ---------------------------------------COMPONENTs DECLARATIONS------------------------------------
+	-- FIFO modules declaration
+	component FIFO
+        generic (
+		    FIFO_WIDTH : natural;
+		    FIFO_DEPTH : integer
+	    );
+	    port (
+
+		    -------- Reset/Clock -------
+		    aresetn	: in std_logic;
+		    clk		: in std_logic;
+		    ----------------------------
+
+		    --- FIFO Write Interface ---
+		    wr_en	: in	std_logic;
+		    din		: in	std_logic_vector(FIFO_WIDTH-1 downto 0);
+		    full	: out	std_logic;
+		    ----------------------------
+
+		    ---- FIFO Read Interface ---
+		    rd_en	: in	std_logic;
+		    dout	: out std_logic_vector(FIFO_WIDTH-1 downto 0);
+		    empty	: out std_logic
+		    ----------------------------
+	    );
+    end component;
+    -------------------------------------------------------------------------------------------------
+
 architecture Behavioral of MovingAverageFilter is
 
 begin
+    --------------------------------------FIFO MODULES INSTATIATION---------------------------------
 
+    -----Left Channel-----
+	inst1: FIFO 
+    generic map (
+        FIFO_DEPTH => AVERAGE_BUFF_SIZE,
+        FIFO_WIDTH => AXIS_TDATA_WIDTH
+    )
+    port map (
+        aresetn  => aresetn,
+        clk    => clk,
+    );
+
+    ----Right Channel----
+    inst2: FIFO 
+    generic map (
+        FIFO_DEPTH => AVERAGE_BUFF_SIZE,
+        FIFO_WIDTH => AXIS_TDATA_WIDTH
+    )
+    port map (
+        aresetn  => aresetn,
+        clk    => clk,
+    );
+
+    ------------------------------------------------------------------------------------------------
 
 end Behavioral;
