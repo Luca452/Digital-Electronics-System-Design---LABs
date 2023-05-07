@@ -27,7 +27,7 @@ end AveragingLogic;
 architecture Behavioral of AveragingLogic is
 
     constant SUM_TOTAL_LENGTH : positive := (DATA_WIDTH + positive(ceil(log2(real(AVERAGING_WINDOW_SIZE))))) ;
-    signal SUM_TOTAL : std_logic_vector(SUM_TOTAL_LENGTH-1 downto 0);
+    signal SUM_TOTAL : unsigned(SUM_TOTAL_LENGTH-1 downto 0);
 begin
 
     process(clk, aresetn)
@@ -35,12 +35,12 @@ begin
         if rising_edge(clk) then
             if aresetn = '0' then
             else
-                if(wr_en = '1' AND NOT fifo_full) then
-                    SUM_TOTAL <= SUM_TOTAL + din_plus;
-                elsif(wr_en = '1' AND fifo_full) then
-                    SUM_TOTAL <= SUM_TOTAL + din_plus;
-                    SUM_TOTAL <= SUM_TOTAL - din_minus;
-                    avg_val <= SUM_TOTAL(SUM_TOTAL'left downto SUM_TOTAL_LENGTH-DATA_WIDTH);
+                if(wr_en = '1' AND fifo_full = '0') then
+                    SUM_TOTAL <= SUM_TOTAL + unsigned(din_plus);
+                elsif(wr_en = '1' AND fifo_full = '1') then
+                    SUM_TOTAL <= SUM_TOTAL + unsigned(din_plus);
+                    SUM_TOTAL <= SUM_TOTAL - unsigned(din_minus);
+                    avg_val <= std_logic_vector(SUM_TOTAL(SUM_TOTAL_LENGTH-1 downto SUM_TOTAL_LENGTH-DATA_WIDTH-1));
                 end if;
             end if;
         end if;

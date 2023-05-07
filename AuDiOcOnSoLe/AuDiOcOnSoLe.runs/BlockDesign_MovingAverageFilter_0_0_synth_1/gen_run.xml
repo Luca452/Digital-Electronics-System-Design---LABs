@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BlockDesign_MovingAverageFilter_0_0_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1683463741">
+<GenRun Id="BlockDesign_MovingAverageFilter_0_0_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1683469740">
   <File Type="PA-TCL" Name="BlockDesign_MovingAverageFilter_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="BlockDesign_MovingAverageFilter_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BlockDesign_MovingAverageFilter_0_0_reports.tcl"/>

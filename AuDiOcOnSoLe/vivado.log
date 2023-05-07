@@ -3637,3 +3637,782 @@ Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/
 wait_on_run BlockDesign_axis_dual_i2s_1_0_synth_1
 [Sun May  7 14:49:35 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish...
 [Sun May  7 14:49:40 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish...
+[Sun May  7 14:49:46 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log BlockDesign_axis_dual_i2s_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BlockDesign_axis_dual_i2s_1_0.tcl
+
+[Sun May  7 14:49:46 2023] BlockDesign_axis_dual_i2s_1_0_synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1834.695 ; gain = 0.000
+refresh_design
+ERROR: [Runs 36-527] DCP does not exist: c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/BlockDesign_MovingAverageFilter_0_0.dcp
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+reset_run BlockDesign_MovingAverageFilter_0_0_synth_1
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+[Sun May  7 15:01:38 2023] Launched BlockDesign_MovingAverageFilter_0_0_synth_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MovingAverageFilter_0_0_synth_1/runme.log
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+[Sun May  7 15:01:39 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+[Sun May  7 15:01:44 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 15:01:49 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 15:01:54 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log BlockDesign_MovingAverageFilter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BlockDesign_MovingAverageFilter_0_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source BlockDesign_MovingAverageFilter_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.cache/ip 
+Command: synth_design -top BlockDesign_MovingAverageFilter_0_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'BlockDesign_MovingAverageFilter_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18380
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2778] type error near fifo_full ; expected type boolean [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:40]
+ERROR: [Synth 8-2778] type error near fifo_full ; expected type boolean [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:38]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1003.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+10 Infos, 3 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun May  7 15:01:57 2023...
+[Sun May  7 15:01:59 2023] BlockDesign_MovingAverageFilter_0_0_synth_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'BlockDesign_MovingAverageFilter_0_0_synth_1'
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 1888.688 ; gain = 0.000
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+[Sun May  7 15:01:59 2023] Launched BlockDesign_MovingAverageFilter_0_0_synth_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MovingAverageFilter_0_0_synth_1/runme.log
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+[Sun May  7 15:01:59 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 15:02:05 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 15:02:10 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 15:02:15 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 15:02:25 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log BlockDesign_MovingAverageFilter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BlockDesign_MovingAverageFilter_0_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source BlockDesign_MovingAverageFilter_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.cache/ip 
+Command: synth_design -top BlockDesign_MovingAverageFilter_0_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'BlockDesign_MovingAverageFilter_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18380
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2778] type error near fifo_full ; expected type boolean [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:40]
+ERROR: [Synth 8-2778] type error near fifo_full ; expected type boolean [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:38]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1003.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+10 Infos, 3 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun May  7 15:01:57 2023...
+
+*** Running vivado
+    with args -log BlockDesign_MovingAverageFilter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BlockDesign_MovingAverageFilter_0_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source BlockDesign_MovingAverageFilter_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.cache/ip 
+Command: synth_design -top BlockDesign_MovingAverageFilter_0_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'BlockDesign_MovingAverageFilter_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2568
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1002.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2778] type error near fifo_full ; expected type boolean [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:40]
+ERROR: [Synth 8-2778] type error near fifo_full ; expected type boolean [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:38]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+10 Infos, 3 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun May  7 15:02:20 2023...
+[Sun May  7 15:02:25 2023] BlockDesign_MovingAverageFilter_0_0_synth_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'BlockDesign_MovingAverageFilter_0_0_synth_1'
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1888.688 ; gain = 0.000
+refresh_design
+ERROR: [Runs 36-527] DCP does not exist: c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/BlockDesign_MovingAverageFilter_0_0.dcp
+reset_run BlockDesign_MovingAverageFilter_0_0_synth_1
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+[Sun May  7 16:29:01 2023] Launched BlockDesign_MovingAverageFilter_0_0_synth_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MovingAverageFilter_0_0_synth_1/runme.log
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+[Sun May  7 16:29:01 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 16:29:06 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 16:29:11 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 16:29:16 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 16:29:26 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+[Sun May  7 16:29:36 2023] Waiting for BlockDesign_MovingAverageFilter_0_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log BlockDesign_MovingAverageFilter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BlockDesign_MovingAverageFilter_0_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source BlockDesign_MovingAverageFilter_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.cache/ip 
+Command: synth_design -top BlockDesign_MovingAverageFilter_0_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'BlockDesign_MovingAverageFilter_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27808
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_MovingAverageFilter_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/synth/BlockDesign_MovingAverageFilter_0_0.vhd:72]
+	Parameter AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter AVERAGING_WINDOW_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'MovingAverageFilter' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:9' bound to instance 'U0' of component 'MovingAverageFilter' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/synth/BlockDesign_MovingAverageFilter_0_0.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'MovingAverageFilter' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:43]
+	Parameter AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter AVERAGING_WINDOW_SIZE bound to: 32 - type: integer 
+WARNING: [Synth 8-5640] Port 'empty' is missing in component declaration [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:47]
+	Parameter FIFO_WIDTH bound to: 24 - type: integer 
+	Parameter FIFO_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/FIFO.vhd:8' bound to instance 'inst1' of component 'FIFO' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'FIFO' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/FIFO.vhd:33]
+	Parameter FIFO_WIDTH bound to: 24 - type: integer 
+	Parameter FIFO_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO' (1#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/FIFO.vhd:33]
+WARNING: [Synth 8-5640] Port 'empty' is missing in component declaration [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:47]
+	Parameter FIFO_WIDTH bound to: 24 - type: integer 
+	Parameter FIFO_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'FIFO' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/FIFO.vhd:8' bound to instance 'inst2' of component 'FIFO' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:128]
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+	Parameter AVERAGING_WINDOW_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'AveragingLogic' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:8' bound to instance 'inst3' of component 'AveragingLogic' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'AveragingLogic' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:27]
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+	Parameter AVERAGING_WINDOW_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'AveragingLogic' (2#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:27]
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+	Parameter AVERAGING_WINDOW_SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'AveragingLogic' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd:8' bound to instance 'inst4' of component 'AveragingLogic' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'MovingAverageFilter' (3#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'BlockDesign_MovingAverageFilter_0_0' (4#1) [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/synth/BlockDesign_MovingAverageFilter_0_0.vhd:72]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1003.137 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1003.137 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   29 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 4     
++---Registers : 
+	               29 Bit    Registers := 2     
+	               24 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
++---RAMs : 
+	              768 Bit	(32 X 24 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   29 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1003.137 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1003.137 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1003.137 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1003.137 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1003.137 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MovingAverageFilter_0_0_synth_1/BlockDesign_MovingAverageFilter_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MovingAverageFilter_0_0_synth_1/BlockDesign_MovingAverageFilter_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file BlockDesign_MovingAverageFilter_0_0_utilization_synth.rpt -pb BlockDesign_MovingAverageFilter_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May  7 16:29:35 2023...
+[Sun May  7 16:29:36 2023] BlockDesign_MovingAverageFilter_0_0_synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:36 . Memory (MB): peak = 1893.324 ; gain = 0.000
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1948.684 ; gain = 55.359
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_wrapper' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:34]
+INFO: [Synth 8-3491] module 'BlockDesign' declared at 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:14' bound to instance 'BlockDesign_i' of component 'BlockDesign' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:46]
+INFO: [Synth 8-3491] module 'BlockDesign_Debouncer_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_0_0_stub.vhdl:5' bound to instance 'Debouncer_0' of component 'BlockDesign_Debouncer_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_Debouncer_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_Debouncer_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_1_0_stub.vhdl:5' bound to instance 'Debouncer_1' of component 'BlockDesign_Debouncer_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:300]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_Debouncer_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_EdgeDetector_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_0_0_stub.vhdl:5' bound to instance 'EdgeDetector_0' of component 'BlockDesign_EdgeDetector_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_EdgeDetector_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_EdgeDetector_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_1_0_stub.vhdl:5' bound to instance 'EdgeDetector_1' of component 'BlockDesign_EdgeDetector_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:314]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_EdgeDetector_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_MovingAverageFilter_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_MovingAverageFilter_0_0_stub.vhdl:5' bound to instance 'MovingAverageFilter_0' of component 'BlockDesign_MovingAverageFilter_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:321]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_MovingAverageFilter_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_MovingAverageFilter_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'BlockDesign_axi4stream_spi_master_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axi4stream_spi_master_1_0_stub.vhdl:5' bound to instance 'axi4stream_spi_master_1' of component 'BlockDesign_axi4stream_spi_master_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:335]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_axi4stream_spi_master_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axi4stream_spi_master_1_0_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'BlockDesign_axis_dual_i2s_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axis_dual_i2s_1_0_stub.vhdl:5' bound to instance 'axis_dual_i2s_1' of component 'BlockDesign_axis_dual_i2s_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:357]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_axis_dual_i2s_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axis_dual_i2s_1_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'BlockDesign_clk_wiz_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'BlockDesign_clk_wiz_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:380]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_clk_wiz_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'BlockDesign_digilent_jstk2_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_digilent_jstk2_0_0_stub.vhdl:5' bound to instance 'digilent_jstk2_0' of component 'BlockDesign_digilent_jstk2_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:388]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_digilent_jstk2_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_digilent_jstk2_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'BlockDesign_proc_sys_reset_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'BlockDesign_proc_sys_reset_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:405]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_proc_sys_reset_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'BlockDesign_proc_sys_reset_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_1_0_stub.vhdl:5' bound to instance 'proc_sys_reset_1' of component 'BlockDesign_proc_sys_reset_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:418]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_proc_sys_reset_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_1_0_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'BlockDesign' (1#1) [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:46]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_io0_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:109]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (2#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_io1_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:116]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_sck_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:123]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_ss_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'BlockDesign_wrapper' (3#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1995.984 ; gain = 102.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2018.910 ; gain = 125.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2018.910 ; gain = 125.586
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_Debouncer_0_0/BlockDesign_Debouncer_0_0.dcp' for cell 'BlockDesign_i/Debouncer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_Debouncer_1_0/BlockDesign_Debouncer_1_0.dcp' for cell 'BlockDesign_i/Debouncer_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_EdgeDetector_0_0/BlockDesign_EdgeDetector_0_0.dcp' for cell 'BlockDesign_i/EdgeDetector_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0.dcp' for cell 'BlockDesign_i/EdgeDetector_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/BlockDesign_MovingAverageFilter_0_0.dcp' for cell 'BlockDesign_i/MovingAverageFilter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_axi4stream_spi_master_1_0/BlockDesign_axi4stream_spi_master_1_0.dcp' for cell 'BlockDesign_i/axi4stream_spi_master_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_axis_dual_i2s_1_0/BlockDesign_axis_dual_i2s_1_0.dcp' for cell 'BlockDesign_i/axis_dual_i2s_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.dcp' for cell 'BlockDesign_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0.dcp' for cell 'BlockDesign_i/digilent_jstk2_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.dcp' for cell 'BlockDesign_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.dcp' for cell 'BlockDesign_i/proc_sys_reset_1'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2048.402 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_board.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_board.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1715] 3 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 2102.652 ; gain = 209.328
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "process". [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:212]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2182.875 ; gain = 4.336
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2715] syntax error near process [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:213]
+ERROR: [Synth 8-2778] type error near behavioral ; expected type  void [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:215]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2185.297 ; gain = 6.758
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 2185.336 ; gain = 6.797
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "process". [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:213]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "process". [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:213]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "process". [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:213]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "process". [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd:213]
+update_compile_order -fileset sources_1
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2213.078 ; gain = 21.512
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_wrapper' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:34]
+INFO: [Synth 8-3491] module 'BlockDesign' declared at 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:14' bound to instance 'BlockDesign_i' of component 'BlockDesign' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:46]
+INFO: [Synth 8-3491] module 'BlockDesign_Debouncer_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_0_0_stub.vhdl:5' bound to instance 'Debouncer_0' of component 'BlockDesign_Debouncer_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_Debouncer_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_Debouncer_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_1_0_stub.vhdl:5' bound to instance 'Debouncer_1' of component 'BlockDesign_Debouncer_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:300]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_Debouncer_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_EdgeDetector_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_0_0_stub.vhdl:5' bound to instance 'EdgeDetector_0' of component 'BlockDesign_EdgeDetector_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_EdgeDetector_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_EdgeDetector_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_1_0_stub.vhdl:5' bound to instance 'EdgeDetector_1' of component 'BlockDesign_EdgeDetector_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:314]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_EdgeDetector_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_MovingAverageFilter_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_MovingAverageFilter_0_0_stub.vhdl:5' bound to instance 'MovingAverageFilter_0' of component 'BlockDesign_MovingAverageFilter_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:321]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_MovingAverageFilter_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_MovingAverageFilter_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'BlockDesign_axi4stream_spi_master_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axi4stream_spi_master_1_0_stub.vhdl:5' bound to instance 'axi4stream_spi_master_1' of component 'BlockDesign_axi4stream_spi_master_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:335]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_axi4stream_spi_master_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axi4stream_spi_master_1_0_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'BlockDesign_axis_dual_i2s_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axis_dual_i2s_1_0_stub.vhdl:5' bound to instance 'axis_dual_i2s_1' of component 'BlockDesign_axis_dual_i2s_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:357]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_axis_dual_i2s_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axis_dual_i2s_1_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'BlockDesign_clk_wiz_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'BlockDesign_clk_wiz_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:380]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_clk_wiz_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'BlockDesign_digilent_jstk2_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_digilent_jstk2_0_0_stub.vhdl:5' bound to instance 'digilent_jstk2_0' of component 'BlockDesign_digilent_jstk2_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:388]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_digilent_jstk2_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_digilent_jstk2_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'BlockDesign_proc_sys_reset_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'BlockDesign_proc_sys_reset_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:405]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_proc_sys_reset_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'BlockDesign_proc_sys_reset_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_1_0_stub.vhdl:5' bound to instance 'proc_sys_reset_1' of component 'BlockDesign_proc_sys_reset_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:418]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_proc_sys_reset_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_1_0_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'BlockDesign' (1#1) [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:46]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_io0_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:109]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (2#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_io1_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:116]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_sck_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:123]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_ss_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'BlockDesign_wrapper' (3#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2213.102 ; gain = 21.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2221.480 ; gain = 29.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2221.480 ; gain = 29.914
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_Debouncer_0_0/BlockDesign_Debouncer_0_0.dcp' for cell 'BlockDesign_i/Debouncer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_Debouncer_1_0/BlockDesign_Debouncer_1_0.dcp' for cell 'BlockDesign_i/Debouncer_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_EdgeDetector_0_0/BlockDesign_EdgeDetector_0_0.dcp' for cell 'BlockDesign_i/EdgeDetector_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0.dcp' for cell 'BlockDesign_i/EdgeDetector_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/BlockDesign_MovingAverageFilter_0_0.dcp' for cell 'BlockDesign_i/MovingAverageFilter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_axi4stream_spi_master_1_0/BlockDesign_axi4stream_spi_master_1_0.dcp' for cell 'BlockDesign_i/axi4stream_spi_master_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_axis_dual_i2s_1_0/BlockDesign_axis_dual_i2s_1_0.dcp' for cell 'BlockDesign_i/axis_dual_i2s_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.dcp' for cell 'BlockDesign_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0.dcp' for cell 'BlockDesign_i/digilent_jstk2_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.dcp' for cell 'BlockDesign_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.dcp' for cell 'BlockDesign_i/proc_sys_reset_1'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2241.910 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_board.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_board.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1715] 3 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2241.910 ; gain = 51.246
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+update_compile_order -fileset sources_1
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2241.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_wrapper' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:34]
+INFO: [Synth 8-3491] module 'BlockDesign' declared at 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:14' bound to instance 'BlockDesign_i' of component 'BlockDesign' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:46]
+INFO: [Synth 8-3491] module 'BlockDesign_Debouncer_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_0_0_stub.vhdl:5' bound to instance 'Debouncer_0' of component 'BlockDesign_Debouncer_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_Debouncer_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_Debouncer_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_1_0_stub.vhdl:5' bound to instance 'Debouncer_1' of component 'BlockDesign_Debouncer_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:300]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_Debouncer_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_Debouncer_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_EdgeDetector_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_0_0_stub.vhdl:5' bound to instance 'EdgeDetector_0' of component 'BlockDesign_EdgeDetector_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:307]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_EdgeDetector_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_EdgeDetector_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_1_0_stub.vhdl:5' bound to instance 'EdgeDetector_1' of component 'BlockDesign_EdgeDetector_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:314]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_EdgeDetector_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_EdgeDetector_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'BlockDesign_MovingAverageFilter_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_MovingAverageFilter_0_0_stub.vhdl:5' bound to instance 'MovingAverageFilter_0' of component 'BlockDesign_MovingAverageFilter_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:321]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_MovingAverageFilter_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_MovingAverageFilter_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'BlockDesign_axi4stream_spi_master_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axi4stream_spi_master_1_0_stub.vhdl:5' bound to instance 'axi4stream_spi_master_1' of component 'BlockDesign_axi4stream_spi_master_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:335]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_axi4stream_spi_master_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axi4stream_spi_master_1_0_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'BlockDesign_axis_dual_i2s_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axis_dual_i2s_1_0_stub.vhdl:5' bound to instance 'axis_dual_i2s_1' of component 'BlockDesign_axis_dual_i2s_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:357]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_axis_dual_i2s_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_axis_dual_i2s_1_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'BlockDesign_clk_wiz_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'BlockDesign_clk_wiz_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:380]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_clk_wiz_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'BlockDesign_digilent_jstk2_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_digilent_jstk2_0_0_stub.vhdl:5' bound to instance 'digilent_jstk2_0' of component 'BlockDesign_digilent_jstk2_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:388]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_digilent_jstk2_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_digilent_jstk2_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'BlockDesign_proc_sys_reset_0_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'BlockDesign_proc_sys_reset_0_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:405]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_proc_sys_reset_0_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'BlockDesign_proc_sys_reset_1_0' declared at 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_1_0_stub.vhdl:5' bound to instance 'proc_sys_reset_1' of component 'BlockDesign_proc_sys_reset_1_0' [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:418]
+INFO: [Synth 8-638] synthesizing module 'BlockDesign_proc_sys_reset_1_0' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/realtime/BlockDesign_proc_sys_reset_1_0_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'BlockDesign' (1#1) [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd:46]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_io0_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:109]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (2#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_io1_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:116]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_sck_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:123]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'SPI_M_1_ss_iobuf' of component 'IOBUF' [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'BlockDesign_wrapper' (3#1) [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2241.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2251.430 ; gain = 9.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2251.430 ; gain = 9.520
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_Debouncer_0_0/BlockDesign_Debouncer_0_0.dcp' for cell 'BlockDesign_i/Debouncer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_Debouncer_1_0/BlockDesign_Debouncer_1_0.dcp' for cell 'BlockDesign_i/Debouncer_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_EdgeDetector_0_0/BlockDesign_EdgeDetector_0_0.dcp' for cell 'BlockDesign_i/EdgeDetector_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0.dcp' for cell 'BlockDesign_i/EdgeDetector_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_MovingAverageFilter_0_0/BlockDesign_MovingAverageFilter_0_0.dcp' for cell 'BlockDesign_i/MovingAverageFilter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_axi4stream_spi_master_1_0/BlockDesign_axi4stream_spi_master_1_0.dcp' for cell 'BlockDesign_i/axi4stream_spi_master_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_axis_dual_i2s_1_0/BlockDesign_axis_dual_i2s_1_0.dcp' for cell 'BlockDesign_i/axis_dual_i2s_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.dcp' for cell 'BlockDesign_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0.dcp' for cell 'BlockDesign_i/digilent_jstk2_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.dcp' for cell 'BlockDesign_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.dcp' for cell 'BlockDesign_i/proc_sys_reset_1'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2271.793 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_board.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_board.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc] for cell 'BlockDesign_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0_board.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xdc] for cell 'BlockDesign_i/proc_sys_reset_1/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BlockDesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BlockDesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1715] 3 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2271.793 ; gain = 29.883
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  7 18:15:15 2023...

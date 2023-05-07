@@ -25,7 +25,7 @@ entity MovingAverageFilter is
         S_AXIS_TLAST	:   in   STD_LOGIC;
         --------------------------------------------
 
-         --------------AXI4-Stream--master----------
+        ------------AXI4-Stream--master-------------
         M_AXIS_TREADY	:   in 	 STD_LOGIC;
         -- Data in
         M_AXIS_TDATA	:   out  STD_LOGIC_VECTOR(AXIS_TDATA_WIDTH-1 DOWNTO 0)  := (Others =>'0');
@@ -182,12 +182,35 @@ begin
 
     wr_en2_int <= S_AXIS_TVALID AND NOT S_AXIS_TLAST;
     rd_en2_int <= wr_en2_int AND full2_int;
+
+    M_AXIS_TLAST <= S_AXIS_TLAST;
     ------------------------------------------------------------------------------------------------
 
     process(aclk)
     begin
+        if rising_edge(aclk) then
+            if aresetn = '0' then
+            
+            else
+                if filter_enable = '1' and full1_int = '1' and full2_int = '1' then
+                    if(S_AXIS_TLAST = '0') then
+                        -- AGGIUNGERE T READY AAAAAAAAAAAAAA
+                        M_AXIS_TDATA <= avg_val1_int;
+                        M_AXIS_TVALID <= '1';
+                    else 
+                        M_AXIS_TDATA <= avg_val1_int;
+                        M_AXIS_TVALID <= '1';
+                    end if;
+                elsif filter_enable = '0' then
+                    M_AXIS_TDATA <= S_AXIS_TDATA;
+                    M_AXIS_TVALID <= S_AXIS_TVALID;
+                    S_AXIS_TREADY <= M_AXIS_TREADY;
+                end if;
+            end if;
+    
+        end if;
+
 
     end process;
-
 
 end Behavioral;
