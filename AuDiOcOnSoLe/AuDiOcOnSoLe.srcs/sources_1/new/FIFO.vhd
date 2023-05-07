@@ -11,7 +11,6 @@ entity FIFO is
 		FIFO_DEPTH : integer := 32
 	);
 	port (
-
 		-------- Reset/Clock -------
 		aresetn	: in std_logic;
 		clk		: in std_logic;
@@ -38,7 +37,6 @@ architecture Behavioral of FIFO is
 	type FIFO_DATA_TYPE is array (0 to FIFO_DEPTH-1) of std_logic_vector(din'range);
 	----------------------------
 	-----------------------------------------------------------------
-
 
 	---------------------------- SIGNALS ----------------------------
 	---------- Memory element -----------
