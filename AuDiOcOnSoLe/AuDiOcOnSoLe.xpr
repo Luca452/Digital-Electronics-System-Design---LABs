@@ -429,24 +429,26 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BlockDesign_axi4stream_spi_master_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_axi4stream_spi_master_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_axi4stream_spi_master_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_axi4stream_spi_master_1_0_synth_1">
+    <Run Id="BlockDesign_axi4stream_spi_master_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_axi4stream_spi_master_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_axi4stream_spi_master_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_axi4stream_spi_master_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_axi4stream_spi_master_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BlockDesign_axis_dual_i2s_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_axis_dual_i2s_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_axis_dual_i2s_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_axis_dual_i2s_1_0_synth_1">
+    <Run Id="BlockDesign_axis_dual_i2s_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_axis_dual_i2s_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_axis_dual_i2s_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_axis_dual_i2s_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_axis_dual_i2s_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
