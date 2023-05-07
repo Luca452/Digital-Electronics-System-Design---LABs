@@ -8,8 +8,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MovingAverageFilter is
     Generic(
-        AXIS_TDATA_WIDTH	: integer	:= 24;
-        AVERAGE_BUFF_SIZE   : integer   := 32
+        AXIS_TDATA_WIDTH        : integer	:= 24;
+        AVERAGING_WINDOW_SIZE   : integer   := 32
     );
     Port (
         aclk             :   in   STD_LOGIC;   
@@ -50,7 +50,6 @@ architecture Behavioral of MovingAverageFilter is
         FIFO_DEPTH : integer
     );
     port (
-
         -------- Reset/Clock -------
         aresetn	: in std_logic;
         clk		: in std_logic;
@@ -64,39 +63,131 @@ architecture Behavioral of MovingAverageFilter is
 
         ---- FIFO Read Interface ---
         rd_en	: in	std_logic;
-        dout	: out std_logic_vector(FIFO_WIDTH-1 downto 0);
-        empty	: out std_logic
+        dout	: out std_logic_vector(FIFO_WIDTH-1 downto 0)
         ----------------------------
     );
     end component;
+    -------------------------------
+    -- Averaging modules declaration
+	component AveragingLogic
+    Generic(
+        DATA_WIDTH              : integer := 24;
+        AVERAGING_WINDOW_SIZE   : integer := 32 
+    );
+    Port ( 
+        aresetn	: in std_logic;
+        clk		: in std_logic;
+
+        din_plus    : IN std_logic_vector(DATA_WIDTH-1 downto 0);
+        din_minus   : IN std_logic_vector(DATA_WIDTH-1 downto 0);
+
+        fifo_full    : IN std_logic;
+        wr_en        : IN std_logic;
+
+        avg_val      : OUT std_logic_vector(DATA_WIDTH-1 downto 0)
+    );
+
+    end component;
+    ------------------------------
+    -------------------------------------------------------------------------------------------------
+
+
+    ----------------------------------------SIGNALS & CONSTANTS--------------------------------------
+    signal dout1_int    : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
+    signal full1_int    : std_logic;
+    signal wr_en1_int   : std_logic;
+    signal avg_val1_int : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
+    signal rd_en1_int   : std_logic;
+
+    signal dout2_int : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
+    signal full2_int : std_logic;
+    signal wr_en2_int   : std_logic;
+    signal avg_val2_int  : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
+    signal rd_en2_int   : std_logic;
     -------------------------------------------------------------------------------------------------
 
 
 begin
     --------------------------------------FIFO MODULES INSTATIATION---------------------------------
-
     -----Left Channel-----
 	inst1: FIFO 
     generic map (
-        FIFO_DEPTH => AVERAGE_BUFF_SIZE,
+        FIFO_DEPTH => AVERAGING_WINDOW_SIZE,
         FIFO_WIDTH => AXIS_TDATA_WIDTH
     )
     port map (
         aresetn  => aresetn,
-        clk    => clk
+        clk    => aclk,
+        wr_en => wr_en1_int,
+        din => S_AXIS_TDATA,
+        full => full1_int,
+        rd_en => rd_en1_int,
+        dout => dout1_int
     );
-
-    ----Right Channel----
-    inst2: FIFO 
+    -----Right Channel-----
+	inst2: FIFO 
     generic map (
-        FIFO_DEPTH => AVERAGE_BUFF_SIZE,
+        FIFO_DEPTH => AVERAGING_WINDOW_SIZE,
         FIFO_WIDTH => AXIS_TDATA_WIDTH
     )
     port map (
         aresetn  => aresetn,
-        clk    => clk
+        clk    => aclk,
+        wr_en => wr_en2_int,
+        din => S_AXIS_TDATA,
+        full => full2_int,
+        rd_en => rd_en2_int,
+        dout => dout2_int
     );
-
     ------------------------------------------------------------------------------------------------
+
+    ---------------------------------AVERAGING MODULES INSTATIATION---------------------------------
+    -----Left Channel-----
+    inst3: AveragingLogic 
+    generic map (
+        AVERAGING_WINDOW_SIZE => AVERAGING_WINDOW_SIZE,
+        DATA_WIDTH => AXIS_TDATA_WIDTH
+    )
+    port map (
+        aresetn  => aresetn,
+        clk    => aclk,
+        din_plus => S_AXIS_TDATA,
+        din_minus => dout1_int,
+        fifo_full => full1_int,  
+        wr_en => wr_en1_int,      
+
+        avg_val => avg_val1_int
+    );
+    -----Right Channel-----
+    inst4: AveragingLogic 
+    generic map (
+        AVERAGING_WINDOW_SIZE => AVERAGING_WINDOW_SIZE,
+        DATA_WIDTH => AXIS_TDATA_WIDTH
+    )
+    port map (
+        aresetn  => aresetn,
+        clk    => aclk,
+        din_plus => S_AXIS_TDATA,
+        din_minus => dout2_int,
+        fifo_full => full2_int,  
+        wr_en => wr_en2_int,      
+
+        avg_val => avg_val2_int
+    );
+    ------------------------------------------------------------------------------------------------
+
+    --------------------------------------------DATA FLOW-------------------------------------------
+    wr_en1_int <= S_AXIS_TVALID AND S_AXIS_TLAST;
+    rd_en1_int <= wr_en1_int AND full1_int;
+
+    wr_en2_int <= S_AXIS_TVALID AND NOT S_AXIS_TLAST;
+    rd_en2_int <= wr_en2_int AND full2_int;
+    ------------------------------------------------------------------------------------------------
+
+    process(aclk)
+    begin
+
+    end process;
+
 
 end Behavioral;
