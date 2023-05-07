@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log BlockDesign_axis_dual_i2s_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BlockDesign_axis_dual_i2s_1_0.tcl
+
