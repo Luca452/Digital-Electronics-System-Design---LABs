@@ -1,0 +1,209 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat May  6 19:21:59 2023
+# Process ID: 19292
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17056 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+set_property location {3 1139 -453} [get_bd_cells digilent_jstk2_0]
+update_module_reference {BlockDesign_Debouncer_0_0 BlockDesign_Debouncer_1_0}
+create_bd_cell -type module -reference EdgeDetector EdgeDetector_0
+create_bd_cell -type module -reference EdgeDetector EdgeDetector_1
+set_property location {3 1008 -249} [get_bd_cells EdgeDetector_1]
+set_property location {3 1108 -784} [get_bd_cells digilent_jstk2_0]
+set_property location {3 1070 -409} [get_bd_cells EdgeDetector_0]
+set_property location {2.5 758 -404} [get_bd_cells Debouncer_0]
+set_property location {3 783 -571} [get_bd_cells Debouncer_0]
+set_property location {4 1081 -557} [get_bd_cells EdgeDetector_0]
+set_property location {3 770 -397} [get_bd_cells Debouncer_1]
+set_property location {4 1062 -389} [get_bd_cells EdgeDetector_1]
+set_property location {3 750 -556} [get_bd_cells Debouncer_0]
+set_property location {4.5 1362 -703} [get_bd_cells digilent_jstk2_0]
+set_property location {4 1068 -395} [get_bd_cells EdgeDetector_1]
+set_property location {4 1078 -400} [get_bd_cells EdgeDetector_1]
+startgroup
+set_property -dict [list CONFIG.PRIMITIVE {MMCM} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100.00} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {22.579} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {7.000} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.000} CONFIG.MMCM_CLKOUT1_DIVIDE {31} CONFIG.CLKOUT1_JITTER {149.337} CONFIG.CLKOUT1_PHASE_ERROR {122.577} CONFIG.CLKOUT2_JITTER {201.826} CONFIG.CLKOUT2_PHASE_ERROR {122.577}] [get_bd_cells clk_wiz_0]
+endgroup
+connect_bd_net [get_bd_pins axi4stream_spi_master_0/aclk] [get_bd_pins EdgeDetector_0/output_signal]
+undo
+set_property location {-297 -59} [get_bd_ports reset]
+set_property location {-141 -67} [get_bd_ports reset]
+set_property location {-218 -28} [get_bd_ports sys_clock]
+set_property location {-123 -42} [get_bd_ports sys_clock]
+save_bd_design
+update_compile_order -fileset sources_1
+close [ open {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/FIFO.vhd} w ]
+add_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/FIFO.vhd}}
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins Debouncer_1/reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins Debouncer_0/input_signal]
+delete_bd_objs [get_bd_nets proc_sys_reset_1_peripheral_reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins Debouncer_1/reset]
+set_property location {3 780 -397} [get_bd_cells Debouncer_1]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins Debouncer_0/reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins EdgeDetector_1/rst]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins EdgeDetector_0/rst]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins Debouncer_1/clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins Debouncer_0/clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins EdgeDetector_1/clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins EdgeDetector_0/clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins digilent_jstk2_0/aclk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins axi4stream_spi_master_0/aclk]
+connect_bd_net [get_bd_pins axis_dual_i2s_0/i2s_clk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins axis_dual_i2s_0/i2s_resetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+delete_bd_objs [get_bd_nets proc_sys_reset_1_peripheral_reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins Debouncer_1/reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins Debouncer_0/reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins EdgeDetector_1/rst]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins EdgeDetector_0/rst]
+delete_bd_objs [get_bd_nets proc_sys_reset_1_peripheral_aresetn]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins Debouncer_1/reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins Debouncer_0/reset]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins EdgeDetector_1/rst]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_reset] [get_bd_pins EdgeDetector_0/rst]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins digilent_jstk2_0/aresetn]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins axi4stream_spi_master_0/aresetn]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins axis_dual_i2s_0/aresetn]
+startgroup
+make_bd_pins_external  [get_bd_pins axis_dual_i2s_0/tx_lrck] [get_bd_pins axis_dual_i2s_0/rx_sclk] [get_bd_pins axis_dual_i2s_0/tx_mclk] [get_bd_pins axis_dual_i2s_0/rx_lrck] [get_bd_pins axis_dual_i2s_0/rx_mclk] [get_bd_pins axis_dual_i2s_0/tx_sdout] [get_bd_pins axis_dual_i2s_0/tx_sclk] [get_bd_pins axis_dual_i2s_0/rx_sdin]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins axis_dual_i2s_0/aclk]
+connect_bd_intf_net [get_bd_intf_pins axi4stream_spi_master_0/S_AXIS] [get_bd_intf_pins digilent_jstk2_0/m_axis]
+connect_bd_intf_net [get_bd_intf_pins axi4stream_spi_master_0/M_AXIS] [get_bd_intf_pins digilent_jstk2_0/s_axis]
+connect_bd_net [get_bd_pins digilent_jstk2_0/btn_trigger] [get_bd_pins Debouncer_0/input_signal]
+connect_bd_net [get_bd_pins digilent_jstk2_0/btn_jstk] [get_bd_pins Debouncer_1/input_signal]
+connect_bd_net [get_bd_pins Debouncer_0/debounced] [get_bd_pins EdgeDetector_0/input_signal]
+connect_bd_net [get_bd_pins Debouncer_1/debounced] [get_bd_pins EdgeDetector_1/input_signal]
+regenerate_bd_layout
+undo
+close [ open {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd} w ]
+add_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd}}
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference MovingAverageFilter MovingAverageFilter_0
+set_property location {5 1403 -464} [get_bd_cells MovingAverageFilter_0]
+set_property location {5 1351 -394} [get_bd_cells MovingAverageFilter_0]
+set_property location {5 1355 -219} [get_bd_cells MovingAverageFilter_0]
+connect_bd_intf_net [get_bd_intf_pins axis_dual_i2s_0/m_axis] [get_bd_intf_pins MovingAverageFilter_0/S_AXIS]
+set_property location {6 1632 -372} [get_bd_cells axi4stream_spi_master_0]
+connect_bd_net [get_bd_pins MovingAverageFilter_0/aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+connect_bd_net [get_bd_pins EdgeDetector_1/output_signal] [get_bd_pins MovingAverageFilter_0/filter_enable]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins MovingAverageFilter_0/aclk]
+connect_bd_intf_net [get_bd_intf_pins MovingAverageFilter_0/M_AXIS] [get_bd_intf_pins axis_dual_i2s_0/s_axis]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado} {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP}} [current_project]
+update_ip_catalog
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {22.591} CONFIG.MMCM_CLKFBOUT_MULT_F {11.750} CONFIG.MMCM_CLKOUT0_DIVIDE_F {11.750} CONFIG.MMCM_CLKOUT1_DIVIDE {52} CONFIG.CLKOUT1_JITTER {117.368} CONFIG.CLKOUT1_PHASE_ERROR {88.161} CONFIG.CLKOUT2_JITTER {161.076} CONFIG.CLKOUT2_PHASE_ERROR {88.161}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+endgroup
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_clk_wiz_0_0_synth_1
+wait_on_run BlockDesign_clk_wiz_0_0_synth_1
+launch_runs BlockDesign_proc_sys_reset_0_0_synth_1
+wait_on_run BlockDesign_proc_sys_reset_0_0_synth_1
+launch_runs BlockDesign_proc_sys_reset_1_0_synth_1
+wait_on_run BlockDesign_proc_sys_reset_1_0_synth_1
+launch_runs BlockDesign_digilent_jstk2_0_0_synth_1
+wait_on_run BlockDesign_digilent_jstk2_0_0_synth_1
+launch_runs BlockDesign_axi4stream_spi_master_0_0_synth_1
+wait_on_run BlockDesign_axi4stream_spi_master_0_0_synth_1
+launch_runs BlockDesign_axis_dual_i2s_0_0_synth_1
+wait_on_run BlockDesign_axis_dual_i2s_0_0_synth_1
+launch_runs BlockDesign_Debouncer_0_0_synth_1
+wait_on_run BlockDesign_Debouncer_0_0_synth_1
+launch_runs BlockDesign_Debouncer_1_0_synth_1
+wait_on_run BlockDesign_Debouncer_1_0_synth_1
+launch_runs BlockDesign_EdgeDetector_0_0_synth_1
+wait_on_run BlockDesign_EdgeDetector_0_0_synth_1
+launch_runs BlockDesign_EdgeDetector_1_0_synth_1
+wait_on_run BlockDesign_EdgeDetector_1_0_synth_1
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+refresh_design
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+create_bd_cell -type ip -vlnv DigiLAB:ip:axi4stream_spi_master:1.0 axi4stream_spi_master_1
+endgroup
+set_property location {7 1633 -506} [get_bd_cells axi4stream_spi_master_1]
+delete_bd_objs [get_bd_intf_nets digilent_jstk2_0_m_axis]
+connect_bd_intf_net [get_bd_intf_pins digilent_jstk2_0/m_axis] [get_bd_intf_pins axi4stream_spi_master_1/S_AXIS]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins axi4stream_spi_master_1/aclk]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins axi4stream_spi_master_1/aresetn]
+delete_bd_objs [get_bd_intf_nets axi4stream_spi_master_0_M_AXIS]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi4stream_spi_master_1/SPI_M]
+endgroup
+delete_bd_objs [get_bd_intf_nets axi4stream_spi_master_0_SPI_M] [get_bd_intf_ports SPI_M_0]
+connect_bd_intf_net [get_bd_intf_pins axi4stream_spi_master_1/M_AXIS] [get_bd_intf_pins digilent_jstk2_0/s_axis]
+delete_bd_objs [get_bd_cells axi4stream_spi_master_0]
+startgroup
+create_bd_cell -type ip -vlnv DigiLAB:ip:axis_dual_i2s:1.0 axis_dual_i2s_1
+endgroup
+set_property location {8 1984 398} [get_bd_cells axis_dual_i2s_1]
+startgroup
+make_bd_pins_external  [get_bd_pins axis_dual_i2s_1/tx_lrck] [get_bd_pins axis_dual_i2s_1/rx_sdin] [get_bd_pins axis_dual_i2s_1/rx_sclk] [get_bd_pins axis_dual_i2s_1/rx_lrck] [get_bd_pins axis_dual_i2s_1/rx_mclk] [get_bd_pins axis_dual_i2s_1/tx_sdout] [get_bd_pins axis_dual_i2s_1/tx_sclk] [get_bd_pins axis_dual_i2s_1/tx_mclk]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins axis_dual_i2s_1/aclk]
+connect_bd_net [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins axis_dual_i2s_1/aresetn]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins axis_dual_i2s_1/i2s_clk]
+connect_bd_net [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins axis_dual_i2s_1/i2s_resetn]
+delete_bd_objs [get_bd_intf_nets axis_dual_i2s_0_m_axis]
+connect_bd_intf_net [get_bd_intf_pins axis_dual_i2s_1/m_axis] [get_bd_intf_pins MovingAverageFilter_0/S_AXIS]
+delete_bd_objs [get_bd_intf_nets MovingAverageFilter_0_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins MovingAverageFilter_0/M_AXIS] [get_bd_intf_pins axis_dual_i2s_1/s_axis]
+delete_bd_objs [get_bd_nets axis_dual_i2s_0_tx_mclk] [get_bd_nets axis_dual_i2s_0_tx_lrck] [get_bd_nets axis_dual_i2s_0_tx_sdout] [get_bd_nets axis_dual_i2s_0_rx_mclk] [get_bd_nets axis_dual_i2s_0_rx_lrck] [get_bd_nets axis_dual_i2s_0_rx_sclk] [get_bd_nets rx_sdin_0_1] [get_bd_nets axis_dual_i2s_0_tx_sclk] [get_bd_cells axis_dual_i2s_0]
+set_property location {7 1896 -127} [get_bd_cells axis_dual_i2s_1]
+delete_bd_objs [get_bd_ports tx_sclk_0] [get_bd_ports tx_lrck_0] [get_bd_ports rx_lrck_0] [get_bd_ports tx_mclk_0] [get_bd_ports rx_mclk_0] [get_bd_ports tx_sdout_0] [get_bd_ports rx_sclk_0]
+set_property location {2116 158} [get_bd_ports tx_lrck_1]
+set_property location {2120 -147} [get_bd_ports tx_lrck_1]
+set_property location {2101 -115} [get_bd_ports tx_sclk_1]
+set_property location {2094 -75} [get_bd_ports tx_sdout_1]
+set_property location {2109 -32} [get_bd_ports rx_mclk_1]
+set_property location {2094 0} [get_bd_ports rx_lrck_1]
+set_property location {2094 32} [get_bd_ports rx_sclk_1]
+reset_run BlockDesign_MovingAverageFilter_0_0_synth_1
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+launch_runs BlockDesign_axi4stream_spi_master_1_0_synth_1
+wait_on_run BlockDesign_axi4stream_spi_master_1_0_synth_1
+launch_runs BlockDesign_axis_dual_i2s_1_0_synth_1
+wait_on_run BlockDesign_axis_dual_i2s_1_0_synth_1
+refresh_design
+reset_run BlockDesign_MovingAverageFilter_0_0_synth_1
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+refresh_design
+reset_run BlockDesign_MovingAverageFilter_0_0_synth_1
+launch_runs BlockDesign_MovingAverageFilter_0_0_synth_1
+wait_on_run BlockDesign_MovingAverageFilter_0_0_synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
