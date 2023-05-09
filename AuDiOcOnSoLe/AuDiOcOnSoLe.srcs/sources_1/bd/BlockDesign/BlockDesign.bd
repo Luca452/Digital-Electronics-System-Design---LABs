@@ -58,9 +58,6 @@
       "tx_lrck_1": {
         "direction": "O"
       },
-      "rx_sdin_1": {
-        "direction": "I"
-      },
       "rx_sclk_1": {
         "direction": "O"
       },
@@ -1071,12 +1068,6 @@
           "tx_lrck_1"
         ]
       },
-      "rx_sdin_1_1": {
-        "ports": [
-          "rx_sdin_1",
-          "axis_dual_i2s_1/rx_sdin"
-        ]
-      },
       "axis_dual_i2s_1_rx_sclk": {
         "ports": [
           "axis_dual_i2s_1/rx_sclk",
@@ -1136,6 +1127,12 @@
         "ports": [
           "LedController_0/led_r",
           "digilent_jstk2_0/led_r"
+        ]
+      },
+      "rx_sdin_0_1": {
+        "ports": [
+          "rx_sdin_0",
+          "axis_dual_i2s_1/rx_sdin"
         ]
       }
     }
