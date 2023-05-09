@@ -760,10 +760,16 @@
       }
     },
     "interface_nets": {
-      "MovingAverageFilter_0_M_AXIS": {
+      "digilent_jstk2_0_m_axis": {
         "interface_ports": [
-          "MovingAverageFilter_0/M_AXIS",
-          "axis_dual_i2s_1/s_axis"
+          "digilent_jstk2_0/m_axis",
+          "axi4stream_spi_master_1/S_AXIS"
+        ]
+      },
+      "axi4stream_spi_master_1_SPI_M": {
+        "interface_ports": [
+          "SPI_M_1",
+          "axi4stream_spi_master_1/SPI_M"
         ]
       },
       "axis_dual_i2s_1_m_axis": {
@@ -772,22 +778,16 @@
           "MovingAverageFilter_0/S_AXIS"
         ]
       },
-      "digilent_jstk2_0_m_axis": {
-        "interface_ports": [
-          "digilent_jstk2_0/m_axis",
-          "axi4stream_spi_master_1/S_AXIS"
-        ]
-      },
       "axi4stream_spi_master_1_M_AXIS": {
         "interface_ports": [
           "axi4stream_spi_master_1/M_AXIS",
           "digilent_jstk2_0/s_axis"
         ]
       },
-      "axi4stream_spi_master_1_SPI_M": {
+      "MovingAverageFilter_0_M_AXIS": {
         "interface_ports": [
-          "SPI_M_1",
-          "axi4stream_spi_master_1/SPI_M"
+          "MovingAverageFilter_0/M_AXIS",
+          "axis_dual_i2s_1/s_axis"
         ]
       }
     },

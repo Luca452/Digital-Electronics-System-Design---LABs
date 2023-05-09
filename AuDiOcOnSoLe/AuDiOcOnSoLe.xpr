@@ -122,8 +122,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_Debouncer_0_0/BlockDesign_Debouncer_0_0.xci">
-          <Proxy FileSetName="BlockDesign_Debouncer_0_0"/>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_axi4stream_spi_master_1_0/BlockDesign_axi4stream_spi_master_1_0.xci">
+          <Proxy FileSetName="BlockDesign_axi4stream_spi_master_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0.xci">
           <Proxy FileSetName="BlockDesign_digilent_jstk2_0_0"/>
@@ -131,26 +131,26 @@
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_EdgeDetector_0_0/BlockDesign_EdgeDetector_0_0.xci">
           <Proxy FileSetName="BlockDesign_EdgeDetector_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_axi4stream_spi_master_1_0/BlockDesign_axi4stream_spi_master_1_0.xci">
-          <Proxy FileSetName="BlockDesign_axi4stream_spi_master_1_0"/>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xci">
+          <Proxy FileSetName="BlockDesign_proc_sys_reset_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xci">
-          <Proxy FileSetName="BlockDesign_clk_wiz_0_0"/>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0.xci">
+          <Proxy FileSetName="BlockDesign_EdgeDetector_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_Debouncer_1_0/BlockDesign_Debouncer_1_0.xci">
           <Proxy FileSetName="BlockDesign_Debouncer_1_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xci">
+          <Proxy FileSetName="BlockDesign_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_Debouncer_0_0/BlockDesign_Debouncer_0_0.xci">
+          <Proxy FileSetName="BlockDesign_Debouncer_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_axis_dual_i2s_1_0/BlockDesign_axis_dual_i2s_1_0.xci">
           <Proxy FileSetName="BlockDesign_axis_dual_i2s_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_proc_sys_reset_1_0/BlockDesign_proc_sys_reset_1_0.xci">
-          <Proxy FileSetName="BlockDesign_proc_sys_reset_1_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_proc_sys_reset_0_0/BlockDesign_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="BlockDesign_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0.xci">
-          <Proxy FileSetName="BlockDesign_EdgeDetector_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd">
