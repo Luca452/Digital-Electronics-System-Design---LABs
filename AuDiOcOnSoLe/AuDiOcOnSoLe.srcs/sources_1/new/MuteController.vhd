@@ -25,7 +25,6 @@ begin
 
     -- pass the controll signals through the module
     m_axis_tvalid <= s_axis_tvalid;
-    
     s_axis_tready <= m_axis_tready;
     m_axis_tlast <= s_axis_tlast;
 
