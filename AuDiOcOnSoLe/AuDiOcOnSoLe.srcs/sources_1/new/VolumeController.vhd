@@ -109,7 +109,8 @@ begin
 
                     if m_axis_tready = '1' then
                         tx_state <= SEND_R;
-
+                    end if;
+                        
                 when SEND_R =>
                     m_axis_tdata <= data_reg_r;
                     m_axis_tlast <= '1';
@@ -117,9 +118,10 @@ begin
 
                     if m_axis_tready = '1' then
                         tx_state <= IDLE;
+                    end if;                        
 
             end case;
-
+            
         end if;
     end process;
 
