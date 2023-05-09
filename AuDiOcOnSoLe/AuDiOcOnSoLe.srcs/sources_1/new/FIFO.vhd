@@ -40,12 +40,12 @@ architecture Behavioral of FIFO is
 
 	---------------------------- SIGNALS ----------------------------
 	---------- Memory element -----------
-	signal fifo_data : FIFO_DATA_TYPE;
+	signal fifo_data : FIFO_DATA_TYPE := (others => (others => '0'));
 	--------------------------------------
 
 	------ Write and read "pointers" ------
 	signal write_index	 : integer range 0 to FIFO_DEPTH-1 := 0;
-	signal read_index	 : integer range 0 to FIFO_DEPTH-1 := 0;
+	signal read_index	 : integer range 0 to FIFO_DEPTH-1 := FIFO_DEPTH-1;
 	---------------------------------------
 
 	------- Number of words in FIFO ------
@@ -61,7 +61,6 @@ architecture Behavioral of FIFO is
 begin
 	----------------------------- DATA FLOW ---------------------------
 	dout <= fifo_data(read_index);
-
 	full_int	<= '1' when fifo_count = FIFO_DEPTH	else '0';
 	empty_int	<= '1' when fifo_count = 0			else '0';
 
@@ -81,7 +80,7 @@ begin
 			if aresetn = '0' then
 				fifo_count	<= 0;
 				write_index	<= 0;
-				read_index	<= 0;
+				read_index	<= FIFO_DEPTH-1;
 
 			else
 
@@ -120,6 +119,7 @@ begin
 				if is_writing = '1' then
 					fifo_data(write_index) <= din;
 				end if;
+
 
 			end if;
 		end if;

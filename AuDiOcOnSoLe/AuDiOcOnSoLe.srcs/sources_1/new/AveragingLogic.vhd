@@ -16,10 +16,8 @@ entity AveragingLogic is
 
         din_plus    : IN std_logic_vector(DATA_WIDTH-1 downto 0);
         din_minus   : IN std_logic_vector(DATA_WIDTH-1 downto 0);
-
-        fifo_full    : IN std_logic;
+    
         wr_en        : IN std_logic;
-
         avg_val      : OUT std_logic_vector(DATA_WIDTH-1 downto 0)
     );
 end AveragingLogic;
@@ -27,7 +25,8 @@ end AveragingLogic;
 architecture Behavioral of AveragingLogic is
 
     constant SUM_TOTAL_LENGTH : positive := (DATA_WIDTH + positive(ceil(log2(real(AVERAGING_WINDOW_SIZE))))) ;
-    signal SUM_TOTAL : unsigned(SUM_TOTAL_LENGTH-1 downto 0);
+    signal SUM_TOTAL : signed(SUM_TOTAL_LENGTH-1 downto 0) := (others => '0') ;
+
 begin
 
     process(clk, aresetn)
@@ -35,15 +34,13 @@ begin
         if rising_edge(clk) then
             if aresetn = '0' then
             else
-                if(wr_en = '1' AND fifo_full = '0') then
-                    SUM_TOTAL <= SUM_TOTAL + unsigned(din_plus);
-                elsif(wr_en = '1' AND fifo_full = '1') then
-                    SUM_TOTAL <= SUM_TOTAL + unsigned(din_plus);
-                    SUM_TOTAL <= SUM_TOTAL - unsigned(din_minus);
-                    avg_val <= std_logic_vector(SUM_TOTAL(SUM_TOTAL_LENGTH-1 downto SUM_TOTAL_LENGTH-DATA_WIDTH-1));
+                if(wr_en = '1') then
+                    SUM_TOTAL <= SUM_TOTAL + signed(std_logic_vector(resize(signed(din_plus),SUM_TOTAL_LENGTH))) - signed(std_logic_vector(resize(signed(din_minus),SUM_TOTAL_LENGTH)));
+                    avg_val <= std_logic_vector(SUM_TOTAL(SUM_TOTAL_LENGTH-1 downto SUM_TOTAL_LENGTH-DATA_WIDTH));
                 end if;
             end if;
         end if;
     end process;
 
 end Behavioral;
+

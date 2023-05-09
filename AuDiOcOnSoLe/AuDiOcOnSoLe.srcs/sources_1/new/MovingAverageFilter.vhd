@@ -61,7 +61,7 @@ architecture Behavioral of MovingAverageFilter is
         full	: out	std_logic;
         ----------------------------
 
-        ---- FIFO Read Interface ---
+        --- FIFO Read Interface ---
         rd_en	: in	std_logic;
         dout	: out std_logic_vector(FIFO_WIDTH-1 downto 0)
         ----------------------------
@@ -81,7 +81,6 @@ architecture Behavioral of MovingAverageFilter is
         din_plus    : IN std_logic_vector(DATA_WIDTH-1 downto 0);
         din_minus   : IN std_logic_vector(DATA_WIDTH-1 downto 0);
 
-        fifo_full    : IN std_logic;
         wr_en        : IN std_logic;
 
         avg_val      : OUT std_logic_vector(DATA_WIDTH-1 downto 0)
@@ -104,6 +103,16 @@ architecture Behavioral of MovingAverageFilter is
     signal wr_en2_int   : std_logic;
     signal avg_val2_int  : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
     signal rd_en2_int   : std_logic;
+
+    -- in the first cycle it takes one clock cycle before data is ready after filter_enable is set to '1', we need to delay TVALID
+    signal M_AXIS_TVALID_reg1 : std_logic := '0';
+    signal M_AXIS_TVALID_reg2 : std_logic := '0';
+
+    signal M_AXIS_TLAST_reg1 : std_logic := '0';
+    signal M_AXIS_TLAST_reg2 : std_logic := '0';
+
+    signal S_AXIS_TREADY_reg1 : std_logic := '0';
+    signal S_AXIS_TREADY_reg2 : std_logic := '0';
     -------------------------------------------------------------------------------------------------
 
 
@@ -152,10 +161,8 @@ begin
         aresetn  => aresetn,
         clk    => aclk,
         din_plus => S_AXIS_TDATA,
-        din_minus => dout1_int,
-        fifo_full => full1_int,  
+        din_minus => dout1_int, 
         wr_en => wr_en1_int,      
-
         avg_val => avg_val1_int
     );
     -----Right Channel-----
@@ -168,22 +175,18 @@ begin
         aresetn  => aresetn,
         clk    => aclk,
         din_plus => S_AXIS_TDATA,
-        din_minus => dout2_int,
-        fifo_full => full2_int,  
+        din_minus => dout2_int, 
         wr_en => wr_en2_int,      
-
         avg_val => avg_val2_int
     );
     ------------------------------------------------------------------------------------------------
 
     --------------------------------------------DATA FLOW-------------------------------------------
-    wr_en1_int <= S_AXIS_TVALID AND S_AXIS_TLAST;
+    wr_en1_int <= S_AXIS_TVALID AND S_AXIS_TLAST AND filter_enable;
     rd_en1_int <= wr_en1_int AND full1_int;
 
-    wr_en2_int <= S_AXIS_TVALID AND NOT S_AXIS_TLAST;
+    wr_en2_int <= S_AXIS_TVALID AND NOT S_AXIS_TLAST AND filter_enable;
     rd_en2_int <= wr_en2_int AND full2_int;
-
-    M_AXIS_TLAST <= S_AXIS_TLAST;
     ------------------------------------------------------------------------------------------------
 
     process(aclk)
@@ -192,15 +195,30 @@ begin
             if aresetn = '0' then
             
             else
-                if filter_enable = '1' and full1_int = '1' and full2_int = '1' then
-                    if(S_AXIS_TLAST = '0') then
-                        -- AGGIUNGERE T READY AAAAAAAAAAAAAA
+
+                M_AXIS_TVALID_reg1 <= M_AXIS_TVALID_reg2;
+                M_AXIS_TVALID <= M_AXIS_TVALID_reg1;
+
+                M_AXIS_TLAST_reg2 <= S_AXIS_TLAST;
+                M_AXIS_TLAST_reg1 <= M_AXIS_TLAST_reg2;
+                M_AXIS_TLAST <= M_AXIS_TLAST_reg1;
+
+                S_AXIS_TREADY_reg2 <= M_AXIS_TREADY;
+                S_AXIS_TREADY_reg1 <= S_AXIS_TREADY_reg2;
+                S_AXIS_TREADY <= S_AXIS_TREADY_reg1;
+
+                -- THREE STAGES PIPELINE
+                if filter_enable = '1' then
+
+                    if(S_AXIS_TLAST = '1') then
                         M_AXIS_TDATA <= avg_val1_int;
-                        M_AXIS_TVALID <= '1';
+                        M_AXIS_TVALID_reg2 <= '1';
                     else 
-                        M_AXIS_TDATA <= avg_val1_int;
-                        M_AXIS_TVALID <= '1';
+                        M_AXIS_TDATA <= avg_val2_int;
+                        M_AXIS_TVALID_reg2 <= '1';
                     end if;
+                    
+                -- pass through ONE STAGE ONLY
                 elsif filter_enable = '0' then
                     M_AXIS_TDATA <= S_AXIS_TDATA;
                     M_AXIS_TVALID <= S_AXIS_TVALID;
