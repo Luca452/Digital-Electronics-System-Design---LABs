@@ -11,3 +11,176 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr}
+update_compile_order -fileset sources_1
+update_module_reference BlockDesign_MovingAverageFilter_0_0
+close_project
+create_project Test_Mean {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean} -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MovingAverageFilter.vhd}}
+import_files -force -norecurse
+update_compile_order -fileset sources_1
+import_files -norecurse {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/AveragingLogic.vhd} {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/FIFO.vhd}}
+update_compile_order -fileset sources_1
+file mkdir C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new
+file mkdir C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new
+file mkdir C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new
+file mkdir C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new
+file mkdir C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new
+file mkdir {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new}
+close [ open {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new/tb_MovingAverage.vhd} w ]
+add_files -fileset sim_1 {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/LAB3/Test_Mean/Test_Mean.srcs/sim_1/new/tb_MovingAverage.vhd}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_simulation
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+set_property -name {xsim.simulate.runtime} -value {1500ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_sim
+launch_simulation
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+refresh_design
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+refresh_design
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+set_property -name {xsim.simulate.runtime} -value {2000ns} -objects [get_filesets sim_1]
+relaunch_sim
+close_sim
+launch_simulation
+source tb_MovingAverage.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+refresh_design
+refresh_design
+relaunch_sim
+relaunch_sim
+refresh_design
+refresh_design
+relaunch_sim
+relaunch_sim
+refresh_design
+relaunch_sim
+relaunch_sim
+refresh_design
+refresh_design
+relaunch_sim
+refresh_design
+relaunch_sim
+refresh_design
+refresh_design
+relaunch_sim
+relaunch_sim
+refresh_design
+close_sim
+launch_simulation
+refresh_design
+launch_simulation
+refresh_design
