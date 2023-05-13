@@ -17,7 +17,7 @@ end EdgeDetector;
 architecture Behavioral of EdgeDetector is
 
     signal input_signal_prec : std_logic;
-    signal output_signal_reg : std_logic := '0';
+    signal output_signal_reg : std_logic := '1';
 
 begin
     process(clk, rst) 

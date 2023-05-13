@@ -132,26 +132,18 @@ begin
 
     --------------------------------------------DATA FLOW-------------------------------------------
     -- pass through all data if filter disabled 
-    with filter_enable select M_AXIS_TDATA <= 
-        S_AXIS_TDATA  when '0',
-        DATA_OUT      when '1',
-        S_AXIS_TDATA  when others;
+    M_AXIS_TDATA <= DATA_OUT when filter_enable = '1' else
+                    S_AXIS_TDATA;
 
-    with filter_enable select M_AXIS_TVALID <= 
-        S_AXIS_TVALID       when '0',
-        M_AXIS_TVALID_reg2   when '1',
-        S_AXIS_TVALID       when others;
+    M_AXIS_TVALID <= M_AXIS_TVALID_reg2 when filter_enable = '1' else           
+                    S_AXIS_TVALID;
 
-    with filter_enable select S_AXIS_TREADY <= 
-        M_AXIS_TREADY       when '0',
-        '1'                 when '1',
-        M_AXIS_TREADY       when others;
+    S_AXIS_TREADY <= '1' when filter_enable = '1' else           
+                    M_AXIS_TREADY;
 
-    with filter_enable select M_AXIS_TLAST <= 
-        S_AXIS_TLAST       when '0',
-        S_AXIS_TLAST_reg   when '1',
-        S_AXIS_TLAST       when others;
-  
+    M_AXIS_TLAST <= S_AXIS_TLAST_reg when filter_enable = '1' else           
+                    S_AXIS_TLAST;
+
     -- if TVALID and filter enable, activate fifo
     wr_en_L_int <= S_AXIS_TVALID AND S_AXIS_TLAST AND filter_enable;
     wr_en_R_int <= S_AXIS_TVALID AND NOT S_AXIS_TLAST AND filter_enable;
@@ -186,8 +178,6 @@ begin
                         M_AXIS_TVALID_reg2 <= '1';
                     end if;
                 end if;
-
-
 
                 -- reset TVALID register when the filter is bypassed, so that when filter is enabled we set it high only when valid data is on the bus
                 if (filter_enable = '0') then
