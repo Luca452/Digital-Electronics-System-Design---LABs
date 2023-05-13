@@ -29,8 +29,8 @@ begin
     m_axis_tlast <= s_axis_tlast;
 
     -- if the mute is enable pass only zeros as data, otherwise forward the data received 
-    with mute_enable select
-        m_axis_tdata <= s_axis_tdata when '0',
-                        (Others => '0') when '1';
+    with mute_enable select m_axis_tdata <= 
+                    s_axis_tdata    when '0',
+                    (Others => '0') when '1';
 
 end Behavioral;

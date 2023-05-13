@@ -187,13 +187,15 @@ begin
                     end if;
                 end if;
 
-                M_AXIS_TVALID_reg1  <= S_AXIS_TVALID;
-                M_AXIS_TVALID_reg2  <= M_AXIS_TVALID_reg1;
-                S_AXIS_TLAST_reg <= S_AXIS_TLAST;
+
 
                 -- reset TVALID register when the filter is bypassed, so that when filter is enabled we set it high only when valid data is on the bus
-                if(filter_enable = '0') then
+                if (filter_enable = '0') then
                     M_AXIS_TVALID_reg2 <= '0';
+                elsif (filter_enable = '1') then 
+                    M_AXIS_TVALID_reg1  <= S_AXIS_TVALID;
+                    M_AXIS_TVALID_reg2  <= M_AXIS_TVALID_reg1;
+                    S_AXIS_TLAST_reg <= S_AXIS_TLAST;
                 end if;
             -------------------------------------------------
             end if;
