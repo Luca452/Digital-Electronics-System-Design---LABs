@@ -131,7 +131,7 @@ begin
     ------------------------------------------------------------------------------------------------
 
     --------------------------------------------DATA FLOW-------------------------------------------
-    -- pass through all data if filter disabled 
+    -- pass through all data if filter is disabled 
     M_AXIS_TDATA <= DATA_OUT when filter_enable = '1' else
                     S_AXIS_TDATA;
 
