@@ -50,7 +50,7 @@ architecture Behavioral of VolumeController is
     signal    abs_data : std_logic_vector(AXIS_TDATA_WIDTH-1 DOWNTO 0);
 
     -- signals that hold the volume data
-    signal data_L    : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
+    -- signal data_L    : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0); -- TODO is not needed, as we put the data directly on the line
     signal data_R    : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
 
     -- states for the state machine
@@ -67,9 +67,9 @@ begin
     -- if the volumes MSB is 1, the value is >= 512 and the volume has to be amplified, thottled otherwise
     -- on every transitioning value the bit volume(N_VOLUME-1) is 1
     -- then take the bits above, namely volume(VOLUME_BITS-2 downto N_VOLUME) which represent a unsigned in the range from 0 to max_vol, so we've got our N
-
-    vol_N <= (max_vol - to_integer( unsigned(volume(VOLUME_BITS-2 downto N_VOLUME)) + volume(N_VOLUME-1) )) when (volume(volume'left) = '0') 
-        else to_integer( unsigned(volume(VOLUME_BITS-2 downto N_VOLUME)) + volume(N_VOLUME-1) )             when (volume(volume'left) = '1'); 
+    
+    vol_N <= (max_vol - to_integer( unsigned(volume(VOLUME_BITS-2 downto N_VOLUME)) + unsigned(volume(N_VOLUME-1 downto N_VOLUME-1)) ))  when (volume(volume'left) = '0') 
+                    else to_integer( unsigned(volume(VOLUME_BITS-2 downto N_VOLUME)) + unsigned(volume(N_VOLUME-1 downto N_VOLUME-1)) )  when (volume(volume'left) = '1'); 
 
     -- this only works, if we hit the value in the transitioning reagion, since for example for N=6 the values between 576 and 607 have this N-1 bit = 0
     -- TODO can't assign based on volume(N_VOLUME-1) = '1' since for example the values between 576 and 607 have this bit = 0
@@ -87,7 +87,7 @@ begin
         elsif rising_edge(aclk) then
 
 
-            case tx_state is
+            case state is
 
                 when RECEIVE =>
 
@@ -101,15 +101,16 @@ begin
                             -- thus the data to be multiplied, otherwise divided
                             -- the multiplicatio and division is implementet with a bitshift in the according direction by vol_N bits
                             if(volume(volume'left) = '0') then
-                                data_L <= std_logic_vector(shift_right(signed(S_AXIS_TDATA),vol_N));
+                                -- to save a clock cycle we put the data directly on the axis line
+                                m_axis_tdata <= std_logic_vector(shift_right(signed(S_AXIS_TDATA),vol_N));
                             elsif (volume(volume'left) = '1') then
 
                                 -- if the left most N bits of the absolute value of the data are different than 0,
                                 -- it means that a shift would bring the data outside of range and thus the signal has to be clipped at it's maximum possible value
                                 if unsigned(abs_data((abs_data'left) downto (abs_data'left - vol_N))) /= 0 then
-                                    data_L <= (data_L'left => '0', Others => '1');
+                                    m_axis_tdata <= (m_axis_tdata'left => '0', Others => '1');
                                 else
-                                    data_L <= std_logic_vector(shift_left(signed(S_AXIS_TDATA), vol_N));
+                                    m_axis_tdata <= std_logic_vector(shift_left(signed(S_AXIS_TDATA), vol_N));
                                 end if;
 
                             end if;
@@ -133,9 +134,9 @@ begin
                             -- when the elaboration of the right channel is done, the data can be send in the next clock phase
                             
                             -- don't receive any more data
-                            s_axis_tready <= '0'
+                            s_axis_tready <= '0';
                             -- put the data for the the left channel on the line
-                            m_axis_tdata <= data_L;
+                            -- m_axis_tdata <= data_L; -- TODO not needed as we put the data directly on the line 
                             -- since it is the left channel,  put tlast to 0
                             m_axis_tlast <= '0';
                             -- set the data on the line to valid
