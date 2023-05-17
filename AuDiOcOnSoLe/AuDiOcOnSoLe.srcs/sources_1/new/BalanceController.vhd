@@ -1,39 +1,10 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 05.05.2023 15:45:41
--- Design Name: 
--- Module Name: BalanceController - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.NUMERIC_STD.ALL;
 
 entity BalanceController is
     Generic(
-        BALANCE_BITS     : integer := 10
+        BALANCE_BITS     : integer := 10;
         AXIS_TDATA_WIDTH : integer	:= 24;
         N_BALANCE         : positive := 6
     );
@@ -70,76 +41,65 @@ architecture Behavioral of BalanceController is
     -- but MSB bit is used to discriminate between pan left/right so 10-N-1 
     constant  max_balance : positive := 2**(BALANCE_BITS - N_BALANCE - 1)-1;
     signal    bal_N   : integer  := 0;
+
+    -- states for the state machine
+	type state_type is (RECEIVE, SEND);
+	signal state     : state_type;
+
 begin    
-    -- process to handle the axis receive part
-    RX : process (aresetn, aclk)
-    begin
-        if aresetn = '0' then
+
+ bal_N <= (max_balance - to_integer( unsigned(balance(BALANCE_BITS-2 downto N_BALANCE)) + unsigned(balance(N_BALANCE-1 downto N_BALANCE-1)) ))  when (balance(balance'left) = '0') 
+            else to_integer( unsigned(balance(BALANCE_BITS-2 downto N_BALANCE)) + unsigned(balance(N_BALANCE-1 downto N_BALANCE-1)) )  when (balance(balance'left) = '1'); 
+    FSM : process (aresetn, aclk)
+        begin
+            if aresetn = '0' then
             -- TODO should the reset get handled?
             -- reset is not handled
-        elsif rising_edge(aclk) then
+            elsif rising_edge(aclk) then
 
-            if s_axis_tvalid = '1' then
+                case state is
 
-                if s_axis_tlast = '0' then  --left channel
-                    data_reg_l <= s_axis_tdata;
-                    s_axis_tready <= '1';
+                    when RECEIVE =>
 
-                    --if balance > 544 (joystick moved right I hope) then left channel has to be attenuated 
-                    if(balance > '544') then
-                        bal_N <=  max_balance - to_integer(unsigned(balance(VOLUME_BITS-2 downto N_BALANCE)));
-                        data_reg_l <= data_reg_l srl bal_N;
-                    end if;
-                    
-                else                        --right channel
-                    data_reg_r <= s_axis_tdata;
-                    s_axis_tready <= '1';
+                        -- process the data on the data line only if it's valid
+                        if s_axis_tvalid = '1' then
 
-                    --if balance < 480 (joystick moved left I hope) then right channel has to be attenuated 
-                    if(balance < '480') then
-                        bal_N <=  to_integer(unsigned(balance(VOLUME_BITS-2 downto N_BALANCE)));
-                        data_reg_r <= data_reg_r srl bal_N;
-                    end if;
-                end if;
-            end if;
-        end if;    
+                            -- if the MSB of balance is 1, the value is >= 512, so the balance has to be panned right (left channel attenuated),
+                            -- otherwhise balance has to be panned to left (right channel attenuated) 
+                            -- the division is handled the same way as for the volume
+
+                            -- discriminate between left and right channel, if tlast = '1' -> right channel, otherwise left 
+                            -- if joystick to the left and last data belonged to right channel or if joystick to the right and last data belonged to left channel then make a shift
+                            if((balance(balance'left) = '0' and s_axis_tlast = '1') or (balance(balance'left) = '1' and s_axis_tlast = '0')) then
+                                M_AXIS_TDATA <= std_logic_vector(shift_left(signed(S_AXIS_TDATA), bal_N));
+                            end if;
+
+                            -- don't receive any more data
+                            s_axis_tready <= '0';
+                            -- put the data for the the left channel on the line
+                            -- we put t_last to match the channel of incoming data
+                            m_axis_tlast <= s_axis_tlast;
+                            -- set the data on the line to valid
+                            m_axis_tvalid <= '1';
+                            -- set the next state to be the sending of the left data
+                            state <= SEND;
+                                
+                        end if;
+
+                    when SEND =>
+
+                        -- if the receiver is ready to receive more data go on
+                        if m_axis_tready = '1' then
+                            -- set the data on the line to valid
+                            m_axis_tvalid <= '1';
+
+                            s_axis_tready <= '1';
+                            -- set the next state to be the receiving of data
+                            state <= RECEIVE;
+                        end if;
+
+                end case;
+
+            end if;    
     end process;
-
--- process to handle the axis send part
-    TX : process (aresetn, aclk)
-    begin
-        if aresetn = '0' then
-        -- TODO should the reset get handled?
-        -- reset is not handled
-        elsif rising_edge(aclk) then
-
-            -- FSM for sending the left and right channel
-            case tx_state is
-
-                when IDLE =>
-                    m_axis_tvalid <= '0';
-                    m_axis_tlast <= '0';
-
-                when SEND_L =>
-                    m_axis_tdata <= data_reg_l;
-                    m_axis_tlast <= '0';
-                    m_axis_tvalid <= '1';
-
-                    if m_axis_tready = '1' then
-                        tx_state <= SEND_R;
-                    end if;
-                        
-                when SEND_R =>
-                    m_axis_tdata <= data_reg_r;
-                    m_axis_tlast <= '1';
-                    m_axis_tvalid <= '1';
-
-                    if m_axis_tready = '1' then
-                        tx_state <= IDLE;
-                    end if;                        
-            end case;
-        end if;
-    end process;
-
-
 end Behavioral;
