@@ -43,7 +43,6 @@ architecture Behavioral of BalanceController is
     signal      bal_N           : integer  := 0;
     signal      data_R          : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
     signal      data_L          : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
-    signal      new_data        : std_logic := '0';
     
     -- states for the TX state machine
 	type tx_state_type is (RECEIVE, SEND_L, SEND_R);
@@ -93,9 +92,8 @@ begin
                                 data_L <= std_logic_vector(shift_left(signed(S_AXIS_TDATA), bal_N));
                             end if;
                         end if;
-            
                     end if;
-                    
+
                 when SEND_L =>
                     -- if the receiver is ready to receive more data go on
                     if m_axis_tready = '1' then
