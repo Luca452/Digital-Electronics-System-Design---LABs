@@ -49,7 +49,7 @@ architecture Behavioral of VolumeController is
     signal    abs_data : std_logic_vector(AXIS_TDATA_WIDTH-1 DOWNTO 0);
 
     -- states for the state machine
-	type state_type is (RECEIVE, SEND);
+	type state_type is (RECEIVE, SEND_L, SEND_R);
 	signal state     : state_type;
 
 begin
@@ -79,7 +79,7 @@ begin
 
                 when RECEIVE =>
 
-                    -- process the data on the data line only if it's valid
+                    -- process the data on the data line only if it's valid and indeed for the left channel
                     if s_axis_tvalid = '1' then
 
                         -- if the MSB of volume is 1, the value is >= 512, so the volume has the volume has to be increased,
@@ -116,11 +116,15 @@ begin
                             
                             -- since it is the left channel,  put tlast to 0
                             m_axis_tlast <= '0';
+                            -- set the next state to be in the sending of the left data
+                            state <= SEND_L;
 
                         else
                             
                             -- since it is the right channel,  put tlast to 0
                             m_axis_tlast <= '1';
+                            -- set the next state to be in the sending of the right data
+                            state <= SEND_R;
                             
                         end if;
 
@@ -128,19 +132,19 @@ begin
                         s_axis_tready <= '0';
                         -- set the data on the line to valid
                         m_axis_tvalid <= '1';
-                        -- set the next state to be the sending of the data
-                        state <= SEND;
 
                     end if;
                         
-                when SEND =>
+                when SEND_L | SEND_R =>
 
-                    -- if the receiver is ready go on to receiving again 
-                    -- wait for the receiver to be ready, as we are going to invalidate the data on the line, to be ready to receive 
+                    -- if the receiver has received the data and is ready, invalidate the data on the line, and change back to receiving mode for the other channel
                     if m_axis_tready = '1' then
 
-                        -- invalidate the data on the line
-                        m_axis_tvalid <= '0';
+                        -- invalidate the data on the line only after the right channel data was received
+                        if state = SEND_R  then
+                            m_axis_tvalid <= '0';
+                        end if;
+                    
                         -- communicate that we're ready to receive data
                         s_axis_tready <= '1';
                         -- set the next state to be the receiving of data
