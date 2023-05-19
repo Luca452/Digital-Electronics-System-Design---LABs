@@ -41,16 +41,17 @@ architecture Behavioral of BalanceController is
     -- but MSB bit is used to discriminate between pan left/right so 10-N-1 
     constant    max_balance     : positive := 2**(BALANCE_BITS - N_BALANCE - 1)-1;
     signal      bal_N           : integer  := 0;
+    signal      DATA_R          : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0) := (others => '0');
     
     -- states for the TX state machine
-	type state_type is (RECEIVE, SEND_L, SEND_R);
-	signal state     : state_type := RECEIVE;
+	type state_type is (RECEIVE_L, RECEIVE_R, SEND_L, SEND_R);
+	signal state     : state_type := RECEIVE_L;
 
 begin    
 
-    bal_N <= (max_balance - to_integer(unsigned(balance(BALANCE_BITS-2 downto N_BALANCE)) + to_integer(unsigned(balance(N_BALANCE-1 downto N_BALANCE-1)))))  when (balance(balance'left) = '0') 
-                       else to_integer(unsigned(balance(BALANCE_BITS-2 downto N_BALANCE)) + to_integer(unsigned(balance(N_BALANCE-1 downto N_BALANCE-1))))   when (balance(balance'left) = '1'); 
-
+    bal_N <= (max_balance - to_integer( unsigned(balance(BALANCE_BITS-2 downto N_BALANCE)) + unsigned(balance(N_BALANCE-1 downto N_BALANCE-1)) ))  when (balance(balance'left) = '0') 
+                else to_integer( unsigned(balance(BALANCE_BITS-2 downto N_BALANCE)) + unsigned(balance(N_BALANCE-1 downto N_BALANCE-1)) )  when (balance(balance'left) = '1'); 
+    
     FSM : process (aresetn, aclk)
     begin
         if aresetn = '0' then
@@ -58,59 +59,70 @@ begin
         -- reset is not handled
         elsif rising_edge(aclk) then
 
+
             case state is
 
-                when RECEIVE =>
+                when RECEIVE_L =>
 
-                    -- process the data on the data line only if it's valid and indeed for the left channel
-                    if S_AXIS_TVALID = '1' then
-                        -- (if joystick is to the right AND channel is left) OR (if joystick is to the left AND channel is right) THEN attenuate. Otherwise is transparent
-                        if ((balance(balance'left) = '1' and S_AXIS_TLAST = '0') or (balance(balance'left) = '0' and S_AXIS_TLAST = '1')) then
+                    -- ready to read the signal from the bus
+                    S_AXIS_TREADY <= '1';
+
+                    -- process the data only if TVALID = '1', TLAST discriminates between channels. TLAST = 0 => left channel
+                    if S_AXIS_TLAST = '0' and S_AXIS_TVALID = '1' then
+                        -- if joystick is to the right then attenuate left channel and put it in the bus otherwise write it directly on the bus
+                        if (balance(balance'left) = '1') then
                             M_AXIS_TDATA <= std_logic_vector(shift_right(signed(S_AXIS_TDATA), bal_N));
                         else 
                             M_AXIS_TDATA <= S_AXIS_TDATA;
                         end if;
 
-                        -- discriminate between left and right channel, if tlast = '1' -> right channel, otherwise left 
-                        if s_axis_tlast = '0' then
-                            
-                            -- since it is the left channel,  put tlast to 0
-                            m_axis_tlast <= '0';
-                            -- set the next state to be in the sending of the left data
-                            state <= SEND_L;
+                        state <= RECEIVE_R; 
+                    end if;
 
-                        else
-                            
-                            -- since it is the right channel,  put tlast to 0
-                            m_axis_tlast <= '1';
-                            -- set the next state to be in the sending of the right data
-                            state <= SEND_R;
-                            
+                when RECEIVE_R => 
+
+                    if S_AXIS_TLAST = '1' and S_AXIS_TVALID = '1' then
+                        -- if joystick is to the left then attenuate right channel and put it in a register otherwise write it directly in the register
+                        if (balance(balance'left) = '0') then
+                            DATA_R <= std_logic_vector(shift_right(signed(S_AXIS_TDATA), bal_N));
+                        else 
+                            DATA_R <= S_AXIS_TDATA;
                         end if;
 
                         -- don't receive any more data
-                        s_axis_tready <= '0';
-                        -- set the data on the line to valid
-                        m_axis_tvalid <= '1';
+                        S_AXIS_TREADY <= '0';
+                        -- ready to send data, set master valid to '1'
+                        M_AXIS_TVALID <= '1';
+                        -- set the next state to be the sending of the left data
+                        state <= SEND_L;     
                     end if;
-
-
-                when SEND_L | SEND_R =>
-
-                    -- if the receiver has received the data and is ready, invalidate the data on the line, and change back to receiving mode for the other channel
-                    if m_axis_tready = '1' then
-
-                        -- invalidate the data on the line only after the right channel data was received
-                        if state = SEND_R  then
-                            m_axis_tvalid <= '0';
-                        end if;
                     
-                        -- communicate that we're ready to receive data
-                        s_axis_tready <= '1';
-                        -- set the next state to be the receiving of data
-                        state <= RECEIVE;
+                when SEND_L =>
 
+                    M_AXIS_TLAST <= '0';
+
+                    -- if slave is ready, means it read the data on the bus, put new data on the bus and change state
+                    if M_AXIS_TREADY = '1' then
+                        -- when the elaboration of the right channel is done, the data can be send in the next clock phase
+                        M_AXIS_TDATA <= DATA_R;
+                        -- set the next state to be the receiving of data
+                        state <= SEND_R;
                     end if;
+
+                when SEND_R =>
+
+                    M_AXIS_TLAST <= '1';
+
+                    -- if slave is ready, means it read the data on the bus, go back to receive state
+                    if M_AXIS_TREADY = '1' then
+                        -- invalidate the data on the line
+                        M_AXIS_TVALID <= '0';
+                        -- ready to read the signal from the bus
+                        S_AXIS_TREADY <= '1';
+                        -- set the next state to be the receiving of data
+                        state <= RECEIVE_L;
+                    end if;
+                    
             end case;
         end if;    
     end process;
