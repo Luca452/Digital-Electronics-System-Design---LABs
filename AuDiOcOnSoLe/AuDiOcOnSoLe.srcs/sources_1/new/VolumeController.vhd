@@ -63,8 +63,8 @@ begin
     -- on every transitioning value the bit volume(N_VOLUME-1) is 1
     -- then take the bits above, namely volume(VOLUME_BITS-2 downto N_VOLUME) which represent a unsigned in the range from 0 to max_vol, so we've got our N
     
-    vol_N <= (max_vol - to_integer( unsigned(volume(VOLUME_BITS-2 downto N_VOLUME)) + unsigned(volume(N_VOLUME-1 downto N_VOLUME-1)) ))  when (volume(volume'left) = '0') 
-                    else to_integer( unsigned(volume(VOLUME_BITS-2 downto N_VOLUME)) + unsigned(volume(N_VOLUME-1 downto N_VOLUME-1)) )  when (volume(volume'left) = '1'); 
+    vol_N <= (max_vol - (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1))))) when (volume(volume'left) = '0') 
+                   else (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1))))  when (volume(volume'left) = '1'); 
 
     -- process to handle the data
     -- everything is handled by states in a single process, to stay in sync between incoming and outgoing data
