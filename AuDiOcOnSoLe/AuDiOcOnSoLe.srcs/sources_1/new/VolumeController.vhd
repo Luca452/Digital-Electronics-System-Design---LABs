@@ -57,15 +57,6 @@ begin
     -- absolute value of input data 
     abs_data <= std_logic_vector(abs(signed(S_AXIS_TDATA)));
 
-    -- calculate the volume range we must be in
-    -- namely the number of bits to shift
-    -- if the volumes MSB is 1, the value is >= 512 and the volume has to be amplified, thottled otherwise
-    -- on every transitioning value the bit volume(N_VOLUME-1) is 1
-    -- then take the bits above, namely volume(VOLUME_BITS-2 downto N_VOLUME) which represent a unsigned in the range from 0 to max_vol, so we've got our N
-    
-    vol_N <= (max_vol - (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1))))) when (volume(volume'left) = '0') 
-                   else (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1))))  when (volume(volume'left) = '1'); 
-
     -- process to handle the data
     -- everything is handled by states in a single process, to stay in sync between incoming and outgoing data
     FSM : process (aresetn, aclk)
@@ -82,15 +73,26 @@ begin
                     -- process the data on the data line only if it's valid and indeed for the left channel
                     if s_axis_tvalid = '1' then
 
+                        
                         -- if the MSB of volume is 1, the value is >= 512, so the volume has the volume has to be increased,
                         -- thus the data to be multiplied, otherwise divided
                         -- the multiplicatio and division is implementet with a bitshift in the according direction by vol_N bits
                         if(volume(volume'high) = '0') then
 
+                            -- calculate the volume range we must be in
+                            -- namely the number of bits to shift
+                            -- on every transitioning value the bit volume(N_VOLUME-1) is 1
+                            -- then take the three bits above, namely volume(VOLUME_BITS-2 downto N_VOLUME) which represent a unsigned in the range from 0 to max_vol, so we've got our N
+                            -- if we have to throttle the volume subtract this from the maximum possible N
+                            vol_N <= (max_vol - (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))));
+                            
                             -- to save a clock cycle we put the data directly on the axis line
                             m_axis_tdata <= std_logic_vector(shift_right(signed(S_AXIS_TDATA),vol_N));
 
                         elsif (volume(volume'high) = '1') then
+
+                            -- as discussed above, but now assign it directly without the subtraction from the max value
+                            vol_N <= (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))); 
 
                             -- if the left most N bits of the absolute value of the data are different than 0,
                             -- it means that a shift would bring the data outside of range and thus the signal has to be clipped at it's maximum possible value

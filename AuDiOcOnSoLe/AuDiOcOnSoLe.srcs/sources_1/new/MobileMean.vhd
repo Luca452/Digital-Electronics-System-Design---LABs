@@ -95,9 +95,6 @@ begin
 
                 when RECEIVE_L =>
 
-                    -- ready to read the signal from the bus
-                    S_AXIS_TREADY_int <= '1';
-
                     -- process the data only if TVALID = '1', TLAST discriminates between channels 
                     if S_AXIS_TLAST = '0' and filter_enable = '1' and S_AXIS_TVALID = '1' then
 
@@ -112,6 +109,9 @@ begin
                         -- result is put on the axis bus
                         M_AXIS_TDATA_int <= std_logic_vector(SUM_TOTAL_L(SUM_TOTAL_LENGTH-1 downto SUM_TOTAL_LENGTH-AXIS_TDATA_WIDTH));
                         
+                        -- ready to receive the next data
+                        S_AXIS_TREADY_int <= '1';
+
                         state <= RECEIVE_R; 
                     end if;
 
@@ -130,6 +130,8 @@ begin
 
                         -- don't receive any more data
                         S_AXIS_TREADY_int <= '0';
+                        -- writing on the L channel
+                        M_AXIS_TLAST_int <= '0';
                         -- ready to send data, set master valid to '1'
                         M_AXIS_TVALID_int <= '1';
                         -- set the next state to be the sending of the left data
@@ -138,10 +140,10 @@ begin
                    
                 when SEND_L =>
 
-                    M_AXIS_TLAST_int <= '0';
-
                     -- if slave is ready, means it read the data on the bus, put new data on the bus and change state
                     if M_AXIS_TREADY = '1' then
+                        -- writing on the R channel
+                        M_AXIS_TLAST_int <= '1';
                         -- when the elaboration of the right channel is done, the data can be send in the next clock phase
                         M_AXIS_TDATA_int <= DATA_R;
                         -- set the next state to be the receiving of data
@@ -149,8 +151,6 @@ begin
                     end if;
 
                 when SEND_R =>
-
-                    M_AXIS_TLAST_int <= '1';
 
                     -- if slave is ready, means it read the data on the bus, go back to receive state
                     if M_AXIS_TREADY = '1' then
