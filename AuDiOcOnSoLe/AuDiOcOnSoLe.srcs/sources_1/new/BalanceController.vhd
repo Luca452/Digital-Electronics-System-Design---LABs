@@ -57,7 +57,6 @@ begin
         -- reset is not handled
         elsif rising_edge(aclk) then
 
-
             case state is
 
                 when RECEIVE_L =>
@@ -90,7 +89,7 @@ begin
                     if S_AXIS_TLAST = '1' and S_AXIS_TVALID = '1' then
                         -- if joystick is to the left then attenuate right channel and put it in a register otherwise write it directly in the register
                         if (balance(balance'left) = '0') then
-                            
+                            -- as discussed above, but now assign it directly without the subtraction from the max value
                             bal_N <= max_balance - (to_integer(unsigned(balance(BALANCE_BITS-2 downto N_BALANCE))) 
                                     + to_integer(unsigned(balance(N_BALANCE-1 DOWNTO N_BALANCE-1))));
                             
@@ -99,11 +98,12 @@ begin
                             DATA_R <= S_AXIS_TDATA;
                         end if;
 
-                        M_AXIS_TLAST <= '0';
                         -- don't receive any more data
                         S_AXIS_TREADY <= '0';
                         -- ready to send data, set master valid to '1'
                         M_AXIS_TVALID <= '1';
+                        -- we need to send the L data first
+                        M_AXIS_TLAST <= '0';
                         -- set the next state to be the sending of the left data
                         state <= SEND_L;     
                     end if;
@@ -112,11 +112,11 @@ begin
 
                     -- if slave is ready, means it read the data on the bus, put new data on the bus and change state
                     if M_AXIS_TREADY = '1' then
-                        -- when the elaboration of the right channel is done, the data can be send in the next clock phase
+                        -- data referring to L channel has been read, now preparing the R channel data on the bus
                         M_AXIS_TDATA <= DATA_R;
-                        
+                        -- next data is for R channel, set TLAST = '1'
                         M_AXIS_TLAST <= '1';
-                        -- set the next state to be the receiving of data
+                        -- set the next state to be the sending of the right data
                         state <= SEND_R;
                     end if;
 
@@ -133,92 +133,6 @@ begin
                     end if;
                     
             end case;
-        end if;    
-    end process;
-
-
-    -- process to handle the data
-    -- everything is handled by states in a single process, to stay in sync between incoming and outgoing data
-    FSM : process (aresetn, aclk)
-    begin
-        if aresetn = '0' then
-        -- TODO should the reset get handled?
-        -- reset is not handled
-        elsif rising_edge(aclk) then
-
-            case state is
-
-                when RECEIVE =>
-
-                    -- process the data on the data line only if it's valid 
-                    if s_axis_tvalid = '1' then
-
-                        -- if joystick is to the left then attenuate right channel
-                        if(balance(balance'high) = '0') then
-
-                            -- calculate the volume range we must be in
-                            -- namely the number of bits to shift
-                            -- on every transitioning value the bit volume(N_VOLUME-1) is 1
-                            -- then take the three bits above, namely volume(VOLUME_BITS-2 downto N_VOLUME) which represent a unsigned in the range from 0 to max_vol, so we've got our N
-                            -- if we have to decrease the volume subtract this from the maximum possible N
-                            bal_N <= max_balance - (to_integer(unsigned(balance(BALANCE_BITS-2 downto N_BALANCE))) 
-                                    + to_integer(unsigned(balance(N_BALANCE-1 DOWNTO N_BALANCE-1))));
-                            
-                            -- to save a clock cycle we put the data directly on the axis line
-                            M_AXIS_TDATA <= std_logic_vector(shift_right(signed(S_AXIS_TDATA), bal_N));
-
-                        --if joystick is to the right then attenuate left channel
-                        elsif (balance(balance'high) = '1') then
-
-                            -- as discussed above, but now assign it directly without the subtraction from the max value
-                            bal_N <= (to_integer(unsigned(balance(BALANCE_BITS-2 downto N_BALANCE))) 
-                                    + to_integer(unsigned(balance(N_BALANCE-1 DOWNTO N_BALANCE-1)))); 
-
-                            -- to save a clock cycle we put the data directly on the axis line
-                            M_AXIS_TDATA <= std_logic_vector(shift_right(signed(S_AXIS_TDATA), bal_N));
-
-                        end if;
-
-                        -- discriminate between left and right channel, if tlast = '1' -> right channel, otherwise left 
-                        if s_axis_tlast = '0' then
-                            -- since it is the left channel,  put tlast to 0
-                            m_axis_tlast <= '0';
-                            -- set the next state to be in the sending of the left data
-                            state <= SEND_L;
-                        else   
-                            -- since it is the right channel,  put tlast to 0
-                            m_axis_tlast <= '1';
-                            -- set the next state to be in the sending of the right data
-                            state <= SEND_R; 
-                        end if;
-
-                        -- don't receive any more data
-                        s_axis_tready <= '0';
-                        -- set the data on the line to valid
-                        m_axis_tvalid <= '1';
-
-                    end if;
-                        
-                when SEND_L | SEND_R =>
-
-                    -- if the receiver has received the data and is ready, invalidate the data on the line, and change back to receiving mode for the other channel
-                    if m_axis_tready = '1' then
-
-                        -- invalidate the data on the line only after the right channel data was received
-                        if state = SEND_R  then
-                            m_axis_tvalid <= '0';
-                        end if;
-                    
-                        -- communicate that we're ready to receive data
-                        s_axis_tready <= '1';
-                        -- set the next state to be the receiving of data
-                        state <= RECEIVE;
-
-                    end if;
-
-            end case;
-
-
         end if;    
     end process;
 
