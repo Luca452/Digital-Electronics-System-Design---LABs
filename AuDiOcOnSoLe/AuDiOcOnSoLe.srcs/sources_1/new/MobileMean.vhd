@@ -66,21 +66,6 @@ architecture Behavioral of MobileMean is
 
 begin
 
-    --------------------------------------------DATA FLOW-------------------------------------------
-    -- pass through all data if filter disabled 
-    M_AXIS_TDATA <= M_AXIS_TDATA_int when filter_enable = '1' else
-                    S_AXIS_TDATA;
-
-    M_AXIS_TVALID <= M_AXIS_TVALID_int when filter_enable = '1' else           
-                    S_AXIS_TVALID;
-
-    S_AXIS_TREADY <= S_AXIS_TREADY_int when filter_enable = '1' else           
-                    M_AXIS_TREADY;
-
-    M_AXIS_TLAST <= M_AXIS_TLAST_int when filter_enable = '1' else           
-                    S_AXIS_TLAST;
-    ------------------------------------------------------------------------------------------------
-
     -- process to handle the data
     -- everything is handled by states in a single process, to stay in sync between incoming and outgoing data
     FSM : process (aresetn, aclk)
@@ -90,6 +75,21 @@ begin
         -- reset is not handled
         elsif rising_edge(aclk) then
 
+            -- this mux for the filter_en can't be performed in DATAFLOW,
+            -- since after implementation the total negative slack is non null due to longer signal path for clock >180MHz
+            -- a register is needed since I'm not able to perform path optimization :(
+            case filter_enable is 
+                when '0' => 
+                            M_AXIS_TDATA <= S_AXIS_TDATA; 
+                            M_AXIS_TVALID <= S_AXIS_TVALID;
+                            S_AXIS_TREADY <= M_AXIS_TREADY;
+                            M_AXIS_TLAST <= S_AXIS_TLAST;
+                when '1' =>
+                            M_AXIS_TDATA <= M_AXIS_TDATA_int; 
+                            M_AXIS_TVALID <= M_AXIS_TVALID_int;
+                            S_AXIS_TREADY <= S_AXIS_TREADY_int;
+                            M_AXIS_TLAST <= M_AXIS_TLAST_int;
+            end case;
 
             case state is
 

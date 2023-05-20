@@ -55,24 +55,32 @@ architecture Behavioral of VolumeController is
     -- signal to save the data for the right channel
     signal data_R : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
 
+    -- register needed to synchronize abs value and data on same clock edge
+    signal S_AXIS_TDATA_reg : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
+
 
 begin
-
-    -- absolute value of input data 
-    abs_data <= std_logic_vector(abs(signed(S_AXIS_TDATA)));
 
     -- process to handle the data
     -- everything is handled by states in a single process, to stay in sync between incoming and outgoing data
     FSM : process (aresetn, aclk)
+
         -- variable to save the elaborated channel data
         -- here a variable is used since its value is updated instantly, and we can use it without waiting for the next process invocation
-        -- doing so, we can elaborate the data directly and then assign it to the corrisponding channel without the need of dublicating the code
+        -- doing so, we can elaborate the data directly and then assign it to the corrisponding channel without the need of duplicating the code
         variable data : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
     begin
         if aresetn = '0' then
         -- TODO should the reset get handled?
         -- reset is not handled
         elsif rising_edge(aclk) then
+
+            -- absolute value of input data, as for the mobile mean filter case, this operation can't be performed in dataflow,
+            -- since the longer path through carry blocks delays too much the signal
+            abs_data <= std_logic_vector(abs(signed(S_AXIS_TDATA)));
+            S_AXIS_TDATA_reg <= S_AXIS_TDATA;
+            
+            --abs_data <= std_logic_vector(abs(signed(S_AXIS_TDATA)));
 
             case state is
 
@@ -95,7 +103,7 @@ begin
                                               +  to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))));
                             
                             -- to save a clock cycle we put the data directly on the axis line
-                            data := std_logic_vector(shift_right(signed(S_AXIS_TDATA),vol_N));
+                            data := std_logic_vector(shift_right(signed(S_AXIS_TDATA_reg),vol_N));
 
                         elsif (volume(volume'high) = '1') then
 
@@ -108,14 +116,14 @@ begin
                             if unsigned(abs_data((abs_data'high) downto (abs_data'high- vol_N))) /= 0 then
                                 -- if the highest bit of the incoming data is 0, the value is positive and so has to be the clipping,
                                 -- otherwise the data is negative and the clipping has to occur at the minimum
-                                if s_axis_tdata(s_axis_tdata'high) = '0' then
-                                    data := (m_axis_tdata'high => '0', Others => '1');
-                                elsif s_axis_tdata(s_axis_tdata'high) = '1' then
-                                    data := (m_axis_tdata'high => '1', Others => '0');
+                                if s_axis_tdata_reg(s_axis_tdata_reg'high) = '0' then
+                                    data := (data'high => '0', Others => '1');
+                                elsif s_axis_tdata_reg(s_axis_tdata_reg'high) = '1' then
+                                    data := (data'high => '1', Others => '0');
                                 end if;
                             else
                                 -- no clipping, shift
-                                data := std_logic_vector(shift_left(signed(S_AXIS_TDATA), vol_N));
+                                data := std_logic_vector(shift_left(signed(S_AXIS_TDATA_reg), vol_N));
                             end if;
 
                         end if;
@@ -126,8 +134,8 @@ begin
                             -- if we received the data for the let channel, put the elaborated data dirctly on the outgoing axis lines
                             m_axis_tdata <= data;
 
-                            -- stay in Receive mode, since we have receive also the right channel
-
+                            -- stay in Receive mode, since we have to receive also the right channel
+                            s_axis_tready <= '1';
                         else   
                             -- if the received data is for the right channel, save it, since we have to send the left one first
                             data_R <= data;
