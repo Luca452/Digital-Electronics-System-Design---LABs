@@ -52,6 +52,10 @@ architecture Behavioral of VolumeController is
 	type state_type is (RECEIVE, SEND_L, SEND_R);
 	signal state     : state_type;
 
+    -- signal to save the data for the right channel
+    signal data_R : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
+
+
 begin
 
     -- absolute value of input data 
@@ -60,6 +64,10 @@ begin
     -- process to handle the data
     -- everything is handled by states in a single process, to stay in sync between incoming and outgoing data
     FSM : process (aresetn, aclk)
+        -- variable to save the elaborated channel data
+        -- here a variable is used since its value is updated instantly, and we can use it without waiting for the next process invocation
+        -- doing so, we can elaborate the data directly and then asign it to the corrisponding channel without the need of dublicating the code
+        variable data : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
     begin
         if aresetn = '0' then
         -- TODO should the reset get handled?
@@ -87,7 +95,7 @@ begin
                                               +  to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))));
                             
                             -- to save a clock cycle we put the data directly on the axis line
-                            m_axis_tdata <= std_logic_vector(shift_right(signed(S_AXIS_TDATA),vol_N));
+                            data := std_logic_vector(shift_right(signed(S_AXIS_TDATA),vol_N));
 
                         elsif (volume(volume'high) = '1') then
 
@@ -101,12 +109,13 @@ begin
                                 -- if the highest bit of the incoming data is 0, the value is positive and so has to be the clipping,
                                 -- otherwise the data is negative and the clipping has to occur at the minimum
                                 if s_axis_tdata(s_axis_tdata'high) = '0' then
-                                    m_axis_tdata <= (m_axis_tdata'high => '0', Others => '1');
+                                    data := (m_axis_tdata'high => '0', Others => '1');
                                 elsif s_axis_tdata(s_axis_tdata'high) = '1' then
-                                    m_axis_tdata <= (m_axis_tdata'high => '1', Others => '0');
+                                    data := (m_axis_tdata'high => '1', Others => '0');
                                 end if;
                             else
-                                m_axis_tdata <= std_logic_vector(shift_left(signed(S_AXIS_TDATA), vol_N));
+                                -- no clipping, shift
+                                data := std_logic_vector(shift_left(signed(S_AXIS_TDATA), vol_N));
                             end if;
 
                         end if;
@@ -114,36 +123,58 @@ begin
 
                         -- discriminate between left and right channel, if tlast = '1' -> right channel, otherwise left 
                         if s_axis_tlast = '0' then
-                            -- since it is the left channel,  put tlast to 0
-                            m_axis_tlast <= '0';
+                            -- if we received the data for the let channel, put the elaborated data dirctly on the outgoing axis lines
+                            m_axis_tdata <= data;
+
+                            -- stay in Receive mode, since we have receive also the right channel
+
+                        else   
+                            -- if the received data is for the right channel, save it, since we have to send the left one first
+                            data_R <= data;
+
                             -- set the next state to be in the sending of the left data
                             state <= SEND_L;
-                        else   
-                            -- since it is the right channel,  put tlast to 0
-                            m_axis_tlast <= '1';
-                            -- set the next state to be in the sending of the right data
-                            state <= SEND_R; 
-                        end if;
 
-                        -- don't receive any more data
-                        s_axis_tready <= '0';
-                        -- set the data on the line to valid
-                        m_axis_tvalid <= '1';
+                            -- don't receive any more data
+                            s_axis_tready <= '0';
+
+                            -- since it is the left channel,  put tlast to 0
+                            m_axis_tlast <= '0';
+
+                            -- set the data on the line to valid
+                            m_axis_tvalid <= '1';
+
+                        end if;
 
                     end if;
                         
-                when SEND_L | SEND_R =>
+                when SEND_L =>
 
-                    -- if the receiver has received the data and is ready, invalidate the data on the line, and change back to receiving mode for the other channel
+                    -- if the receiver is ready to receive more data, start the sending of the right one 
                     if m_axis_tready = '1' then
 
-                        -- invalidate the data on the line only after the right channel data was received
-                        if state = SEND_R  then
-                            m_axis_tvalid <= '0';
-                        end if;
-                    
+                        -- put the saved data for the right channel on the line
+                        m_axis_tdata <= data_R;
+
+                        -- since it is the right channel, put tlast to 1
+                        m_axis_tlast <= '1';
+
+                        -- set the next state to be in the sending of the right data 
+                        state <= SEND_R;
+
+                    end if;
+
+                when SEND_R =>
+
+                    -- if the receiver is ready to receive more data, means it has received all the previous one and we can go on receiving some new data 
+                    if m_axis_tready = '1' then
+
+                        -- invalidate the data on the line
+                        m_axis_tvalid <= '0';
+
                         -- communicate that we're ready to receive data
                         s_axis_tready <= '1';
+
                         -- set the next state to be the receiving of data
                         state <= RECEIVE;
 
