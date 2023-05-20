@@ -73,7 +73,6 @@ begin
                     -- process the data on the data line only if it's valid and indeed for the left channel
                     if s_axis_tvalid = '1' then
 
-                        
                         -- if the MSB of volume is 1, the value is >= 512, so the volume has the volume has to be increased,
                         -- thus the data to be multiplied, otherwise divided
                         -- the multiplicatio and division is implementet with a bitshift in the according direction by vol_N bits
@@ -84,7 +83,8 @@ begin
                             -- on every transitioning value the bit volume(N_VOLUME-1) is 1
                             -- then take the three bits above, namely volume(VOLUME_BITS-2 downto N_VOLUME) which represent a unsigned in the range from 0 to max_vol, so we've got our N
                             -- if we have to throttle the volume subtract this from the maximum possible N
-                            vol_N <= (max_vol - (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))));
+                            vol_N <= (max_vol - (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) 
+                                              +  to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))));
                             
                             -- to save a clock cycle we put the data directly on the axis line
                             m_axis_tdata <= std_logic_vector(shift_right(signed(S_AXIS_TDATA),vol_N));
@@ -92,12 +92,12 @@ begin
                         elsif (volume(volume'high) = '1') then
 
                             -- as discussed above, but now assign it directly without the subtraction from the max value
-                            vol_N <= (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))); 
+                            vol_N <= (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) 
+                                    + to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))); 
 
                             -- if the left most N bits of the absolute value of the data are different than 0,
                             -- it means that a shift would bring the data outside of range and thus the signal has to be clipped at it's maximum possible value
                             if unsigned(abs_data((abs_data'high) downto (abs_data'high- vol_N))) /= 0 then
-
                                 -- if the highest bit of the incoming data is 0, the value is positive and so has to be the clipping,
                                 -- otherwise the data is negative and the clipping has to occur at the minimum
                                 if s_axis_tdata(s_axis_tdata'high) = '0' then
@@ -105,7 +105,6 @@ begin
                                 elsif s_axis_tdata(s_axis_tdata'high) = '1' then
                                     m_axis_tdata <= (m_axis_tdata'high => '1', Others => '0');
                                 end if;
-
                             else
                                 m_axis_tdata <= std_logic_vector(shift_left(signed(S_AXIS_TDATA), vol_N));
                             end if;
@@ -115,19 +114,15 @@ begin
 
                         -- discriminate between left and right channel, if tlast = '1' -> right channel, otherwise left 
                         if s_axis_tlast = '0' then
-                            
                             -- since it is the left channel,  put tlast to 0
                             m_axis_tlast <= '0';
                             -- set the next state to be in the sending of the left data
                             state <= SEND_L;
-
-                        else
-                            
+                        else   
                             -- since it is the right channel,  put tlast to 0
                             m_axis_tlast <= '1';
                             -- set the next state to be in the sending of the right data
-                            state <= SEND_R;
-                            
+                            state <= SEND_R; 
                         end if;
 
                         -- don't receive any more data
