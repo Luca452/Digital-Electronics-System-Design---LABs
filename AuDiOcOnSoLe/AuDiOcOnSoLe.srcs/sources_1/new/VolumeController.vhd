@@ -66,7 +66,7 @@ begin
     FSM : process (aresetn, aclk)
         -- variable to save the elaborated channel data
         -- here a variable is used since its value is updated instantly, and we can use it without waiting for the next process invocation
-        -- doing so, we can elaborate the data directly and then asign it to the corrisponding channel without the need of dublicating the code
+        -- doing so, we can elaborate the data directly and then assign it to the corrisponding channel without the need of dublicating the code
         variable data : std_logic_vector(AXIS_TDATA_WIDTH-1 downto 0);
     begin
         if aresetn = '0' then
@@ -90,7 +90,7 @@ begin
                             -- namely the number of bits to shift
                             -- on every transitioning value the bit volume(N_VOLUME-1) is 1
                             -- then take the three bits above, namely volume(VOLUME_BITS-2 downto N_VOLUME) which represent a unsigned in the range from 0 to max_vol, so we've got our N
-                            -- if we have to throttle the volume subtract this from the maximum possible N
+                            -- if we have to decrease the volume subtract this from the maximum possible N
                             vol_N <= (max_vol - (to_integer(unsigned(volume(VOLUME_BITS-2 downto N_VOLUME))) 
                                               +  to_integer(unsigned(volume(N_VOLUME-1 DOWNTO N_VOLUME-1)))));
                             
