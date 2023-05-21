@@ -4,9 +4,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity BalanceController is
     Generic(
-        BALANCE_BITS     : integer := 10;
-        AXIS_TDATA_WIDTH : integer	:= 24;
-        N_BALANCE         : positive := 6
+        BALANCE_BITS     : positive := 10;
+        AXIS_TDATA_WIDTH : positive	:= 24;
+        N_BALANCE        : positive range 1 to 9 := 6
     );
     Port (         
         aclk            :   in   STD_LOGIC;   

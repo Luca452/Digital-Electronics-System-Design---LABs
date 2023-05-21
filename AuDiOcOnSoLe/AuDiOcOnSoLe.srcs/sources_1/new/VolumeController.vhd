@@ -4,9 +4,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity VolumeController is
     Generic(
-        AXIS_TDATA_WIDTH : integer	:= 24;
+        AXIS_TDATA_WIDTH : positive	:= 24;
         VOLUME_BITS      : positive := 10;
-        N_VOLUME         : positive := 6
+        N_VOLUME         : positive range 1 to 9 := 6
     );
     Port (         
         aclk             :   in   STD_LOGIC;   
