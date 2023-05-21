@@ -1,7 +1,21 @@
+------------ LIBRARIES -------------
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+	use IEEE.STD_LOGIC_1164.ALL;
+	use IEEE.NUMERIC_STD.ALL;
+------------------------------------
+---------------------------------------CODE EXPLANATION----------------------------------------------
 
+-- FSM EXPLANATION, same as other modules, can avoid reading it if already did :)
+-- This VHDL code implements a 4-state finite state machine to handle data receiving/processing/transmitting in a serial manner.
+-- The machine waits for data of both channels and performs appropriate processing before transmitting it.
+-- The choice of a 4-state finite state machine is justified by the nature of the input data, which arrives in a sequential manner,
+-- since left and right channels data is known to arrive one after the other in a single packet.
+-- By employing a serial approach, we ensure the safety and simplicity of data handling.
+-- Additionally, employing serial data transmission simplifies the design and implementation of the system
+-- by eliminating the need for complex parallel data handling mechanisms.
+-- This is possible considering that the frequency of the AXI protocol clock is significantly higher than that of the audio signals.
+-- Overall, this design choice optimizes data handling efficiency while ensuring reliability and ease of implementation.
+-----------------------------------------------------------------------------------------------------
 entity VolumeController is
     Generic(
         AXIS_TDATA_WIDTH : positive	:= 24;
@@ -9,26 +23,26 @@ entity VolumeController is
         N_VOLUME         : positive range 1 to 9 := 6
     );
     Port (         
-        aclk             :   in   STD_LOGIC;   
+        aclk            :   in   STD_LOGIC;   
         aresetn         :   in   STD_LOGIC;  
 
         ------------AXI4-Stream--slave-------------
         S_AXIS_TVALID	:   in   STD_LOGIC;
-        -- TDATA is the primary payload that is used to provide the data that is passing across the interface from the master
+        -- Data coming from the master
         S_AXIS_TDATA	:   in 	 STD_LOGIC_VECTOR(AXIS_TDATA_WIDTH-1 DOWNTO 0);
         -- TREADY indicates that the slave can accept a transfer in the current cycle
-        S_AXIS_TREADY	:   out  STD_LOGIC := '1';
-        -- AXI4Stream tLAST to distinguish between left and right channel
+        S_AXIS_TREADY	:   out  STD_LOGIC := '0';
+        -- AXI4Stream TLAST to distinguish between left and right channel
         S_AXIS_TLAST	:   in   STD_LOGIC;
         --------------------------------------------
 
         ------------AXI4-Stream--master-------------
         M_AXIS_TREADY	:   in 	 STD_LOGIC;
-        -- Data in
+        -- Data output
         M_AXIS_TDATA	:   out  STD_LOGIC_VECTOR(AXIS_TDATA_WIDTH-1 DOWNTO 0) := (Others =>'0');
-        -- AXI4Stream tLAST to distinguish between left and right channel
+        -- AXI4Stream TLAST to distinguish between left and right channel
         M_AXIS_TLAST	:   out  STD_LOGIC;
-        -- Data is in valid
+        --TVALID indicates if data on the bus is valid
         M_AXIS_TVALID	:   out  STD_LOGIC := '0';
         --------------------------------------------
 
