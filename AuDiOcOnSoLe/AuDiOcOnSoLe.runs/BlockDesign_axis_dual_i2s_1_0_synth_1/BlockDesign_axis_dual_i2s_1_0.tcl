@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "BlockDesign_axis_dual_i2s_1_0_synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-19292-DESKTOP-JKUPK39/incrSyn}
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
@@ -96,7 +93,7 @@ set_property ip_output_repo {c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittC
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet {{c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ip/BlockDesign_axis_dual_i2s_1_0/BlockDesign_axis_dual_i2s_1_0.xci}}
+read_ip -quiet {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ip/BlockDesign_axis_dual_i2s_1_0/BlockDesign_axis_dual_i2s_1_0.xci}}
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

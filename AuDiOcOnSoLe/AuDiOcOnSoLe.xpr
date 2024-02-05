@@ -86,6 +86,30 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/VolumeController.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/BalanceController.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/MobileMean.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/EdgeDetector.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/Debouncer.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -104,80 +128,48 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/EdgeDetector.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/VolumeController.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/MobileMean.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/bd/BlockDesign/BlockDesign.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_MuteController_0_0/BlockDesign_MuteController_0_0.xci">
-          <Proxy FileSetName="BlockDesign_MuteController_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_LedController_0_0/BlockDesign_LedController_0_0.xci">
-          <Proxy FileSetName="BlockDesign_LedController_0_0"/>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_MobileMean_0_0/BlockDesign_MobileMean_0_0.xci">
+          <Proxy FileSetName="BlockDesign_MobileMean_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_axis_dual_i2s_1_0/BlockDesign_axis_dual_i2s_1_0.xci">
           <Proxy FileSetName="BlockDesign_axis_dual_i2s_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_EdgeDetector_0_0/BlockDesign_EdgeDetector_0_0.xci">
-          <Proxy FileSetName="BlockDesign_EdgeDetector_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0.xci">
-          <Proxy FileSetName="BlockDesign_EdgeDetector_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_Debouncer_0_0/BlockDesign_Debouncer_0_0.xci">
-          <Proxy FileSetName="BlockDesign_Debouncer_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0.xci">
           <Proxy FileSetName="BlockDesign_digilent_jstk2_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0.xci">
-          <Proxy FileSetName="BlockDesign_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_Debouncer_1_0/BlockDesign_Debouncer_1_0.xci">
-          <Proxy FileSetName="BlockDesign_Debouncer_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_VolumeController_0_0/BlockDesign_VolumeController_0_0.xci">
           <Proxy FileSetName="BlockDesign_VolumeController_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_MobileMean_0_0/BlockDesign_MobileMean_0_0.xci">
-          <Proxy FileSetName="BlockDesign_MobileMean_0_0"/>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_BalanceController_0_0/BlockDesign_BalanceController_0_0.xci">
+          <Proxy FileSetName="BlockDesign_BalanceController_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_MuteController_0_0/BlockDesign_MuteController_0_0.xci">
+          <Proxy FileSetName="BlockDesign_MuteController_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0.xci">
+          <Proxy FileSetName="BlockDesign_EdgeDetector_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_Debouncer_1_0/BlockDesign_Debouncer_1_0.xci">
+          <Proxy FileSetName="BlockDesign_Debouncer_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_LedController_0_0/BlockDesign_LedController_0_0.xci">
+          <Proxy FileSetName="BlockDesign_LedController_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_Debouncer_0_0/BlockDesign_Debouncer_0_0.xci">
+          <Proxy FileSetName="BlockDesign_Debouncer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BlockDesign.bd" FileRelPathName="ip/BlockDesign_EdgeDetector_0_0/BlockDesign_EdgeDetector_0_0.xci">
+          <Proxy FileSetName="BlockDesign_EdgeDetector_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/FIFO.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/MovingAverageFilter.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -187,13 +179,6 @@
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../LAB3/Volume_test/Volume_test.srcs/sources_1/new/VolumeControl.vhd"/>
           <Attr Name="ImportTime" Val="1684259753"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/BalanceController.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -245,33 +230,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="BlockDesign_Debouncer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_Debouncer_0_0" RelGenDir="$PGENDIR/BlockDesign_Debouncer_0_0">
-      <Config>
-        <Option Name="TopModule" Val="BlockDesign_Debouncer_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="BlockDesign_Debouncer_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_Debouncer_1_0" RelGenDir="$PGENDIR/BlockDesign_Debouncer_1_0">
-      <Config>
-        <Option Name="TopModule" Val="BlockDesign_Debouncer_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="BlockDesign_axis_dual_i2s_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_axis_dual_i2s_1_0" RelGenDir="$PGENDIR/BlockDesign_axis_dual_i2s_1_0">
       <Config>
         <Option Name="TopModule" Val="BlockDesign_axis_dual_i2s_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="BlockDesign_MuteController_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_MuteController_0_0" RelGenDir="$PGENDIR/BlockDesign_MuteController_0_0">
-      <Config>
-        <Option Name="TopModule" Val="BlockDesign_MuteController_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="BlockDesign_LedController_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_LedController_0_0" RelGenDir="$PGENDIR/BlockDesign_LedController_0_0">
-      <Config>
-        <Option Name="TopModule" Val="BlockDesign_LedController_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -281,15 +242,33 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="BlockDesign_MuteController_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_MuteController_0_0" RelGenDir="$PGENDIR/BlockDesign_MuteController_0_0">
+      <Config>
+        <Option Name="TopModule" Val="BlockDesign_MuteController_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="BlockDesign_EdgeDetector_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_EdgeDetector_1_0" RelGenDir="$PGENDIR/BlockDesign_EdgeDetector_1_0">
       <Config>
         <Option Name="TopModule" Val="BlockDesign_EdgeDetector_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="BlockDesign_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_clk_wiz_0_0" RelGenDir="$PGENDIR/BlockDesign_clk_wiz_0_0">
+    <FileSet Name="BlockDesign_Debouncer_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_Debouncer_1_0" RelGenDir="$PGENDIR/BlockDesign_Debouncer_1_0">
       <Config>
-        <Option Name="TopModule" Val="BlockDesign_clk_wiz_0_0"/>
+        <Option Name="TopModule" Val="BlockDesign_Debouncer_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BlockDesign_LedController_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_LedController_0_0" RelGenDir="$PGENDIR/BlockDesign_LedController_0_0">
+      <Config>
+        <Option Name="TopModule" Val="BlockDesign_LedController_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BlockDesign_Debouncer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_Debouncer_0_0" RelGenDir="$PGENDIR/BlockDesign_Debouncer_0_0">
+      <Config>
+        <Option Name="TopModule" Val="BlockDesign_Debouncer_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -302,6 +281,12 @@
     <FileSet Name="BlockDesign_VolumeController_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_VolumeController_0_0" RelGenDir="$PGENDIR/BlockDesign_VolumeController_0_0">
       <Config>
         <Option Name="TopModule" Val="BlockDesign_VolumeController_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BlockDesign_BalanceController_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BlockDesign_BalanceController_0_0" RelGenDir="$PGENDIR/BlockDesign_BalanceController_0_0">
+      <Config>
+        <Option Name="TopModule" Val="BlockDesign_BalanceController_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -345,47 +330,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BlockDesign_Debouncer_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_Debouncer_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_Debouncer_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="BlockDesign_Debouncer_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_Debouncer_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_Debouncer_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_1_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="BlockDesign_axis_dual_i2s_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_axis_dual_i2s_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_axis_dual_i2s_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_axis_dual_i2s_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_axis_dual_i2s_1_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="BlockDesign_MuteController_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_MuteController_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_MuteController_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_MuteController_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_MuteController_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="BlockDesign_LedController_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_LedController_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_LedController_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_LedController_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_LedController_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -405,6 +350,16 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="BlockDesign_MuteController_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_MuteController_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_MuteController_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_MuteController_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_MuteController_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="BlockDesign_EdgeDetector_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_EdgeDetector_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_EdgeDetector_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_EdgeDetector_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_EdgeDetector_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
@@ -415,7 +370,27 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BlockDesign_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_clk_wiz_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_clk_wiz_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_clk_wiz_0_0_synth_1">
+    <Run Id="BlockDesign_Debouncer_1_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_Debouncer_1_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_Debouncer_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BlockDesign_LedController_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_LedController_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_LedController_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_LedController_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_LedController_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BlockDesign_Debouncer_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_Debouncer_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_Debouncer_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -438,6 +413,18 @@
       <RQSFiles/>
     </Run>
     <Run Id="BlockDesign_VolumeController_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_VolumeController_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_VolumeController_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_VolumeController_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_VolumeController_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BlockDesign_BalanceController_0_0_synth_1" Type="Ft3:Synth" SrcSet="BlockDesign_BalanceController_0_0" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_BalanceController_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BlockDesign_BalanceController_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_BalanceController_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -484,75 +471,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BlockDesign_Debouncer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_Debouncer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="BlockDesign_Debouncer_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_Debouncer_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_1_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="BlockDesign_axis_dual_i2s_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_axis_dual_i2s_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_axis_dual_i2s_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_axis_dual_i2s_1_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="BlockDesign_MuteController_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_MuteController_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_MuteController_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_MuteController_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="BlockDesign_LedController_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_LedController_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_LedController_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_LedController_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -586,6 +505,23 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="BlockDesign_MuteController_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_MuteController_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_MuteController_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_MuteController_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="BlockDesign_EdgeDetector_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_EdgeDetector_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_EdgeDetector_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_EdgeDetector_1_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
@@ -603,7 +539,41 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BlockDesign_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_clk_wiz_0_0_impl_1">
+    <Run Id="BlockDesign_Debouncer_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_Debouncer_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BlockDesign_LedController_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_LedController_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_LedController_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_LedController_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BlockDesign_Debouncer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_Debouncer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_Debouncer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_Debouncer_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -640,6 +610,25 @@
       <RQSFiles/>
     </Run>
     <Run Id="BlockDesign_VolumeController_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_VolumeController_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_VolumeController_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_VolumeController_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BlockDesign_BalanceController_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="BlockDesign_BalanceController_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BlockDesign_BalanceController_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BlockDesign_BalanceController_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>

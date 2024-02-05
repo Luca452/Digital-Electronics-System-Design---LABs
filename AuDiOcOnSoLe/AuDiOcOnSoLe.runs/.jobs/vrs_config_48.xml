@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="BlockDesign_clk_wiz_0_0_synth_1" LaunchDir="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BlockDesign_proc_sys_reset_0_0_synth_1" LaunchDir="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BlockDesign_proc_sys_reset_1_0_synth_1" LaunchDir="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_proc_sys_reset_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BlockDesign_axi4stream_spi_master_1_0_synth_1" LaunchDir="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_axi4stream_spi_master_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="BlockDesign_clk_wiz_0_0_synth_1"/>
+		<Parent Id="BlockDesign_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="BlockDesign_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="BlockDesign_axi4stream_spi_master_1_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_1"/>
+		<Parent Id="BlockDesign_clk_wiz_0_0_synth_1"/>
+		<Parent Id="BlockDesign_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="BlockDesign_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="BlockDesign_axi4stream_spi_master_1_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

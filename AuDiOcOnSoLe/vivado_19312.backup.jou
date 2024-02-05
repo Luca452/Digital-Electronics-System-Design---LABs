@@ -1,0 +1,717 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri May 19 23:08:20 2023
+# Process ID: 19312
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29968 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+create_bd_cell -type module -reference BalanceController BalanceController_0
+connect_bd_net [get_bd_pins BalanceController_0/aresetn] [get_bd_pins BalanceController_0/balance]
+undo
+set_property location {7.5 2268 -398} [get_bd_cells BalanceController_0]
+set_property location {8 2282 -530} [get_bd_cells BalanceController_0]
+connect_bd_intf_net [get_bd_intf_pins VolumeController_0/M_AXIS] [get_bd_intf_pins BalanceController_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins BalanceController_0/M_AXIS] [get_bd_intf_pins MuteController_0/s_axis]
+connect_bd_net [get_bd_pins BalanceController_0/aclk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins BalanceController_0/aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+connect_bd_net [get_bd_pins digilent_jstk2_0/jstk_y] [get_bd_pins BalanceController_0/balance]
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/m_axis]
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/s_axis]
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {100000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {100000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.000} CONFIG.MMCM_CLKOUT1_DIVIDE {31} CONFIG.CLKOUT1_JITTER {149.337} CONFIG.CLKOUT1_PHASE_ERROR {122.577} CONFIG.CLKOUT2_JITTER {201.826} CONFIG.CLKOUT2_PHASE_ERROR {122.577}] [get_bd_cells clk_wiz_0]
+endgroup
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run BlockDesign_BalanceController_0_0_synth_1
+reset_run impl_1
+update_module_reference BlockDesign_BalanceController_0_0
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+delete_bd_objs [get_bd_nets digilent_jstk2_0_jstk_y]
+delete_bd_objs [get_bd_nets digilent_jstk2_0_jstk_x]
+connect_bd_net [get_bd_pins digilent_jstk2_0/jstk_y] [get_bd_pins VolumeController_0/volume]
+connect_bd_net [get_bd_pins digilent_jstk2_0/jstk_x] [get_bd_pins BalanceController_0/balance]
+save_bd_design
+update_module_reference BlockDesign_BalanceController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_run impl_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {180} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {49.500} CONFIG.MMCM_CLKOUT0_DIVIDE_F {5.500} CONFIG.MMCM_CLKOUT1_DIVIDE {44} CONFIG.CLKOUT1_JITTER {224.262} CONFIG.CLKOUT1_PHASE_ERROR {296.868} CONFIG.CLKOUT2_JITTER {316.348} CONFIG.CLKOUT2_PHASE_ERROR {296.868}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {180000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {180000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+startgroup
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {180000000}] [get_bd_intf_pins MuteController_0/s_axis]
+set_property -dict [list CONFIG.FREQ_HZ {180000000}] [get_bd_intf_pins MuteController_0/m_axis]
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+delete_bd_objs [get_bd_intf_nets BalanceController_0_M_AXIS] [get_bd_intf_nets VolumeController_0_M_AXIS] [get_bd_nets digilent_jstk2_0_jstk_x] [get_bd_cells BalanceController_0]
+update_compile_order -fileset sources_1
+connect_bd_intf_net [get_bd_intf_pins VolumeController_0/M_AXIS] [get_bd_intf_pins MuteController_0/s_axis]
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+update_module_reference BlockDesign_VolumeController_0_0
+update_module_reference BlockDesign_VolumeController_0_0
+delete_bd_objs [get_bd_intf_nets MobileMean_0_M_AXIS] [get_bd_intf_nets VolumeController_0_M_AXIS] [get_bd_nets digilent_jstk2_0_jstk_y] [get_bd_cells VolumeController_0]
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+create_bd_cell -type module -reference BalanceController BalanceController_0
+set_property location {7.5 2152 -537} [get_bd_cells BalanceController_0]
+connect_bd_intf_net [get_bd_intf_pins MobileMean_0/M_AXIS] [get_bd_intf_pins BalanceController_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins BalanceController_0/M_AXIS] [get_bd_intf_pins MuteController_0/s_axis]
+connect_bd_net [get_bd_pins digilent_jstk2_0/jstk_x] [get_bd_pins BalanceController_0/balance]
+connect_bd_net [get_bd_pins BalanceController_0/aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+connect_bd_net [get_bd_pins BalanceController_0/aclk] [get_bd_pins clk_wiz_0/clk_out1]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_BalanceController_0_0_synth_1
+wait_on_run BlockDesign_BalanceController_0_0_synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+current_design impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+endgroup
+update_module_reference BlockDesign_BalanceController_0_0
+update_module_reference BlockDesign_BalanceController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_BalanceController_0_0
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {190} CONFIG.MMCM_CLKFBOUT_MULT_F {45.125} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4.750} CONFIG.MMCM_CLKOUT1_DIVIDE {40} CONFIG.CLKOUT1_JITTER {243.281} CONFIG.CLKOUT1_PHASE_ERROR {304.558} CONFIG.CLKOUT2_JITTER {350.114} CONFIG.CLKOUT2_PHASE_ERROR {304.558}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {190000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {190000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {190000000}] [get_bd_intf_pins MuteController_0/s_axis]
+set_property -dict [list CONFIG.FREQ_HZ {190000000}] [get_bd_intf_pins MuteController_0/m_axis]
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.500} CONFIG.MMCM_CLKOUT1_DIVIDE {31} CONFIG.CLKOUT1_JITTER {130.488} CONFIG.CLKOUT1_PHASE_ERROR {122.577} CONFIG.CLKOUT2_JITTER {201.826} CONFIG.CLKOUT2_PHASE_ERROR {122.577}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {200000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {200000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+endgroup
+startgroup
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {200000000}] [get_bd_intf_pins MuteController_0/s_axis]
+set_property -dict [list CONFIG.FREQ_HZ {200000000}] [get_bd_intf_pins MuteController_0/m_axis]
+current_design rtl_1
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+launch_runs BlockDesign_digilent_jstk2_0_0_synth_1
+wait_on_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run BlockDesign_clk_wiz_0_0_synth_1
+launch_runs BlockDesign_clk_wiz_0_0_synth_1
+wait_on_run BlockDesign_clk_wiz_0_0_synth_1
+reset_run BlockDesign_axi4stream_spi_master_1_0_synth_1
+launch_runs BlockDesign_axi4stream_spi_master_1_0_synth_1
+wait_on_run BlockDesign_axi4stream_spi_master_1_0_synth_1
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_proc_sys_reset_1_0_synth_1
+wait_on_run BlockDesign_proc_sys_reset_1_0_synth_1
+launch_runs BlockDesign_proc_sys_reset_0_0_synth_1
+wait_on_run BlockDesign_proc_sys_reset_0_0_synth_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+current_design impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+create_bd_cell -type module -reference VolumeController VolumeController_0
+set_property location {6.5 1964 -205} [get_bd_cells VolumeController_0]
+set_property location {7 1941 -568} [get_bd_cells VolumeController_0]
+delete_bd_objs [get_bd_intf_nets MobileMean_0_M_AXIS]
+set_property location {7 1968 -558} [get_bd_cells VolumeController_0]
+connect_bd_intf_net [get_bd_intf_pins MobileMean_0/M_AXIS] [get_bd_intf_pins VolumeController_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins VolumeController_0/M_AXIS] [get_bd_intf_pins BalanceController_0/S_AXIS]
+connect_bd_net [get_bd_pins VolumeController_0/aclk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins VolumeController_0/aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+connect_bd_net [get_bd_pins VolumeController_0/volume] [get_bd_pins digilent_jstk2_0/btn_jstk]
+undo
+connect_bd_net [get_bd_pins VolumeController_0/volume] [get_bd_pins digilent_jstk2_0/jstk_y]
+save_bd_design
+set_property location {8 2190 -603} [get_bd_cells BalanceController_0]
+set_property location {8 2295 -564} [get_bd_cells BalanceController_0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.000} CONFIG.CLKOUT1_JITTER {149.337}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {100000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {100000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+startgroup
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/s_axis]
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/m_axis]
+startgroup
+endgroup
+startgroup
+endgroup
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run BlockDesign_clk_wiz_0_0_synth_1
+reset_run BlockDesign_axi4stream_spi_master_1_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {180} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {49.500} CONFIG.MMCM_CLKOUT0_DIVIDE_F {5.500} CONFIG.MMCM_CLKOUT1_DIVIDE {44} CONFIG.CLKOUT1_JITTER {224.262} CONFIG.CLKOUT1_PHASE_ERROR {296.868} CONFIG.CLKOUT2_JITTER {316.348} CONFIG.CLKOUT2_PHASE_ERROR {296.868}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {180000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {180000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {180000000}] [get_bd_intf_pins MuteController_0/s_axis]
+set_property -dict [list CONFIG.FREQ_HZ {180000000}] [get_bd_intf_pins MuteController_0/m_axis]
+startgroup
+endgroup
+startgroup
+endgroup
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+endgroup
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+current_design rtl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+current_design impl_1
+current_design rtl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+reset_run synth_1
+update_module_reference BlockDesign_VolumeController_0_0
+update_module_reference BlockDesign_MobileMean_0_0
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+current_design impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_MobileMean_0_0
+update_module_reference BlockDesign_VolumeController_0_0
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+update_module_reference BlockDesign_MobileMean_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+current_design impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.000} CONFIG.MMCM_CLKOUT1_DIVIDE {31} CONFIG.CLKOUT1_JITTER {149.337} CONFIG.CLKOUT1_PHASE_ERROR {122.577} CONFIG.CLKOUT2_JITTER {201.826} CONFIG.CLKOUT2_PHASE_ERROR {122.577}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {100000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {100000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/m_axis]
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/s_axis]
+regenerate_bd_layout
+undo
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+update_module_reference BlockDesign_VolumeController_0_0
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_MobileMean_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_MobileMean_0_0
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_VolumeController_0_0
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {180} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {49.500} CONFIG.MMCM_CLKOUT0_DIVIDE_F {5.500} CONFIG.MMCM_CLKOUT1_DIVIDE {44} CONFIG.CLKOUT1_JITTER {224.262} CONFIG.CLKOUT1_PHASE_ERROR {296.868} CONFIG.CLKOUT2_JITTER {316.348} CONFIG.CLKOUT2_PHASE_ERROR {296.868}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {180000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {180000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {180000000}] [get_bd_intf_pins MuteController_0/m_axis]
+set_property -dict [list CONFIG.FREQ_HZ {180000000}] [get_bd_intf_pins MuteController_0/s_axis]
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+update_module_reference BlockDesign_BalanceController_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.500} CONFIG.MMCM_CLKOUT1_DIVIDE {31} CONFIG.CLKOUT1_JITTER {130.488} CONFIG.CLKOUT1_PHASE_ERROR {122.577} CONFIG.CLKOUT2_JITTER {201.826} CONFIG.CLKOUT2_PHASE_ERROR {122.577}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {200000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {200000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+set_property location {8 2281 -608} [get_bd_cells BalanceController_0]
+set_property -dict [list CONFIG.FREQ_HZ {200000000}] [get_bd_intf_pins MuteController_0/s_axis]
+set_property -dict [list CONFIG.FREQ_HZ {200000000}] [get_bd_intf_pins MuteController_0/m_axis]
+save_bd_design
+update_module_reference BlockDesign_BalanceController_0_0
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.000} CONFIG.CLKOUT1_JITTER {149.337}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKFREQ {100000000}] [get_bd_cells digilent_jstk2_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_clkfreq {100000000}] [get_bd_cells axi4stream_spi_master_1]
+endgroup
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/s_axis]
+set_property -dict [list CONFIG.FREQ_HZ {100000000}] [get_bd_intf_pins MuteController_0/m_axis]
+startgroup
+endgroup
+reset_run BlockDesign_digilent_jstk2_0_0_synth_1
+reset_run BlockDesign_axi4stream_spi_master_1_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1

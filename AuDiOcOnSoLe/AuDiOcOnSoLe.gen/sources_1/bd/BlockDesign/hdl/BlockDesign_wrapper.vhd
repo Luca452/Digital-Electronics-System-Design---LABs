@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Sun May  7 14:49:00 2023
+--Date        : Tue May 23 00:12:59 2023
 --Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 --Command     : generate_target BlockDesign_wrapper.bd
 --Design      : BlockDesign_wrapper
@@ -22,7 +22,6 @@ entity BlockDesign_wrapper is
     rx_mclk_1 : out STD_LOGIC;
     rx_sclk_1 : out STD_LOGIC;
     rx_sdin_0 : in STD_LOGIC;
-    rx_sdin_1 : in STD_LOGIC;
     sys_clock : in STD_LOGIC;
     tx_lrck_1 : out STD_LOGIC;
     tx_mclk_1 : out STD_LOGIC;
@@ -37,6 +36,13 @@ architecture STRUCTURE of BlockDesign_wrapper is
     sys_clock : in STD_LOGIC;
     reset : in STD_LOGIC;
     rx_sdin_0 : in STD_LOGIC;
+    tx_lrck_1 : out STD_LOGIC;
+    rx_sclk_1 : out STD_LOGIC;
+    rx_lrck_1 : out STD_LOGIC;
+    rx_mclk_1 : out STD_LOGIC;
+    tx_sdout_1 : out STD_LOGIC;
+    tx_sclk_1 : out STD_LOGIC;
+    tx_mclk_1 : out STD_LOGIC;
     SPI_M_1_sck_t : out STD_LOGIC;
     SPI_M_1_io1_o : out STD_LOGIC;
     SPI_M_1_ss_t : out STD_LOGIC;
@@ -48,15 +54,7 @@ architecture STRUCTURE of BlockDesign_wrapper is
     SPI_M_1_sck_o : out STD_LOGIC;
     SPI_M_1_ss_i : in STD_LOGIC;
     SPI_M_1_io1_i : in STD_LOGIC;
-    SPI_M_1_io0_i : in STD_LOGIC;
-    tx_lrck_1 : out STD_LOGIC;
-    rx_sdin_1 : in STD_LOGIC;
-    rx_sclk_1 : out STD_LOGIC;
-    rx_lrck_1 : out STD_LOGIC;
-    rx_mclk_1 : out STD_LOGIC;
-    tx_sdout_1 : out STD_LOGIC;
-    tx_sclk_1 : out STD_LOGIC;
-    tx_mclk_1 : out STD_LOGIC
+    SPI_M_1_io0_i : in STD_LOGIC
   );
   end component BlockDesign;
   component IOBUF is
@@ -99,7 +97,6 @@ BlockDesign_i: component BlockDesign
       rx_mclk_1 => rx_mclk_1,
       rx_sclk_1 => rx_sclk_1,
       rx_sdin_0 => rx_sdin_0,
-      rx_sdin_1 => rx_sdin_1,
       sys_clock => sys_clock,
       tx_lrck_1 => tx_lrck_1,
       tx_mclk_1 => tx_mclk_1,

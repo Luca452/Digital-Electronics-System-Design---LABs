@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Sun May  7 13:56:32 2023
+// Date        : Mon May 22 00:06:43 2023
 // Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {c:/Users/daido/Desktop/Polimi/Anno
 //               4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_EdgeDetector_1_0/BlockDesign_EdgeDetector_1_0_sim_netlist.v}
@@ -53,6 +53,8 @@ module BlockDesign_EdgeDetector_1_0_EdgeDetector
   wire input_signal_prec;
   wire output_signal;
   wire output_signal_i_1_n_0;
+  wire output_signal_reg__0;
+  wire output_signal_reg_i_1_n_0;
   wire rst;
 
   FDCE input_signal_prec_reg
@@ -61,11 +63,13 @@ module BlockDesign_EdgeDetector_1_0_EdgeDetector
         .CLR(rst),
         .D(input_signal),
         .Q(input_signal_prec));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT4 #(
+    .INIT(16'hFB08)) 
     output_signal_i_1
-       (.I0(input_signal),
-        .I1(input_signal_prec),
+       (.I0(output_signal_reg__0),
+        .I1(input_signal),
+        .I2(input_signal_prec),
+        .I3(output_signal),
         .O(output_signal_i_1_n_0));
   FDCE output_signal_reg
        (.C(clk),
@@ -73,6 +77,22 @@ module BlockDesign_EdgeDetector_1_0_EdgeDetector
         .CLR(rst),
         .D(output_signal_i_1_n_0),
         .Q(output_signal));
+  LUT4 #(
+    .INIT(16'hFB04)) 
+    output_signal_reg_i_1
+       (.I0(rst),
+        .I1(input_signal),
+        .I2(input_signal_prec),
+        .I3(output_signal_reg__0),
+        .O(output_signal_reg_i_1_n_0));
+  FDRE #(
+    .INIT(1'b1)) 
+    output_signal_reg_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(output_signal_reg_i_1_n_0),
+        .Q(output_signal_reg__0),
+        .R(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

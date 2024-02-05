@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Sun May  7 13:54:42 2023
+// Date        : Mon May 22 00:07:48 2023
 // Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ BlockDesign_Debouncer_0_0_sim_netlist.v
@@ -48,7 +48,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
   input input_signal;
 
   wire clk;
-  wire [19:0]counter;
+  wire [16:0]counter;
   wire counter0_carry__0_i_1_n_0;
   wire counter0_carry__0_i_2_n_0;
   wire counter0_carry__0_i_3_n_0;
@@ -69,15 +69,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
   wire counter0_carry__2_i_2_n_0;
   wire counter0_carry__2_i_3_n_0;
   wire counter0_carry__2_i_4_n_0;
-  wire counter0_carry__2_n_0;
   wire counter0_carry__2_n_1;
   wire counter0_carry__2_n_2;
   wire counter0_carry__2_n_3;
-  wire counter0_carry__3_i_1_n_0;
-  wire counter0_carry__3_i_2_n_0;
-  wire counter0_carry__3_i_3_n_0;
-  wire counter0_carry__3_n_2;
-  wire counter0_carry__3_n_3;
   wire counter0_carry_i_1_n_0;
   wire counter0_carry_i_2_n_0;
   wire counter0_carry_i_3_n_0;
@@ -93,16 +87,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
   wire \counter[13]_i_1_n_0 ;
   wire \counter[14]_i_1_n_0 ;
   wire \counter[15]_i_1_n_0 ;
-  wire \counter[16]_i_1_n_0 ;
-  wire \counter[17]_i_1_n_0 ;
-  wire \counter[18]_i_1_n_0 ;
-  wire \counter[19]_i_2_n_0 ;
-  wire \counter[19]_i_3_n_0 ;
-  wire \counter[19]_i_4_n_0 ;
-  wire \counter[19]_i_5_n_0 ;
-  wire \counter[19]_i_6_n_0 ;
-  wire \counter[19]_i_7_n_0 ;
-  wire \counter[19]_i_8_n_0 ;
+  wire \counter[16]_i_2_n_0 ;
+  wire \counter[16]_i_3_n_0 ;
+  wire \counter[16]_i_4_n_0 ;
+  wire \counter[16]_i_5_n_0 ;
+  wire \counter[16]_i_6_n_0 ;
+  wire \counter[16]_i_7_n_0 ;
   wire \counter[1]_i_1_n_0 ;
   wire \counter[2]_i_1_n_0 ;
   wire \counter[3]_i_1_n_0 ;
@@ -113,7 +103,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
   wire \counter[8]_i_1_n_0 ;
   wire \counter[9]_i_1_n_0 ;
   wire counter_0;
-  wire [19:1]data0;
+  wire [16:1]data0;
   wire debounced;
   wire debounced_int_C_i_1_n_0;
   wire debounced_int_reg_C_n_0;
@@ -123,8 +113,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
   wire debounced_int_reg_P_n_0;
   wire input_signal;
   wire reset;
-  wire [3:2]NLW_counter0_carry__3_CO_UNCONNECTED;
-  wire [3:3]NLW_counter0_carry__3_O_UNCONNECTED;
+  wire [3:3]NLW_counter0_carry__2_CO_UNCONNECTED;
 
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 counter0_carry
@@ -193,9 +182,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 counter0_carry__2
        (.CI(counter0_carry__1_n_0),
-        .CO({counter0_carry__2_n_0,counter0_carry__2_n_1,counter0_carry__2_n_2,counter0_carry__2_n_3}),
+        .CO({NLW_counter0_carry__2_CO_UNCONNECTED[3],counter0_carry__2_n_1,counter0_carry__2_n_2,counter0_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI(counter[16:13]),
+        .DI({1'b0,counter[15:13]}),
         .O(data0[16:13]),
         .S({counter0_carry__2_i_1_n_0,counter0_carry__2_i_2_n_0,counter0_carry__2_i_3_n_0,counter0_carry__2_i_4_n_0}));
   LUT1 #(
@@ -218,29 +207,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
     counter0_carry__2_i_4
        (.I0(counter[13]),
         .O(counter0_carry__2_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 counter0_carry__3
-       (.CI(counter0_carry__2_n_0),
-        .CO({NLW_counter0_carry__3_CO_UNCONNECTED[3:2],counter0_carry__3_n_2,counter0_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,counter[18:17]}),
-        .O({NLW_counter0_carry__3_O_UNCONNECTED[3],data0[19:17]}),
-        .S({1'b0,counter0_carry__3_i_1_n_0,counter0_carry__3_i_2_n_0,counter0_carry__3_i_3_n_0}));
-  LUT1 #(
-    .INIT(2'h1)) 
-    counter0_carry__3_i_1
-       (.I0(counter[19]),
-        .O(counter0_carry__3_i_1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    counter0_carry__3_i_2
-       (.I0(counter[18]),
-        .O(counter0_carry__3_i_2_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    counter0_carry__3_i_3
-       (.I0(counter[17]),
-        .O(counter0_carry__3_i_3_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     counter0_carry_i_1
@@ -261,7 +227,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
     counter0_carry_i_4
        (.I0(counter[1]),
         .O(counter0_carry_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \counter[0]_i_1 
@@ -269,186 +235,158 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
         .O(\counter[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'hB)) 
     \counter[10]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
-        .I1(data0[10]),
+       (.I0(data0[10]),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[10]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \counter[11]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
+       (.I0(\counter[16]_i_3_n_0 ),
         .I1(data0[11]),
         .O(\counter[11]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \counter[12]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
+       (.I0(\counter[16]_i_3_n_0 ),
         .I1(data0[12]),
         .O(\counter[12]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \counter[13]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
+       (.I0(\counter[16]_i_3_n_0 ),
         .I1(data0[13]),
         .O(\counter[13]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
-    .INIT(4'hB)) 
+    .INIT(4'h8)) 
     \counter[14]_i_1 
-       (.I0(data0[14]),
-        .I1(\counter[19]_i_3_n_0 ),
+       (.I0(\counter[16]_i_3_n_0 ),
+        .I1(data0[14]),
         .O(\counter[14]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'hB)) 
     \counter[15]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
-        .I1(data0[15]),
+       (.I0(data0[15]),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \counter[16]_i_1 
-       (.I0(data0[16]),
-        .I1(\counter[19]_i_3_n_0 ),
-        .O(\counter[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \counter[17]_i_1 
-       (.I0(data0[17]),
-        .I1(\counter[19]_i_3_n_0 ),
-        .O(\counter[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \counter[18]_i_1 
-       (.I0(data0[18]),
-        .I1(\counter[19]_i_3_n_0 ),
-        .O(\counter[18]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hFFFF656A)) 
-    \counter[19]_i_1 
+    \counter[16]_i_1 
        (.I0(input_signal),
         .I1(debounced_int_reg_P_n_0),
         .I2(debounced_int_reg_LDC_n_0),
         .I3(debounced_int_reg_C_n_0),
-        .I4(\counter[19]_i_3_n_0 ),
+        .I4(\counter[16]_i_3_n_0 ),
         .O(counter_0));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'hB)) 
-    \counter[19]_i_2 
-       (.I0(data0[19]),
-        .I1(\counter[19]_i_3_n_0 ),
-        .O(\counter[19]_i_2_n_0 ));
+    \counter[16]_i_2 
+       (.I0(data0[16]),
+        .I1(\counter[16]_i_3_n_0 ),
+        .O(\counter[16]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \counter[16]_i_3 
+       (.I0(\counter[16]_i_4_n_0 ),
+        .I1(\counter[16]_i_5_n_0 ),
+        .I2(\counter[16]_i_6_n_0 ),
+        .I3(\counter[16]_i_7_n_0 ),
+        .O(\counter[16]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \counter[16]_i_4 
+       (.I0(counter[4]),
+        .I1(counter[3]),
+        .I2(counter[6]),
+        .I3(counter[5]),
+        .O(\counter[16]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \counter[19]_i_3 
-       (.I0(\counter[19]_i_4_n_0 ),
-        .I1(\counter[19]_i_5_n_0 ),
-        .I2(\counter[19]_i_6_n_0 ),
-        .I3(\counter[19]_i_7_n_0 ),
-        .I4(\counter[19]_i_8_n_0 ),
-        .O(\counter[19]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \counter[19]_i_4 
-       (.I0(counter[1]),
-        .I1(counter[0]),
-        .I2(counter[3]),
+    \counter[16]_i_5 
+       (.I0(counter[0]),
+        .I1(counter[15]),
+        .I2(counter[16]),
         .I3(counter[2]),
-        .O(\counter[19]_i_4_n_0 ));
+        .I4(counter[1]),
+        .O(\counter[16]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \counter[19]_i_5 
-       (.I0(counter[13]),
-        .I1(counter[12]),
-        .I2(counter[15]),
-        .I3(counter[14]),
-        .O(\counter[19]_i_5_n_0 ));
+    \counter[16]_i_6 
+       (.I0(counter[12]),
+        .I1(counter[11]),
+        .I2(counter[14]),
+        .I3(counter[13]),
+        .O(\counter[16]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \counter[19]_i_6 
-       (.I0(counter[17]),
-        .I1(counter[16]),
-        .I2(counter[19]),
-        .I3(counter[18]),
-        .O(\counter[19]_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \counter[19]_i_7 
-       (.I0(counter[9]),
-        .I1(counter[8]),
-        .I2(counter[11]),
-        .I3(counter[10]),
-        .O(\counter[19]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \counter[19]_i_8 
-       (.I0(counter[5]),
-        .I1(counter[4]),
-        .I2(counter[7]),
-        .I3(counter[6]),
-        .O(\counter[19]_i_8_n_0 ));
+    \counter[16]_i_7 
+       (.I0(counter[8]),
+        .I1(counter[7]),
+        .I2(counter[10]),
+        .I3(counter[9]),
+        .O(\counter[16]_i_7_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \counter[1]_i_1 
        (.I0(data0[1]),
-        .I1(\counter[19]_i_3_n_0 ),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[1]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \counter[2]_i_1 
        (.I0(data0[2]),
-        .I1(\counter[19]_i_3_n_0 ),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[2]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \counter[3]_i_1 
        (.I0(data0[3]),
-        .I1(\counter[19]_i_3_n_0 ),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[3]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \counter[4]_i_1 
        (.I0(data0[4]),
-        .I1(\counter[19]_i_3_n_0 ),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[4]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
-    .INIT(4'hB)) 
+    .INIT(4'h8)) 
     \counter[5]_i_1 
-       (.I0(data0[5]),
-        .I1(\counter[19]_i_3_n_0 ),
+       (.I0(\counter[16]_i_3_n_0 ),
+        .I1(data0[5]),
         .O(\counter[5]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \counter[6]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
+       (.I0(\counter[16]_i_3_n_0 ),
         .I1(data0[6]),
         .O(\counter[6]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'hB)) 
     \counter[7]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
-        .I1(data0[7]),
+       (.I0(data0[7]),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[7]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \counter[8]_i_1 
-       (.I0(\counter[19]_i_3_n_0 ),
+       (.I0(\counter[16]_i_3_n_0 ),
         .I1(data0[8]),
         .O(\counter[8]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
@@ -456,7 +394,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
     .INIT(4'hB)) 
     \counter[9]_i_1 
        (.I0(data0[9]),
-        .I1(\counter[19]_i_3_n_0 ),
+        .I1(\counter[16]_i_3_n_0 ),
         .O(\counter[9]_i_1_n_0 ));
   FDCE \counter_reg[0] 
        (.C(clk),
@@ -504,26 +442,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
        (.C(clk),
         .CE(counter_0),
         .CLR(reset),
-        .D(\counter[16]_i_1_n_0 ),
+        .D(\counter[16]_i_2_n_0 ),
         .Q(counter[16]));
-  FDCE \counter_reg[17] 
-       (.C(clk),
-        .CE(counter_0),
-        .CLR(reset),
-        .D(\counter[17]_i_1_n_0 ),
-        .Q(counter[17]));
-  FDCE \counter_reg[18] 
-       (.C(clk),
-        .CE(counter_0),
-        .CLR(reset),
-        .D(\counter[18]_i_1_n_0 ),
-        .Q(counter[18]));
-  FDCE \counter_reg[19] 
-       (.C(clk),
-        .CE(counter_0),
-        .CLR(reset),
-        .D(\counter[19]_i_2_n_0 ),
-        .Q(counter[19]));
   FDCE \counter_reg[1] 
        (.C(clk),
         .CE(counter_0),
@@ -578,7 +498,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
         .CLR(reset),
         .D(\counter[9]_i_1_n_0 ),
         .Q(counter[9]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     debounced_INST_0
@@ -586,14 +506,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer
         .I1(debounced_int_reg_LDC_n_0),
         .I2(debounced_int_reg_C_n_0),
         .O(debounced));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     debounced_int_C_i_1
        (.I0(debounced_int_reg_P_n_0),
         .I1(debounced_int_reg_LDC_n_0),
         .I2(debounced_int_reg_C_n_0),
-        .I3(\counter[19]_i_3_n_0 ),
+        .I3(\counter[16]_i_3_n_0 ),
         .I4(input_signal),
         .O(debounced_int_C_i_1_n_0));
   FDCE debounced_int_reg_C

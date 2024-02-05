@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu May 18 16:04:45 2023
+# Process ID: 15220
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31504 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr}
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MobileMean.vhd} w ]
+add_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/MobileMean.vhd}}
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_nets digilent_jstk2_0_jstk_y] [get_bd_intf_nets VolumeController_0_M_AXIS] [get_bd_intf_nets MovingAverageFilter_0_M_AXIS] [get_bd_cells VolumeController_0]
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_intf_nets axis_dual_i2s_1_m_axis] [get_bd_cells MovingAverageFilter_0]
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+create_bd_cell -type module -reference MobileMean MobileMean_0
+set_property location {6.5 1784 -486} [get_bd_cells MobileMean_0]
+set_property location {9 2646 -510} [get_bd_cells axis_dual_i2s_1]
+undo
+undo
+undo
+set_property location {9 2678 -436} [get_bd_cells axis_dual_i2s_1]
+set_property location {8 2660 -457} [get_bd_cells axis_dual_i2s_1]
+set_property location {8 2675 -399} [get_bd_cells axis_dual_i2s_1]
+set_property location {8 2672 -371} [get_bd_cells axis_dual_i2s_1]
+set_property location {8 2672 -339} [get_bd_cells axis_dual_i2s_1]
+create_bd_cell -type module -reference MobileMean MobileMean_0
+set_property location {6.5 1888 -526} [get_bd_cells MobileMean_0]
+connect_bd_intf_net [get_bd_intf_pins MobileMean_0/M_AXIS] [get_bd_intf_pins MuteController_0/s_axis]
+connect_bd_intf_net [get_bd_intf_pins axis_dual_i2s_1/m_axis] [get_bd_intf_pins MobileMean_0/S_AXIS]
+connect_bd_net [get_bd_pins MobileMean_0/aclk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins MobileMean_0/aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+connect_bd_net [get_bd_pins MobileMean_0/filter_enable] [get_bd_pins EdgeDetector_1/output_signal]
+save_bd_design
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_MobileMean_0_1_synth_1
+wait_on_run BlockDesign_MobileMean_0_1_synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+update_module_reference BlockDesign_MobileMean_0_1
+generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+launch_runs BlockDesign_MobileMean_0_1_synth_1
+wait_on_run BlockDesign_MobileMean_0_1_synth_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}]
+refresh_design
+reset_run synth_1
+update_module_reference BlockDesign_MobileMean_0_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_module_reference BlockDesign_MobileMean_0_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}

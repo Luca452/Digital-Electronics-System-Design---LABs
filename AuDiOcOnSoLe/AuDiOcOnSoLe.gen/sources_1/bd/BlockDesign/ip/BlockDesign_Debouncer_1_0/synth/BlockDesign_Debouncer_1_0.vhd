@@ -82,7 +82,7 @@ ARCHITECTURE BlockDesign_Debouncer_1_0_arch OF BlockDesign_Debouncer_1_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF BlockDesign_Debouncer_1_0_arch : ARCHITECTURE IS "BlockDesign_Debouncer_1_0,Debouncer,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF BlockDesign_Debouncer_1_0_arch: ARCHITECTURE IS "BlockDesign_Debouncer_1_0,Debouncer,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Debouncer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,DEBOUNCE_MS=10,CLOCK_FREQ=100000000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF BlockDesign_Debouncer_1_0_arch: ARCHITECTURE IS "BlockDesign_Debouncer_1_0,Debouncer,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Debouncer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,DEBOUNCE_MS=1,CLOCK_FREQ=100000000}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF BlockDesign_Debouncer_1_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -94,7 +94,7 @@ ARCHITECTURE BlockDesign_Debouncer_1_0_arch OF BlockDesign_Debouncer_1_0 IS
 BEGIN
   U0 : Debouncer
     GENERIC MAP (
-      DEBOUNCE_MS => 10,
+      DEBOUNCE_MS => 1,
       CLOCK_FREQ => 100000000
     )
     PORT MAP (

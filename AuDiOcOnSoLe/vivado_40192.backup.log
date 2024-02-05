@@ -1,0 +1,1038 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May 21 19:25:49 2023
+# Process ID: 40192
+# Current directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33420 C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.xpr
+# Log file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/vivado.log
+# Journal file: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr}
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/.Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/imports/new/VolumeControl.vhd'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1003.434 ; gain = 0.000
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+update_compile_order -fileset sources_1
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+Reading block design file <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd>...
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:module_ref:digilent_jstk2:1.0 - digilent_jstk2_0
+Adding component instance block -- xilinx.com:module_ref:Debouncer:1.0 - Debouncer_0
+Adding component instance block -- xilinx.com:module_ref:Debouncer:1.0 - Debouncer_1
+Adding component instance block -- DigiLAB:ip:axi4stream_spi_master:1.0 - axi4stream_spi_master_1
+Adding component instance block -- DigiLAB:ip:axis_dual_i2s:1.0 - axis_dual_i2s_1
+Adding component instance block -- xilinx.com:module_ref:MuteController:1.0 - MuteController_0
+Adding component instance block -- xilinx.com:module_ref:LedController:1.0 - LedController_0
+Adding component instance block -- xilinx.com:module_ref:EdgeDetector:1.0 - EdgeDetector_0
+Adding component instance block -- xilinx.com:module_ref:EdgeDetector:1.0 - EdgeDetector_1
+Adding component instance block -- xilinx.com:module_ref:MobileMean:1.0 - MobileMean_0
+Adding component instance block -- xilinx.com:module_ref:VolumeController:1.0 - VolumeController_0
+Adding component instance block -- xilinx.com:module_ref:BalanceController:1.0 - BalanceController_0
+Successfully read diagram <BlockDesign> from block design file <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1003.434 ; gain = 0.000
+startgroup
+set_property -dict [list CONFIG.N_VOLUME {10}] [get_bd_cells VolumeController_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.N_BALANCE {10}] [get_bd_cells BalanceController_0]
+endgroup
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+reset_run BlockDesign_VolumeController_0_0_synth_1
+reset_run BlockDesign_BalanceController_0_0_synth_1
+reset_run synth_1
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/s_axis is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VolumeController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BalanceController_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Sun May 21 19:34:25 2023] Launched BlockDesign_VolumeController_0_0_synth_1, BlockDesign_BalanceController_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_VolumeController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1/runme.log
+BlockDesign_BalanceController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Sun May 21 19:34:25 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 1216.859 ; gain = 133.836
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+update_module_reference BlockDesign_BalanceController_0_0
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+WARNING: [IP_Flow 19-4997] N_BALANCE has an invalid right range constraint : '(spirit:decode(id('MODELPARAM_VALUE.BALANCE_BITS')) - 1)' . Only simple expressions  are supported as range constraints.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+ERROR: [IP_Flow 19-347] User Parameter 'N_BALANCE (N Balance)': Invalid range maximum "(spirit:decode(id('MODELPARAM_VALUE.BALANCE_BITS')) - 1)"
+ERROR: [IP_Flow 19-347] HDL Parameter 'N_BALANCE (N Balance)': Invalid range maximum "(spirit:decode(id('MODELPARAM_VALUE.BALANCE_BITS')) - 1)"
+ERROR: [IP_Flow 19-4668] Failed to infer definition from module 'BalanceController'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+update_module_reference BlockDesign_BalanceController_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1
+
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+WARNING: [IP_Flow 19-4050] The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+WARNING: [IP_Flow 19-3932] Unable to set the value '10' on parameter 'N Balance' due to the following failure - 
+Validation failed for parameter 'N Balance(N_BALANCE)' for BD Cell 'BlockDesign_BalanceController_0_0'. Value '10' is out of the range (1,9)
+. Restoring to an old valid value of '6'
+WARNING: [IP_Flow 19-3458] Validation failed for parameter 'N Balance(N_BALANCE)' for BD Cell 'BlockDesign_BalanceController_0_0'. Value '10' is out of the range (1,9)
+WARNING: [IP_Flow 19-3438] Customization errors found on 'BlockDesign_BalanceController_0_0'. Restoring to previous valid configuration.
+WARNING: [IP_Flow 19-3439] Failed to restore IP 'BlockDesign_BalanceController_0_0' customization to its previous valid configuration.
+WARNING: [IP_Flow 19-1721] During upgrade of 'BlockDesign_BalanceController_0_0':
+The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. Note that parameter names and IDs are case sensitive.
+
+CRITICAL WARNING: [IP_Flow 19-3408] Upgrade of BlockDesign_BalanceController_0_0 from BalanceController_v1_0 1.0 to BalanceController_v1_0 1.0 has resulted in an incomplete parameterization. Please review the message log, and recustomize this instance before continuing with your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'BlockDesign_BalanceController_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+update_module_reference BlockDesign_VolumeController_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1
+
+WARNING: [IP_Flow 19-4050] The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+WARNING: [IP_Flow 19-3932] Unable to set the value '10' on parameter 'N Volume' due to the following failure - 
+Validation failed for parameter 'N Volume(N_VOLUME)' for BD Cell 'BlockDesign_VolumeController_0_0'. Value '10' is out of the range (1,9)
+. Restoring to an old valid value of '6'
+WARNING: [IP_Flow 19-3458] Validation failed for parameter 'N Volume(N_VOLUME)' for BD Cell 'BlockDesign_VolumeController_0_0'. Value '10' is out of the range (1,9)
+WARNING: [IP_Flow 19-3438] Customization errors found on 'BlockDesign_VolumeController_0_0'. Restoring to previous valid configuration.
+WARNING: [IP_Flow 19-3439] Failed to restore IP 'BlockDesign_VolumeController_0_0' customization to its previous valid configuration.
+WARNING: [IP_Flow 19-1721] During upgrade of 'BlockDesign_VolumeController_0_0':
+The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. Note that parameter names and IDs are case sensitive.
+
+CRITICAL WARNING: [IP_Flow 19-3408] Upgrade of BlockDesign_VolumeController_0_0 from VolumeController_v1_0 1.0 to VolumeController_v1_0 1.0 has resulted in an incomplete parameterization. Please review the message log, and recustomize this instance before continuing with your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'BlockDesign_VolumeController_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+startgroup
+set_property -dict [list CONFIG.N_VOLUME {2}] [get_bd_cells VolumeController_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.BALANCE_BITS {2}] [get_bd_cells BalanceController_0]
+endgroup
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/s_axis is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/BalanceController_0/balance'(2) to pin '/digilent_jstk2_0/jstk_x'(10) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/BalanceController_0/balance'(2) to pin '/digilent_jstk2_0/jstk_x'(10) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VolumeController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BalanceController_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Sun May 21 19:41:10 2023] Launched BlockDesign_VolumeController_0_0_synth_1, BlockDesign_BalanceController_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_VolumeController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1/runme.log
+BlockDesign_BalanceController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Sun May 21 19:41:10 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 1277.676 ; gain = 12.586
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.BALANCE_BITS {10} CONFIG.N_BALANCE {2}] [get_bd_cells BalanceController_0]
+endgroup
+reset_run BlockDesign_BalanceController_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1
+
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/s_axis is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BalanceController_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Sun May 21 19:43:19 2023] Launched BlockDesign_BalanceController_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_BalanceController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Sun May 21 19:43:19 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1292.480 ; gain = 14.805
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun May 21 19:55:12 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+Warning: Cannot create '3000:arm' GDB server: Tentativo di accesso al socket con modalità non consentite dalle rispettive autorizzazioni di accesso
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1292.480 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4CF5A
+open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2855.383 ; gain = 1562.902
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.N_VOLUME {5}] [get_bd_cells VolumeController_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.N_BALANCE {5}] [get_bd_cells BalanceController_0]
+endgroup
+update_module_reference BlockDesign_BalanceController_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1
+
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_BalanceController_0_0 from BalanceController_v1_0 1.0 to BalanceController_v1_0 1.0
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+startgroup
+endgroup
+startgroup
+endgroup
+reset_run BlockDesign_VolumeController_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1
+
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/s_axis is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VolumeController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BalanceController_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Sun May 21 19:59:54 2023] Launched BlockDesign_VolumeController_0_0_synth_1, BlockDesign_BalanceController_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_VolumeController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1/runme.log
+BlockDesign_BalanceController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Sun May 21 19:59:54 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 2927.688 ; gain = 0.000
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun May 21 20:02:46 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.N_VOLUME {7}] [get_bd_cells VolumeController_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.N_BALANCE {7}] [get_bd_cells BalanceController_0]
+endgroup
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+reset_run BlockDesign_VolumeController_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1
+
+reset_run BlockDesign_BalanceController_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1
+
+reset_run synth_1
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/s_axis is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VolumeController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BalanceController_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Sun May 21 20:06:10 2023] Launched BlockDesign_VolumeController_0_0_synth_1, BlockDesign_BalanceController_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_VolumeController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1/runme.log
+BlockDesign_BalanceController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Sun May 21 20:06:10 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2927.688 ; gain = 0.000
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun May 21 20:11:53 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2954.320 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 3630.625 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.202 . Memory (MB): peak = 3630.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3630.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 3748.531 ; gain = 820.844
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.N_VOLUME {6}] [get_bd_cells VolumeController_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.N_BALANCE {6}] [get_bd_cells BalanceController_0]
+endgroup
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+startgroup
+endgroup
+reset_run BlockDesign_VolumeController_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1
+
+reset_run BlockDesign_BalanceController_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1
+
+reset_run synth_1
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/s_axis is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VolumeController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BalanceController_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Sun May 21 20:20:16 2023] Launched BlockDesign_VolumeController_0_0_synth_1, BlockDesign_BalanceController_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_VolumeController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1/runme.log
+BlockDesign_BalanceController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Sun May 21 20:20:16 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 3875.543 ; gain = 0.000
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun May 21 20:24:23 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AB4CF5A
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+update_module_reference BlockDesign_VolumeController_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1
+
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_VolumeController_0_0 from VolumeController_v1_0 1.0 to VolumeController_v1_0 1.0
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+update_module_reference: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3888.332 ; gain = 0.000
+update_module_reference BlockDesign_BalanceController_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_BalanceController_0_0 from BalanceController_v1_0 1.0 to BalanceController_v1_0 1.0
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+update_module_reference: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 3888.332 ; gain = 0.000
+update_module_reference BlockDesign_MobileMean_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MobileMean_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_MobileMean_0_0 from MobileMean_v1_0 1.0 to MobileMean_v1_0 1.0
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+update_module_reference: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3888.332 ; gain = 0.000
+update_module_reference {BlockDesign_EdgeDetector_0_0 BlockDesign_EdgeDetector_1_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_EdgeDetector_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_EdgeDetector_1_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_EdgeDetector_0_0 from EdgeDetector_v1_0 1.0 to EdgeDetector_v1_0 1.0
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_EdgeDetector_1_0 from EdgeDetector_v1_0 1.0 to EdgeDetector_v1_0 1.0
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 3888.332 ; gain = 0.000
+update_module_reference {BlockDesign_Debouncer_0_0 BlockDesign_Debouncer_1_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_Debouncer_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_Debouncer_1_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_Debouncer_0_0 from Debouncer_v1_0 1.0 to Debouncer_v1_0 1.0
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_Debouncer_1_0 from Debouncer_v1_0 1.0 to Debouncer_v1_0 1.0
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3888.332 ; gain = 0.000
+update_module_reference BlockDesign_MuteController_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3158] Bus Interface 'M_AXIS': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'S_AXIS': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MuteController_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_MuteController_0_0 from MuteController_v1_0 1.0 to MuteController_v1_0 1.0
+INFO: [IP_Flow 19-4701] Upgrade has renamed interface 'm_axis' as 'M_AXIS' (xilinx.com:interface:axis:1.0)
+INFO: [IP_Flow 19-4701] Upgrade has renamed interface 's_axis' as 'S_AXIS' (xilinx.com:interface:axis:1.0)
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 'm_axis_tdata' as 'M_AXIS_TDATA'
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 'm_axis_tlast' as 'M_AXIS_TLAST'
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 'm_axis_tready' as 'M_AXIS_TREADY'
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 'm_axis_tvalid' as 'M_AXIS_TVALID'
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 's_axis_tdata' as 'S_AXIS_TDATA'
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 's_axis_tlast' as 'S_AXIS_TLAST'
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 's_axis_tready' as 'S_AXIS_TREADY'
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 's_axis_tvalid' as 'S_AXIS_TVALID'
+WARNING: [IP_Flow 19-4707] Upgraded port order differs after port 'S_AXIS_TVALID'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'BlockDesign_MuteController_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'BlockDesign_MuteController_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+update_module_reference: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3888.332 ; gain = 0.000
+update_module_reference BlockDesign_LedController_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/code/ipCoreVivado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'.
+Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_LedController_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded BlockDesign_LedController_0_0 from LedController_v1_0 1.0 to LedController_v1_0 1.0
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3888.332 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/M_AXIS is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/S_AXIS is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debouncer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Debouncer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MuteController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LedController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block EdgeDetector_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block EdgeDetector_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MobileMean_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block VolumeController_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BalanceController_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin M_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin S_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Mon May 22 00:04:58 2023] Launched BlockDesign_VolumeController_0_0_synth_1, BlockDesign_BalanceController_0_0_synth_1, BlockDesign_EdgeDetector_0_0_synth_1, BlockDesign_MobileMean_0_0_synth_1, BlockDesign_MuteController_0_0_synth_1, BlockDesign_EdgeDetector_1_0_synth_1, BlockDesign_Debouncer_1_0_synth_1, BlockDesign_LedController_0_0_synth_1, BlockDesign_Debouncer_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_VolumeController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_VolumeController_0_0_synth_1/runme.log
+BlockDesign_BalanceController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_BalanceController_0_0_synth_1/runme.log
+BlockDesign_EdgeDetector_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_EdgeDetector_0_0_synth_1/runme.log
+BlockDesign_MobileMean_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MobileMean_0_0_synth_1/runme.log
+BlockDesign_MuteController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MuteController_0_0_synth_1/runme.log
+BlockDesign_EdgeDetector_1_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_EdgeDetector_1_0_synth_1/runme.log
+BlockDesign_Debouncer_1_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_Debouncer_1_0_synth_1/runme.log
+BlockDesign_LedController_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_LedController_0_0_synth_1/runme.log
+BlockDesign_Debouncer_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_Debouncer_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Mon May 22 00:04:59 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 3888.332 ; gain = 0.000
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+set_property -dict [list CONFIG.CLK_DOMAIN {clk_out1}] [get_bd_intf_pins MuteController_0/S_AXIS]
+set_property -dict [list CONFIG.CLK_DOMAIN {clk_out1}] [get_bd_intf_pins MuteController_0/M_AXIS]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/M_AXIS is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/S_AXIS is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /MuteController_0/S_AXIS(clk_out1) and /BalanceController_0/M_AXIS(/clk_wiz_0_clk_out1)
+ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axis_dual_i2s_1/s_axis(/clk_wiz_0_clk_out1) and /MuteController_0/M_AXIS(clk_out1)
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd 
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+set_property -dict [list CONFIG.CLK_DOMAIN {}] [get_bd_intf_pins MuteController_0/S_AXIS]
+set_property -dict [list CONFIG.CLK_DOMAIN {}] [get_bd_intf_pins MuteController_0/M_AXIS]
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/M_AXIS is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/S_AXIS is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin M_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin S_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Mon May 22 00:11:53 2023] Launched synth_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Mon May 22 00:11:53 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 3920.469 ; gain = 1.852
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon May 22 00:15:51 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4CF5A
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/lab3_home_assignment_solution.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.AVERAGING_WINDOW_SIZE {128}] [get_bd_cells MobileMean_0]
+endgroup
+reset_run BlockDesign_MobileMean_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MobileMean_0_0_synth_1
+
+reset_run synth_1
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/M_AXIS is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/S_AXIS is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MobileMean_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin M_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin S_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Mon May 22 00:19:15 2023] Launched BlockDesign_MobileMean_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_MobileMean_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MobileMean_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Mon May 22 00:19:15 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:21 . Memory (MB): peak = 3935.148 ; gain = 0.000
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon May 22 00:22:56 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/BlockDesign_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.AVERAGING_WINDOW_SIZE {32}] [get_bd_cells MobileMean_0]
+endgroup
+reset_run BlockDesign_MobileMean_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MobileMean_0_0_synth_1
+
+reset_run synth_1
+save_bd_design
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui> 
+launch_runs impl_1 -jobs 6
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/M_AXIS is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /MuteController_0/S_AXIS is not associated to any clock pin. It may not work correctly.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /axi4stream_spi_master_1/aclk have been updated from connected ip, but BD cell '/axi4stream_spi_master_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	PHASE = 0.0 
+Please resolve any mismatches by directly setting properties on BD cell </axi4stream_spi_master_1> to completely resolve these warnings.
+Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd> 
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd
+VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MobileMean_0 .
+Exporting to file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign.hwh
+Generated Block Design Tcl file c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hw_handoff/BlockDesign_bd.tcl
+Generated Hardware Definition File c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin M_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin S_AXIS could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /MuteController_0
+[Mon May 22 00:25:51 2023] Launched BlockDesign_MobileMean_0_0_synth_1, synth_1...
+Run output will be captured here:
+BlockDesign_MobileMean_0_0_synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MobileMean_0_0_synth_1/runme.log
+synth_1: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/synth_1/runme.log
+[Mon May 22 00:25:51 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 3935.148 ; gain = 0.000
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AB4CF5A
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.v:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+CRITICAL WARNING: [#UNDEF] Badly-written IEEE-1735 file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl' cannot be decrypted [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_digilent_jstk2_0_0/BlockDesign_digilent_jstk2_0_0_sim_netlist.vhdl:]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon May 22 00:29:31 2023] Launched impl_1...
+Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 22 00:32:26 2023...

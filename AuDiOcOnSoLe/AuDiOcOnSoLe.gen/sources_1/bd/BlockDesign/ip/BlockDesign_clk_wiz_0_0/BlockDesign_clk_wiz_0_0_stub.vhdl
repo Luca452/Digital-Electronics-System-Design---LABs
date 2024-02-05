@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Sun May  7 13:50:36 2023
+-- Date        : Tue May 16 21:15:14 2023
 -- Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub {c:/Users/daido/Desktop/Polimi/Anno
---               4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_stub.vhdl}
+-- Command     : write_vhdl -force -mode synth_stub -rename_top BlockDesign_clk_wiz_0_0 -prefix
+--               BlockDesign_clk_wiz_0_0_ BlockDesign_clk_wiz_0_0_stub.vhdl
 -- Design      : BlockDesign_clk_wiz_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

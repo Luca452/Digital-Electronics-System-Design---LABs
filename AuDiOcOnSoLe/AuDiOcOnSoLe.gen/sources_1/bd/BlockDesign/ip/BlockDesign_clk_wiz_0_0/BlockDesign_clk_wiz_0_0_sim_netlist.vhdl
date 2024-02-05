@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Sun May  7 13:50:36 2023
+-- Date        : Tue May 16 21:15:14 2023
 -- Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {c:/Users/daido/Desktop/Polimi/Anno
---               4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/ip/BlockDesign_clk_wiz_0_0/BlockDesign_clk_wiz_0_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top BlockDesign_clk_wiz_0_0 -prefix
+--               BlockDesign_clk_wiz_0_0_ BlockDesign_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : BlockDesign_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +22,6 @@ entity BlockDesign_clk_wiz_0_0_BlockDesign_clk_wiz_0_0_clk_wiz is
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BlockDesign_clk_wiz_0_0_BlockDesign_clk_wiz_0_0_clk_wiz : entity is "BlockDesign_clk_wiz_0_0_clk_wiz";
 end BlockDesign_clk_wiz_0_0_BlockDesign_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of BlockDesign_clk_wiz_0_0_BlockDesign_clk_wiz_0_0_clk_wiz is
@@ -86,16 +84,16 @@ clkout2_buf: unisim.vcomponents.BUFG
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 11.750000,
+      CLKFBOUT_MULT_F => 7.000000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => false,
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 11.750000,
+      CLKOUT0_DIVIDE_F => 7.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
-      CLKOUT1_DIVIDE => 52,
+      CLKOUT1_DIVIDE => 31,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,

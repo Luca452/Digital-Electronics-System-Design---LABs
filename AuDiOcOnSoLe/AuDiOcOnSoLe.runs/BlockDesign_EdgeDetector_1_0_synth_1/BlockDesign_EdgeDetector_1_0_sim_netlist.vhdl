@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Sun May  7 13:56:32 2023
+-- Date        : Mon May 22 00:06:42 2023
 -- Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ BlockDesign_EdgeDetector_1_0_sim_netlist.vhdl
@@ -25,8 +25,12 @@ end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_EdgeDetector;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_EdgeDetector is
   signal input_signal_prec : STD_LOGIC;
+  signal \^output_signal\ : STD_LOGIC;
   signal output_signal_i_1_n_0 : STD_LOGIC;
+  signal \output_signal_reg__0\ : STD_LOGIC;
+  signal output_signal_reg_i_1_n_0 : STD_LOGIC;
 begin
+  output_signal <= \^output_signal\;
 input_signal_prec_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
@@ -35,13 +39,15 @@ input_signal_prec_reg: unisim.vcomponents.FDCE
       D => input_signal,
       Q => input_signal_prec
     );
-output_signal_i_1: unisim.vcomponents.LUT2
+output_signal_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2"
+      INIT => X"FB08"
     )
         port map (
-      I0 => input_signal,
-      I1 => input_signal_prec,
+      I0 => \output_signal_reg__0\,
+      I1 => input_signal,
+      I2 => input_signal_prec,
+      I3 => \^output_signal\,
       O => output_signal_i_1_n_0
     );
 output_signal_reg: unisim.vcomponents.FDCE
@@ -50,7 +56,29 @@ output_signal_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => rst,
       D => output_signal_i_1_n_0,
-      Q => output_signal
+      Q => \^output_signal\
+    );
+output_signal_reg_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB04"
+    )
+        port map (
+      I0 => rst,
+      I1 => input_signal,
+      I2 => input_signal_prec,
+      I3 => \output_signal_reg__0\,
+      O => output_signal_reg_i_1_n_0
+    );
+output_signal_reg_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => output_signal_reg_i_1_n_0,
+      Q => \output_signal_reg__0\,
+      R => '0'
     );
 end STRUCTURE;
 library IEEE;

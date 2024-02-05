@@ -88,7 +88,7 @@ ARCHITECTURE BlockDesign_Debouncer_1_0_arch OF BlockDesign_Debouncer_1_0 IS
 BEGIN
   U0 : Debouncer
     GENERIC MAP (
-      DEBOUNCE_MS => 10,
+      DEBOUNCE_MS => 1,
       CLOCK_FREQ => 100000000
     )
     PORT MAP (

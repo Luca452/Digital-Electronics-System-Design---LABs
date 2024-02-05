@@ -1,0 +1,507 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 37196
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri May 19 22:28:10 CEST 2023
+Time zone: 	Central European Standard Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	daido
+User home directory: C:/Users/daido
+User working directory: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe
+User country: 	IT
+User language: 	it
+User locale: 	it_IT
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.2
+RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/daido/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/daido/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/daido/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/vivado.log
+Vivado journal file location: 	C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/vivado.jou
+Engine tmp dir: 	C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/.Xil/Vivado-37196-DESKTOP-JKUPK39
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,011 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 71 MB (+71610kb) [00:00:14]
+// [Engine Memory]: 1,011 MB (+909072kb) [00:00:14]
+// [GUI Memory]: 79 MB (+4656kb) [00:00:15]
+// [GUI Memory]: 109 MB (+28084kb) [00:00:16]
+// [GUI Memory]: 116 MB (+1427kb) [00:00:17]
+// [GUI Memory]: 122 MB (+102kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  5030 ms.
+// Tcl Message: open_project {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,011 MB. GUI used memory: 63 MB. Current time: 5/19/23, 10:28:16 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  1080 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1002.887 ; gain = 0.000 
+// Project name: AuDiOcOnSoLe; location: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bz
+// a (cr): Critical Messages: addNotify
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 408ms to process. Increasing delay to 3000 ms.
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 144 MB (+16657kb) [00:00:49]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 264 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BalanceController(Behavioral) (BalanceController.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BalanceController(Behavioral) (BalanceController.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+// Launch External Editor: 'code.cmd "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/BalanceController.vhd"'
+// Elapsed time: 754 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VolumeController(Behavioral) (VolumeController.vhd)]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VolumeController(Behavioral) (VolumeController.vhd)]", 10, false, false, false, false, false, true); // D - Double Click
+// Launch External Editor: 'code.cmd "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/VolumeController.vhd"'
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 631 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: open_bd_design {C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd} 
+// Tcl Message: Reading block design file <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  3185 ms.
+// Elapsed time: 13 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1002.887 ; gain = 0.000 
+// 'bF' command handler elapsed time: 13 seconds
+dismissDialog("Open Block Design"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 1,011 MB. GUI used memory: 86 MB. Current time: 5/19/23, 10:58:18 PM CEST
+// Elapsed time: 336 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// bz (cr):  Refresh Changed Modules : addNotify
+// TclEventType: RUN_DELETE
+// Tcl Message: update_module_reference BlockDesign_VolumeController_0_0 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/IP'. 
+// Tcl Message: Upgrading 'C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd' 
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded BlockDesign_VolumeController_0_0 from VolumeController_v1_0 1.0 to VolumeController_v1_0 1.0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd>  Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui>  
+dismissDialog("Refresh Changed Modules"); // bz
+// Tcl Command: 'set_property location {9.5 2796 -415} [get_bd_cells axis_dual_i2s_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {9.5 2796 -415} [get_bd_cells axis_dual_i2s_1] 
+// Tcl Command: 'set_property location {8.5 2492 -447} [get_bd_cells MuteController_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {8.5 2492 -447} [get_bd_cells MuteController_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets VolumeController_0_M_AXIS] 
+// Elapsed time: 19 seconds
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "System Hierarchy_search"); // x: TRUE
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BalanceController(Behavioral) (BalanceController.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BalanceController(Behavioral) (BalanceController.vhd)]", 5, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_MODULE_TO_BD, "Add Module to Block Design"); // ak
+// Run Command: PAResourceCommand.PACommandNames_ADD_MODULE_TO_BD
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: create_bd_cell -type module -reference BalanceController BalanceController_0 
+// Tcl Message: ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL. ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/BalanceController.vhd'. 
+// Tcl Message: ERROR: [IP_Flow 19-4668] Failed to infer definition from module 'BalanceController'. ERROR: [BD 41-1699] Unable to add reference type cell for reference-module 'BalanceController' ERROR: [BD 5-7] Error: running create_bd_cell  -type module -reference BalanceController -name BalanceController_0 . 
+// Tcl Message: ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.  
+// bz (cr):  Add Module : addNotify
+// a (cr): Critical Messages: addNotify
+dismissDialog("Add Module"); // bz
+// Elapsed time: 18 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, BlockDesign, General Messages, [HDL 9-806] Syntax error near when. [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/BalanceController.vhd:52]. ]", 23, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;c:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\new\BalanceController.vhd;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah
+// Launch External Editor: 'code.cmd "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/BalanceController.vhd"'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 51 seconds
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "4"); // h
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, BlockDesign, General Messages, [HDL 9-806] Syntax error near when. [c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/BalanceController.vhd:52]. ]", 7, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;c:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\new\BalanceController.vhd;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah
+// Launch External Editor: 'code.cmd "C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/new/BalanceController.vhd"'
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Open Elaborated Design : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Elaborate Design"); // A
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: generate_target all [get_files {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}] 
+// Tcl Message: INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate 
+// Tcl Message: Wrote  : <C:\Users\daido\Desktop\Polimi\Anno 4\DESD\Git\KittCarPWM\AuDiOcOnSoLe\AuDiOcOnSoLe.srcs\sources_1\bd\BlockDesign\BlockDesign.bd>  Wrote  : <C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/ui/bd_1f67aeeb.ui>  
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// Tcl Message: INFO: [Common 17-365] Interrupt caught but 'generate_target' cannot be canceled. Please wait for command to finish. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/synth/BlockDesign.vhd VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/sim/BlockDesign.vhd VHDL Output written to : c:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.gen/sources_1/bd/BlockDesign/hdl/BlockDesign_wrapper.vhd 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1171] User-interrupt detected : Generation halted successfully for IP Integrator design C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd INFO: [Common 17-681] Processing pending cancel. 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.srcs/sources_1/bd/BlockDesign/BlockDesign.bd}}] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// [Engine Memory]: 1,062 MB (+395kb) [00:35:56]
+// TclEventType: RUN_ADD
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 1,066 MB. GUI used memory: 87 MB. Current time: 5/19/23, 11:03:54 PM CEST
+// Tcl Message: launch_runs BlockDesign_digilent_jstk2_0_0_synth_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri May 19 23:03:55 2023] Launched BlockDesign_digilent_jstk2_0_0_synth_1... Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_digilent_jstk2_0_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run BlockDesign_digilent_jstk2_0_0_synth_1 
+// Tcl Message: [Fri May 19 23:03:55 2023] Waiting for BlockDesign_digilent_jstk2_0_0_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri May 19 23:04:00 2023] Waiting for BlockDesign_digilent_jstk2_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:04:05 2023] Waiting for BlockDesign_digilent_jstk2_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:04:10 2023] Waiting for BlockDesign_digilent_jstk2_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:04:21 2023] Waiting for BlockDesign_digilent_jstk2_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:04:31 2023] Waiting for BlockDesign_digilent_jstk2_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: [Fri May 19 23:04:36 2023] BlockDesign_digilent_jstk2_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:40 . Memory (MB): peak = 1064.320 ; gain = 0.000 
+// Tcl Message: launch_runs BlockDesign_Debouncer_0_0_synth_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri May 19 23:04:37 2023] Launched BlockDesign_Debouncer_0_0_synth_1... Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_Debouncer_0_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run BlockDesign_Debouncer_0_0_synth_1 
+// Tcl Message: [Fri May 19 23:04:37 2023] Waiting for BlockDesign_Debouncer_0_0_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri May 19 23:04:42 2023] Waiting for BlockDesign_Debouncer_0_0_synth_1 to finish... 
+// Elapsed time: 61 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// Tcl Message: [Fri May 19 23:04:47 2023] Waiting for BlockDesign_Debouncer_0_0_synth_1 to finish... 
+// 'dV' command handler elapsed time: 64 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdgeDetector(Behavioral) (EdgeDetector.vhd)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BalanceController(Behavioral) (BalanceController.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BalanceController(Behavioral) (BalanceController.vhd)]", 4, false, false, false, false, true, false); // D - Popup Trigger
+// Tcl Message: [Fri May 19 23:04:52 2023] Waiting for BlockDesign_Debouncer_0_0_synth_1 to finish... 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Debouncer(Behavioral) (Debouncer.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BalanceController(Behavioral) (BalanceController.vhd)]", 4, false, false, false, false, true, false); // D - Popup Trigger
+// Tcl Message: [Fri May 19 23:05:02 2023] Waiting for BlockDesign_Debouncer_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: [Fri May 19 23:05:12 2023] Waiting for BlockDesign_Debouncer_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:05:17 2023] BlockDesign_Debouncer_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:40 . Memory (MB): peak = 1064.320 ; gain = 0.000 
+// Tcl Message: launch_runs BlockDesign_Debouncer_1_0_synth_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri May 19 23:05:19 2023] Launched BlockDesign_Debouncer_1_0_synth_1... Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_Debouncer_1_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run BlockDesign_Debouncer_1_0_synth_1 
+// Tcl Message: [Fri May 19 23:05:19 2023] Waiting for BlockDesign_Debouncer_1_0_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri May 19 23:05:24 2023] Waiting for BlockDesign_Debouncer_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:05:29 2023] Waiting for BlockDesign_Debouncer_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:05:34 2023] Waiting for BlockDesign_Debouncer_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:05:44 2023] Waiting for BlockDesign_Debouncer_1_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: [Fri May 19 23:05:54 2023] Waiting for BlockDesign_Debouncer_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:05:54 2023] BlockDesign_Debouncer_1_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:35 . Memory (MB): peak = 1064.320 ; gain = 0.000 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs BlockDesign_axis_dual_i2s_1_0_synth_1 
+// Tcl Message: [Fri May 19 23:05:54 2023] Launched BlockDesign_axis_dual_i2s_1_0_synth_1... Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_axis_dual_i2s_1_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run BlockDesign_axis_dual_i2s_1_0_synth_1 
+// Tcl Message: [Fri May 19 23:05:54 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri May 19 23:05:59 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:06:04 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:06:09 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:06:20 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:06:30 2023] Waiting for BlockDesign_axis_dual_i2s_1_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: [Fri May 19 23:06:35 2023] BlockDesign_axis_dual_i2s_1_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 1064.320 ; gain = 0.000 
+// Tcl Message: launch_runs BlockDesign_MuteController_0_0_synth_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri May 19 23:06:36 2023] Launched BlockDesign_MuteController_0_0_synth_1... Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_MuteController_0_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run BlockDesign_MuteController_0_0_synth_1 
+// Tcl Message: [Fri May 19 23:06:36 2023] Waiting for BlockDesign_MuteController_0_0_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri May 19 23:06:41 2023] Waiting for BlockDesign_MuteController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:06:46 2023] Waiting for BlockDesign_MuteController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:06:51 2023] Waiting for BlockDesign_MuteController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:07:01 2023] Waiting for BlockDesign_MuteController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:07:11 2023] Waiting for BlockDesign_MuteController_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: [Fri May 19 23:07:16 2023] BlockDesign_MuteController_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:40 . Memory (MB): peak = 1064.320 ; gain = 0.000 
+// Tcl Message: launch_runs BlockDesign_LedController_0_0_synth_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri May 19 23:07:17 2023] Launched BlockDesign_LedController_0_0_synth_1... Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_LedController_0_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run BlockDesign_LedController_0_0_synth_1 
+// Tcl Message: [Fri May 19 23:07:17 2023] Waiting for BlockDesign_LedController_0_0_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri May 19 23:07:23 2023] Waiting for BlockDesign_LedController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:07:28 2023] Waiting for BlockDesign_LedController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:07:33 2023] Waiting for BlockDesign_LedController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:07:43 2023] Waiting for BlockDesign_LedController_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Tcl Message: [Fri May 19 23:07:53 2023] Waiting for BlockDesign_LedController_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:07:53 2023] BlockDesign_LedController_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 1064.320 ; gain = 0.000 
+// Tcl Message: launch_runs BlockDesign_EdgeDetector_0_0_synth_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri May 19 23:07:54 2023] Launched BlockDesign_EdgeDetector_0_0_synth_1... Run output will be captured here: C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.runs/BlockDesign_EdgeDetector_0_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: wait_on_run BlockDesign_EdgeDetector_0_0_synth_1 
+// Tcl Message: [Fri May 19 23:07:54 2023] Waiting for BlockDesign_EdgeDetector_0_0_synth_1 to finish... 
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri May 19 23:07:59 2023] Waiting for BlockDesign_EdgeDetector_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:08:04 2023] Waiting for BlockDesign_EdgeDetector_0_0_synth_1 to finish... 
+// Tcl Message: [Fri May 19 23:08:09 2023] Waiting for BlockDesign_EdgeDetector_0_0_synth_1 to finish... 
+// Elapsed time: 200 seconds
+closeMainWindow("AuDiOcOnSoLe - [C:/Users/daido/Desktop/Polimi/Anno 4/DESD/Git/KittCarPWM/AuDiOcOnSoLe/AuDiOcOnSoLe.xpr] - Vivado 2020.2"); // cr
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

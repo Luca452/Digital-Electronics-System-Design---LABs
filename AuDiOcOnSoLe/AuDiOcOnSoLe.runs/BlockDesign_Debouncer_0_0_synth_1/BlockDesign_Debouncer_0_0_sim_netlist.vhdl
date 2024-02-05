@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Sun May  7 13:54:42 2023
+-- Date        : Mon May 22 00:07:48 2023
 -- Host        : DESKTOP-JKUPK39 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ BlockDesign_Debouncer_0_0_sim_netlist.vhdl
@@ -24,7 +24,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer is
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer is
-  signal counter : STD_LOGIC_VECTOR ( 19 downto 0 );
+  signal counter : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal \counter0_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \counter0_carry__0_i_2_n_0\ : STD_LOGIC;
   signal \counter0_carry__0_i_3_n_0\ : STD_LOGIC;
@@ -45,15 +45,9 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer is
   signal \counter0_carry__2_i_2_n_0\ : STD_LOGIC;
   signal \counter0_carry__2_i_3_n_0\ : STD_LOGIC;
   signal \counter0_carry__2_i_4_n_0\ : STD_LOGIC;
-  signal \counter0_carry__2_n_0\ : STD_LOGIC;
   signal \counter0_carry__2_n_1\ : STD_LOGIC;
   signal \counter0_carry__2_n_2\ : STD_LOGIC;
   signal \counter0_carry__2_n_3\ : STD_LOGIC;
-  signal \counter0_carry__3_i_1_n_0\ : STD_LOGIC;
-  signal \counter0_carry__3_i_2_n_0\ : STD_LOGIC;
-  signal \counter0_carry__3_i_3_n_0\ : STD_LOGIC;
-  signal \counter0_carry__3_n_2\ : STD_LOGIC;
-  signal \counter0_carry__3_n_3\ : STD_LOGIC;
   signal counter0_carry_i_1_n_0 : STD_LOGIC;
   signal counter0_carry_i_2_n_0 : STD_LOGIC;
   signal counter0_carry_i_3_n_0 : STD_LOGIC;
@@ -69,16 +63,12 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer is
   signal \counter[13]_i_1_n_0\ : STD_LOGIC;
   signal \counter[14]_i_1_n_0\ : STD_LOGIC;
   signal \counter[15]_i_1_n_0\ : STD_LOGIC;
-  signal \counter[16]_i_1_n_0\ : STD_LOGIC;
-  signal \counter[17]_i_1_n_0\ : STD_LOGIC;
-  signal \counter[18]_i_1_n_0\ : STD_LOGIC;
-  signal \counter[19]_i_2_n_0\ : STD_LOGIC;
-  signal \counter[19]_i_3_n_0\ : STD_LOGIC;
-  signal \counter[19]_i_4_n_0\ : STD_LOGIC;
-  signal \counter[19]_i_5_n_0\ : STD_LOGIC;
-  signal \counter[19]_i_6_n_0\ : STD_LOGIC;
-  signal \counter[19]_i_7_n_0\ : STD_LOGIC;
-  signal \counter[19]_i_8_n_0\ : STD_LOGIC;
+  signal \counter[16]_i_2_n_0\ : STD_LOGIC;
+  signal \counter[16]_i_3_n_0\ : STD_LOGIC;
+  signal \counter[16]_i_4_n_0\ : STD_LOGIC;
+  signal \counter[16]_i_5_n_0\ : STD_LOGIC;
+  signal \counter[16]_i_6_n_0\ : STD_LOGIC;
+  signal \counter[16]_i_7_n_0\ : STD_LOGIC;
   signal \counter[1]_i_1_n_0\ : STD_LOGIC;
   signal \counter[2]_i_1_n_0\ : STD_LOGIC;
   signal \counter[3]_i_1_n_0\ : STD_LOGIC;
@@ -89,33 +79,29 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer is
   signal \counter[8]_i_1_n_0\ : STD_LOGIC;
   signal \counter[9]_i_1_n_0\ : STD_LOGIC;
   signal counter_0 : STD_LOGIC;
-  signal data0 : STD_LOGIC_VECTOR ( 19 downto 1 );
+  signal data0 : STD_LOGIC_VECTOR ( 16 downto 1 );
   signal debounced_int_C_i_1_n_0 : STD_LOGIC;
   signal debounced_int_reg_C_n_0 : STD_LOGIC;
   signal debounced_int_reg_LDC_i_1_n_0 : STD_LOGIC;
   signal debounced_int_reg_LDC_i_2_n_0 : STD_LOGIC;
   signal debounced_int_reg_LDC_n_0 : STD_LOGIC;
   signal debounced_int_reg_P_n_0 : STD_LOGIC;
-  signal \NLW_counter0_carry__3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
-  signal \NLW_counter0_carry__3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_counter0_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of counter0_carry : label is 35;
   attribute ADDER_THRESHOLD of \counter0_carry__0\ : label is 35;
   attribute ADDER_THRESHOLD of \counter0_carry__1\ : label is 35;
   attribute ADDER_THRESHOLD of \counter0_carry__2\ : label is 35;
-  attribute ADDER_THRESHOLD of \counter0_carry__3\ : label is 35;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \counter[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \counter[0]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \counter[10]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \counter[11]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \counter[12]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \counter[13]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \counter[14]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \counter[15]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \counter[16]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \counter[17]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \counter[18]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \counter[19]_i_4\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \counter[16]_i_2\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \counter[16]_i_5\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \counter[1]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \counter[2]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \counter[3]_i_1\ : label is "soft_lutpair3";
@@ -125,8 +111,8 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Debouncer is
   attribute SOFT_HLUTNM of \counter[7]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \counter[8]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \counter[9]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of debounced_INST_0 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of debounced_int_C_i_1 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of debounced_INST_0 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of debounced_int_C_i_1 : label is "soft_lutpair1";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of debounced_int_reg_LDC : label is "LDC";
 begin
@@ -242,12 +228,13 @@ counter0_carry: unisim.vcomponents.CARRY4
 \counter0_carry__2\: unisim.vcomponents.CARRY4
      port map (
       CI => \counter0_carry__1_n_0\,
-      CO(3) => \counter0_carry__2_n_0\,
+      CO(3) => \NLW_counter0_carry__2_CO_UNCONNECTED\(3),
       CO(2) => \counter0_carry__2_n_1\,
       CO(1) => \counter0_carry__2_n_2\,
       CO(0) => \counter0_carry__2_n_3\,
       CYINIT => '0',
-      DI(3 downto 0) => counter(16 downto 13),
+      DI(3) => '0',
+      DI(2 downto 0) => counter(15 downto 13),
       O(3 downto 0) => data0(16 downto 13),
       S(3) => \counter0_carry__2_i_1_n_0\,
       S(2) => \counter0_carry__2_i_2_n_0\,
@@ -285,46 +272,6 @@ counter0_carry: unisim.vcomponents.CARRY4
         port map (
       I0 => counter(13),
       O => \counter0_carry__2_i_4_n_0\
-    );
-\counter0_carry__3\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \counter0_carry__2_n_0\,
-      CO(3 downto 2) => \NLW_counter0_carry__3_CO_UNCONNECTED\(3 downto 2),
-      CO(1) => \counter0_carry__3_n_2\,
-      CO(0) => \counter0_carry__3_n_3\,
-      CYINIT => '0',
-      DI(3 downto 2) => B"00",
-      DI(1 downto 0) => counter(18 downto 17),
-      O(3) => \NLW_counter0_carry__3_O_UNCONNECTED\(3),
-      O(2 downto 0) => data0(19 downto 17),
-      S(3) => '0',
-      S(2) => \counter0_carry__3_i_1_n_0\,
-      S(1) => \counter0_carry__3_i_2_n_0\,
-      S(0) => \counter0_carry__3_i_3_n_0\
-    );
-\counter0_carry__3_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => counter(19),
-      O => \counter0_carry__3_i_1_n_0\
-    );
-\counter0_carry__3_i_2\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => counter(18),
-      O => \counter0_carry__3_i_2_n_0\
-    );
-\counter0_carry__3_i_3\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => counter(17),
-      O => \counter0_carry__3_i_3_n_0\
     );
 counter0_carry_i_1: unisim.vcomponents.LUT1
     generic map(
@@ -368,11 +315,11 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
     );
 \counter[10]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"8"
+      INIT => X"B"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
-      I1 => data0(10),
+      I0 => data0(10),
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[10]_i_1_n_0\
     );
 \counter[11]_i_1\: unisim.vcomponents.LUT2
@@ -380,7 +327,7 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
       INIT => X"8"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
+      I0 => \counter[16]_i_3_n_0\,
       I1 => data0(11),
       O => \counter[11]_i_1_n_0\
     );
@@ -389,7 +336,7 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
       INIT => X"8"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
+      I0 => \counter[16]_i_3_n_0\,
       I1 => data0(12),
       O => \counter[12]_i_1_n_0\
     );
@@ -398,56 +345,29 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
       INIT => X"8"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
+      I0 => \counter[16]_i_3_n_0\,
       I1 => data0(13),
       O => \counter[13]_i_1_n_0\
     );
 \counter[14]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B"
+      INIT => X"8"
     )
         port map (
-      I0 => data0(14),
-      I1 => \counter[19]_i_3_n_0\,
+      I0 => \counter[16]_i_3_n_0\,
+      I1 => data0(14),
       O => \counter[14]_i_1_n_0\
     );
 \counter[15]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"8"
+      INIT => X"B"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
-      I1 => data0(15),
+      I0 => data0(15),
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[15]_i_1_n_0\
     );
-\counter[16]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => data0(16),
-      I1 => \counter[19]_i_3_n_0\,
-      O => \counter[16]_i_1_n_0\
-    );
-\counter[17]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => data0(17),
-      I1 => \counter[19]_i_3_n_0\,
-      O => \counter[17]_i_1_n_0\
-    );
-\counter[18]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => data0(18),
-      I1 => \counter[19]_i_3_n_0\,
-      O => \counter[18]_i_1_n_0\
-    );
-\counter[19]_i_1\: unisim.vcomponents.LUT5
+\counter[16]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFF656A"
     )
@@ -456,84 +376,73 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
       I1 => debounced_int_reg_P_n_0,
       I2 => debounced_int_reg_LDC_n_0,
       I3 => debounced_int_reg_C_n_0,
-      I4 => \counter[19]_i_3_n_0\,
+      I4 => \counter[16]_i_3_n_0\,
       O => counter_0
     );
-\counter[19]_i_2\: unisim.vcomponents.LUT2
+\counter[16]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"B"
     )
         port map (
-      I0 => data0(19),
-      I1 => \counter[19]_i_3_n_0\,
-      O => \counter[19]_i_2_n_0\
+      I0 => data0(16),
+      I1 => \counter[16]_i_3_n_0\,
+      O => \counter[16]_i_2_n_0\
     );
-\counter[19]_i_3\: unisim.vcomponents.LUT5
+\counter[16]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \counter[16]_i_4_n_0\,
+      I1 => \counter[16]_i_5_n_0\,
+      I2 => \counter[16]_i_6_n_0\,
+      I3 => \counter[16]_i_7_n_0\,
+      O => \counter[16]_i_3_n_0\
+    );
+\counter[16]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => counter(4),
+      I1 => counter(3),
+      I2 => counter(6),
+      I3 => counter(5),
+      O => \counter[16]_i_4_n_0\
+    );
+\counter[16]_i_5\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => \counter[19]_i_4_n_0\,
-      I1 => \counter[19]_i_5_n_0\,
-      I2 => \counter[19]_i_6_n_0\,
-      I3 => \counter[19]_i_7_n_0\,
-      I4 => \counter[19]_i_8_n_0\,
-      O => \counter[19]_i_3_n_0\
-    );
-\counter[19]_i_4\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => counter(1),
-      I1 => counter(0),
-      I2 => counter(3),
+      I0 => counter(0),
+      I1 => counter(15),
+      I2 => counter(16),
       I3 => counter(2),
-      O => \counter[19]_i_4_n_0\
+      I4 => counter(1),
+      O => \counter[16]_i_5_n_0\
     );
-\counter[19]_i_5\: unisim.vcomponents.LUT4
+\counter[16]_i_6\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => counter(13),
-      I1 => counter(12),
-      I2 => counter(15),
-      I3 => counter(14),
-      O => \counter[19]_i_5_n_0\
+      I0 => counter(12),
+      I1 => counter(11),
+      I2 => counter(14),
+      I3 => counter(13),
+      O => \counter[16]_i_6_n_0\
     );
-\counter[19]_i_6\: unisim.vcomponents.LUT4
+\counter[16]_i_7\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => counter(17),
-      I1 => counter(16),
-      I2 => counter(19),
-      I3 => counter(18),
-      O => \counter[19]_i_6_n_0\
-    );
-\counter[19]_i_7\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => counter(9),
-      I1 => counter(8),
-      I2 => counter(11),
-      I3 => counter(10),
-      O => \counter[19]_i_7_n_0\
-    );
-\counter[19]_i_8\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => counter(5),
-      I1 => counter(4),
-      I2 => counter(7),
-      I3 => counter(6),
-      O => \counter[19]_i_8_n_0\
+      I0 => counter(8),
+      I1 => counter(7),
+      I2 => counter(10),
+      I3 => counter(9),
+      O => \counter[16]_i_7_n_0\
     );
 \counter[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -541,7 +450,7 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       I0 => data0(1),
-      I1 => \counter[19]_i_3_n_0\,
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[1]_i_1_n_0\
     );
 \counter[2]_i_1\: unisim.vcomponents.LUT2
@@ -550,7 +459,7 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       I0 => data0(2),
-      I1 => \counter[19]_i_3_n_0\,
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[2]_i_1_n_0\
     );
 \counter[3]_i_1\: unisim.vcomponents.LUT2
@@ -559,7 +468,7 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       I0 => data0(3),
-      I1 => \counter[19]_i_3_n_0\,
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[3]_i_1_n_0\
     );
 \counter[4]_i_1\: unisim.vcomponents.LUT2
@@ -568,16 +477,16 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       I0 => data0(4),
-      I1 => \counter[19]_i_3_n_0\,
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[4]_i_1_n_0\
     );
 \counter[5]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B"
+      INIT => X"8"
     )
         port map (
-      I0 => data0(5),
-      I1 => \counter[19]_i_3_n_0\,
+      I0 => \counter[16]_i_3_n_0\,
+      I1 => data0(5),
       O => \counter[5]_i_1_n_0\
     );
 \counter[6]_i_1\: unisim.vcomponents.LUT2
@@ -585,17 +494,17 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
       INIT => X"8"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
+      I0 => \counter[16]_i_3_n_0\,
       I1 => data0(6),
       O => \counter[6]_i_1_n_0\
     );
 \counter[7]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"8"
+      INIT => X"B"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
-      I1 => data0(7),
+      I0 => data0(7),
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[7]_i_1_n_0\
     );
 \counter[8]_i_1\: unisim.vcomponents.LUT2
@@ -603,7 +512,7 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
       INIT => X"8"
     )
         port map (
-      I0 => \counter[19]_i_3_n_0\,
+      I0 => \counter[16]_i_3_n_0\,
       I1 => data0(8),
       O => \counter[8]_i_1_n_0\
     );
@@ -613,7 +522,7 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
     )
         port map (
       I0 => data0(9),
-      I1 => \counter[19]_i_3_n_0\,
+      I1 => \counter[16]_i_3_n_0\,
       O => \counter[9]_i_1_n_0\
     );
 \counter_reg[0]\: unisim.vcomponents.FDCE
@@ -677,32 +586,8 @@ counter0_carry_i_4: unisim.vcomponents.LUT1
       C => clk,
       CE => counter_0,
       CLR => reset,
-      D => \counter[16]_i_1_n_0\,
+      D => \counter[16]_i_2_n_0\,
       Q => counter(16)
-    );
-\counter_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => counter_0,
-      CLR => reset,
-      D => \counter[17]_i_1_n_0\,
-      Q => counter(17)
-    );
-\counter_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => counter_0,
-      CLR => reset,
-      D => \counter[18]_i_1_n_0\,
-      Q => counter(18)
-    );
-\counter_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => counter_0,
-      CLR => reset,
-      D => \counter[19]_i_2_n_0\,
-      Q => counter(19)
     );
 \counter_reg[1]\: unisim.vcomponents.FDCE
      port map (
@@ -794,7 +679,7 @@ debounced_int_C_i_1: unisim.vcomponents.LUT5
       I0 => debounced_int_reg_P_n_0,
       I1 => debounced_int_reg_LDC_n_0,
       I2 => debounced_int_reg_C_n_0,
-      I3 => \counter[19]_i_3_n_0\,
+      I3 => \counter[16]_i_3_n_0\,
       I4 => input_signal,
       O => debounced_int_C_i_1_n_0
     );
